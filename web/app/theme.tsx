@@ -1,94 +1,142 @@
-'use client'
+let storedProvider: string | undefined;
  
-import { useState, createContext, useContext, useEffect } from 'react'
+export const setCurrentProvider = (provider: string) => {
+  if (provider && !storedProvider) {
+    const providers = provider.split(',');
+    storedProvider = providers[0].trim();
+    console.log('Theme.tsx - New Provider Stored:', storedProvider);
+  }
+};
  
-type ThemeStyles = {
-  background: string
-  text: string
-  icon: string
-  card: string
-}
+export const getCurrentProvider = () => {
+  return storedProvider;
+};
  
-export const ThemeContext = createContext<{
-  themeStyles: ThemeStyles
-  toggleTheme: () => void
-  isDarkMode: boolean
-}>({
-  themeStyles: {
-    background: 'bg-gray-100',
-    text: 'text-[#000000]',
-    icon: 'text-[#333333]',
-    card: 'bg-white'
-  },
-  toggleTheme: () => {},
-  isDarkMode: false
-})
 export type DarkThemeColors = {
-  main_background: string
-  text: string
-  hover: string
-  border: string
-  sub_text1: string
-  sub_text2: string
-  sub_text3: string
-  background1: string
-  background2: string
-  background3: string
-  background4:string
-  green_text: string
-  green_border:string
-  svg:string  
+  main_background: string;
+  text: string;
+  hover: string;
+  grouphover:string;
+  border: string;
+  border1:string;
+  sub_text1: string;
+  sub_text2: string;
+  sub_text3: string;
+  background1: string;
+  background2: string;
+  background3: string;
+  background4: string;
+  green_text: string;
+  green_border: string;
+  svg: string;
+  shadow:string;
+  lab_activatedbutton:string;
+  hover1:string;
+  hover2:string;
+  hover3:string;
+  hover4:string;
+  placeholder:string;
+  sub_text4:string;
+  border2:string;
+  border3:string;
+  borderhover:string;
+  borderhover2:string;
+  shadow1:string;
+  sub_text5:string;
+  focus:string;
+  borderfocus: string;
+  sub_text6: string
+  sub_text7: string;
+  sub_text8: string;
+  sub_text9:string;
+  texthover: string;
+  borderhover1:string;
+  hovershadow:string;
+  groupBorderHover:string;
+  ring:string;
+  border4:string;
+  shadow2:string;
+  placeholder1:string;
+  caret:string;
+  focus1:string;
+  background5: string
 }
-export const darkTheme: DarkThemeColors = {
-  main_background: 'dark:bg-[#202020]',
+ 
+// // Function to determine background color based on provider
+// const getProviderBackground = (provider?: string): string => {
+//   if (!provider) return 'bg-zinc-800'; // Default dark theme
+ 
+//   if (provider.includes('nvidia')) {
+//     return 'bg-green-800';
+//   }
+ 
+//   if (provider.includes('openai')) {
+//     return 'bg-black';
+//   }
+ 
+//   return 'bg-zinc-800'; // Fallback dark theme
+// };
+ 
+// export const getDarkTheme = (): DarkThemeColors => ({
+//     background: `dark:${getProviderBackground(storedProvider)}`,
+//     text: 'dark:text-white',
+//     hover: 'dark:hover:bg-zinc-800',
+//     border: 'dark:border-zinc-700'
+// });
+ 
+export const getDarkTheme = (): DarkThemeColors => ({
+  // background: `dark:${getProviderBackground(storedProvider)}`,
+  main_background: 'dark:!bg-[#202020]',
   text: 'dark:text-white',
-  hover: 'dark:hover:bg-zinc-800',
-  border: 'dark:border-[#5f5f5f]',
-  sub_text1:'dark:text-[#fcfcfc]',
+  hover: 'dark:hover:!bg-zinc-800',
+  grouphover:'dark:group-hover:!bg-zinc-800',
+  border: 'dark:!border-[#5f5f5f]',
+  border1:'dark:!border-[#202020]',
+  border4:'dark:border-[#3e3e3e]',
+  sub_text1: 'dark:text-[#fcfcfc]',
   sub_text2: 'dark:text-[#6b7280]',
   sub_text3: 'dark:text-[#a1a2b6]',
-  background1: 'dark:bg-[#3e3e3e]',
-  background2: 'dark:bg-[#2c2c2c]',
-  background3: 'dark:bg-[#3f3f3f]',
+  background1: 'dark:!bg-[#3e3e3e]',
+  background2: 'dark:!bg-[#2c2c2c]',
+  background3: 'dark:!bg-[#3f3f3f]',
   background4: 'dark:bg-[#1A1A1A]',
-
-  svg:'dark:text-[#6b7280]',
-  green_text:'dark:text-primary-600',
-  green_border:'dark:text-primary-600'
+  svg: 'dark:text-[#6b7280]',
+  green_text: 'dark:text-primary-600',
+  green_border: 'dark:text-primary-600',
+  shadow:'dark:shadow-[#5f5f5f]',
+  lab_activatedbutton:'dark:bg-zinc-600',
+  hover1:'dark:hover:bg-[#3f3f3f]',
+  hover2:'dark:hover:bg-gray-800',
+  hover3:'dark:hover:bg-zinc-700',
+  hover4: 'dark:hover:bg-[#E35B5B]',
+  placeholder:'dark:placeholder:text-white',
+  placeholder1:'dark:placeholder:text-[#FCFCFC]',
+  caret:'dark:caret-primary-600',
+  sub_text4:'dark:text-[#E1E1E1]',
+  border2:'dark:border-slate-400',
+  border3:'dark:border-primary-400',
+  borderhover:'dark:hover:border-[#5F5F5F]',
+  borderhover2:'dark:hover:border-primary-400',
+  shadow1:'dark:shadow-slate-700',
+  shadow2:'dark:shadow-[#3e3e3e]',
+  sub_text5:'dark:text-[#F5F5F5]',
+  focus:' dark:focus:bg-[#3f3f3f]',
+  focus1:'dark:focus:bg-[#3e3e3e]',
+  borderfocus: 'dark:focus:border-[#5F5F5F]',
+  sub_text6: 'dark:text-gray-200',
+  sub_text7: 'dark:text-gray-400',
+  sub_text8: 'dark:text-slate-400',
+  sub_text9:'dark:text-[#3f3f3f]',
+  texthover: 'dark:hover:text-[#b7e724]',
+  borderhover1:'dark:hover:border-[#B2CCFF]',
+  hovershadow:'dark:hover:bg-transparent dark:hover:shadow-[#5F5F5F]',
+  groupBorderHover:'dark:group-hover:border-gray-700',
+  ring:'dark:ring-primary-500',
+  background5: 'dark:bg-[#a1a6b2]'
+});
+ 
+export const getDarkThemeClasses = (componet: keyof DarkThemeColors): string => {
+    const currentTheme = getDarkTheme();
+    console.log('Current Provider in Theme:', storedProvider);
+    return currentTheme[componet];
 }
-export const getDarkThemeClasses = (componet: keyof DarkThemeColors):string => {
-  return darkTheme[componet]
-}
- 
-export default function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [isDarkMode, setIsDarkMode] = useState(false)
- 
-  const themeStyles = isDarkMode ? {
-    background: 'bg-[#202020]',
-    text: 'text-[#00FF00]',
-    icon: 'text-[#FFFFFF]',
-    card: 'bg-[#202020]'
-  } : {
-    background: 'bg-gray-100',
-    text: 'text-[#000000]',
-    icon: 'text-[#333333]',
-    card: 'bg-white'
-  }
- 
-  const toggleTheme = () => {
-    setIsDarkMode(!isDarkMode)
-    localStorage.setItem('theme', (!isDarkMode).toString())
-  }
- 
-  useEffect(() => {
-    const savedTheme = localStorage.getItem('theme') === 'true'
-    setIsDarkMode(savedTheme)
-  }, [])
- 
-  return (
-    <ThemeContext.Provider value={{ themeStyles, toggleTheme, isDarkMode }}>
-      {children}
-    </ThemeContext.Provider>
-  )
-}
- 
