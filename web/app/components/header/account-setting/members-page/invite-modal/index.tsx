@@ -172,4 +172,7 @@ const InviteModal = ({
 }
 
 export default InviteModal
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -97,4 +97,7 @@ export default function AppBasic({ icon, icon_background, name, type, hoverTip, 
     </div>
   )
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

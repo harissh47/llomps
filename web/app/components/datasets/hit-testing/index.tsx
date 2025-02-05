@@ -25,7 +25,10 @@ import type { RetrievalConfig } from '@/types/app'
 import useBreakpoints, { MediaType } from '@/hooks/use-breakpoints'
 import useTimestamp from '@/hooks/use-timestamp'
 import { useRouter } from 'next/navigation'
+<<<<<<< HEAD
 import { getDarkThemeClasses } from '@/app/theme'
+=======
+>>>>>>> origin/rupa
 
 const limit = 10
 
@@ -91,7 +94,11 @@ const HitTesting: FC<Props> = ({ datasetId }: Props) => {
 
   return (
     // <div className={s.container}>
+<<<<<<< HEAD
     <div className={cn('flex h-full w-full relative overflow-y-auto', getDarkThemeClasses('background'))}>
+=======
+    <div className={cn('flex h-full w-full relative overflow-y-auto dark:bg-[#202020]')}>
+>>>>>>> origin/rupa
       {/* <div className={s.leftDiv}> */}
       <div className="border-r border-gray-100 dark:border-[#5f5f5f] px-6 py-3 flex flex-col">
 
@@ -248,4 +255,7 @@ const HitTesting: FC<Props> = ({ datasetId }: Props) => {
 }
 
 export default HitTesting
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

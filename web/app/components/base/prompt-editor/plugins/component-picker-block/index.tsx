@@ -274,4 +274,7 @@ const ComponentPicker = ({
 };
 
 export default memo(ComponentPicker);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -96,4 +96,7 @@ const DependencyPicker: FC<Props> = ({
 }
 
 export default React.memo(DependencyPicker)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

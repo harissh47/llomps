@@ -1,4 +1,5 @@
 'use client';
+<<<<<<< HEAD
 import { useEffect, useState } from 'react';
 import { fetchModelList } from '@/service/common';
 
@@ -20,11 +21,49 @@ const Home = () => {
 
     fetchModels();
   }, []);
+=======
+import { useEffect,useState } from 'react';
+import useSWR from 'swr';
+import { fetchAppMeta } from '@/service/share';
+
+
+// const [isInstalledApp] = useState(true);
+
+// const [appId] = useState('')
+
+const Home = () => {
+  const [isInstalledApp] = useState(true);
+ 
+  const [appId] = useState('')
+  const { data: appMetaResponse, error: appMetaError, isLoading: appMetaLoading } = useSWR(
+    ['meta', isInstalledApp, appId], 
+    () => fetchAppMeta(isInstalledApp, appId) 
+  );
+
+  useEffect(() => {
+    const savedTheme = localStorage.getItem('theme')
+    if (savedTheme === 'dark') {
+      document.documentElement.classList.add('dark')
+      // setIsDarkMode(true)
+    }
+  }, [])
+  useEffect(() => {
+    // const { data: appMetaResponse, error: appMetaError, isLoading: appMetaLoading } = useSWR(
+    //   ['meta', isInstalledApp, appId], 
+    //   () => fetchAppMeta(isInstalledApp, appId) 
+    // );
+   
+    if (appMetaResponse) {
+      console.log('meta:', appMetaResponse); 
+    }
+  }, [appMetaResponse]); 
+>>>>>>> origin/rupa
 
   return (
     <div>
       <h1>Hello!!!</h1>
 
+<<<<<<< HEAD
       {/* Model List Section */}
       <h2>Model List:</h2>
       {modelListError ? (
@@ -37,6 +76,22 @@ const Home = () => {
         </ul>
       ) : (
         <p>Loading model list...</p>
+=======
+      {/* App Meta Section */}
+      <h2>App Meta:</h2>
+      {appMetaLoading ? (
+        
+        <p>Loading app meta...</p>
+      ) : appMetaError ? (
+        
+        <p>Error loading app meta</p>
+      ) : appMetaResponse ? (
+        
+        <pre>{JSON.stringify(appMetaResponse, null, 2)}</pre>
+      ) : (
+       
+        <p>No app meta data available.</p>
+>>>>>>> origin/rupa
       )}
     </div>
   );

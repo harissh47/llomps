@@ -89,4 +89,7 @@ const ProviderCard: FC<ProviderCardProps> = ({
 }
 
 export default ProviderCard
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

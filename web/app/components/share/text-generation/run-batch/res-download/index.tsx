@@ -41,4 +41,7 @@ const ResDownload: FC<IResDownloadProps> = ({
   )
 }
 export default React.memo(ResDownload)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

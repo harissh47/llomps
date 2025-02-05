@@ -140,4 +140,7 @@ const ImageList: FC<ImageListProps> = ({
 }
 
 export default ImageList
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

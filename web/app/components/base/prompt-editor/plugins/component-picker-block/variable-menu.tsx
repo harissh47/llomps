@@ -38,4 +38,7 @@ const VariableMenu = ({
 }
 
 export default memo(VariableMenu)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -171,4 +171,7 @@ const ChooseFeature: FC<IChooseFeatureProps> = ({
   )
 }
 export default React.memo(ChooseFeature)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

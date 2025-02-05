@@ -57,4 +57,7 @@ export default function Indicator({
     </div>
   )
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

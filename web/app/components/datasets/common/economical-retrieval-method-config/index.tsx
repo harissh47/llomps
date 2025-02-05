@@ -38,4 +38,7 @@ const EconomicalRetrievalMethodConfig: FC<Props> = ({
   )
 }
 export default React.memo(EconomicalRetrievalMethodConfig)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

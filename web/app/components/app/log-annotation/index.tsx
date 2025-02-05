@@ -57,4 +57,7 @@ const LogAnnotation: FC<Props> = ({
   )
 }
 export default React.memo(LogAnnotation)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

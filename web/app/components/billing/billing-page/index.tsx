@@ -5,7 +5,10 @@ import Loading from '../../base/loading'
 import PricingToggle from './PricingToggle'
 import { PricingPlan } from './types'
 import PricingCard from './PricingCard'
+<<<<<<< HEAD
 import { getDarkThemeClasses } from '@/app/theme'
+=======
+>>>>>>> origin/rupa
 import PricingTable from './PricingTable'
 const Billing: FC = () => {
   const [isYearly, setIsYearly] = useState(false)
@@ -38,7 +41,11 @@ const Billing: FC = () => {
 
   return (
     // <main className='bg-white dark:bg-gray-900'>
+<<<<<<< HEAD
     <main className={`bg-white ${getDarkThemeClasses('background')}`}>
+=======
+    <main className='bg-white dark:bg-[#202020]'>
+>>>>>>> origin/rupa
 
       <section className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 py-4'>
         <h1 className='text-4xl font-bold mb-4 mt-0 text-gray-900 dark:text-white text-center'>{heading}</h1>
@@ -102,4 +109,7 @@ export default React.memo(Billing)
 // }
 
 // export default React.memo(Billing)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

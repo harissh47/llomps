@@ -79,4 +79,7 @@ const Command = ({
 }
 
 export default memo(Command)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

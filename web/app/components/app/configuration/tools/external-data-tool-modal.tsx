@@ -219,7 +219,11 @@ const ExternalDataToolModal: FC<ExternalDataToolModalProps> = ({
             value={localeData.label || ''}
             onChange={e => handleValueChange({ label: e.target.value })}
             // className='grow block mr-2 px-3 h-9 bg-gray-100 rounded-lg text-sm text-gray-900 outline-none appearance-none'
+<<<<<<< HEAD
             className='grow block mr-2 px-3 h-9 bg-gray-100 dark:bg-[#3F3F3F] rounded-lg text-sm text-gray-900 dark:text-[#FCFCFC] outline-none appearance-none'
+=======
+            className='grow block mr-2 px-3 h-9 bg-gray-100 dark:bg-[#2c2c2c] rounded-lg text-sm text-gray-900 dark:text-[#FCFCFC] outline-none appearance-none'
+>>>>>>> origin/rupa
             placeholder={t('appDebug.feature.tools.modal.name.placeholder') || ''}
           />
           <AppIcon size='large'
@@ -239,7 +243,11 @@ const ExternalDataToolModal: FC<ExternalDataToolModalProps> = ({
           value={localeData.variable || ''}
           onChange={e => handleValueChange({ variable: e.target.value })}
           // className='block px-3 w-full h-9 bg-gray-100 rounded-lg text-sm text-gray-900 outline-none appearance-none'
+<<<<<<< HEAD
           className='block px-3 w-full h-9 bg-gray-100 dark:bg-[#3F3F3F] rounded-lg text-sm text-gray-900 dark:text-[#FCFCFC] outline-none appearance-none'
+=======
+          className='block px-3 w-full h-9 bg-gray-100 dark:bg-[#2c2c2c] rounded-lg text-sm text-gray-900 dark:text-[#FCFCFC] outline-none appearance-none'
+>>>>>>> origin/rupa
           placeholder={t('appDebug.feature.tools.modal.variableName.placeholder') || ''}
         />
       </div>
@@ -311,4 +319,7 @@ const ExternalDataToolModal: FC<ExternalDataToolModalProps> = ({
 }
 
 export default ExternalDataToolModal
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

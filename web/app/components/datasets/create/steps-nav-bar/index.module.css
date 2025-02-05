@@ -1,7 +1,13 @@
 .stepsHeader {
   @apply flex items-center px-6 py-6;
   /* color: #344054; */
+<<<<<<< HEAD
   color: black;
+=======
+  /* color: black; */
+  color: rgb(103, 99, 99);
+
+>>>>>>> origin/rupa
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
@@ -26,7 +32,11 @@
   height: 18px;
 }
 
+<<<<<<< HEAD
 .stepItem.step1::before {
+=======
+/* .stepItem.step1::before {
+>>>>>>> origin/rupa
   content: '';
   position: absolute;
   bottom: 0;
@@ -34,9 +44,25 @@
   width: 2px;
   height: 7px;
   background-color: #f2f4f7;
+<<<<<<< HEAD
 }
 
 .stepItem.step2::before {
+=======
+} */
+
+/* .stepItem.step1::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 23px;
+  width: 2px;
+  height: 10px;
+  background-color: #f2f4f7;
+} */
+/* .stepItem.step2::before {
+  @apply dark:bg-[#202020];
+>>>>>>> origin/rupa
   content: '';
   position: absolute;
   top: 0;
@@ -44,18 +70,61 @@
   width: 2px;
   height: 100%;
   background-color: #f2f4f7;
+<<<<<<< HEAD
 }
 .stepItem.step2::after {
+=======
+} */
+/* .stepItem.step2::before {
+  content: '';
+  @apply absolute top-0 left-[23px] w-[2px] h-full bg-[#f2f4f7] dark:bg-[#202020];
+} */
+
+/* .stepItem.step2::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 23px;
+  width: 2px;
+  height: 5px;
+  background-color: #f2f4f7;
+} */
+
+/* .stepItem.step2::after {
+  @apply dark:bg-[#202020];
+>>>>>>> origin/rupa
   content: '';
   position: absolute;
   top: 6px;
   left: 23px;
   width: 2px;
+<<<<<<< HEAD
   height: 28px;
   background-color: #fff;
 }
 
 .stepItem.step3::before {
+=======
+  height:28px;
+  background-color: #fff;
+} */
+/* .stepItem.step2::after {
+  content: '';
+  @apply absolute top-[6px] left-[23px] w-[2px] h-[28px] bg-white dark:!bg-[#202020];
+} */
+/* .stepItem.step2::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 23px;
+  width: 2px;
+  height:2px;
+  background-color: #fff;
+} */
+
+
+/* .stepItem.step3::before {
+>>>>>>> origin/rupa
   content: '';
   position: absolute;
   top: 0;
@@ -63,14 +132,34 @@
   width: 2px;
   height: 7px;
   background-color: #f2f4f7;
+<<<<<<< HEAD
 }
+=======
+} */
+/* .stepItem.step3::before {
+  content: '';
+  position: absolute;
+  top: 0px;
+  left: 23px;
+  width: 2px;
+  height: 8px;
+  background-color: #f2f4f7;
+} */
+>>>>>>> origin/rupa
 
 .stepNum {
   @apply box-border absolute top-2 left-3 flex justify-center items-center  w-6 h-6;
   /* color: #98a2b3; */
+<<<<<<< HEAD
   /* color: #a7eb99; */
   font-size: 12px;
   border: 1px solid #F2F4F7;
+=======
+  color: #C4E037;
+  font-size: 12px;
+  /* border: 1px solid #F2F4F7; */
+  border: 1px solid #C4E037;
+>>>>>>> origin/rupa
   border-radius: 24px;
   z-index: 1;
 }
@@ -78,6 +167,7 @@
 .stepName {
   /* color: #98a2b3; */
   /* color: #a7eb99; */
+<<<<<<< HEAD
   color: black;
 }
 
@@ -101,6 +191,40 @@
   border: none;
 }
 
+=======
+  /* color: black; */
+  color:  #6b7280;
+}
+
+.stepItem.active .stepNum {
+ 
+  /* color: #667085; */
+  color: #C4E037;
+  background-color: #C4E037;
+
+  /* border: none; */
+  border: 1px solid #C4E037;
+}
+
+
+.stepItem.active .stepName {
+  /* color: #1c64f2; */
+  /* color: #8AB40A; */
+  color:  #6b7280;
+}
+
+.stepItem.done .stepNum {
+  /* color: #667085; */
+  color: #C4E037;
+
+  background-color: #C4E037;
+
+  /* border: none; */
+  border: 1px solid #C4E037;
+}
+
+
+>>>>>>> origin/rupa
 .stepItem.done .stepNum::after {
   content: '';
   display: flex;
@@ -111,5 +235,10 @@
 }
 
 .stepItem.done .stepName {
+<<<<<<< HEAD
   color: #667085;
+=======
+  /* color: #667085; */
+  color: white;
+>>>>>>> origin/rupa
 }

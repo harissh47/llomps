@@ -35,4 +35,7 @@ const FloatRightContainer = ({ open, toggle, triggerElement, isMobile, children,
 }
 
 export default FloatRightContainer
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

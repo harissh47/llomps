@@ -14,4 +14,7 @@ const Layout: FC<{
 }
 
 export default Layout
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -58,4 +58,7 @@ const QueryBlockReplacementBlock = ({
 }
 
 export default memo(QueryBlockReplacementBlock)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

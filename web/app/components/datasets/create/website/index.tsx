@@ -70,4 +70,7 @@ const Website: FC<Props> = ({
   )
 }
 export default React.memo(Website)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

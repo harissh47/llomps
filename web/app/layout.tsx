@@ -4,10 +4,15 @@ import BrowerInitor from './components/browser-initor'
 import SentryInitor from './components/sentry-initor'
 import Topbar from './components/base/topbar'
 import { getLocaleOnServer } from '@/i18n/server'
+<<<<<<< HEAD
 import Apps from './(commonLayout)/apps/Apps'
 import './styles/globals.css'
 import './styles/markdown.scss'
 import { getDarkThemeClasses } from './theme'
+=======
+import './styles/globals.css'
+import './styles/markdown.scss'
+>>>>>>> origin/rupa
 
 export const metadata = {
   // title: 'Dify',
@@ -38,7 +43,12 @@ const LocaleLayout = ({
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
       <body
+<<<<<<< HEAD
         className={`h-full select-auto ${getDarkThemeClasses('background')}`}
+=======
+        // className="h-full select-auto"
+        className="h-full select-auto dark:bg-[#202020]"
+>>>>>>> origin/rupa
         data-api-prefix={process.env.NEXT_PUBLIC_API_PREFIX}
         data-pubic-api-prefix={process.env.NEXT_PUBLIC_PUBLIC_API_PREFIX}
         data-public-edition={process.env.NEXT_PUBLIC_EDITION}
@@ -59,4 +69,7 @@ const LocaleLayout = ({
 }
 
 export default LocaleLayout
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

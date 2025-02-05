@@ -406,4 +406,7 @@ const Result: FC<IResultProps> = ({
   )
 }
 export default React.memo(Result)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

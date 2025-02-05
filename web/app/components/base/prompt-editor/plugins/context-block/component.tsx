@@ -101,4 +101,7 @@ const ContextBlockComponent: FC<ContextBlockComponentProps> = ({
 }
 
 export default ContextBlockComponent
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

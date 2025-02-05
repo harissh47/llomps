@@ -8,7 +8,11 @@ import { Yaml as YamlIcon } from '@/app/components/base/icons/src/public/files'
 import { ToastContext } from '@/app/components/base/toast'
 import { Trash03, UploadCloud01 } from '@/app/components/base/icons/src/vender/line/general'
 import Button from '@/app/components/base/button'
+<<<<<<< HEAD
 
+=======
+import { getDarkThemeClasses } from '@/app/theme'
+>>>>>>> origin/rupa
 export type Props = {
   file: File | undefined
   updateFile: (file?: File) => void
@@ -92,11 +96,19 @@ const Uploader: FC<Props> = ({
       <div ref={dropRef}>
         {!file && (
           // <div className={cn('flex items-center h-20 rounded-xl bg-gray-50 border border-dashed border-gray-200 text-sm font-normal', dragging && 'bg-[#F5F8FF] border border-[#B2CCFF]')}>
+<<<<<<< HEAD
           <div className={cn('flex items-center h-20 rounded-xl bg-gray-50 border border-dashed border-gray-200 text-sm font-normal dark:bg-[#3f3f3f] dark:border-[#5F5F5F]', dragging && 'bg-[#F5F8FF] border border-[#B2CCFF]')}>
             <div className='w-full flex items-center justify-center space-x-2'>
               <UploadCloud01 className='w-6 h-6 mr-2 dark:text-[#6B7280]'/>
               {/* <div className='text-gray-500'> */}
               <div className='text-gray-500 dark:text-white'>
+=======
+          <div className={cn(`flex items-center h-20 rounded-xl bg-gray-50 border border-dashed border-gray-200 text-sm font-normal ${getDarkThemeClasses('background2')} ${getDarkThemeClasses('border')}`, dragging && `bg-[#F5F8FF] border border-[#B2CCFF]`)}>
+            <div className='w-full flex items-center justify-center space-x-2'>
+              <UploadCloud01 className={`w-6 h-6 mr-2 ${getDarkThemeClasses('sub_text2')}`}/>
+              {/* <div className='text-gray-500'> */}
+              <div className={`text-gray-500 ${getDarkThemeClasses('text')}`}>
+>>>>>>> origin/rupa
                 {t('datasetCreation.stepOne.uploader.button')}
                 {/* <span className='pl-1 text-[#155eef] cursor-pointer' onClick={selectHandle}>{t */}
                 <span className='pl-1 text-[#8AB40A] cursor-pointer' onClick={selectHandle}>{t('datasetDocuments.list.batchModal.browse')}</span>
@@ -107,6 +119,7 @@ const Uploader: FC<Props> = ({
         )}
         {file && (
           // <div className={cn('flex items-center h-20 px-6 rounded-xl bg-gray-50 border border-gray-200 text-sm font-normal group', 'hover:bg-[#F5F8FF] hover:border-[#B2CCFF]')}>
+<<<<<<< HEAD
           <div className={cn('flex items-center h-20 px-6 rounded-xl bg-gray-50 dark:bg-[#383838] border border-gray-200 dark:border-[#5F5F5F] text-sm font-normal group', 'hover:bg-[#F5F8FF] hover:border-[#B2CCFF] dark:hover:border-[#B2CCFF]')}>
             <YamlIcon className="shrink-0" />
             <div className='flex ml-2 w-0 grow'>
@@ -118,6 +131,19 @@ const Uploader: FC<Props> = ({
               <div className='mx-2 w-px h-4 bg-gray-200' />
               <div className='p-2 cursor-pointer' onClick={removeFile}>
                 <Trash03 className='w-4 h-4 text-gray-500 dark:text-[#6B7280]' />
+=======
+          <div className={cn(`flex items-center h-20 px-6 rounded-xl bg-gray-50 ${getDarkThemeClasses('background2')} border border-gray-200 ${getDarkThemeClasses('border')} text-sm font-normal group`, `hover:bg-[#F5F8FF] hover:border-[#B2CCFF] ${getDarkThemeClasses('borderhover1')}`)}>
+            <YamlIcon className="shrink-0" />
+            <div className='flex ml-2 w-0 grow'>
+              <span className={`max-w-[calc(100%_-_30px)] text-ellipsis whitespace-nowrap overflow-hidden text-gray-800 ${getDarkThemeClasses('text')}`}>{file.name.replace(/(.yaml|.yml)$/, '')}</span>
+              <span className={`shrink-0 text-gray-500 ${getDarkThemeClasses('sub_text2')}`}>.yml</span>
+            </div>
+            <div className='hidden group-hover:flex items-center'>
+              <Button className={`!h-8 !px-3 !py-[6px] bg-white !text-[13px] !leading-[18px] text-gray-700 ${getDarkThemeClasses('background3')} ${getDarkThemeClasses('border')} ${getDarkThemeClasses('hovershadow')}`} onClick={selectHandle}>{t('datasetCreation.stepOne.uploader.change')}</Button>
+              <div className='mx-2 w-px h-4 bg-gray-200' />
+              <div className='p-2 cursor-pointer' onClick={removeFile}>
+                <Trash03 className={`w-4 h-4 text-gray-500 ${getDarkThemeClasses('sub_text2')}`} />
+>>>>>>> origin/rupa
               </div>
             </div>
           </div>
@@ -294,4 +320,7 @@ export default React.memo(Uploader)
 // }
 
 // export default Uploader
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

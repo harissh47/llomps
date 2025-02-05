@@ -96,4 +96,7 @@ const InfiniteVirtualList: FC<IInfiniteVirtualListProps> = ({
   )
 }
 export default InfiniteVirtualList
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

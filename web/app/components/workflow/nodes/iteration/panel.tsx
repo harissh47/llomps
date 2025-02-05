@@ -137,4 +137,7 @@ const Panel: FC<NodePanelProps<IterationNodeType>> = ({
 }
 
 export default React.memo(Panel)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

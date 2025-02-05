@@ -14,4 +14,7 @@ const Icon = React.forwardRef<React.MutableRefObject<SVGElement>, Omit<IconBaseP
 Icon.displayName = 'Globe01'
 
 export default Icon
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -27,4 +27,7 @@ const CheckboxWithLabel: FC<Props> = ({
   )
 }
 export default React.memo(CheckboxWithLabel)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

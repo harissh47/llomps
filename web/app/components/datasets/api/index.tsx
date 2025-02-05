@@ -9,4 +9,7 @@ const index = (props: Props) => {
 }
 
 export default index
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

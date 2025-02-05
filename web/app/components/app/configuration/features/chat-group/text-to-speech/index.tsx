@@ -53,4 +53,7 @@ const TextToSpeech: FC = () => {
   )
 }
 export default React.memo(TextToSpeech)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

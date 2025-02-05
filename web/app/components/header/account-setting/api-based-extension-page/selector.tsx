@@ -64,7 +64,11 @@ const ApiBasedExtensionSelector: FC<ApiBasedExtensionSelectorProps> = ({
             )
             : (
               // <div className='flex items-center justify-between pl-3 pr-2.5 h-9 bg-gray-100 rounded-lg text-sm text-gray-400 cursor-pointer'>
+<<<<<<< HEAD
               <div className='flex items-center justify-between pl-3 pr-2.5 h-9 bg-gray-100 dark:bg-[#3F3F3F] rounded-lg text-sm text-gray-400 dark:text-[#FCFCFC] cursor-pointer'>
+=======
+              <div className='flex items-center justify-between pl-3 pr-2.5 h-9 bg-gray-100 dark:bg-[#2c2c2c] rounded-lg text-sm text-gray-400 dark:text-[#FCFCFC] cursor-pointer'>
+>>>>>>> origin/rupa
                 {t('common.apiBasedExtension.selector.placeholder')}
                 <ChevronDown className={`w-4 h-4 text-gray-700 dark:text-[#6B7280] ${!open && 'opacity-60'}`} />
               </div>
@@ -122,4 +126,7 @@ const ApiBasedExtensionSelector: FC<ApiBasedExtensionSelectorProps> = ({
 }
 
 export default ApiBasedExtensionSelector
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

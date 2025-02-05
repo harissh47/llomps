@@ -84,4 +84,7 @@ const Form1: FC<Form1Props> = ({ onSend, handleModal }) => {
 }
 
 export default Form1
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -86,4 +86,7 @@ const SelectVarType: FC<Props> = ({
   )
 }
 export default React.memo(SelectVarType)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

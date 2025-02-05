@@ -18,4 +18,7 @@ const ProgressBar = ({
 }
 
 export default ProgressBar
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

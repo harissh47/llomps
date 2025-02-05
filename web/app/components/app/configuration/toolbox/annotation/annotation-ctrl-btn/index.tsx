@@ -135,4 +135,7 @@ const CacheCtrlBtn: FC<Props> = ({
   )
 }
 export default React.memo(CacheCtrlBtn)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

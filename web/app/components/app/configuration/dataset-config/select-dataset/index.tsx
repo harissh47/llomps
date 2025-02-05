@@ -176,4 +176,7 @@ const SelectDataSet: FC<ISelectDataSetProps> = ({
   )
 }
 export default React.memo(SelectDataSet)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

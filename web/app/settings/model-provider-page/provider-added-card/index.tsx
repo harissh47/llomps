@@ -164,4 +164,7 @@ const ProviderAddedCard: FC<ProviderAddedCardProps> = ({
 }
 
 export default ProviderAddedCard
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

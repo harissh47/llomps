@@ -181,4 +181,7 @@ export const CheckModal = () => {
     />
   )
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

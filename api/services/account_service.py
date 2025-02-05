@@ -261,23 +261,6 @@ class TenantService:
         account.current_tenant = tenant
         db.session.commit()
         tenant_was_created.send(tenant)
-
-    def create_workspace_owner(account: Account):
-        """Create workspace owner"""
-        print(f"\n=== Starting create_workspace_owner for account {account.id} ===")
-        print(f"EDITION config: {current_app.config['EDITION']}")
-        
-        available_ta = TenantAccountJoin.query.filter_by(account_id=account.id) \
-            .order_by(TenantAccountJoin.id.asc()).first()
-        
-        if available_ta:
-            return
-        
-        tenant = TenantService.create_tenant(f"{account.name}'s Workspace")
-        TenantService.create_tenant_member(tenant, account, role='owner')
-        account.current_tenant = tenant
-        db.session.commit()
-        tenant_was_created.send(tenant)
         
     @staticmethod
     def create_tenant_member(tenant: Tenant, account: Account, role: str = 'normal') -> TenantAccountJoin:

@@ -128,4 +128,7 @@ const RetrievalParamConfig: FC<Props> = ({
   )
 }
 export default React.memo(RetrievalParamConfig)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

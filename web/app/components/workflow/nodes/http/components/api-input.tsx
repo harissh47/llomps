@@ -80,4 +80,7 @@ const ApiInput: FC<Props> = ({
   )
 }
 export default React.memo(ApiInput)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

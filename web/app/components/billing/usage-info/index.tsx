@@ -74,4 +74,7 @@ const UsageInfo: FC<Props> = ({
   )
 }
 export default React.memo(UsageInfo)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

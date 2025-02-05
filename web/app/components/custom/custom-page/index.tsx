@@ -55,4 +55,7 @@ const CustomPage = () => {
 }
 
 export default CustomPage
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -264,4 +264,7 @@ const AdvancedPromptInput: FC<Props> = ({
   )
 }
 export default React.memo(AdvancedPromptInput)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

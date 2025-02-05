@@ -291,4 +291,7 @@ export const useEmbeddedChatbot = () => {
     currentChatInstanceRef,
   }
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

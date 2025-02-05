@@ -149,4 +149,7 @@ const Logs: FC<ILogsProps> = ({ appDetail }) => {
 }
 
 export default Logs
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -64,4 +64,7 @@ const DeleteConfirmModal: FC<Props> = ({
   )
 }
 export default React.memo(DeleteConfirmModal)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

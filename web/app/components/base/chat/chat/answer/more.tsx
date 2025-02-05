@@ -44,4 +44,7 @@ const More: FC<MoreProps> = ({
 }
 
 export default memo(More)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

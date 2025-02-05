@@ -112,4 +112,7 @@ const Trigger: FC<TriggerProps> = ({
 }
 
 export default Trigger
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

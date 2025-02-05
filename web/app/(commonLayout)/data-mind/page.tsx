@@ -12,4 +12,7 @@ export const metadata = {
 }
 
 export default AppList
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

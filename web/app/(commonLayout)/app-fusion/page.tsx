@@ -15,4 +15,7 @@ const Layout: FC = () => {
   return <ToolProviderList />
 }
 export default React.memo(Layout)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

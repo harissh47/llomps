@@ -58,4 +58,7 @@ const Category: FC<ICategoryProps> = ({
 }
 
 export default React.memo(Category)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -39,7 +39,10 @@ import { useEventEmitterContextContext } from '@/context/event-emitter'
 import { useProviderContext } from '@/context/provider-context'
 import PromptLogModal from '@/app/components/base/prompt-log-modal'
 import { useStore as useAppStore } from '@/app/components/app/store'
+<<<<<<< HEAD
 import { getDarkThemeClasses } from '@/app/theme'
+=======
+>>>>>>> origin/rupa
 
 type IDebug = {
   isAPIKeySet: boolean
@@ -405,7 +408,11 @@ const Debug: FC<IDebug> = ({
                       //   ${multipleModelConfigs.length >= 4 && 'opacity-30'}
                       // `}
                       className={`
+<<<<<<< HEAD
                         h-8 px-2.5 text-[13px] font-medium text-primary-600 bg-white ${getDarkThemeClasses('background')} dark:!text-primary-600 dark:border-[#5F5F5F] dark:hover:bg-zinc-800
+=======
+                        h-8 px-2.5 text-[13px] font-medium text-primary-600 bg-white dark:bg-[#202020] dark:!text-primary-600 dark:border-[#5F5F5F] dark:hover:bg-zinc-800
+>>>>>>> origin/rupa
                         ${multipleModelConfigs.length >= 4 && 'opacity-30'}
                       `}
                       onClick={() => onMultipleModelConfigsChange(true, [...multipleModelConfigs, { id: `${Date.now()}`, model: '', provider: '', parameters: {} }])}
@@ -420,8 +427,13 @@ const Debug: FC<IDebug> = ({
                 : null
             }
             {mode !== AppType.completion && (
+<<<<<<< HEAD
               // <Button className='flex items-center gap-1 !h-8 bg-white ${getDarkThemeClasses('background')}  dark:border-[#5F5F5F] dark:hover:bg-zinc-800 dark:hover:shadow-[#5F5F5F]' onClick={clearConversation}>
               <Button className={`flex items-center gap-1 !h-8 bg-white ${getDarkThemeClasses('background')} dark:border-[#5F5F5F] dark:hover:bg-zinc-800 dark:hover:shadow-[#5F5F5F]`} onClick={clearConversation}>
+=======
+              // <Button className='flex items-center gap-1 !h-8 !bg-white' onClick={clearConversation}>
+              <Button className='flex items-center gap-1 !h-8 bg-white dark:bg-[#202020] dark:bg-[#202020] dark:border-[#5F5F5F] dark:hover:bg-zinc-800 dark:hover:shadow-[#5F5F5F]' onClick={clearConversation}>
+>>>>>>> origin/rupa
                 {/* <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M2.66663 2.66629V5.99963H3.05463M3.05463 5.99963C3.49719 4.90505 4.29041 3.98823 5.30998 3.39287C6.32954 2.7975 7.51783 2.55724 8.68861 2.70972C9.85938 2.8622 10.9465 3.39882 11.7795 4.23548C12.6126 5.07213 13.1445 6.16154 13.292 7.33296M3.05463 5.99963H5.99996M13.3333 13.333V9.99963H12.946M12.946 9.99963C12.5028 11.0936 11.7093 12.0097 10.6898 12.6045C9.67038 13.1993 8.48245 13.4393 7.31203 13.2869C6.1416 13.1344 5.05476 12.5982 4.22165 11.7621C3.38854 10.926 2.8562 9.83726 2.70796 8.66629M12.946 9.99963H9.99996" stroke="#1C64F2" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg> */}
@@ -524,4 +536,7 @@ const Debug: FC<IDebug> = ({
   )
 }
 export default React.memo(Debug)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -73,4 +73,7 @@ export const ChatWithHistoryContext = createContext<ChatWithHistoryContextValue>
   currentChatInstanceRef: { current: { handleStop: () => { } } },
 })
 export const useChatWithHistoryContext = () => useContext(ChatWithHistoryContext)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

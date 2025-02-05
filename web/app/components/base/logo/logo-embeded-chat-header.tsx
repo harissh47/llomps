@@ -16,4 +16,7 @@ const LogoEmbededChatHeader: FC<LogoEmbededChatHeaderProps> = ({
 }
 
 export default LogoEmbededChatHeader
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

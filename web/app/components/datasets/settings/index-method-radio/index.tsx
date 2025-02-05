@@ -72,4 +72,7 @@ const IndexMethodRadio = ({
 }
 
 export default IndexMethodRadio
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

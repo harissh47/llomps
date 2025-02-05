@@ -11,4 +11,7 @@ const Node: FC<NodeProps<TemplateTransformNodeType>> = () => {
 }
 
 export default React.memo(Node)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -29,4 +29,7 @@ const ImagePreview: FC<ImagePreviewProps> = ({
 }
 
 export default ImagePreview
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

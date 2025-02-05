@@ -23,4 +23,7 @@ const LinkEditorPlugin = ({
 }
 
 export default memo(LinkEditorPlugin)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

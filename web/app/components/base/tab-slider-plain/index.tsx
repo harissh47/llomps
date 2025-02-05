@@ -70,4 +70,7 @@ const TabSlider: FC<Props> = ({
   )
 }
 export default React.memo(TabSlider)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

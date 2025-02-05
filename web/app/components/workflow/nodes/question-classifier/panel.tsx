@@ -151,4 +151,7 @@ const Panel: FC<NodePanelProps<QuestionClassifierNodeType>> = ({
 }
 
 export default React.memo(Panel)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

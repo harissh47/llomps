@@ -30,4 +30,7 @@ const VectorSpaceFull: FC = () => {
   )
 }
 export default React.memo(VectorSpaceFull)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

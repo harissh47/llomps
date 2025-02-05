@@ -57,4 +57,7 @@ const Collapse = ({
 }
 
 export default Collapse
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

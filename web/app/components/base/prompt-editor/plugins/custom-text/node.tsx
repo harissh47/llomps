@@ -50,4 +50,7 @@ export class CustomTextNode extends TextNode {
 export function $createCustomTextNode(text: string): CustomTextNode {
   return new CustomTextNode(text)
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

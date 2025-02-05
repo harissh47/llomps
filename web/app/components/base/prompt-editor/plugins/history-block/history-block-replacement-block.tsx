@@ -59,4 +59,7 @@ const HistoryBlockReplacementBlock = ({
 }
 
 export default HistoryBlockReplacementBlock
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

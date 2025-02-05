@@ -36,4 +36,7 @@ const PluginPage = () => {
 }
 
 export default PluginPage
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

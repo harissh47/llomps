@@ -57,4 +57,7 @@ const Line = ({
 }
 
 export default memo(Line)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -66,4 +66,7 @@ const QuotaPanel: FC<QuotaPanelProps> = ({
 }
 
 export default QuotaPanel
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

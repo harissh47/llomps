@@ -11,4 +11,7 @@ const ConfigScene: FC<IWelcomeProps> = (props) => {
   )
 }
 export default React.memo(ConfigScene)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -59,4 +59,7 @@ const ShareQRCode = ({ content, selectorId, className }: Props) => {
 }
 
 export default ShareQRCode
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

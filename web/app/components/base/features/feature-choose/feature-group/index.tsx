@@ -29,4 +29,7 @@ const FeatureGroup: FC<IFeatureGroupProps> = ({
   )
 }
 export default React.memo(FeatureGroup)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

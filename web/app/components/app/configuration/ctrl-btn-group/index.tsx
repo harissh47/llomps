@@ -22,4 +22,7 @@ const ContrlBtnGroup: FC<IContrlBtnGroupProps> = ({ onSave, onReset }) => {
   )
 }
 export default React.memo(ContrlBtnGroup)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

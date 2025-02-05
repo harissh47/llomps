@@ -18,4 +18,7 @@ const Checkbox = ({ checked, onCheck, className }: CheckboxProps) => {
 }
 
 export default Checkbox
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -24,7 +24,11 @@ import type { DocType, FullDocumentDetail } from '@/models/datasets'
 import { CUSTOMIZABLE_DOC_TYPES } from '@/models/datasets'
 import type { inputType, metadataType } from '@/hooks/use-metadata'
 import { useBookCategories, useBusinessDocCategories, useLanguages, useMetadataMap, usePersonalDocCategories } from '@/hooks/use-metadata'
+<<<<<<< HEAD
 import { getDarkThemeClasses } from '@/app/theme'
+=======
+
+>>>>>>> origin/rupa
 const map2Options = (map: { [key: string]: string }) => {
   return Object.keys(map).map(key => ({ value: key, name: map[key] }))
 }
@@ -329,7 +333,11 @@ const Metadata: FC<IMetadataProps> = ({ docDetail, loading, onUpdate }) => {
   return (
     // <div className={`${s.main} ${editStatus ? 'bg-white' : 'bg-gray-25'}`}>
     // <div className={`overflow-y-scroll pl-2 ${editStatus ? 'bg-white' : 'bg-gray-25'}`}>
+<<<<<<< HEAD
     <div className={`h-screen  overflow-y-scroll pl-2 ${editStatus ? `bg-white ${getDarkThemeClasses('background')}` : `bg-gray-25 ${getDarkThemeClasses('background')}`}`}>
+=======
+    <div className={`h-screen  overflow-y-scroll pl-2 ${editStatus ? 'bg-white dark:bg-[#202020]' : 'bg-gray-25 dark:bg-[#333333]'}`}>
+>>>>>>> origin/rupa
 
       {loading
         ? (<Loading type='app' />)
@@ -410,4 +418,7 @@ const Metadata: FC<IMetadataProps> = ({ docDetail, loading, onUpdate }) => {
 }
 
 export default Metadata
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

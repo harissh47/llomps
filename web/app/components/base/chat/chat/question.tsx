@@ -56,4 +56,7 @@ const Question: FC<QuestionProps> = ({
 }
 
 export default memo(Question)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -44,4 +44,7 @@ const AddFeatureBtn: FC<IAddFeatureBtnProps> = ({
   )
 }
 export default React.memo(AddFeatureBtn)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

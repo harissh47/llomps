@@ -54,4 +54,7 @@ const ResultText: FC<ResultTextProps> = ({
 }
 
 export default ResultText
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

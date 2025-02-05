@@ -17,14 +17,34 @@ import RenameModal from './rename-modal'
 import styles from './styles.module.css'
 import { MoonIcon, SunIcon } from '@heroicons/react/20/solid'
 
+<<<<<<< HEAD
 const ChevronLeftSVG = () => (
   <svg width="23" height="23" fill="currentColor" viewBox="0 0 24 24">
+=======
+// const ChevronLeftSVG = () => (
+//   <svg width="23" height="23" fill="currentColor" viewBox="0 0 24 24">
+//     <path d="M15.5 19l-1.42 1.42L6.58 13.92 14.08 6.5 15.5 7.92 9.34 14l6.16 5z"></path>
+//   </svg>
+// )
+const ChevronLeftSVG = () => (
+  <svg width="23" height="23" fill="#6b7280" viewBox="0 0 24 24">
+>>>>>>> origin/rupa
     <path d="M15.5 19l-1.42 1.42L6.58 13.92 14.08 6.5 15.5 7.92 9.34 14l6.16 5z"></path>
   </svg>
 )
 
+<<<<<<< HEAD
 const ChevronRightSVG = () => (
   <svg width="23" height="23" fill="currentColor" viewBox="0 0 24 24">
+=======
+// const ChevronRightSVG = () => (
+//   <svg width="23" height="23" fill="currentColor" viewBox="0 0 24 24">
+//     <path d="M8.5 5L7.08 6.42l6.16 5.5-6.16 5.5L8.5 19l7.92-7.92L8.5 5z"></path>
+//   </svg>
+// )
+const ChevronRightSVG = () => (
+  <svg width="23" height="23" fill="#6b7280" viewBox="0 0 24 24">
+>>>>>>> origin/rupa
     <path d="M8.5 5L7.08 6.42l6.16 5.5-6.16 5.5L8.5 19l7.92-7.92L8.5 5z"></path>
   </svg>
 )
@@ -124,22 +144,43 @@ const Sidebar: React.FC<SidebarProps> = ({ toggleCollapse }) => {
   return (
     // <div className='shrink-0 h-full flex flex-col w-[240px] border-r border-r-gray-100'>
     // <div className='shrink-0 h-full flex flex-col w-[240px]'>
+<<<<<<< HEAD
     <div className={`shrink-0 h-full flex flex-col ${isCollapsed ? 'w-[60px]' : 'w-[240px]'} border-r border-r-gray-100 transition-width duration-300`}>
       <div className='shrink-0 flex items-center p-4'>
         {!isCollapsed && !isMobile && (
           <div className='py-1 text-base font-semibold text-gray-800'>
+=======
+    // <div className={`shrink-0 h-full flex flex-col ${isCollapsed ? 'w-[60px]' : 'w-[240px]'} border-r border-r-gray-100 transition-width duration-300`}>
+    <div className={`shrink-0 h-full flex flex-col ${isCollapsed ? 'w-[60px]' : 'w-[240px]'} border-r border-r-gray-100 dark:border-r-[#5f5f5f] transition-width duration-300`}>
+
+      <div className='shrink-0 flex items-center p-4'>
+        {!isCollapsed && !isMobile && (
+          // <div className='py-1 text-base font-semibold text-gray-800'>
+          <div className='py-1 text-base font-semibold text-gray-800 dark:text-[#fcfcfc]'>
+
+>>>>>>> origin/rupa
             {appData?.site.title}
           </div>
         )
         }
+<<<<<<< HEAD
         <button onClick={handleToggleCollapse} className='ml-auto text-gray-800 hover:text-gray-600 focus:outline-none'>
+=======
+        {/* <button onClick={handleToggleCollapse} className='ml-auto text-gray-800  hover:text-gray-600 focus:outline-none'> */}
+                <button onClick={handleToggleCollapse} className='ml-auto text-gray-800  hover:text-gray-600 focus:outline-none'>
+
+>>>>>>> origin/rupa
           {isCollapsed ? <ChevronRightSVG /> : <ChevronLeftSVG />}
         </button>
       </div>
       {isCollapsed ? (
         <div className='flex flex-col items-center'>
           <Button
+<<<<<<< HEAD
             className='justify-center px-3 py-0 w-full h-9 text-sm font-bold text-[#bed730]'
+=======
+            className='justify-center px-3 py-0 w-full h-9 text-sm font-bold text-[#bed730] border dark:border-[#5f5f5f] dark:hover:bg-[#202020] dark:bg-[#202020] border dark:border-[#5f5f5f] dark:hover:border-[#3e3e3e] dark:hover:shadow-[#3f3f3f] '
+>>>>>>> origin/rupa
             onClick={handleNewConversation}
           >
             <Edit05 className='w-4 h-4' />
@@ -153,7 +194,11 @@ const Sidebar: React.FC<SidebarProps> = ({ toggleCollapse }) => {
               <Button
                 // className='justify-start px-3 py-0 w-full h-9 text-sm font-medium text-primary-600'
                 // className='justify-start px-3 py-0 w-full h-9 text-sm font-medium text-white hover:text-black'
+<<<<<<< HEAD
                 className={`${styles.newChatBtn} justify-start px-3 py-0 w-full h-9 text-sm font-medium text-[#bed730] !important`}
+=======
+                className={`${styles.newChatBtn} justify-start px-3 py-0 w-full h-9 text-sm font-medium text-[#bed730] !important dark:hover:bg-[#202020] dark:bg-[#202020] border dark:border-[#5f5f5f] dark:hover:border-[#3e3e3e] dark:hover:shadow-[#3f3f3f]`}
+>>>>>>> origin/rupa
                 onClick={handleNewConversation}
               >
                 <Edit05 className='mr-2 w-4 h-4' />

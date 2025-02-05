@@ -44,4 +44,7 @@ const ItemPanel: FC<Props> = ({
   )
 }
 export default React.memo(ItemPanel)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

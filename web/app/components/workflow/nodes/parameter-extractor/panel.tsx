@@ -225,4 +225,7 @@ const Panel: FC<NodePanelProps<ParameterExtractorNodeType>> = ({
 }
 
 export default React.memo(Panel)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

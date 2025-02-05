@@ -657,4 +657,7 @@ export default VoiceInput
 
 // export default VoiceInput
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

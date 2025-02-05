@@ -24,4 +24,7 @@ const Header = () => {
 }
 
 export default Header
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

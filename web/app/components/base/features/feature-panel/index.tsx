@@ -114,4 +114,7 @@ const FeaturePanel = ({
   )
 }
 export default memo(FeaturePanel)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

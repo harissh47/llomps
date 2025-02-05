@@ -508,4 +508,7 @@ const Chat: FC<ChatProps> = ({
 };
 
 export default memo(Chat);
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

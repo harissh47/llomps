@@ -82,4 +82,7 @@ export const ImageGalleryTest = () => {
     </div>
   )
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

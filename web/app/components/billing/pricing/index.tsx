@@ -78,4 +78,7 @@ const Pricing: FC<Props> = ({
   )
 }
 export default React.memo(Pricing)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

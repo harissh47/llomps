@@ -37,4 +37,7 @@ export const metadata = {
 }
 
 export default Layout
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

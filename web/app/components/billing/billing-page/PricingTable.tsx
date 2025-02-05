@@ -1,6 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { CheckIcon } from '@heroicons/react/20/solid';
+<<<<<<< HEAD
 import { getDarkThemeClasses } from '@/app/theme'
+=======
+>>>>>>> origin/rupa
 
 type Feature =
     | { name: string; hobby: boolean; pro: boolean; enterprise: boolean; details?: never }
@@ -60,7 +63,11 @@ const PricingTable: React.FC = () => {
     if (!pricingData) return null;
 
     return (
+<<<<<<< HEAD
         <div className={`relative bg-white ${getDarkThemeClasses('background')}`}>
+=======
+        <div className="relative bg-white dark:bg-[#202020] ">
+>>>>>>> origin/rupa
             {/* Sticky header shadow */}
             <div
                 className={`fixed top-0 left-0 right-0 h-24 bg-gradient-to-b from-white dark:from-gray-900 to-transparent pointer-events-none transition-opacity duration-200 z-20  ${isScrolled ? 'opacity-100' : 'opacity-0'
@@ -70,11 +77,19 @@ const PricingTable: React.FC = () => {
             <div className="relative">
                 <table className="w-full border-collapse">
                     {/* <thead className="sticky top-0 bg-white dark:bg-gray-900 z-10"> */}
+<<<<<<< HEAD
                     <thead className={`sticky top-0 bg-white ${getDarkThemeClasses('background')} z-10`}>
 
                         <tr>
                             {/* <th colSpan={pricingData.plans.length + 1} className="p-6 text-center bg-white dark:bg-gray-900"> */}
                             <th colSpan={pricingData.plans.length + 1} className={`p-6 text-center bg-white ${getDarkThemeClasses('background')}`}>
+=======
+                    <thead className="sticky top-0 bg-white dark:bg-[#202020] z-10">
+
+                        <tr>
+                            {/* <th colSpan={pricingData.plans.length + 1} className="p-6 text-center bg-white dark:bg-gray-900"> */}
+                            <th colSpan={pricingData.plans.length + 1} className="p-6 text-center bg-white dark:bg-[#202020]">
+>>>>>>> origin/rupa
 
                                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white">Choose Plan</h2>
                             </th>
@@ -83,11 +98,19 @@ const PricingTable: React.FC = () => {
                         <tr className="border-b dark:border-b-[#5f5f5f]">
 
                             {/* <th className="text-left p-6 bg-white dark:bg-gray-900 " /> */}
+<<<<<<< HEAD
                             <th className={`text-left p-6 bg-white ${getDarkThemeClasses('background')}`} />
 
                             {pricingData.plans.map((plan) => (
                                 // <th key={plan.name} className="p-6 text-center bg-white dark:bg-gray-900">
                                 <th key={plan.name} className={`p-6 text-center bg-white ${getDarkThemeClasses('background')}`}>
+=======
+                            <th className="text-left p-6 bg-white dark:bg-[#202020] " />
+
+                            {pricingData.plans.map((plan) => (
+                                // <th key={plan.name} className="p-6 text-center bg-white dark:bg-gray-900">
+                                <th key={plan.name} className="p-6 text-center bg-white dark:bg-[#202020]">
+>>>>>>> origin/rupa
 
                                     <div className="mb-4 text-lg font-semibold text-gray-900 dark:text-white">
                                         {plan.name}
@@ -110,7 +133,11 @@ const PricingTable: React.FC = () => {
                                         // href={plan.buttonLink}
                                         className={`inline-block px-4 py-2 rounded-md text-sm font-medium transition-colors ${plan.popular
                                             ? 'bg-black dark:bg-[#333333] text-white hover:bg-gray-800 dark:hover:bg-zinc-800'
+<<<<<<< HEAD
                                             : `bg-white  text-black hover:bg-gray-100 ${getDarkThemeClasses('background')} dark:text-white dark:hover:bg-zinc-700`
+=======
+                                            : 'bg-white  text-black hover:bg-gray-100 dark:bg-[#202020] dark:text-white dark:hover:bg-zinc-700'
+>>>>>>> origin/rupa
                                             }`}
                                     >
                                         {plan.buttonText}
@@ -124,7 +151,11 @@ const PricingTable: React.FC = () => {
                         {pricingData.categories.map((category) => (
                             <React.Fragment key={category.name}>
                                 {/* <tr className="bg-white dark:bg-gray-900"> */}
+<<<<<<< HEAD
                                 <tr className={`bg-white ${getDarkThemeClasses('background')}`}>
+=======
+                                <tr className="bg-white dark:bg-[#202020]">
+>>>>>>> origin/rupa
 
                                     <td colSpan={pricingData.plans.length + 1} className="p-6 font-semibold text-left text-gray-900 dark:text-white flex items-center ">
                                         {/* <img src={category.icon.src} alt={category.name} className="w-5 h-5 mr-2" /> */}
@@ -134,7 +165,11 @@ const PricingTable: React.FC = () => {
                                 </tr>
                                 {category.features.map((feature) => (
                                     // <tr key={feature.name} className="bg-white dark:bg-gray-900">
+<<<<<<< HEAD
                                     <tr key={feature.name} className={`bg-white ${getDarkThemeClasses('background')}`}>
+=======
+                                    <tr key={feature.name} className="bg-white dark:bg-[#202020]">
+>>>>>>> origin/rupa
 
                                         {/* <td className="p-6 border-t text-left text-gray-900 dark:text-white"> */}
                                         <td className="p-6 border-t dark:border-t-[#5f5f5f] text-left text-gray-900 dark:text-white">
@@ -163,4 +198,7 @@ const PricingTable: React.FC = () => {
 };
 
 export default PricingTable;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

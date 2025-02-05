@@ -25,4 +25,7 @@ const AppsFull: FC = () => {
   )
 }
 export default React.memo(AppsFull)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

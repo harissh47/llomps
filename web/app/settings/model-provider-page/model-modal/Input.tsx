@@ -71,4 +71,7 @@ const Input: FC<InputProps> = ({
 }
 
 export default Input
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

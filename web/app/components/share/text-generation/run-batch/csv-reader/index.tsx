@@ -68,4 +68,7 @@ const CSVReader: FC<Props> = ({
 }
 
 export default React.memo(CSVReader)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

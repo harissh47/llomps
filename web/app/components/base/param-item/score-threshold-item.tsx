@@ -52,4 +52,7 @@ const ScoreThresholdItem: FC<Props> = ({
   )
 }
 export default React.memo(ScoreThresholdItem)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

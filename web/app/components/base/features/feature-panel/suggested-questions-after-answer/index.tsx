@@ -28,4 +28,7 @@ const SuggestedQuestionsAfterAnswer: FC = () => {
   )
 }
 export default React.memo(SuggestedQuestionsAfterAnswer)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

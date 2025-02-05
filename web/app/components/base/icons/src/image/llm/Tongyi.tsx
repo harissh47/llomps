@@ -13,4 +13,7 @@ const Icon = React.forwardRef<HTMLSpanElement, React.DetailedHTMLProps<React.HTM
 Icon.displayName = 'Tongyi'
 
 export default Icon
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

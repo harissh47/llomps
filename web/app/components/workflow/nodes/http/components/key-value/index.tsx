@@ -57,4 +57,7 @@ const KeyValueList: FC<Props> = ({
   // />
 }
 export default React.memo(KeyValueList)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

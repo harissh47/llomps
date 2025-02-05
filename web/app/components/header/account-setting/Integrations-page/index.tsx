@@ -80,4 +80,7 @@ export default function IntegrationsPage() {
     </>
   )
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

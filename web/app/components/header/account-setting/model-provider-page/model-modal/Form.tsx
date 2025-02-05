@@ -275,4 +275,7 @@ const Form: FC<FormProps> = ({
 }
 
 export default Form
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

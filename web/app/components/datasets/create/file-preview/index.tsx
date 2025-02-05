@@ -6,7 +6,10 @@ import { XMarkIcon } from '@heroicons/react/20/solid'
 import s from './index.module.css'
 import type { CustomFile as File } from '@/models/datasets'
 import { fetchFilePreview } from '@/service/common'
+<<<<<<< HEAD
 import { getDarkThemeClasses } from '@/app/theme'
+=======
+>>>>>>> origin/rupa
 
 type IProps = {
   file?: File
@@ -46,7 +49,11 @@ const FilePreview = ({
 
   return (
     // <div className={cn(s.filePreview)}>
+<<<<<<< HEAD
     <div className={`flex flex-col border-l border-gray-200 dark:border-[#5f5f5f] shrink-0 w-[528px] ${getDarkThemeClasses('background')} h-screen`}>
+=======
+    <div className="flex flex-col border-l border-gray-200dark:border-[#5f5f5f] shrink-0 w-[528px] bg-[#fcfcfd] dark:bg-[#202020] h-screen">
+>>>>>>> origin/rupa
       <div className={cn(s.previewHeader)}>
         {/* <div className={cn(s.title)}> */}
         <div className="flex justify-between items-center text-[#101828] dark:text-white font-semibold text-lg leading-7">
@@ -74,4 +81,7 @@ const FilePreview = ({
 }
 
 export default FilePreview
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

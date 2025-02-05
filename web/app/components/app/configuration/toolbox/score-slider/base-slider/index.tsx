@@ -38,4 +38,7 @@ const Slider: React.FC<ISliderProps> = ({ className, max, min, step, value, disa
 }
 
 export default Slider
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

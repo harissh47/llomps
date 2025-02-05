@@ -179,4 +179,7 @@ const VoiceParamConfig: FC = () => {
 }
 
 export default React.memo(VoiceParamConfig)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

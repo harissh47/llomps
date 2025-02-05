@@ -150,4 +150,7 @@ const LinkEditorComponent = ({
 }
 
 export default memo(LinkEditorComponent)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -49,4 +49,7 @@ const Loading = (
   )
 }
 export default Loading
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

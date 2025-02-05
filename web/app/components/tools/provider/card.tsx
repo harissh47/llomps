@@ -9,7 +9,11 @@ import { Tag01 } from '@/app/components/base/icons/src/vender/line/financeAndECo
 import I18n from '@/context/i18n'
 import { getLanguage } from '@/i18n/language'
 import { useStore as useLabelStore } from '@/app/components/tools/labels/store'
+<<<<<<< HEAD
 
+=======
+import { getDarkThemeClasses } from '@/app/theme'
+>>>>>>> origin/rupa
 type Props = {
   active: boolean
   collection: Collection
@@ -37,9 +41,15 @@ const ProviderCard = ({
 
   return (
     // <div className={cn('group flex col-span-1 bg-white border-2 border-solid border-transparent rounded-xl shadow-sm min-h-[160px] flex flex-col transition-all duration-200 ease-in-out cursor-pointer hover:shadow-lg', active && '!border-primary-400')} onClick={onSelect}>
+<<<<<<< HEAD
       <div className={cn('group flex col-span-1 bg-white border-2 border-solid border-transparent rounded-xl shadow-sm min-h-[160px] flex flex-col transition-all duration-200 ease-in-out cursor-pointer hover:shadow-lg dark:bg-[#1A1A1A] dark:border-2 dark:border-[#3F3F3F] dark:border-solid dark:rounded-xl dark:shadow-sm', active && '!border-primary-400')} onClick={onSelect}>
       {/* <div className='flex pt-[14px] px-[14px] pb-3 h-[66px] items-center gap-3 grow-0 shrink-0'> */}
       <div className='flex pt-[14px] px-[14px] pb-3 h-[66px] items-center gap-3 grow-0 shrink-0 dark:text-white'>
+=======
+      <div className={cn(`group flex col-span-1 bg-white border-2 border-solid border-transparent rounded-xl shadow-sm min-h-[160px] flex flex-col transition-all duration-200 ease-in-out cursor-pointer hover:shadow-lg ${getDarkThemeClasses('background4')} border-2 ${getDarkThemeClasses('border')} border-solid rounded-xl shadow-sm', active && '!border-primary-400`)} onClick={onSelect}>
+      {/* <div className='flex pt-[14px] px-[14px] pb-3 h-[66px] items-center gap-3 grow-0 shrink-0'> */}
+      <div className={`flex pt-[14px] px-[14px] pb-3 h-[66px] items-center gap-3 grow-0 shrink-0 ${getDarkThemeClasses('text')}`}>
+>>>>>>> origin/rupa
         <div className='relative shrink-0'>
           {typeof collection.icon === 'string' && (
             <div className='w-10 h-10 bg-center bg-cover bg-no-repeat rounded-md' style={{ backgroundImage: `url(${collection.icon})` }}/>
@@ -54,7 +64,11 @@ const ProviderCard = ({
         </div>
         <div className='grow w-0 py-[1px]'>
           {/* <div className='flex items-center text-sm leading-5 font-semibold text-gray-800'> */}
+<<<<<<< HEAD
           <div className='flex items-center text-sm leading-5 font-semibold text-gray-800 dark:text-white'>
+=======
+          <div className={`flex items-center text-sm leading-5 font-semibold text-gray-800 ${getDarkThemeClasses('text')}`}>
+>>>>>>> origin/rupa
             <div className='truncate' title={collection.label[language]}>{collection.label[language]}</div>
           </div>
           <div className='flex items-center text-[10px] leading-[18px] text-gray-500 font-medium'>
@@ -72,7 +86,11 @@ const ProviderCard = ({
       > */}
         <div
         className={cn(
+<<<<<<< HEAD
           'grow mb-2 px-[14px] max-h-[72px] text-xs leading-normal text-gray-500 dark:text-white',
+=======
+          `grow mb-2 px-[14px] max-h-[72px] text-xs leading-normal text-gray-500 ${getDarkThemeClasses('text')}`,
+>>>>>>> origin/rupa
           collection.labels?.length ? 'line-clamp-2' : 'line-clamp-4',
           collection.labels?.length > 0 && 'group-hover:line-clamp-2 group-hover:max-h-[36px]',
         )}
@@ -85,7 +103,11 @@ const ProviderCard = ({
           <div className='relative w-full flex items-center gap-1 py-[7px] rounded-md text-gray-500' title={labelContent}>
             <Tag01 className='shrink-0 w-3 h-3' />
             {/* <div className='grow text-xs text-start leading-[18px] font-normal truncate'>{labelContent}</div> */}
+<<<<<<< HEAD
             <div className='grow text-xs text-start leading-[18px] font-normal truncate dark:text-white'>{labelContent}</div>
+=======
+            <div className={`grow text-xs text-start leading-[18px] font-normal truncate ${getDarkThemeClasses('text')}`}>{labelContent}</div>
+>>>>>>> origin/rupa
           </div>
         </div>
       )}
@@ -93,4 +115,7 @@ const ProviderCard = ({
   )
 }
 export default ProviderCard
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

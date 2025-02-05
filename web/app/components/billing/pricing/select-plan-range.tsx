@@ -54,4 +54,7 @@ const SelectPlanRange: FC<Props> = ({
   )
 }
 export default React.memo(SelectPlanRange)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

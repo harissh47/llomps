@@ -210,7 +210,13 @@ const OpeningStatement: FC<IOpeningStatementProps> = ({
       <div className='mt-1.5 flex flex-wrap'>
         {notEmptyQuestions.map((question, index) => {
           return (
+<<<<<<< HEAD
             <div key={index} className='mt-1 mr-1 max-w-full truncate last:mr-0 shrink-0 leading-8 items-center px-2.5 rounded-lg border border-gray-200 shadow-xs bg-white text-[13px] font-normal text-gray-900 cursor-pointer'>
+=======
+            // <div key={index} className='mt-1 mr-1 max-w-full truncate last:mr-0 shrink-0 leading-8 items-center px-2.5 rounded-lg border border-gray-200 shadow-xs bg-white text-[13px] font-normal text-gray-900 cursor-pointer'>
+            <div key={index} className='mt-1 mr-1 max-w-full truncate last:mr-0 shrink-0 leading-8 items-center px-2.5 rounded-lg border border-gray-200 dark:border-[#5f5f5f] shadow-xs bg-white dark:bg-[#202020] text-[13px] font-normal text-gray-900 dark:text-[#667085] cursor-pointer'>
+
+>>>>>>> origin/rupa
               {question}
             </div>
           )
@@ -232,7 +238,13 @@ const OpeningStatement: FC<IOpeningStatementProps> = ({
       hasHeaderBottomBorder={!hasValue}
       isFocus={isFocus}
     >
+<<<<<<< HEAD
       <div className='text-gray-700 text-sm'>
+=======
+      {/* <div className='text-gray-700 text-sm'> */}
+      <div className='text-gray-700 dark:text-[#6b7280] text-sm'>
+
+>>>>>>> origin/rupa
         {(hasValue || (!hasValue && isFocus)) ? (
           <>
             {isFocus
@@ -274,4 +286,7 @@ const OpeningStatement: FC<IOpeningStatementProps> = ({
   )
 }
 export default React.memo(OpeningStatement)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -218,4 +218,7 @@ const ToolList: FC<Props> = ({
   )
 }
 export default React.memo(ToolList)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

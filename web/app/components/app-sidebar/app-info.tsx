@@ -477,4 +477,7 @@ const AgentIcon=()=>(
 }
 
 export default React.memo(AppInfo)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

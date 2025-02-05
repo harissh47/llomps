@@ -102,4 +102,7 @@ const Item = ({
 }
 
 export default memo(Item)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

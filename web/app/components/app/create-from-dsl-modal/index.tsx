@@ -17,8 +17,12 @@ import { XClose } from "@/app/components/base/icons/src/vender/line/general";
 import { NEED_REFRESH_APP_LIST_KEY } from "@/config";
 import { getRedirection } from "@/utils/app-redirection";
 import DSLFileList from "./DslFileList";
+<<<<<<< HEAD
 import { getDarkThemeClasses } from '@/app/theme'
 
+=======
+import { getDarkThemeClasses } from "@/utils/theme";
+>>>>>>> origin/rupa
 type CreateFromDSLModalProps = {
   show: boolean;
   onSuccess?: () => void;
@@ -83,7 +87,14 @@ const CreateFromDSLModal = ({
     <Modal
       wrapperClassName="z-20"
       // className='px-8 py-6 max-w-[520px] w-[520px] rounded-xl'
+<<<<<<< HEAD
       className={`px-8 py-6 max-w-[520px] w-[520px] rounded-xl ${getDarkThemeClasses('background')} dark:shadow-slate-700 dark:shadow-sm`}
+=======
+      // className="px-8 py-6 max-w-[520px] w-[520px] rounded-xl dark:bg-[#202020] dark:shadow-slate-700 dark:shadow-sm"
+      className={`px-8 py-6 max-w-[520px] w-[520px] rounded-xl ${getDarkThemeClasses('main_background')}
+ ${getDarkThemeClasses('shadow1')} shadow-sm`}
+
+>>>>>>> origin/rupa
       isShow={show}
       onClose={() => {}}
     >
@@ -94,7 +105,11 @@ const CreateFromDSLModal = ({
         onClick={onClose}
       >
         {/* <XClose className='w-4 h-4 text-gray-500' /> */}
+<<<<<<< HEAD
         <XClose className="w-4 h-4 text-gray-500 dark:text-white" />
+=======
+        <XClose className={`w-4 h-4 text-gray-500 ${getDarkThemeClasses('text')} `} />
+>>>>>>> origin/rupa
       </div>
       {/* Tabs Section */}
       <div className="flex space-x-4 ">
@@ -102,8 +117,14 @@ const CreateFromDSLModal = ({
           // className={`text-sm font-medium ${activeTab === 0 ? 'border-b-2 border-[#b7e724]' : 'text-gray-700 hover:text-[#b7e724] hover:border-b-2 hover:border-[#b7e724]'} transition-all`}
           className={`text-sm font-medium ${
             activeTab === 0
+<<<<<<< HEAD
               ? "border-b-2 border-[#b7e724] dark:text-white"
               : "text-gray-700 dark:text-[#A1A2B6] hover:text-[#b7e724] hover:border-b-2 hover:border-[#b7e724] dark:hover:text-[#b7e724]"
+=======
+              ? `border-b-2 border-[#b7e724] ${getDarkThemeClasses('text')}
+`
+              : `text-gray-700 ${getDarkThemeClasses('sub_text3')} hover:text-[#b7e724] hover:border-b-2 hover:border-[#b7e724] ${getDarkThemeClasses('texthover')}`
+>>>>>>> origin/rupa
           } transition-all`}
           onClick={() => setActiveTab(0)}
         >
@@ -113,8 +134,13 @@ const CreateFromDSLModal = ({
           // className={`text-sm font-medium ${activeTab === 1 ? ' border-b-2 border-[#b7e724]' : 'text-gray-700 hover:text-[#b7e724] hover:border-b-2 hover:border-[#b7e724]'} transition-all`}
           className={`text-sm font-medium ${
             activeTab === 1
+<<<<<<< HEAD
               ? " border-b-2 border-[#b7e724] dark:text-white"
               : "text-gray-700 dark:text-[#A1A2B6] hover:text-[#b7e724] hover:border-b-2 hover:border-[#b7e724] dark:hover:text-[#b7e724]"
+=======
+              ? `border-b-2 border-[#b7e724] ${getDarkThemeClasses('text')}`
+              : `text-gray-700 ${getDarkThemeClasses('sub_text3')} hover:text-[#b7e724] hover:border-b-2 hover:border-[#b7e724] ${getDarkThemeClasses('texthover')}`
+>>>>>>> origin/rupa
           } transition-all`}
           onClick={() => setActiveTab(1)}
         >
@@ -126,7 +152,11 @@ const CreateFromDSLModal = ({
       <div className="pt-4">
         {activeTab === 0 && (
           <div>
+<<<<<<< HEAD
             <div className="relative pb-2 text-xl font-medium leading-[30px] text-gray-900 dark:text-white">
+=======
+            <div className={`relative pb-2 text-xl font-medium leading-[30px] text-gray-900 ${getDarkThemeClasses('text')}`}>
+>>>>>>> origin/rupa
               Upload File to Create App
             </div>
             <Uploader file={currentFile} updateFile={handleFile} />
@@ -134,11 +164,20 @@ const CreateFromDSLModal = ({
             <div className="pt-6 flex justify-end">
               {/* <Button className='mr-2 text-gray-700 text-sm font-medium' onClick={onClose}>{t('app.newApp.Cancel')}</Button> */}
               <Button
+<<<<<<< HEAD
                 className="mr-2 text-gray-700 text-sm font-medium dark:bg-[#333333] dark:text-white dark:border-[#5F5F5F] dark:hover:bg-zinc-800"
                 onClick={onClose}
               >
                 {t("app.newApp.Cancel")}
               </Button>
+=======
+  className={`mr-2 text-gray-700 text-sm font-medium ${getDarkThemeClasses('background1')} ${getDarkThemeClasses('text')} ${getDarkThemeClasses('border')} ${getDarkThemeClasses('hover')}`}
+  onClick={onClose}
+>
+  {t("app.newApp.Cancel")}
+</Button>
+
+>>>>>>> origin/rupa
               <Button
                 className="text-sm font-medium"
                 disabled={isAppsFull || !currentFile}
@@ -157,4 +196,7 @@ const CreateFromDSLModal = ({
 };
 
 export default CreateFromDSLModal;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

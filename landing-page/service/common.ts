@@ -16,7 +16,10 @@ type RetrievalMethodsRes = {
   'retrieval_method': RETRIEVE_METHOD[]
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa
 export const fetchSupportRetrievalMethods: Fetcher<RetrievalMethodsRes, string> = (url) => {
   return get<RetrievalMethodsRes>(url)
 }

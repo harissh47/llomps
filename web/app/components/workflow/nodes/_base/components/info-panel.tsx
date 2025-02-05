@@ -28,4 +28,7 @@ const InfoPanel: FC<Props> = ({
   )
 }
 export default React.memo(InfoPanel)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

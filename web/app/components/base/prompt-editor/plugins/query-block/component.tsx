@@ -31,4 +31,7 @@ const QueryBlockComponent: FC<QueryBlockComponentProps> = ({
 }
 
 export default QueryBlockComponent
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

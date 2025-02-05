@@ -130,4 +130,7 @@ const ParamConfigContent: FC = () => {
 }
 
 export default React.memo(ParamConfigContent)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -48,4 +48,7 @@ export const CopyIcon = ({ content }: Props) => {
 }
 
 export default CopyIcon
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

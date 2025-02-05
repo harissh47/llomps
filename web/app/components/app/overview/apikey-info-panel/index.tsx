@@ -71,4 +71,7 @@ const APIKeyInfoPanel: FC = () => {
   )
 }
 export default React.memo(APIKeyInfoPanel)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

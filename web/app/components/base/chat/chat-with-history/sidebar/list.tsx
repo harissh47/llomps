@@ -44,4 +44,7 @@ const List: FC<ListProps> = ({
 }
 
 export default List
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

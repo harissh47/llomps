@@ -43,4 +43,7 @@ const ModelIcon: FC<ModelIconProps> = ({
 }
 
 export default ModelIcon
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

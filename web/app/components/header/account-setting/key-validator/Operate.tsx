@@ -85,4 +85,7 @@ const Operate = ({
 }
 
 export default Operate
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

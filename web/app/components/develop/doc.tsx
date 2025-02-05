@@ -44,4 +44,7 @@ const Doc = ({ appDetail }: IDocProps) => {
 }
 
 export default Doc
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

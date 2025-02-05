@@ -39,4 +39,7 @@ const ParamsConfig: FC = () => {
   )
 }
 export default memo(ParamsConfig)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

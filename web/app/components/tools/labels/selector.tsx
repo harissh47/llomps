@@ -101,13 +101,21 @@ const LabelSelector: FC<LabelSelectorProps> = ({
         </PortalToFollowElemTrigger>
         <PortalToFollowElemContent className='z-[1040]'>
           {/* <div className='relative w-[591px] bg-white rounded-lg border-[0.5px] border-gray-200  shadow-lg'> */}
+<<<<<<< HEAD
           <div className='relative w-[591px] bg-white ${getDarkThemeClasses('background')} rounded-lg border-[0.5px] border-gray-200 dark:border-[#5f5f5f] shadow-lg overflow-hidden'>
+=======
+          <div className='relative w-[591px] bg-white dark:bg-[#202020] rounded-lg border-[0.5px] border-gray-200 dark:border-[#5f5f5f] shadow-lg overflow-hidden'>
+>>>>>>> origin/rupa
             <div className='p-2 border-b-[0.5px] border-black/5'>
               <SearchInput white value={keywords} onChange={handleKeywordsChange} />
            
             </div>
             {/* <div className='p-1 max-h-[264px] overflow-y-auto'> */}
+<<<<<<< HEAD
             <div className='p-1 max-h-[264px] overflow-y-auto ${getDarkThemeClasses('background')}'>
+=======
+            <div className='p-1 max-h-[264px] overflow-y-auto dark:bg-[#202020]'>
+>>>>>>> origin/rupa
               {filteredLabelList.map(label => (
                 <div
                   key={label.name}
@@ -141,4 +149,7 @@ const LabelSelector: FC<LabelSelectorProps> = ({
 }
 
 export default LabelSelector
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

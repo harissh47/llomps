@@ -681,4 +681,7 @@ const ConversationList: FC<IConversationList> = ({ logs, appDetail, onRefresh })
 }
 
 export default ConversationList
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

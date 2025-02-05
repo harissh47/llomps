@@ -77,4 +77,7 @@ const FormGeneration: FC<FormGenerationProps> = ({
 }
 
 export default FormGeneration
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -121,4 +121,7 @@ const ParamConfigContent = ({
 }
 
 export default React.memo(ParamConfigContent)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

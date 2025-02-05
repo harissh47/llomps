@@ -25,4 +25,7 @@ const TracingPanel: FC<TracingPanelProps> = ({ list, onShowIterationDetail }) =>
 }
 
 export default TracingPanel
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

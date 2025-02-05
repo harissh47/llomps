@@ -15,4 +15,7 @@ const LoaidingAnim: FC<ILoaidingAnimProps> = ({
   )
 }
 export default React.memo(LoaidingAnim)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

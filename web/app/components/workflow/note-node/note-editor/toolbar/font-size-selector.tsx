@@ -86,4 +86,7 @@ const FontSizeSelector = () => {
 }
 
 export default memo(FontSizeSelector)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

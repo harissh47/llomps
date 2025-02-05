@@ -454,4 +454,7 @@ const Chat: FC<IChatProps> = ({
   )
 }
 export default React.memo(Chat)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

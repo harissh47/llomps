@@ -72,4 +72,7 @@ const RenameModal: FC<Props> = ({
   )
 }
 export default React.memo(RenameModal)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

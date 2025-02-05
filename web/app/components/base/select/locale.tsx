@@ -116,4 +116,7 @@ export function InputSelect({
     </div>
   )
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

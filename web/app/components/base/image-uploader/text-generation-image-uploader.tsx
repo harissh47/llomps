@@ -146,4 +146,7 @@ const TextGenerationImageUploader: FC<TextGenerationImageUploaderProps> = ({
 }
 
 export default TextGenerationImageUploader
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

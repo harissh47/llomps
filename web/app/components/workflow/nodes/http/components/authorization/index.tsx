@@ -154,4 +154,7 @@ const Authorization: FC<Props> = ({
   )
 }
 export default React.memo(Authorization)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -71,4 +71,7 @@ const ChangeBlock = ({
 }
 
 export default memo(ChangeBlock)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

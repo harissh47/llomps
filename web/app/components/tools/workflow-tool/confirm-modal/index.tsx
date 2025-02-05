@@ -45,4 +45,7 @@ const ConfirmModal = ({ show, onConfirm, onClose }: ConfirmModalProps) => {
 }
 
 export default ConfirmModal
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

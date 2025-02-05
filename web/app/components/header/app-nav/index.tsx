@@ -166,4 +166,7 @@ const AppNav = ({
 }
 
 export default AppNav
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

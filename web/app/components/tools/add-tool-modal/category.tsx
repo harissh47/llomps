@@ -68,4 +68,7 @@ const Category = ({
   )
 }
 export default Category
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

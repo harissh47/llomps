@@ -24,11 +24,23 @@ const WarningMask: FC<IWarningMaskProps> = ({
   return (
     // <div className={`${s.mask} absolute z-10 inset-0 pt-16`}
     <div
+<<<<<<< HEAD
   className="absolute z-10 inset-0 pt-16 bg-[rgba(239,244,255,0.9)] backdrop-blur-[2px]"
 >
       <div className='mx-auto px-10'>
         <div className={`${s.icon} flex items-center justify-center w-11 h-11 rounded-xl bg-white`}>{warningIcon}</div>
         <div className='mt-4 text-[24px] leading-normal font-semibold text-gray-800'>
+=======
+  // className="absolute z-10 inset-0 pt-16 bg-[rgba(239,244,255,0.9)] backdrop-blur-[2px]"
+  className="absolute z-10 inset-0 pt-16 bg-white dark:bg-[#202020] backdrop-blur-[2px]"
+
+>
+      <div className='mx-auto px-10'>
+        <div className={`${s.icon} flex items-center justify-center w-11 h-11 rounded-xl bg-white`}>{warningIcon}</div>
+        {/* <div className='mt-4 text-[24px] leading-normal font-semibold text-gray-800'> */}
+        <div className='mt-4 text-[24px] leading-normal font-semibold text-gray-800 dark:text-[#fcfcfc]'>
+
+>>>>>>> origin/rupa
           {title}
         </div>
         <div className='mt-3 text-base text-gray-500'>
@@ -43,4 +55,7 @@ const WarningMask: FC<IWarningMaskProps> = ({
   )
 }
 export default React.memo(WarningMask)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

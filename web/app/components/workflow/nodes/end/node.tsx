@@ -73,4 +73,7 @@ const Node: FC<NodeProps<EndNodeType>> = ({
 }
 
 export default React.memo(Node)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

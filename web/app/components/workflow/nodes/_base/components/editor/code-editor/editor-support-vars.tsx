@@ -168,4 +168,7 @@ const CodeEditor: FC<Props> = ({
   )
 }
 export default React.memo(CodeEditor)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

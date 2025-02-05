@@ -106,4 +106,7 @@ const PublishWithMultipleModel: FC<PublishWithMultipleModelProps> = ({
 }
 
 export default PublishWithMultipleModel
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

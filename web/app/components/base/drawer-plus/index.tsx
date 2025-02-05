@@ -5,7 +5,10 @@ import cn from 'classnames'
 import Drawer from '@/app/components/base/drawer'
 import { XClose } from '@/app/components/base/icons/src/vender/line/general'
 import useBreakpoints, { MediaType } from '@/hooks/use-breakpoints'
+<<<<<<< HEAD
 import { getDarkThemeClasses } from '@/app/theme'
+=======
+>>>>>>> origin/rupa
 
 type Props = {
   isShow: boolean
@@ -67,7 +70,11 @@ const DrawerPlus: FC<Props> = ({
         ref={ref}
       >
         {/* <div className={cn(headerClassName, 'shrink-0 border-b border-b-gray-100 py-4')}> */}
+<<<<<<< HEAD
         <div className={cn(headerClassName, ` shrink-0 border-b border-b-gray-100 dark:border-b-[#5f5f5f] py-4 ${getDarkThemeClasses('background')} `)}>
+=======
+        <div className={cn(headerClassName, 'shrink-0 border-b border-b-gray-100 dark:border-b-[#5f5f5f] py-4 dark:bg-[#202020]')}>
+>>>>>>> origin/rupa
           
           <div className='flex justify-between items-center pl-6 pr-5 h-6'>
             {/* <div className='text-base font-semibold text-gray-900'> */}
@@ -91,7 +98,11 @@ const DrawerPlus: FC<Props> = ({
           )}
         </div>
         {/* <div className='grow overflow-y-auto'> */}
+<<<<<<< HEAD
         <div className={`grow overflow-y-auto ${getDarkThemeClasses('background')}`}>
+=======
+        <div className='grow overflow-y-auto dark:bg-[#202020]'>
+>>>>>>> origin/rupa
           {body}
         </div>
         {foot && (
@@ -104,4 +115,7 @@ const DrawerPlus: FC<Props> = ({
   )
 }
 export default React.memo(DrawerPlus)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

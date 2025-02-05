@@ -69,4 +69,7 @@ const OptionsList: FC<Props> = ({
 }
 
 export default React.memo(OptionsList)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

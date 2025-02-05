@@ -3,11 +3,18 @@ import { useState } from 'react'
 import cn from 'classnames'
 import { useDebounceFn } from 'ahooks'
 import { useContext } from 'use-context-selector'
+<<<<<<< HEAD
+=======
+import { getDarkThemeClasses } from '@/app/theme'
+>>>>>>> origin/rupa
 import { useTranslation } from 'react-i18next'
 import { useStore as useTagStore } from './store'
 import TagRemoveModal from './tag-remove-modal'
 import { Edit03, Trash03 } from '@/app/components/base/icons/src/vender/line/general'
+<<<<<<< HEAD
 import { getDarkThemeClasses } from '@/app/theme'
+=======
+>>>>>>> origin/rupa
 import type { Tag } from '@/app/components/base/tag-management/constant'
 import { ToastContext } from '@/app/components/base/toast'
 import {
@@ -102,6 +109,7 @@ const TagItemEditor: FC<TagItemEditorProps> = ({
   return (
     <>
       {/* <div className={cn('shrink-0 flex items-center gap-0.5 pr-1 pl-2 py-1 rounded-lg border border-gray-200 text-sm leading-5 text-gray-700')}> */}
+<<<<<<< HEAD
       <div className={cn('shrink-0 flex items-center gap-0.5 pr-1 pl-2 py-1 rounded-lg border border-gray-200 dark:border-[#5F5F5F] text-sm leading-5 text-gray-700')}>
         {!isEditing && (
           <>
@@ -111,6 +119,17 @@ const TagItemEditor: FC<TagItemEditorProps> = ({
             </div>
             {/* <div className='shrink-0 px-1 text-sm leading-4.5 text-gray-500 font-medium'>{tag.binding_count}</div> */}
             <div className='shrink-0 px-1 text-sm leading-4.5 text-gray-500 dark:text-[#F5F5F5] font-medium'>{tag.binding_count}</div>
+=======
+      <div className={cn(`shrink-0 flex items-center gap-0.5 pr-1 pl-2 py-1 rounded-lg border border-gray-200 ${getDarkThemeClasses('border')} text-sm leading-5 text-gray-700`)}>
+        {!isEditing && (
+          <>
+            {/* <div className='text-sm leading-5 text-gray-700'> */}
+            <div className={`text-sm leading-5 text-gray-700 ${getDarkThemeClasses('sub_text1')}`}>
+              {tag.name}
+            </div>
+            {/* <div className='shrink-0 px-1 text-sm leading-4.5 text-gray-500 font-medium'>{tag.binding_count}</div> */}
+            <div className={`shrink-0 px-1 text-sm leading-4.5 text-gray-500 ${getDarkThemeClasses('sub_text1')} font-medium`}>{tag.binding_count}</div>
+>>>>>>> origin/rupa
             <div className='group/edit shrink-0 p-1 rounded-md cursor-pointer hover:bg-black/5' onClick={() => setIsEditing(true)}>
               <Edit03 className='w-3 h-3 text-gray-500 group-hover/edit:text-gray-800' />
             </div>
@@ -127,7 +146,11 @@ const TagItemEditor: FC<TagItemEditorProps> = ({
         {isEditing && (
           <input
             // className='shrink-0 outline-none appearance-none placeholder:text-gray-300 caret-primary-600'
+<<<<<<< HEAD
             className={`shrink-0 outline-none appearance-none placeholder:text-gray-300 caret-primary-600 dark:text-[#FCFCFC] ${getDarkThemeClasses('background')}`}
+=======
+            className={`shrink-0 outline-none appearance-none placeholder:text-gray-300 caret-primary-600 ${getDarkThemeClasses('sub_text1')} ${getDarkThemeClasses('background3')}`}
+>>>>>>> origin/rupa
             autoFocus
             value={name}
             onChange={e => setName(e.target.value)}
@@ -150,4 +173,7 @@ const TagItemEditor: FC<TagItemEditorProps> = ({
 }
 
 export default TagItemEditor
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

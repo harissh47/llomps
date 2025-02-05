@@ -140,4 +140,7 @@ export default function PricingCard({ plan, isYearly }: PricingCardProps) {
         </div>
     );
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

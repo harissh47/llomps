@@ -419,4 +419,7 @@ const NormalForm = () => {
 };
 
 export default NormalForm;
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

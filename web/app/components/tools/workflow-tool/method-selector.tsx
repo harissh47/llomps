@@ -75,4 +75,7 @@ const MethodSelector: FC<MethodSelectorProps> = ({
 }
 
 export default MethodSelector
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

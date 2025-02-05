@@ -85,4 +85,7 @@ const DebugAndPreview = () => {
 }
 
 export default memo(DebugAndPreview)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -19,4 +19,7 @@ const RestoringTitle = () => {
 }
 
 export default memo(RestoringTitle)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -7,7 +7,11 @@ import CreateAppModal from '@/app/components/app/create-app-modal'
 import CreateFromDSLModal from '@/app/components/app/create-from-dsl-modal'
 import { useProviderContext } from '@/context/provider-context'
 import { FileArrow01, FilePlus01, FilePlus02 } from '@/app/components/base/icons/src/vender/line/files'
+<<<<<<< HEAD
 
+=======
+import { getDarkThemeClasses } from '@/app/theme';
+>>>>>>> origin/rupa
 export type CreateAppCardProps = {
   onSuccess?: () => void
 }
@@ -96,7 +100,13 @@ const CreateAppCard = forwardRef<HTMLAnchorElement, CreateAppCardProps>(({ onSuc
         onClick={() => setShowNewAppModal(true)}> */}
       {/* <div className='flex items-center px-6 py-2 rounded-tl-full rounded-br-full border-[0.5px] border-transparent text-[13px] font-medium leading-[18px] text-gray-600 dark:text-[#E1E1E1] cursor-pointer hover:bg-gray-300 hover:text-primary-600 bg-white  dark:bg-[#1A1A1A] shadow-xs transition-all duration-200  bg-white border-gray-200 dark:hover:bg-zinc-800  text-primary-600 hover:bg-white dark:text-whit-27 dark:border-2 dark:border-[#3F3F3F] dark:border-solid dark:rounded-tl-full dark:rounded-br-full dark:shadow-sm' */}
         {/* <div className='flex items-center px-6 py-2 rounded-tl-full rounded-br-full border-[0.5px] border-transparent text-[13px] font-medium leading-[18px] text-gray-600 cursor-pointer hover:bg-gray-300 hover:text-primary-600 bg-white  dark:bg-[#1A1A1A] shadow-xs transition-all duration-200  bg-white border-gray-200 dark:hover:bg-zinc-800  text-primary-600 hover:bg-white dark:text-whit-27 dark:border-2 dark:border-[#3F3F3F] dark:border-solid dark:rounded-tl-full dark:rounded-br-full dark:shadow-sm' */}
+<<<<<<< HEAD
         <div className='flex items-center px-6 py-2 rounded-tl-full rounded-br-full text-[13px] font-medium leading-[18px] text-gray-600 cursor-pointer hover:bg-gray-300 hover:text-primary-600 bg-white  dark:bg-[#333333] shadow-xs transition-all duration-200  bg-white border-gray-200 dark:hover:bg-zinc-800  text-primary-600 hover:bg-white dark:text-whit-27 '
+=======
+        {/* <div className='flex items-center px-6 py-2 rounded-tl-full rounded-br-full text-[13px] font-medium leading-[18px] text-gray-600 cursor-pointer hover:bg-gray-300 hover:text-primary-600 bg-white  dark:bg-[#333333] shadow-xs transition-all duration-200  bg-white border-gray-200 dark:hover:bg-zinc-800  text-primary-600 hover:bg-white dark:text-whit-27 ' */}
+        <div className={`flex items-center px-6 py-2 rounded-tl-full rounded-br-full text-[13px] font-medium leading-[18px] text-gray-600 cursor-pointer hover:bg-gray-300 hover:text-primary-600 bg-white shadow-xs transition-all duration-200  bg-white border-gray-200 text-primary-600 hover:bg-white ${getDarkThemeClasses('background3')} ${getDarkThemeClasses('green_text')}`}
+
+>>>>>>> origin/rupa
 
         onClick={() => setShowNewAppModal(true)}>
         {/* <FilePlus01 className='shrink-0 mr-2 w-4 h-4' /> */}
@@ -110,8 +120,13 @@ const CreateAppCard = forwardRef<HTMLAnchorElement, CreateAppCardProps>(({ onSuc
         onClick={() => setShowCreateFromDSLModal(true)}> */}
       {/* <div className='flex items-center px-6 py-2 rounded-tl-full rounded-br-full border-[0.5px] border-transparent text-[13px] font-medium leading-[18px] text-gray-600 dark:text-[#E1E1E1] cursor-pointer hover:bg-gray-300 hover:text-primary-600 bg-white  dark:bg-[#1A1A1A] shadow-xs transition-all duration-200  bg-white border-gray-200 dark:hover:bg-zinc-800  text-primary-600 hover:bg-white dark:text-whit-27 dark:border-2 dark:border-[#3F3F3F] dark:border-solid dark:rounded-tl-full dark:rounded-br-full dark:shadow-sm' */}
       {/* <div className='flex items-center px-6 py-2 rounded-tl-full rounded-br-full border-[0.5px] border-transparent text-[13px] font-medium leading-[18px] text-gray-600 cursor-pointer hover:bg-gray-300 hover:text-primary-600 bg-white  dark:bg-[#1A1A1A] shadow-xs transition-all duration-200  bg-white border-gray-200 dark:hover:bg-zinc-800  text-primary-600 hover:bg-white dark:text-whit-27 dark:border-2 dark:border-[#3F3F3F] dark:border-solid dark:rounded-tl-full dark:rounded-br-full dark:shadow-sm' */}
+<<<<<<< HEAD
       <div className='flex items-center px-6 py-2 rounded-tl-full rounded-br-full text-[13px] font-medium leading-[18px] text-gray-600 cursor-pointer hover:bg-gray-300 hover:text-primary-600 bg-white  dark:bg-[#333333] shadow-xs transition-all duration-200  bg-white border-gray-200 dark:hover:bg-zinc-800  text-primary-600 hover:bg-white dark:text-whit-27 '
 
+=======
+      {/* <div className='flex items-center px-6 py-2 rounded-tl-full rounded-br-full text-[13px] font-medium leading-[18px] text-gray-600 cursor-pointer hover:bg-gray-300 hover:text-primary-600 bg-white  dark:bg-[#333333] shadow-xs transition-all duration-200  bg-white border-gray-200 dark:hover:bg-zinc-800  text-primary-600 hover:bg-white dark:text-whit-27 ' */}
+      <div className={`flex items-center px-6 py-2 rounded-tl-full rounded-br-full text-[13px] font-medium leading-[18px] text-gray-600 cursor-pointer hover:bg-gray-300 hover:text-primary-600 bg-white shadow-xs transition-all duration-200  bg-white border-gray-200 text-primary-600 hover:bg-white  ${getDarkThemeClasses('background3')} ${getDarkThemeClasses('green_text')}`}
+>>>>>>> origin/rupa
         onClick={() => setShowCreateFromDSLModal(true)}>
         {/* <FileArrow01 className='shrink-0 mr-2 w-4 h-4' /> */}
         <ImportIcon />
@@ -150,4 +165,7 @@ const CreateAppCard = forwardRef<HTMLAnchorElement, CreateAppCardProps>(({ onSuc
 })
 
 export default CreateAppCard
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

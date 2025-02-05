@@ -170,7 +170,11 @@ const AddToolModal: FC<Props> = ({
             height: 'calc(100vh - 16px)',
           }}
         >
+<<<<<<< HEAD
           <div className='relative shrink-0 w-[200px] pb-3 bg-gray-100 ${getDarkThemeClasses('background')} rounded-l-xl border-r-[0.5px] border-black/2 overflow-y-auto'>
+=======
+          <div className='relative shrink-0 w-[200px] pb-3 bg-gray-100 dark:bg-[#202020] rounded-l-xl border-r-[0.5px] border-black/2 overflow-y-auto'>
+>>>>>>> origin/rupa
             <div className='sticky top-0 left-0 right-0'>
               <div className='sticky top-0 left-0 right-0 px-5 py-3 text-md font-semibold text-gray-900 dark:text-white'>{t('tools.addTool')}</div>
               <div className='px-3 pt-2 pb-4'>
@@ -235,4 +239,7 @@ const AddToolModal: FC<Props> = ({
   )
 }
 export default React.memo(AddToolModal)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

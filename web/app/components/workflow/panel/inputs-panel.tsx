@@ -116,4 +116,7 @@ const InputsPanel = ({ onRun }: Props) => {
 }
 
 export default memo(InputsPanel)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

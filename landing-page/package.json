@@ -9,15 +9,25 @@
     "lint": "next lint"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@mdx-js/loader": "^2.3.0",
     "@mdx-js/react": "^2.3.0",
     "@emoji-mart/data": "^1.1.2",
     "@floating-ui/react": "^0.25.2",
     "@heroicons/react": "^2.0.16",
+=======
+    "@emoji-mart/data": "^1.1.2",
+    "@floating-ui/react": "^0.25.2",
+    "@headlessui/react": "^1.7.13",
+    "@heroicons/react": "^2.0.16",
+    "@mdx-js/loader": "^2.3.0",
+    "@mdx-js/react": "^2.3.0",
+>>>>>>> origin/rupa
     "@monaco-editor/react": "^4.6.0",
     "@next/mdx": "^14.0.4",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.9",
+<<<<<<< HEAD
     "@headlessui/react": "^1.7.13",
     "ahooks": "^3.7.5",
     "next": "14.2.5",
@@ -58,9 +68,54 @@
     "eslint-config-next": "14.2.5",
     "@types/react-syntax-highlighter": "^15.5.6",
     "@types/lodash-es": "^4.17.7",
+=======
+    "ahooks": "^3.7.5",
+    "classnames": "^2.3.2",
+    "copy-to-clipboard": "^3.3.3",
+    "crypto-js": "^4.2.0",
+    "echarts": "^5.4.1",
+    "echarts-for-react": "^3.0.2",
+    "emoji-mart": "^5.5.2",
+    "immer": "^9.0.19",
+    "js-audio-recorder": "^1.0.7",
+    "lodash-es": "^4.17.21",
+    "mermaid": "10.4.0",
+    "next": "^14.2.5",
+    "rc-textarea": "^1.5.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-markdown": "^8.0.6",
+    "react-select": "^5.8.0",
+    "react-syntax-highlighter": "^15.5.0",
+    "react-tooltip": "5.8.3",
+    "reactflow": "^11.11.3",
+    "rehype-katex": "^6.0.2",
+    "remark-breaks": "^3.0.2",
+    "remark-gfm": "^3.0.1",
+    "remark-math": "^5.1.1",
+    "swiper": "^11.1.9",
+    "swr": "^2.1.0",
+    "use-context-selector": "^1.4.1",
+    "zustand": "^4.5.1"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.1.1",
+    "@types/lodash-es": "^4.17.7",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "@types/react-syntax-highlighter": "^15.5.6",
+    "code-inspector-plugin": "^0.13.0",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5",
+>>>>>>> origin/rupa
     "postcss": "^8",
     "sass": "^1.61.0",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/rupa

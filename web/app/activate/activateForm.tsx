@@ -241,4 +241,7 @@ const ActivateForm = () => {
 }
 
 export default ActivateForm
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

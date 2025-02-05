@@ -159,7 +159,11 @@ const ChatInput: FC<ChatInputProps> = ({
           //   ${isDragActive && 'border-primary-600'} mb-2
           // `}
           className={`
+<<<<<<< HEAD
             p-[5.5px] max-h-[150px] bg-white border-[1.5px] border-gray-200 rounded-xl overflow-y-auto flex items-center
+=======
+            p-[5.5px] max-h-[150px] bg-white dark:bg-[#3f3f3f] border-[1.5px] border-gray-200 dark:border-[#5f5f5f] rounded-xl overflow-y-auto flex items-center
+>>>>>>> origin/rupa
             ${isDragActive && 'border-primary-600'} mb-2
           `}
         // className={`
@@ -193,7 +197,11 @@ const ChatInput: FC<ChatInputProps> = ({
           }
           <Textarea
             className={`
+<<<<<<< HEAD
               ${s.textArea} block w-full px-2 pr-[118px] py-[7px] leading-5 max-h-none text-sm text-gray-700 outline-none appearance-none resize-none
+=======
+              ${s.textArea} block w-full px-2 pr-[118px] py-[7px] leading-5 max-h-none text-sm text-gray-700 dark:text-[#fcfcfc] outline-none appearance-none resize-none dark:bg-[#3f3f3f]
+>>>>>>> origin/rupa
               ${visionConfig?.enabled && 'pl-12'}
             `}
             // className={`

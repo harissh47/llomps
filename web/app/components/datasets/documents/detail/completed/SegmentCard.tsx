@@ -16,7 +16,11 @@ import { formatNumber } from '@/utils/format'
 import type { SegmentDetailModel } from '@/models/datasets'
 import { AlertCircle } from '@/app/components/base/icons/src/vender/solid/alertsAndFeedback'
 import { Trash03 } from '@/app/components/base/icons/src/vender/line/general'
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/rupa
 const ProgressBar: FC<{ percent: number; loading: boolean }> = ({ percent, loading }) => {
   return (
     <div className={s.progressWrapper}>
@@ -30,9 +34,15 @@ const ProgressBar: FC<{ percent: number; loading: boolean }> = ({ percent, loadi
     </div>
   )
 }
+<<<<<<< HEAD
 
 export type UsageScene = 'doc' | 'hitTesting'
 
+=======
+ 
+export type UsageScene = 'doc' | 'hitTesting'
+ 
+>>>>>>> origin/rupa
 type ISegmentCardProps = {
   loading: boolean
   detail?: SegmentDetailModel & { document: { name: string } }
@@ -45,7 +55,11 @@ type ISegmentCardProps = {
   archived?: boolean
   embeddingAvailable?: boolean
 }
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/rupa
 const SegmentCard: FC<ISegmentCardProps> = ({
   detail = {},
   score,
@@ -71,7 +85,11 @@ const SegmentCard: FC<ISegmentCardProps> = ({
   } = detail as Required<ISegmentCardProps>['detail']
   const isDocScene = scene === 'doc'
   const [showModal, setShowModal] = useState(false)
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/rupa
   const renderContent = () => {
     if (answer) {
       return (
@@ -87,26 +105,44 @@ const SegmentCard: FC<ISegmentCardProps> = ({
         </>
       )
     }
+<<<<<<< HEAD
 
     return content
   }
 
+=======
+ 
+    return content
+  }
+ 
+>>>>>>> origin/rupa
   return (
     <div
       // className={cn(
       //   s.segWrapper,
       //   // (isDocScene && !enabled) ? 'bg-gray-25' : '',
       //   (isDocScene && !enabled) ? 'bg-gray-25 dark:bg-[#3f3f3f]' : '',
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/rupa
       //   'group',
       //   !loading ? 'pb-4 hover:pb-[10px]' : '',
       //   className,
       // )}
       className={cn(
+<<<<<<< HEAD
         `box-border h-[180px] w-full xl:min-w-[290px] bg-gray-50 dark:bg-[#3f3f3f] px-4 pt-4 flex flex-col text-opacity-50 rounded-xl border border-transparent 
         hover:border-gray-200 dark:hover:border-[#5f5f5f] hover:shadow-lg  hover:cursor-pointer hover:bg-white dark:hover:bg-zinc-800
         ${isDocScene && !enabled ? 'bg-gray-25 dark:bg-[#3f3f3f]' : ''}
         group 
+=======
+        `box-border h-[180px] w-full xl:min-w-[290px] bg-gray-50 dark:bg-[#3f3f3f] px-4 pt-4 flex flex-col text-opacity-50 rounded-xl border border-transparent
+        hover:border-gray-200 dark:hover:border-[#5f5f5f] hover:shadow-lg  hover:cursor-pointer hover:bg-white dark:hover:bg-zinc-800
+        ${isDocScene && !enabled ? 'bg-gray-25 dark:bg-[#3f3f3f]' : ''}
+        group
+>>>>>>> origin/rupa
         ${!loading ? 'pb-4 hover:pb-[10px]' : ''}
         ${className}`,
       )}
@@ -185,7 +221,11 @@ const SegmentCard: FC<ISegmentCardProps> = ({
                 className={cn(
                   s.segContent,
                   enabled ? '' : 'opacity-50',
+<<<<<<< HEAD
                   'group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-b',
+=======
+                  'dark:text-white group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-b',
+>>>>>>> origin/rupa
                 )}
               >
                 {renderContent()}
@@ -258,6 +298,11 @@ const SegmentCard: FC<ISegmentCardProps> = ({
     </div>
   )
 }
+<<<<<<< HEAD
 
 export default SegmentCard
 
+=======
+ 
+export default SegmentCard
+>>>>>>> origin/rupa

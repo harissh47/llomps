@@ -97,4 +97,7 @@ const ModelList: FC<ModelListProps> = ({
 }
 
 export default ModelList
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

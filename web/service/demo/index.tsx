@@ -98,4 +98,7 @@ const Service: FC = () => {
   )
 }
 export default React.memo(Service)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

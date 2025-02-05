@@ -56,4 +56,7 @@ const Uploader: FC<UploaderProps> = ({
 }
 
 export default Uploader
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

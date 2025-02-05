@@ -75,4 +75,7 @@ const InputCopy = ({
 }
 
 export default InputCopy
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

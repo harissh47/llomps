@@ -72,4 +72,7 @@ const Item: FC<ItemProps> = ({
 }
 
 export default Item
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

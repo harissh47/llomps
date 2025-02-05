@@ -18,4 +18,7 @@ const ListNoDataPlaceholder: FC<Props> = ({
   )
 }
 export default React.memo(ListNoDataPlaceholder)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -138,4 +138,7 @@ const TestApi: FC<Props> = ({
   )
 }
 export default React.memo(TestApi)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

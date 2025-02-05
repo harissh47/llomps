@@ -41,7 +41,11 @@ const ConfigPanel = () => {
         //   `}
         className={`
           grow rounded-xl overflow-y-auto
+<<<<<<< HEAD
           ${showConfigPanelBeforeChat && 'border-[0.5px] border-gray-100 shadow-lg'}
+=======
+          ${showConfigPanelBeforeChat && 'border-[0.5px] border-gray-100 dark:border-[#5f5f5f] shadow-lg'}
+>>>>>>> origin/rupa
           ${!showConfigPanelBeforeChat && collapsed && 'border border-indigo-100'}
           ${!showConfigPanelBeforeChat && !collapsed && 'border-[0.5px] border-gray-100 shadow-lg'}
         `}
@@ -55,8 +59,17 @@ const ConfigPanel = () => {
           //   flex flex-wrap px-6 py-4 rounded-t-xl bg-[#202020]
           //   ${isMobile && '!px-4 !py-3'}
           //   `}
+<<<<<<< HEAD
           className={`
             flex flex-wrap px-6 py-4 rounded-t-xl bg-[#bed730]/10
+=======
+          // className={`
+          //   flex flex-wrap px-6 py-4 rounded-t-xl bg-[#bed730]/10
+          //   ${isMobile && '!px-4 !py-3'}
+          // `}
+          className={`
+            flex flex-wrap px-6 py-4 rounded-t-xl bg-[#bed730]/10 dark:bg-[#F8FBEA]/10
+>>>>>>> origin/rupa
             ${isMobile && '!px-4 !py-3'}
           `}
         >
@@ -65,7 +78,11 @@ const ConfigPanel = () => {
               <>
                 {/* <div className='flex items-center h-8 text-2xl font-semibold text-gray-800'> */}
                 {/* <div className='flex items-center h-8 text-2xl font-semibold text-white'> */}
+<<<<<<< HEAD
                 <div className='flex items-center h-8 text-2xl font-semibold text-gray-800'>
+=======
+                <div className='flex items-center h-8 text-2xl font-semibold text-gray-800 dark:text-white'>
+>>>>>>> origin/rupa
                   {/* <AppIcon
                     icon={appData?.site.icon}
                     background='transparent'

@@ -109,4 +109,7 @@ export default function AppSelector({ appItems, curApp }: IAppSelectorProps) {
     </div>
   )
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

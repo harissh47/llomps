@@ -42,4 +42,7 @@ const InputTypeIcon: FC<IInputTypeIconProps> = ({
 }
 
 export default React.memo(InputTypeIcon)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

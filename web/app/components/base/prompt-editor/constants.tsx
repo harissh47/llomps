@@ -49,4 +49,7 @@ export const getInputVars = (text: string): ValueSelector[] => {
   }
   return []
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

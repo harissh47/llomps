@@ -136,4 +136,7 @@ const ConfigPromptItem: FC<Props> = ({
   )
 }
 export default React.memo(ConfigPromptItem)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

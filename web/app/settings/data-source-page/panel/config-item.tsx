@@ -77,4 +77,7 @@ const ConfigItem: FC<Props> = ({
   )
 }
 export default React.memo(ConfigItem)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

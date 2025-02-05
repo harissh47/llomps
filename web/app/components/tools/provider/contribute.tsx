@@ -37,4 +37,7 @@ const Contribute: FC = () => {
   )
 }
 export default React.memo(Contribute)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

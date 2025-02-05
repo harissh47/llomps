@@ -221,4 +221,7 @@ const Operation: FC<OperationProps> = ({
 }
 
 export default memo(Operation)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

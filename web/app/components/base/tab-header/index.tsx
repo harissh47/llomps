@@ -45,4 +45,7 @@ const TabHeader: FC<ITabHeaderProps> = ({
   )
 }
 export default React.memo(TabHeader)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

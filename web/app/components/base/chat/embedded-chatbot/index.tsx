@@ -181,4 +181,7 @@ const EmbeddedChatbot = () => {
 }
 
 export default EmbeddedChatbot
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

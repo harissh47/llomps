@@ -3,7 +3,12 @@ import { Fragment } from 'react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import classNames from 'classnames'
 // https://headlessui.com/react/dialog
+<<<<<<< HEAD
 
+=======
+import { getDarkThemeClasses } from '@/app/theme'
+ 
+>>>>>>> origin/rupa
 type IModal = {
   className?: string
   wrapperClassName?: string
@@ -15,7 +20,11 @@ type IModal = {
   closable?: boolean
   overflowVisible?: boolean
 }
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/rupa
 export default function Modal({
   className,
   wrapperClassName,
@@ -41,7 +50,11 @@ export default function Modal({
         >
           <div className="fixed inset-0 bg-black bg-opacity-25" />
         </Transition.Child>
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/rupa
         <div
           className="fixed inset-0 overflow-y-auto"
           onClick={(e) => {
@@ -63,14 +76,25 @@ export default function Modal({
               <Dialog.Panel className={classNames(
                 'modal-panel',
                 // overflowVisible ? 'overflow-visible' : 'overflow-hidden ',
+<<<<<<< HEAD
                 overflowVisible ? 'overflow-visible dark:bg-[#3e3e3e]' : 'overflow-hidden dark:bg-[#3e3e3e]',
 
+=======
+                // overflowVisible ? 'overflow-visible dark:bg-[#3e3e3e]' : 'overflow-hidden dark:bg-[#3e3e3e]',
+                overflowVisible ? `overflow-visible ${getDarkThemeClasses('background1')}` : `overflow-hidden ${getDarkThemeClasses('background1')}`,
+ 
+>>>>>>> origin/rupa
                 className,
               )}>
                 {title && <Dialog.Title
                   as="h3"
                   // className="text-lg font-medium leading-6 text-gray-900"
+<<<<<<< HEAD
                   className="text-lg font-medium leading-6 text-gray-900 dark:bg-[#3e3e3e] dark:text-white"
+=======
+                  // className="text-lg font-medium leading-6 text-gray-900 dark:bg-[#3e3e3e] dark:text-white"
+                    className="text-lg font-medium leading-6 text-gray-900 ${getDarkThemeClasses('background1')} ${getDarkThemeClasses('text')}"
+>>>>>>> origin/rupa
                 >
                   {title}
                 </Dialog.Title>}
@@ -78,7 +102,13 @@ export default function Modal({
                   {description}
                 </Dialog.Description>}
                 {closable
+<<<<<<< HEAD
                   && <div className='absolute z-10 top-6 right-6 w-5 h-5 rounded-2xl flex items-center justify-center hover:cursor-pointer hover:bg-gray-100 dark:hover:bg-zinc-800'>
+=======
+                  &&
+                  // <div className='absolute z-10 top-6 right-6 w-5 h-5 rounded-2xl flex items-center justify-center hover:cursor-pointer hover:bg-gray-100 dark:hover:bg-zinc-800'>
+                  <div className={`absolute z-10 top-6 right-6 w-5 h-5 rounded-2xl flex items-center justify-center hover:cursor-pointer hover:bg-gray-100 ${getDarkThemeClasses('hover')}`}>
+>>>>>>> origin/rupa
                     <XMarkIcon className='w-4 h-4 text-gray-500 ' onClick={
                       (e) => {
                         e.stopPropagation()
@@ -94,5 +124,9 @@ export default function Modal({
       </Dialog>
     </Transition>
   )
+<<<<<<< HEAD
 }
 
+=======
+}
+>>>>>>> origin/rupa

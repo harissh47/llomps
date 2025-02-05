@@ -53,4 +53,7 @@ const AdvancedModeWarning: FC<Props> = ({
   )
 }
 export default React.memo(AdvancedModeWarning)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

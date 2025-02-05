@@ -67,4 +67,7 @@ const Form: FC<Props> = ({
   )
 }
 export default React.memo(Form)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

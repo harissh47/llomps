@@ -84,4 +84,7 @@ const CustomDialog = ({
 }
 
 export default CustomDialog
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

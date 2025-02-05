@@ -63,4 +63,7 @@ export const NoteEditorContextProvider = memo(({
 NoteEditorContextProvider.displayName = 'NoteEditorContextProvider'
 
 export default NoteEditorContext
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

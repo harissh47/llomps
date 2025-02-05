@@ -50,4 +50,7 @@ const AutoHeightTextarea = forwardRef<HTMLTextAreaElement, AutoHeightTextareaPro
 )
 
 export default AutoHeightTextarea
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -60,4 +60,7 @@ const BulkEdit: FC<Props> = ({
   )
 }
 export default React.memo(BulkEdit)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

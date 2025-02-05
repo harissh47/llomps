@@ -73,4 +73,7 @@ export const EditBtn = ({ className, onClick }: { className?: string; onClick: (
 export const FootLogo = () => (
   <LogoSite className='!h-5' />
 )
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

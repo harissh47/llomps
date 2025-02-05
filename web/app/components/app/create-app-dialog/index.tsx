@@ -35,4 +35,7 @@ const CreateAppTemplateDialog = ({ show, onSuccess, onClose }: CreateAppDialogPr
 }
 
 export default CreateAppTemplateDialog
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

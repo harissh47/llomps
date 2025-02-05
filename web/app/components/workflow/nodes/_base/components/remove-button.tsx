@@ -24,4 +24,7 @@ const Remove: FC<Props> = ({
   )
 }
 export default React.memo(Remove)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

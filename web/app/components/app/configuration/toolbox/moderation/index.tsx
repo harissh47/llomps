@@ -78,4 +78,7 @@ const Moderation = () => {
 }
 
 export default Moderation
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

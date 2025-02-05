@@ -57,4 +57,7 @@ const Item: FC<Props> = ({
   )
 }
 export default React.memo(Item)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -46,4 +46,7 @@ const NodeVariableItem = ({
 }
 
 export default memo(NodeVariableItem)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -85,4 +85,7 @@ export default function AccountAbout({
     </Modal>
   )
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

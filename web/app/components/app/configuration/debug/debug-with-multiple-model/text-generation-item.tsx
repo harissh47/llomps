@@ -156,4 +156,7 @@ const TextGenerationItem: FC<TextGenerationItemProps> = ({
 }
 
 export default memo(TextGenerationItem)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

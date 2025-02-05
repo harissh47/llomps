@@ -74,4 +74,7 @@ const VarPanel: FC<Props> = ({
   )
 }
 export default React.memo(VarPanel)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

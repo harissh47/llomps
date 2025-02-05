@@ -43,4 +43,7 @@ const Toolbox: FC<ToolboxProps> = ({
   )
 }
 export default React.memo(Toolbox)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -59,4 +59,7 @@ const OutputPanel: FC<OutputPanelProps> = ({
 }
 
 export default OutputPanel
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

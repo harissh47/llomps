@@ -6,7 +6,11 @@ FROM node:20.11-alpine3.19 AS base
 # RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
 RUN apk add --no-cache tzdata
+<<<<<<< HEAD
 RUN apk add --no-cache curl
+=======
+
+>>>>>>> origin/rupa
 
 # install packages
 FROM base as packages
@@ -44,8 +48,11 @@ ENV APP_API_URL http://127.0.0.1:5001
 ENV FILE_API_URL http://127.0.0.1:5001
 ENV PORT 3010
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> origin/rupa
 # set timezone
 ENV TZ UTC
 RUN ln -s /usr/share/zoneinfo/${TZ} /etc/localtime \

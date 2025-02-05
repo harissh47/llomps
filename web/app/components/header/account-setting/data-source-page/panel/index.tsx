@@ -151,4 +151,7 @@ const Panel: FC<Props> = ({
   )
 }
 export default React.memo(Panel)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -104,4 +104,7 @@ const Popup: FC<PopupProps> = ({
 }
 
 export default Popup
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

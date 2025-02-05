@@ -80,4 +80,7 @@ const InitPasswordPopup = () => {
 }
 
 export default InitPasswordPopup
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -21,4 +21,7 @@ const MoreInfo: FC<IMoreInfoProps> = ({ more, isQuestion, className }) => {
   </div>)
 }
 export default React.memo(MoreInfo)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

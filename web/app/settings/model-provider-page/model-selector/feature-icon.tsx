@@ -75,4 +75,7 @@ const FeatureIcon: FC<FeatureIconProps> = ({
 }
 
 export default FeatureIcon
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

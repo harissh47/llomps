@@ -66,4 +66,7 @@ QueryBlock.displayName = 'QueryBlock'
 export { QueryBlock }
 export { QueryBlockNode } from './node'
 export { default as QueryBlockReplacementBlock } from './query-block-replacement-block'
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

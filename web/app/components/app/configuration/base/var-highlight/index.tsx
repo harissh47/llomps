@@ -35,4 +35,7 @@ export const varHighlightHTML = ({ name, className = '' }: IVarHighlightProps) =
 }
 
 export default React.memo(VarHighlight)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -172,4 +172,7 @@ const Panel: FC<NodePanelProps<CodeNodeType>> = ({
 }
 
 export default React.memo(Panel)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

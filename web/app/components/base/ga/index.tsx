@@ -43,4 +43,7 @@ gtag('config', '${gaIdMaps[gaType]}');
   )
 }
 export default React.memo(GA)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

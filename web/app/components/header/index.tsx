@@ -1,6 +1,9 @@
 'use client'
 import { useCallback, useEffect, useState } from 'react'
+<<<<<<< HEAD
 import { getDarkThemeClasses } from '@/app/theme'
+=======
+>>>>>>> origin/rupa
 import Link from 'next/link'
 import { useBoolean } from 'ahooks'
 import { usePathname, useSelectedLayoutSegment } from 'next/navigation'
@@ -21,7 +24,11 @@ import { useProviderContext } from '@/context/provider-context'
 import { useModalContext } from '@/context/modal-context'
 import { SidebarProps } from '../base/chat/chat-with-history/sidebar'
 import { AlignLeft01, AlignRight01 } from '../base/icons/src/vender/line/layout'
+<<<<<<< HEAD
 
+=======
+import { getDarkThemeClasses } from '@/app/theme'
+>>>>>>> origin/rupa
 const navClassName = `
   flex items-center relative mr-0 sm:mr-3 px-3 h-8 rounded-xl
    text-sm
@@ -99,7 +106,12 @@ const Header: React.FC<SidebarProps> = ({ toggleCollapse }) => {
     // <div className='flex flex-col h-full px-1 py-2'>
 
     // <div className={`flex flex-col h-full px-1 py-2 transition-width duration-300 ${isCollapsed ? 'w-[60px]' : 'w-[240px]'} border-r border-gray-300 `}>
+<<<<<<< HEAD
     <div className={`flex flex-col h-full px-1 py-2 transition-width duration-300 ${getDarkThemeClasses('background')} dark:text-whit-27 ${isCollapsed ? 'w-[60px]' : 'w-[240px]'} border-r border-gray-300 dark:border-[#3F3F3F] `}>
+=======
+    // <div className={`flex flex-col h-full px-1 py-2 transition-width duration-300 dark:bg-[#202020] dark:text-whit-27 ${isCollapsed ? 'w-[60px]' : 'w-[240px]'} border-r border-gray-300 dark:border-[#3F3F3F] `}>
+    <div className={`flex flex-col h-full px-1 py-2 transition-width duration-300 ${getDarkThemeClasses('main_background')} ${getDarkThemeClasses('text')} ${isCollapsed ? 'w-[60px]' : 'w-[240px]'} border-r border-gray-300  ${getDarkThemeClasses('border')} `}>
+>>>>>>> origin/rupa
       {/* <div className='flex flex-col h-full px-1 py-2'> */}
       <div className={`flex items-center relative ${isCollapsed ? 'flex-col' : 'flex-row'}`}>
         {/* {isMobile && <div
@@ -303,4 +315,7 @@ export default Header
 //   )
 // }
 // export default Header
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -1,14 +1,21 @@
 'use client'
 
 import { useTranslation } from 'react-i18next'
+<<<<<<< HEAD
 import { getDarkThemeClasses } from '@/app/theme'
+=======
+>>>>>>> origin/rupa
 
 const DatasetFooter = () => {
   const { t } = useTranslation()
 
   return (
     // <footer className='px-12 py-6 grow-0 shrink-0 '>
+<<<<<<< HEAD
       <footer className={`px-12 py-6 grow-0 shrink-0 ${getDarkThemeClasses('background')}`}>
+=======
+      <footer className='px-12 py-6 grow-0 shrink-0 dark:bg-[#202020]'>
+>>>>>>> origin/rupa
       {/* <h3 className='text-xl font-semibold leading-tight text-gradient'>{t('dataset.didYouKnow')}</h3>
       <p className='mt-1 text-sm font-normal leading-tight text-gray-700'>
         {t('dataset.intro1')}<a className='inline-flex items-center gap-1 link' target='_blank' rel='noopener noreferrer' href='/'>{t('dataset.intro2')}</a>{t('dataset.intro3')}<br />
@@ -19,4 +26,7 @@ const DatasetFooter = () => {
 }
 
 export default DatasetFooter
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

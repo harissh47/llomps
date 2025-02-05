@@ -267,8 +267,15 @@ const Chat: FC<ChatProps> = ({
         <div className={classNames(`${s.chatOverlay} relative h-full flex-grow`)}>
           <div
             ref={chatContainerRef}
+<<<<<<< HEAD
             className={classNames('relative h-full overflow-y-auto', chatContainerClassName)}
           // className={classNames('relative h-full overflow-y-auto ${themeStyles.background}', chatContainerClassName)}
+=======
+            // className={classNames('relative h-full overflow-y-auto', chatContainerClassName)}
+            className={classNames(`relative h-full overflow-y-auto dark:bg-[#202020]`, chatContainerClassName)}
+
+          // className={classNames('relative h-full overflow-y-auto dark:bg-[#202020]', chatContainerClassName)}
+>>>>>>> origin/rupa
           >
             {chatNode}
             {(config?.show_carousel === true && chatList.length === 1 && chatList[0].isOpeningStatement! === true)
@@ -374,9 +381,15 @@ const Chat: FC<ChatProps> = ({
             // style={{
             //   background: 'linear-gradient(0deg, #000 20%, rgba(255, 255, 255, 0.00) 100%)',
             // }}
+<<<<<<< HEAD
             style={{
               background: 'linear-gradient(0deg, #F9FAFB 40%, rgba(255, 255, 255, 0.00) 100%)', zIndex: 10, width: '100%',
             }}
+=======
+            // style={{
+            //   background: 'linear-gradient(0deg, #F9FAFB 40%, rgba(255, 255, 255, 0.00) 100%)', zIndex: 10, width: '100%',
+            // }}
+>>>>>>> origin/rupa
           >
             <div
               ref={chatFooterInnerRef}

@@ -43,4 +43,7 @@ const Tab: FC<TabProps> = ({
 }
 
 export default Tab
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

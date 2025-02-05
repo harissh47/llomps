@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 declare global {
   interface Window {
     __CURRENT_PROVIDER__?: string;
@@ -6,6 +7,10 @@ declare global {
 
 import type { FC } from 'react'
 import { useEffect, useState } from 'react'
+=======
+import type { FC } from 'react'
+import { useState } from 'react'
+>>>>>>> origin/rupa
 import { useTranslation } from 'react-i18next'
 import ModelSelector from '../model-selector'
 import {
@@ -30,7 +35,11 @@ import { useProviderContext } from '@/context/provider-context'
 import { updateDefaultModel } from '@/service/common'
 import { useToastContext } from '@/app/components/base/toast'
 import { useAppContext } from '@/context/app-context'
+<<<<<<< HEAD
 import { setCurrentProvider } from '@/app/theme'
+=======
+
+>>>>>>> origin/rupa
 type SystemModelSelectorProps = {
   textGenerationDefaultModel: DefaultModelResponse | undefined
   embeddingsDefaultModel: DefaultModelResponse | undefined
@@ -61,7 +70,10 @@ const SystemModel: FC<SystemModelSelectorProps> = ({
   const [currentSpeech2textDefaultModel, changeCurrentSpeech2textDefaultModel] = useSystemDefaultModelAndModelList(speech2textDefaultModel, speech2textModelList)
   const [currentTTSDefaultModel, changeCurrentTTSDefaultModel] = useSystemDefaultModelAndModelList(ttsDefaultModel, ttsModelList)
   const [open, setOpen] = useState(false)
+<<<<<<< HEAD
   
+=======
+>>>>>>> origin/rupa
 
   const getCurrentDefaultModelByModelType = (modelType: ModelTypeEnum) => {
     if (modelType === ModelTypeEnum.textGeneration)
@@ -93,6 +105,7 @@ const SystemModel: FC<SystemModelSelectorProps> = ({
       setChangedModelTypes([...changedModelTypes, modelType])
   }
   const handleSave = async () => {
+<<<<<<< HEAD
     const provider = getCurrentDefaultModelByModelType(ModelTypeEnum.textGeneration)?.provider
     
     // Send the provider to theme.tsx
@@ -123,6 +136,20 @@ const SystemModel: FC<SystemModelSelectorProps> = ({
 
     
     window.__CURRENT_PROVIDER__ = provider
+=======
+    const res = await updateDefaultModel({
+      url: '/workspaces/current/default-model',
+      body: {
+        model_settings: [ModelTypeEnum.textGeneration, ModelTypeEnum.textEmbedding, ModelTypeEnum.rerank, ModelTypeEnum.speech2text, ModelTypeEnum.tts].map((modelType) => {
+          return {
+            model_type: modelType,
+            provider: getCurrentDefaultModelByModelType(modelType)?.provider,
+            model: getCurrentDefaultModelByModelType(modelType)?.model,
+          }
+        }),
+      },
+    })
+>>>>>>> origin/rupa
     if (res.result === 'success') {
       notify({ type: 'success', message: t('common.actionMsg.modifiedSuccessfully') })
       setOpen(false)
@@ -140,8 +167,11 @@ const SystemModel: FC<SystemModelSelectorProps> = ({
           updateModelList(modelType)
       })
     }
+<<<<<<< HEAD
     // Export the provider for theme usage
     window.__CURRENT_PROVIDER__ = getCurrentDefaultModelByModelType(ModelTypeEnum.textGeneration)?.provider
+=======
+>>>>>>> origin/rupa
   }
 
   return (
@@ -294,4 +324,7 @@ const SystemModel: FC<SystemModelSelectorProps> = ({
 }
 
 export default SystemModel
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

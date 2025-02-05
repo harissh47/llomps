@@ -174,4 +174,7 @@ const SecretKeyModal = ({
 }
 
 export default SecretKeyModal
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

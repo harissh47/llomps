@@ -25,4 +25,7 @@ export const FeaturesProvider = ({ children, ...props }: FeaturesProviderProps) 
     </FeaturesContext.Provider>
   )
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

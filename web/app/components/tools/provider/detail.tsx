@@ -34,7 +34,11 @@ import { useProviderContext } from '@/context/provider-context'
 import { ConfigurationMethodEnum } from '@/app/components/header/account-setting/model-provider-page/declarations'
 import Loading from '@/app/components/base/loading'
 import { useAppContext } from '@/context/app-context'
+<<<<<<< HEAD
 
+=======
+import { getDarkThemeClasses } from '@/app/theme'
+>>>>>>> origin/rupa
 type Props = {
   collection: Collection
   onRefreshData: () => void
@@ -209,13 +213,21 @@ const ProviderDetail = ({
         </div>
         <div className='grow w-0 py-[1px]'>
           {/* <div className='flex items-center text-md leading-6 font-semibold text-gray-900'> */}
+<<<<<<< HEAD
           <div className='flex items-center text-md leading-6 font-semibold text-gray-900 dark:text-white'>
+=======
+          <div className={`flex items-center text-md leading-6 font-semibold text-gray-900 ${getDarkThemeClasses('text')}`}>
+>>>>>>> origin/rupa
             <div className='truncate' title={collection.label[language]}>{collection.label[language]}</div>
           </div>
         </div>
       </div>
       {/* <div className='mt-2 min-h-[36px] text-gray-500 text-sm leading-[18px]'>{collection.description[language]}</div> */}
+<<<<<<< HEAD
       <div className='mt-2 min-h-[36px] text-gray-500 dark:text-[#FCFCFC] text-sm leading-[18px]'>{collection.description[language]}</div>
+=======
+      <div className={`mt-2 min-h-[36px] text-gray-500 ${getDarkThemeClasses('sub_text1')} text-sm leading-[18px]`}>{collection.description[language]}</div>
+>>>>>>> origin/rupa
       <div className='flex gap-1 border-b-[0.5px] border-black/5'>
         {(collection.type === CollectionType.builtIn) && needAuth && (
           <Button
@@ -347,4 +359,7 @@ const ProviderDetail = ({
   )
 }
 export default ProviderDetail
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

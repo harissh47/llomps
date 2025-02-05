@@ -87,4 +87,7 @@ const AddVariable = ({
 }
 
 export default memo(AddVariable)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -57,4 +57,7 @@ const DevelopMain = ({ appId }: IDevelopMainProps) => {
 }
 
 export default DevelopMain
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

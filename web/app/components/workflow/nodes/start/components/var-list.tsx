@@ -79,4 +79,7 @@ const VarList: FC<Props> = ({
   )
 }
 export default React.memo(VarList)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

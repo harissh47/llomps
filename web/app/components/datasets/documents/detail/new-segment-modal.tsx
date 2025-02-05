@@ -155,4 +155,7 @@ const NewSegmentModal: FC<NewSegmentModalProps> = ({
 }
 
 export default memo(NewSegmentModal)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -77,4 +77,7 @@ const ExploreNav = ({
 }
 
 export default ExploreNav
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

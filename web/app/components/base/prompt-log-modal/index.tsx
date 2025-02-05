@@ -70,4 +70,7 @@ const PromptLogModal: FC<PromptLogModalProps> = ({
 }
 
 export default PromptLogModal
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

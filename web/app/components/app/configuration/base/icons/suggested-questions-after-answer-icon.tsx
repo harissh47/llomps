@@ -10,4 +10,7 @@ const SuggestedQuestionsAfterAnswerIcon: FC = () => {
   )
 }
 export default React.memo(SuggestedQuestionsAfterAnswerIcon)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

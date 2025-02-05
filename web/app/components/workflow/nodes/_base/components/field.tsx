@@ -60,4 +60,7 @@ const Filed: FC<Props> = ({
   )
 }
 export default React.memo(Filed)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

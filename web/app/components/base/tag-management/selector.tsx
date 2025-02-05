@@ -16,6 +16,10 @@ import Checkbox from '@/app/components/base/checkbox'
 import { bindTag, createTag, fetchTagList, unBindTag } from '@/service/tag'
 import { ToastContext } from '@/app/components/base/toast'
 import { getDarkThemeClasses } from '@/app/theme'
+<<<<<<< HEAD
+=======
+ 
+>>>>>>> origin/rupa
 type TagSelectorProps = {
   targetID: string
   isPopover?: boolean
@@ -26,11 +30,19 @@ type TagSelectorProps = {
   onCacheUpdate: (tags: Tag[]) => void
   onChange?: () => void
 }
+<<<<<<< HEAD
 
 type PanelProps = {
   onCreate: () => void
 } & HtmlContentProps & TagSelectorProps
 
+=======
+ 
+type PanelProps = {
+  onCreate: () => void
+} & HtmlContentProps & TagSelectorProps
+ 
+>>>>>>> origin/rupa
 const Panel = (props: PanelProps) => {
   const { t } = useTranslation()
   const { notify } = useContext(ToastContext)
@@ -40,14 +52,22 @@ const Panel = (props: PanelProps) => {
   const setShowTagManagementModal = useTagStore(s => s.setShowTagManagementModal)
   const [selectedTagIDs, setSelectedTagIDs] = useState<string[]>(value)
   const [keywords, setKeywords] = useState('')
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/rupa
   const handleClick = (event: React.MouseEvent) => {
     event.stopPropagation()
   }
   const handleKeywordsChange = (value: string) => {
     setKeywords(value)
   }
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/rupa
   const notExisted = useMemo(() => {
     return tagList.every(tag => tag.type === type && tag.name !== keywords)
   }, [type, tagList, keywords])
@@ -57,7 +77,11 @@ const Panel = (props: PanelProps) => {
   const filteredTagList = useMemo(() => {
     return tagList.filter(tag => tag.type === type && !value.includes(tag.id) && tag.name.includes(keywords))
   }, [type, tagList, value, keywords])
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/rupa
   const [creating, setCreating] = useState<Boolean>(false)
   const createNewTag = async () => {
     if (!keywords)
@@ -104,7 +128,11 @@ const Panel = (props: PanelProps) => {
     else
       setSelectedTagIDs([...selectedTagIDs, tag.id])
   }
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/rupa
   const valueNotChanged = useMemo(() => {
     return value.length === selectedTagIDs.length && value.every(v => selectedTagIDs.includes(v)) && selectedTagIDs.every(v => value.includes(v))
   }, [value, selectedTagIDs])
@@ -126,18 +154,30 @@ const Panel = (props: PanelProps) => {
       return
     handleValueChange()
   })
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/rupa
   const onMouseLeave = async () => {
     props.onClose?.()
   }
   return (
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/rupa
     // <div className='max-w-screen-xl w-fit bg-white border border-gray-200 rounded-lg absolute left-0' onMouseLeave={onMouseLeave}>
     // {/* <div className='relative w-full max-w-screen-xl bg-white rounded-lg border-[0.5px] border-gray-200' onMouseLeave={onMouseLeave}> */}
     // <div className='p-2 border-b-[0.5px] border-black/5 w-full'>
     //   <SearchInput placeholder={t('common.tag.selectorPlaceholder') || ''} white value={keywords} onChange={handleKeywordsChange} />
     // </div>
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/rupa
     // {keywords && notExisted && (
     //   <div className='p-1'>
     //     <div className='flex items-center gap-2 pl-3 py-[6px] pr-2 rounded-lg cursor-pointer hover:bg-gray-100' onClick={createNewTag}>
@@ -183,6 +223,7 @@ const Panel = (props: PanelProps) => {
     //       </div>
     //     ))}
     //   </div>
+<<<<<<< HEAD
 
     // <div className='absolute max-w-screen-xl w-fit bg-white border border-gray-200 rounded-lg shadow-lg absolute left-0 top-[-200%] transform translate-y-[-10px] z-5 overflow-hidden' onMouseLeave={onMouseLeave}>
     <div className={`absolute max-w-screen-xl w-fit ${getDarkThemeClasses('background')} border border-gray-200 dark:border-[#5F5F5F] rounded-lg shadow-lg absolute left-0 top-[-200%] transform translate-y-[-10px] z-5 overflow-hidden`} onMouseLeave={onMouseLeave}>
@@ -194,6 +235,21 @@ const Panel = (props: PanelProps) => {
         <div className='p-1'>
           <div className='flex items-center gap-2 pl-3 py-[6px] pr-2 rounded-lg cursor-pointer hover:bg-gray-100' onClick={createNewTag}>
             <Plus className='h-4 w-4 text-gray-500 ' />
+=======
+ 
+    // <div className='absolute max-w-screen-xl w-fit bg-white border border-gray-200 rounded-lg shadow-lg absolute left-0 top-[-200%] transform translate-y-[-10px] z-5 overflow-hidden' onMouseLeave={onMouseLeave}>
+    <div className={`absolute max-w-screen-xl w-fit bg-white ${getDarkThemeClasses('main_background')} border border-gray-200 ${getDarkThemeClasses('border')} rounded-lg shadow-lg absolute left-0 top-[-200%] transform translate-y-[-10px] z-5 overflow-hidden`} onMouseLeave={onMouseLeave}>
+      <div className='p-2 border-b-[0.5px] border-black/5 w-full'>
+        <SearchInput placeholder={t('common.tag.selectorPlaceholder') || ''} white value={keywords} onChange={handleKeywordsChange} />
+      </div>
+ 
+      {keywords && notExisted && (
+        <div className='p-1'>
+          {/* <div className='flex items-center gap-2 pl-3 py-[6px] pr-2 rounded-lg cursor-pointer hover:bg-gray-100' onClick={createNewTag}>
+            <Plus className='h-4 w-4 text-gray-500 ' /> */}
+             <div className={`flex items-center gap-2 pl-3 py-[6px] pr-2 rounded-lg cursor-pointer hover:bg-gray-100 ${getDarkThemeClasses('hover')}`} onClick={createNewTag}>
+             <Plus className={`h-4 w-4 text-gray-500 ${getDarkThemeClasses('svg')}`} />
+>>>>>>> origin/rupa
             <div className='grow text-sm text-gray-700 leading-5 truncate'>
               {`${t('common.tag.create')} `}
               <span className='font-medium'>{`"${keywords}"`}</span>
@@ -210,7 +266,11 @@ const Panel = (props: PanelProps) => {
           {filteredSelectedTagList.map(tag => (
             <div
               key={tag.id}
+<<<<<<< HEAD
               className='flex items-center gap-2 pl-3 py-[6px] pr-2 rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-zinc-800'
+=======
+              className={`flex items-center gap-2 pl-3 py-[6px] pr-2 rounded-lg cursor-pointer hover:bg-gray-100 ${getDarkThemeClasses('hover')}`}
+>>>>>>> origin/rupa
               onClick={() => selectTag(tag)}
             >
               <Checkbox
@@ -219,14 +279,22 @@ const Panel = (props: PanelProps) => {
                 onCheck={() => { }}
               />
               {/* <div title={tag.name} className='grow text-sm text-gray-700 leading-5 truncate'>{tag.name}</div> */}
+<<<<<<< HEAD
               <div title={tag.name} className='grow text-sm text-gray-700 dark:text-[#F5F5F5] leading-5 truncate'>{tag.name}</div>
+=======
+              <div title={tag.name} className={`grow text-sm text-gray-700 ${getDarkThemeClasses('sub_text1')} leading-5 truncate`}>{tag.name}</div>
+>>>>>>> origin/rupa
             </div>
           ))}
           {filteredTagList.map(tag => (
             <div
               key={tag.id}
               // className='flex items-center gap-2 pl-3 py-[6px] pr-2 rounded-lg cursor-pointer hover:bg-gray-100'
+<<<<<<< HEAD
               className='flex items-center gap-2 pl-3 py-[6px] pr-2 rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-zinc-800'
+=======
+              className={`flex items-center gap-2 pl-3 py-[6px] pr-2 rounded-lg cursor-pointer hover:bg-gray-100 ${getDarkThemeClasses('hover')}`}
+>>>>>>> origin/rupa
               onClick={() => selectTag(tag)}
             >
               <Checkbox
@@ -235,7 +303,11 @@ const Panel = (props: PanelProps) => {
                 onCheck={() => { }}
               />
               {/* <div title={tag.name} className='grow text-sm text-gray-700 leading-5 truncate'>{tag.name}</div> */}
+<<<<<<< HEAD
               <div title={tag.name} className='grow text-sm text-gray-700 dark:text-[#F5F5F5] leading-5 truncate'>{tag.name}</div>
+=======
+              <div title={tag.name} className={`grow text-sm text-gray-700 ${getDarkThemeClasses('sub_text1')} leading-5 truncate`}>{tag.name}</div>
+>>>>>>> origin/rupa
             </div>
           ))}
         </div>
@@ -254,12 +326,22 @@ const Panel = (props: PanelProps) => {
       {/* <div className='p-1'> */}
       <div className='p-1' onClick={handleClick}>
         {/* <div className='flex items-center gap-2 pl-3 py-[6px] pr-2 rounded-lg cursor-pointer hover:bg-gray-100' onClick={() => setShowTagManagementModal(true)}> */}
+<<<<<<< HEAD
         <div className='flex items-center gap-2 pl-3 py-[6px] pr-2 rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-zinc-800' onClick={() => setShowTagManagementModal(true)}>
 
           {/* <Tag03 className='h-4 w-4 text-gray-500' /> */}
           <Tag03 className='h-4 w-4 text-gray-500 dark:text-white' />
 
           <div className='text-sm text-gray-700 dark:text-white leading-5 w-full max-w-[calc(100%_-_40px)]'>
+=======
+        <div className={`flex items-center gap-2 pl-3 py-[6px] pr-2 rounded-lg cursor-pointer hover:bg-gray-100 ${getDarkThemeClasses('hover')} `} onClick={() => setShowTagManagementModal(true)}>
+ 
+          {/* <Tag03 className='h-4 w-4 text-gray-500' /> */}
+          {/* <Tag03 className='h-4 w-4 text-gray-500 dark:text-white' /> */}
+          <Tag03 className={`h-4 w-4 text-gray-500 ${getDarkThemeClasses('text')}`}/>
+          {/* <div className='text-sm text-gray-700 dark:text-white leading-5 w-full max-w-[calc(100%_-_40px)]'> */}
+          <div className={`text-sm text-gray-700 ${getDarkThemeClasses('text')} leading-5 w-full max-w-[calc(100%_-_40px)]`} >
+>>>>>>> origin/rupa
             {t('common.tag.manageTags')}
           </div>
         </div>
@@ -267,7 +349,11 @@ const Panel = (props: PanelProps) => {
     </div>
   )
 }
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/rupa
 const TagSelector: FC<TagSelectorProps> = ({
   targetID,
   isPopover = true,
@@ -279,14 +365,24 @@ const TagSelector: FC<TagSelectorProps> = ({
   onChange,
 }) => {
   const { t } = useTranslation()
+<<<<<<< HEAD
 
   const setTagList = useTagStore(s => s.setTagList)
 
+=======
+ 
+  const setTagList = useTagStore(s => s.setTagList)
+ 
+>>>>>>> origin/rupa
   const getTagList = async () => {
     const res = await fetchTagList(type)
     setTagList(res)
   }
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/rupa
   const triggerContent = useMemo(() => {
     if (selectedTags?.length)
       return selectedTags.map(tag => tag.name).join(', ')
@@ -295,16 +391,30 @@ const TagSelector: FC<TagSelectorProps> = ({
   const add_label = "Add Labels"
   const Trigger = () => {
     return (
+<<<<<<< HEAD
       <div className={cn(
         // 'group/tip relative w-full flex items-center gap-1 px-2 py-[7px] rounded-md cursor-pointer hover:bg-gray-100' ,
         'group/tip relative w-full flex items-center gap-1 px-2 py-[7px] rounded-md cursor-pointer hover:bg-gray-100 dark:hover:bg-zinc-800 dark:text-white' ,
 
+=======
+      // <div className={cn(
+      //   // 'group/tip relative w-full flex items-center gap-1 px-2 py-[7px] rounded-md cursor-pointer hover:bg-gray-100' ,
+      //   'group/tip relative w-full flex items-center gap-1 px-2 py-[7px] rounded-md cursor-pointer hover:bg-gray-100 dark:hover:bg-zinc-800 dark:text-white' ,
+      // )}>
+      <div className={cn(
+        // 'group/tip relative w-full flex items-center gap-1 px-2 py-[7px] rounded-md cursor-pointer hover:bg-gray-100' ,
+        `group/tip relative w-full flex items-center gap-1 px-2 py-[7px] rounded-md cursor-pointer hover:bg-gray-100 ${getDarkThemeClasses('hover')} ${getDarkThemeClasses('text')}` ,
+>>>>>>> origin/rupa
       )}>
         <Tag01 className='shrink-0 w-3 h-3' />
         <div className='grow text-xs text-start leading-[18px] font-normal truncate'>
           {/* {!triggerContent ? t('common.tag.addTag') : triggerContent} */}
           {!triggerContent ? add_label : triggerContent}
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> origin/rupa
         </div>
       </div>
     )
@@ -338,9 +448,18 @@ const TagSelector: FC<TagSelectorProps> = ({
         />
       )}
     </>
+<<<<<<< HEAD
 
   )
 }
 
 export default TagSelector
 
+=======
+ 
+  )
+}
+ 
+export default TagSelector
+ 
+>>>>>>> origin/rupa

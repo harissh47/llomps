@@ -71,4 +71,7 @@ const Carousel: React.FC<CarouselProps> = ({
 }
 
 export default Carousel
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

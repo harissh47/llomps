@@ -1,10 +1,18 @@
 import Link from 'next/link'
 import Loading from '@/app/components/base/loading'
+<<<<<<< HEAD
 import { getDarkThemeClasses } from '@/app/theme'
 const Home = async () => {
   return (
     // <div className="flex flex-col justify-center min-h-screen py-12 sm:px-6 lg:px-8 ">
     <div className={`flex flex-col justify-center min-h-screen py-12 sm:px-6 lg:px-8 ${getDarkThemeClasses('background')}`}>
+=======
+
+const Home = async () => {
+  return (
+    // <div className="flex flex-col justify-center min-h-screen py-12 sm:px-6 lg:px-8 ">
+    <div className="flex flex-col justify-center min-h-screen py-12 sm:px-6 lg:px-8 dark:bg-[#202020]">
+>>>>>>> origin/rupa
 
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <Loading type='area' />
@@ -17,4 +25,7 @@ const Home = async () => {
 }
 
 export default Home
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

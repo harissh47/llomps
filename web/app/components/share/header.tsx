@@ -89,4 +89,7 @@ const Header: FC<IHeaderProps> = ({
 }
 
 export default React.memo(Header)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

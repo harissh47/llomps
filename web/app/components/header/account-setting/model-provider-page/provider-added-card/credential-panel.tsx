@@ -111,4 +111,7 @@ const CredentialPanel: FC<CredentialPanelProps> = ({
 }
 
 export default CredentialPanel
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

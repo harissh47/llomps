@@ -88,4 +88,7 @@ const SegmentAdd: FC<ISegmentAddProps> = ({
   )
 }
 export default React.memo(SegmentAdd)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

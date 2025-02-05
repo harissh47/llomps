@@ -42,4 +42,7 @@ const LanguageSelect: FC<ILanguageSelectProps> = ({
   )
 }
 export default React.memo(LanguageSelect)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

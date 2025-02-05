@@ -41,4 +41,7 @@ const SwrInitor = ({
 }
 
 export default SwrInitor
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

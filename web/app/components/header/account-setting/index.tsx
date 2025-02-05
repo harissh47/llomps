@@ -226,4 +226,7 @@ export default function AccountSetting({
     </Modal>
   )
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -55,4 +55,7 @@ const RunBatch: FC<IRunBatchProps> = ({
   )
 }
 export default React.memo(RunBatch)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

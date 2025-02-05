@@ -85,4 +85,7 @@ const CrawledResult: FC<Props> = ({
   )
 }
 export default React.memo(CrawledResult)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -149,4 +149,7 @@ const SideBar: FC<IExploreSideBarProps> = ({
 }
 
 export default React.memo(SideBar)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

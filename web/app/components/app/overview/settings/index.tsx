@@ -216,4 +216,7 @@ const SettingsModal: FC<ISettingsModalProps> = ({
   )
 }
 export default React.memo(SettingsModal)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

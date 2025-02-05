@@ -53,4 +53,7 @@ const TryToAsk: FC<TryToAskProps> = ({
 }
 
 export default memo(TryToAsk)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -8,7 +8,11 @@ import type { INavSelectorProps } from './nav-selector'
 import NavSelector from './nav-selector'
 import { ArrowNarrowLeft } from '@/app/components/base/icons/src/vender/line/arrows'
 import { useStore as useAppStore } from '@/app/components/app/store'
+<<<<<<< HEAD
 
+=======
+import { getDarkThemeClasses } from '@/app/theme'
+>>>>>>> origin/rupa
 type INavProps = {
   icon: React.ReactNode
   activeIcon?: React.ReactNode
@@ -41,7 +45,11 @@ const Nav = ({
   const isActived = Array.isArray(activeSegment) ? activeSegment.includes(segment!) : segment === activeSegment
   const itemClassName = `
     flex items-center mb-1 w-full h-9 px-1 text-gray-700 text-[14px]
+<<<<<<< HEAD
     rounded-lg font-normal hover:bg-gray-50 cursor-pointer text-wrap: nowrap dark:hover:bg-zinc-800 cursor-pointer dark:text-white
+=======
+    rounded-lg font-normal hover:bg-gray-50 cursor-pointer text-wrap: nowrap ${getDarkThemeClasses('hover')} cursor-pointer ${getDarkThemeClasses('text')}
+>>>>>>> origin/rupa
   `
   return (
     // <div className={`
@@ -51,7 +59,11 @@ const Nav = ({
     // `}>
     <div className={`${itemClassName}
      
+<<<<<<< HEAD
       ${isActived && 'bg-white dark:bg-zinc-600'}
+=======
+      ${isActived && `bg-white ${getDarkThemeClasses('lab_activatedbutton')}`}
+>>>>>>> origin/rupa
       ${!curNav && !isActived && 'hover:bg-gray-200'}
     `}>
       <Link href={link}>
@@ -61,9 +73,20 @@ const Nav = ({
           //   flex items-center h-7 px-2.5 cursor-pointer rounded-[10px]
           //   ${isActived ? 'text-primary-600' : 'text-gray-500'}
           //   ${curNav && isActived && 'hover:bg-primary-50'}
+<<<<<<< HEAD
           className={classNames(`
             flex items-center h-7 px-2.5 cursor-pointer rounded-[10px] dark:hover:bg-zinc-800 cursor-pointer dark:text-white 
             ${isActived ? 'text-primary-600 dark:!text-primary-600' : 'text-gray-500'}
+=======
+          // className={classNames(`
+          //   flex items-center h-7 px-2.5 cursor-pointer rounded-[10px] dark:hover:bg-zinc-800 cursor-pointer dark:text-white 
+          //   ${isActived ? 'text-primary-600 dark:!text-primary-600' : 'text-gray-500'}
+          //   ${curNav && isActived ? 'hover:bg-primary-50' : ''}
+          // `)}
+          className={classNames(`
+            flex items-center h-7 px-2.5 cursor-pointer rounded-[10px] ${getDarkThemeClasses('hover')} cursor-pointer  
+            ${isActived ? `text-primary-600 ${getDarkThemeClasses('green_text')} ` : `text-gray-500 ${getDarkThemeClasses('text')}`}
+>>>>>>> origin/rupa
             ${curNav && isActived ? 'hover:bg-primary-50' : ''}
           `)}
           onMouseEnter={() => setHovered(true)}
@@ -111,4 +134,7 @@ const Nav = ({
 }
 
 export default Nav
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

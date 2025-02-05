@@ -74,4 +74,7 @@ const FeaturePanel: FC<IFeaturePanelProps> = ({
   )
 }
 export default React.memo(FeaturePanel)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

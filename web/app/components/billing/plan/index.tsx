@@ -123,4 +123,7 @@ const PlanComp: FC<Props> = ({
   )
 }
 export default React.memo(PlanComp)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

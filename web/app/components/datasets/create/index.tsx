@@ -14,7 +14,10 @@ import { fetchDatasetDetail } from '@/service/datasets'
 import type { NotionPage } from '@/models/common'
 import { useModalContext } from '@/context/modal-context'
 import { useDefaultModel } from '@/app/components/header/account-setting/model-provider-page/hooks'
+<<<<<<< HEAD
 import { getDarkThemeClasses } from '@/app/theme'
+=======
+>>>>>>> origin/rupa
 
 type DatasetUpdateFormProps = {
   datasetId?: string
@@ -120,7 +123,11 @@ const DatasetUpdateForm = ({ datasetId }: DatasetUpdateFormProps) => {
     // <div className='flex' style={{ height: 'calc(100vh - 56px)' }}>
     <div className='flex w-full'>
       {/* <div className="flex flex-col w-11 sm:w-56 overflow-y-auto bg-white border-r border-gray-200 shrink-0"> */}
+<<<<<<< HEAD
       <div className={`flex flex-col w-11 sm:w-56 overflow-y-auto bg-white ${getDarkThemeClasses('background')} border-r border-gray-200 dark:border-[#5f5f5f] shrink-0`}>
+=======
+      <div className="flex flex-col w-11 sm:w-56 overflow-y-auto bg-white dark:bg-[#202020] border-r border-gray-200 dark:border-[#5f5f5f] shrink-0">
+>>>>>>> origin/rupa
 
         <StepsNavBar step={step} datasetId={datasetId} />
       </div>
@@ -173,4 +180,7 @@ const DatasetUpdateForm = ({ datasetId }: DatasetUpdateFormProps) => {
 }
 
 export default DatasetUpdateForm
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

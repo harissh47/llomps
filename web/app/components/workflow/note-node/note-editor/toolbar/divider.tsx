@@ -5,4 +5,7 @@ const Divider = () => {
 }
 
 export default Divider
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

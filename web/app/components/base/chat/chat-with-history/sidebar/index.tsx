@@ -335,4 +335,7 @@ export default Sidebar
 // }
 
 // export default Sidebar
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

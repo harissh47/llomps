@@ -21,4 +21,8 @@ const SettingsPage = () => {
     )
 }
 
+<<<<<<< HEAD
 export default SettingsPage
+=======
+export default SettingsPage
+>>>>>>> origin/rupa

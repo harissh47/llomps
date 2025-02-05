@@ -199,4 +199,7 @@ export const useOptions = (
     }
   }, [promptOptions, variableOptions, externalToolOptions, workflowVariableOptions])
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -92,4 +92,8 @@ const PricingToggle: React.FC<PricingToggleProps> = ({ isYearly, setIsYearly }) 
     );
 };
 
+<<<<<<< HEAD
 export default PricingToggle;
+=======
+export default PricingToggle;
+>>>>>>> origin/rupa

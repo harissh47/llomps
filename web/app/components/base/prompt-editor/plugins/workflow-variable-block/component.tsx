@@ -117,4 +117,7 @@ const WorkflowVariableBlockComponent = ({
 }
 
 export default memo(WorkflowVariableBlockComponent)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

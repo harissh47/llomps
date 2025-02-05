@@ -16,7 +16,10 @@ import { ChevronDown, ChevronRight } from '@/app/components/base/icons/src/vende
 import Tooltip from '@/app/components/base/tooltip-plus'
 import TextGenerationImageUploader from '@/app/components/base/image-uploader/text-generation-image-uploader'
 import type { VisionFile, VisionSettings } from '@/types/app'
+<<<<<<< HEAD
 import { getDarkThemeClasses } from '@/app/theme'
+=======
+>>>>>>> origin/rupa
 
 export type IPromptValuePanelProps = {
   appType: AppType
@@ -204,7 +207,11 @@ const PromptValuePanel: FC<IPromptValuePanelProps> = ({
             <div className="mt-5 border-b border-gray-100 dark:border-[#5f5f5f]"></div>
             <div className="flex justify-between mt-4 px-4">
               <Button
+<<<<<<< HEAD
                 className={`!h-8 !p-3 ${getDarkThemeClasses('background')} dark:border-[#5f5f5f] dark:hover:bg-zinc-800`}
+=======
+                className='!h-8 !p-3 dark:bg-[#202020] dark:border-[#5f5f5f] dark:hover:bg-zinc-800'
+>>>>>>> origin/rupa
                 onClick={onClear}
                 disabled={false}
               >
@@ -256,4 +263,7 @@ export function replaceStringWithValues(str: string, promptVariables: PromptVari
 function format(str: string) {
   return str.replaceAll('\n', '<br>')
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -10,7 +10,10 @@ import {
   updateApiBasedExtension,
 } from '@/service/common'
 import { useToastContext } from '@/app/components/base/toast'
+<<<<<<< HEAD
 import { getDarkThemeClasses } from '@/app/theme'
+=======
+>>>>>>> origin/rupa
 
 export type ApiBasedExtensionData = {
   name?: string
@@ -79,7 +82,11 @@ const ApiBasedExtensionModal: FC<ApiBasedExtensionModalProps> = ({
       wrapperClassName='!z-[103]'
     //   className='!p-8 !pb-6 !max-w-none !w-[640px]'
     // >
+<<<<<<< HEAD
       className={`!p-8 !pb-6 !max-w-none !w-[640px] ${getDarkThemeClasses('background')}`}
+=======
+      className='!p-8 !pb-6 !max-w-none !w-[640px] dark:bg-[#202020]'
+>>>>>>> origin/rupa
       >
       <div className='mb-2 text-xl font-semibold text-gray-900 '>
         {
@@ -152,4 +159,7 @@ const ApiBasedExtensionModal: FC<ApiBasedExtensionModalProps> = ({
 }
 
 export default ApiBasedExtensionModal
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

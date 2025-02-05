@@ -71,4 +71,7 @@ export default function AppNavItem({
     </div>
   )
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

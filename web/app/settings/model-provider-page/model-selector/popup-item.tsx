@@ -124,4 +124,7 @@ const PopupItem: FC<PopupItemProps> = ({
 }
 
 export default PopupItem
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

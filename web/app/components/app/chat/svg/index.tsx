@@ -21,4 +21,7 @@ const SVGBtn = ({
 }
 
 export default SVGBtn
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

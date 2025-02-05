@@ -149,4 +149,7 @@ const OpeningContainer: React.FC<OpeningContainerProps> = ({ onQuestionClick, co
 }
 
 export default OpeningContainer 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

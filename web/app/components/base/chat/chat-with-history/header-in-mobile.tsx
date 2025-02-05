@@ -64,4 +64,7 @@ const HeaderInMobile = () => {
 }
 
 export default HeaderInMobile
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

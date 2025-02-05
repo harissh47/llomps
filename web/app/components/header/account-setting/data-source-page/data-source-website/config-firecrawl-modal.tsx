@@ -165,4 +165,7 @@ const ConfigFirecrawlModal: FC<Props> = ({
   )
 }
 export default React.memo(ConfigFirecrawlModal)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

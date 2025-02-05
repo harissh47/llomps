@@ -6,7 +6,10 @@ FROM node:20.11-alpine3.19 AS base
 # RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
 
 RUN apk add --no-cache tzdata
+<<<<<<< HEAD
 RUN apk add --no-cache curl
+=======
+>>>>>>> origin/rupa
 
 # install packages
 FROM base as packages

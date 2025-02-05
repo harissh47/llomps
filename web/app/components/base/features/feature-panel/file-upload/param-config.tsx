@@ -11,7 +11,10 @@ import {
   PortalToFollowElemContent,
   PortalToFollowElemTrigger,
 } from '@/app/components/base/portal-to-follow-elem'
+<<<<<<< HEAD
 import { getDarkThemeClasses } from '@/app/theme'
+=======
+>>>>>>> origin/rupa
 
 type ParamsConfigProps = {
   onChange?: OnFeaturesChange
@@ -44,10 +47,17 @@ const ParamsConfig = ({
         </div>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent style={{ zIndex: 50 }}>
+<<<<<<< HEAD
         {/* <div className='w-80 sm:w-[412px] p-4 bg-white ${getDarkThemeClasses('background')} rounded-lg border-[0.5px] border-gray-200 shadow-lg space-y-3'> */}
          
         {/* <div className='w-80 sm:w-[412px] p-4 bg-white ${getDarkThemeClasses('background')} rounded-lg border-[0.5px] border-gray-200 shadow-lg space-y-3'> */}
         <div className={`w-80 sm:w-[412px] p-4 ${getDarkThemeClasses('background')} rounded-lg border-[0.5px] border-gray-200 dark:border-[#5F5F5F] shadow-lg space-y-3`}>
+=======
+        {/* <div className='w-80 sm:w-[412px] p-4 bg-white dark:bg-[#202020] rounded-lg border-[0.5px] border-gray-200 shadow-lg space-y-3'> */}
+         
+        {/* <div className='w-80 sm:w-[412px] p-4 bg-white dark:bg-[#202020] rounded-lg border-[0.5px] border-gray-200 shadow-lg space-y-3'> */}
+        <div className='w-80 sm:w-[412px] p-4 bg-white dark:bg-[#202020] rounded-lg border-[0.5px] border-gray-200 dark:border-[#5F5F5F] shadow-lg space-y-3'>
+>>>>>>> origin/rupa
         <ParamConfigContent onChange={onChange} />
         </div>
       </PortalToFollowElemContent>
@@ -55,4 +65,7 @@ const ParamsConfig = ({
   )
 }
 export default memo(ParamsConfig)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

@@ -40,9 +40,15 @@ const Item: FC<ItemProps> = ({
       //   ${currentConversationId === item.id && 'text-primary-600 bg-primary-50'}
       //   `}
       className={`
+<<<<<<< HEAD
         flex mb-0.5 last-of-type:mb-0 py-1.5 pl-3 pr-1.5 text-sm font-medium text-gray-700
         rounded-lg cursor-pointer hover:bg-gray-50 group
         ${currentConversationId === item.id && 'font-bold text-[#bed730] bg-[#bed730]/10'}
+=======
+        flex mb-0.5 last-of-type:mb-0 py-1.5 pl-3 pr-1.5 text-sm font-medium text-gray-700 dark:text-white
+        rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-zinc-800 group
+        ${currentConversationId === item.id && 'font-bold text-[#bed730] bg-[#bed730]/10 '}
+>>>>>>> origin/rupa
       `}
       onClick={() => onChangeConversation(item.id)}
     >
@@ -68,4 +74,7 @@ const Item: FC<ItemProps> = ({
 }
 
 export default memo(Item)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

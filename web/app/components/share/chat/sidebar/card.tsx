@@ -17,4 +17,7 @@ function Card({ children, text }: PropType) {
 }
 
 export default Card
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

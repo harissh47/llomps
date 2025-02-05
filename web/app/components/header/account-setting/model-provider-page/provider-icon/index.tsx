@@ -33,4 +33,7 @@ const ProviderIcon: FC<ProviderIconProps> = ({
 }
 
 export default ProviderIcon
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

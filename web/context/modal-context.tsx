@@ -269,4 +269,7 @@ export const ModalContextProvider = ({
 }
 
 export default ModalContext
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

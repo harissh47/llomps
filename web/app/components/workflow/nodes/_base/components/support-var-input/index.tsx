@@ -50,4 +50,7 @@ const SupportVarInput: FC<Props> = ({
   )
 }
 export default React.memo(SupportVarInput)
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa

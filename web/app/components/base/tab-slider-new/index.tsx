@@ -49,9 +49,15 @@ const TabSliderNew: FC<TabSliderProps> = ({
           //   value === option.value && 'border-gray-200 text-primary-600'
           // )}
           className={cn(
+<<<<<<< HEAD
             'mr-1 px-3 py-[7px] h-[32px] flex items-center rounded-lg border-[0.5px] border-transparent text-gray-700 text-[13px] leading-[18px] cursor-pointer',
             ` bg-[#F2F4F7] hover:bg-gray-200 ${getDarkThemeClasses('background')} dark:hover:bg-zinc-800 dark:text-white `,
             value === option.value && 'border-gray-200 text-primary-600 bg-white dark:bg-[#3f3f3f] '
+=======
+            `mr-1 px-3 py-[7px] h-[32px] flex items-center rounded-lg border-[0.5px] border-transparent text-gray-700 text-[13px] leading-[18px] cursor-pointer`,
+            `bg-[#F2F4F7] hover:bg-gray-200 ${getDarkThemeClasses('main_background')} ${getDarkThemeClasses('hover')} ${getDarkThemeClasses('text')}`,
+            value === option.value && `border-gray-200 text-primary-600 bg-white ${getDarkThemeClasses('background3')} `
+>>>>>>> origin/rupa
           )}
           
         >
@@ -64,4 +70,7 @@ const TabSliderNew: FC<TabSliderProps> = ({
 }
 
 export default TabSliderNew
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/rupa
