@@ -15,7 +15,7 @@ import type { InputVar, MoreInfo } from '@/app/components/workflow/types'
 import Modal from '@/app/components/base/modal'
 import Switch from '@/app/components/base/switch'
 import { ChangeType, InputVarType } from '@/app/components/workflow/types'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const TEXT_MAX_LENGTH = 256
 const PARAGRAPH_MAX_LENGTH = 1032 * 32
 
@@ -31,7 +31,7 @@ export type IConfigModalProps = {
 }
 
 // const inputClassName = 'w-full px-3 text-sm leading-9 text-gray-900 border-0 rounded-lg grow h-9 bg-gray-100 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200'
-const inputClassName = 'w-full px-3 text-sm leading-9 text-gray-900 dark:text-[#FCFCFC] border-0 rounded-lg grow h-9 bg-gray-100 dark:bg-[#2c2c2c] focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200 dark:focus:ring-[#5F5F5F]'
+const inputClassName = `w-full px-3 text-sm leading-9 text-gray-900 ${getDarkThemeClasses('sub_text1')} border-0 rounded-lg grow h-9 bg-gray-100 ${getDarkThemeClasses('background2')} focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200 ${getDarkThemeClasses('focusring')}`
 
 const ConfigModal: FC<IConfigModalProps> = ({
   isCreate,

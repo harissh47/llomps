@@ -26,6 +26,7 @@ import TypeSelector from '@/app/components/workflow/nodes/_base/components/selec
 import { ChevronDown } from '@/app/components/base/icons/src/vender/line/arrows'
 import { XClose } from '@/app/components/base/icons/src/vender/line/general'
 import AddButton from '@/app/components/base/button/add-button'
+import { getDarkThemeClasses } from '@/app/theme'
 const TRIGGER_DEFAULT_WIDTH = 227
 
 type Props = {
@@ -234,7 +235,7 @@ const VarReferencePicker: FC<Props> = ({
               </div>
             )
             // : (<div ref={triggerRef} className={cn((open || isFocus) ? 'border-gray-300' : 'border-gray-100', 'relative group/wrap flex items-center w-full h-8 p-1 rounded-lg bg-gray-100 border')}>
-            : (<div ref={triggerRef} className={cn((open || isFocus) ? 'border-gray-300 dark:border-[#5F5F5F]' : 'border-gray-100 dark:border-[#3F3F3F]', 'relative group/wrap flex items-center w-full h-8 p-1 rounded-lg bg-gray-100 dark:bg-[#2C2C2C] border')}>
+            : (<div ref={triggerRef} className={cn((open || isFocus) ? `border-gray-300 ${getDarkThemeClasses('border')}` : `border-gray-100 ${getDarkThemeClasses('border')}`, `relative group/wrap flex items-center w-full h-8 p-1 rounded-lg bg-gray-100 ${getDarkThemeClasses('background2')} border`)}>
               {isSupportConstantValue
                 ? <div onClick={(e) => {
                   e.stopPropagation()
@@ -251,7 +252,7 @@ const VarReferencePicker: FC<Props> = ({
                     onChange={handleVarKindTypeChange}
                   />
                   {/* <div className='h-4 w-px bg-black/5'></div> */}
-                  <div className='h-4 w-px bg-black/5 dark:bg-[#5F5F5F]'></div>
+                  <div className={`h-4 w-px bg-black/5 ${getDarkThemeClasses('background6')}`}></div>
                 </div>
                 : (!hasValue && <div className='ml-1.5 mr-1'>
                   <Variable02 className='w-3.5 h-3.5 text-gray-400' />
@@ -261,7 +262,7 @@ const VarReferencePicker: FC<Props> = ({
                   <input
                     type='text'
                     // className='w-full h-8 leading-8 pl-0.5 bg-transparent text-[13px] font-normal text-gray-900 placeholder:text-gray-400 focus:outline-none overflow-hidden'
-                     className='w-full h-8 leading-8 pl-0.5 bg-transparent text-[13px] font-normal text-gray-900 dark:text-[#FCFCFC] placeholder:text-gray-400 focus:outline-none overflow-hidden'
+                     className={`w-full h-8 leading-8 pl-0.5 bg-transparent text-[13px] font-normal text-gray-900 ${getDarkThemeClasses('sub_text1')} placeholder:text-gray-400 focus:outline-none overflow-hidden`}
                     value={isConstant ? value : ''}
                     onChange={handleStaticChange}
                     onFocus={() => setIsFocus(true)}
@@ -271,7 +272,7 @@ const VarReferencePicker: FC<Props> = ({
                 )
                 : (
                   // <div className={cn('inline-flex h-full items-center px-1.5 rounded-[5px]', hasValue && 'bg-white')}>
-                  <div className={cn('inline-flex h-full items-center px-1.5 rounded-[5px]', hasValue && 'bg-white dark:bg-[#3f3f3f]')}>
+                  <div className={cn(`inline-flex h-full items-center px-1.5 rounded-[5px]`, hasValue && `bg-white ${getDarkThemeClasses('background3')}`)}>
 
                     {hasValue
                       ? (
@@ -285,7 +286,7 @@ const VarReferencePicker: FC<Props> = ({
                                 />
                               </div>
                               {/* <div className='mx-0.5 text-xs font-medium text-gray-700 truncate' title={outputVarNode?.title} style={{ */}
-                              <div className='mx-0.5 text-xs font-medium text-gray-700 dark:text-white truncate' title={outputVarNode?.title} style={{
+                              <div className={`mx-0.5 text-xs font-medium text-gray-700 ${getDarkThemeClasses('text')} truncate`} title={outputVarNode?.title} style={{
 
                                 maxWidth: maxNodeNameWidth,
                               }}>{outputVarNode?.title}</div>
@@ -298,13 +299,13 @@ const VarReferencePicker: FC<Props> = ({
                               maxWidth: maxVarNameWidth,
                             }}>{varName}</div>
                           </div>
-                          <div className='ml-0.5 text-xs font-normal text-gray-500 dark:text-white capitalize truncate' title={type} style={{
+                          <div className={`ml-0.5 text-xs font-normal text-gray-500 ${getDarkThemeClasses('text')} capitalize truncate`} title={type} style={{
                             maxWidth: maxTypeWidth,
                           }}>{type}</div>
                         </>
                       )
                       // : <div className='text-[13px] font-normal text-gray-400'>{t('workflow.common.setVarValuePlaceholder')}</div>}
-                      : <div className='text-[13px] font-normal text-gray-400 dark:text-[#FCFCFC]'>{t('workflow.common.setVarValuePlaceholder')}</div>}
+                      : <div className={`text-[13px] font-normal text-gray-400 ${getDarkThemeClasses('sub_text1')}`}>{t('workflow.common.setVarValuePlaceholder')}</div>}
                   </div>
                 )}
               {(hasValue && !readonly) && (<div

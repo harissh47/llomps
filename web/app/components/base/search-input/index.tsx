@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { SearchLg } from "@/app/components/base/icons/src/vender/line/general";
 import { XCircle } from "@/app/components/base/icons/src/vender/solid/general";
-import { getDarkThemeClasses } from "@/utils/theme";
+import { getDarkThemeClasses } from "@/app/theme";
 type SearchInputProps = {
   placeholder?: string;
   className?: string;

@@ -20,7 +20,7 @@ import {
 import { SearchLg } from "@/app/components/base/icons/src/vender/line/general";
 import { XCircle } from "@/app/components/base/icons/src/vender/solid/general";
 import { checkKeys } from "@/utils/var";
-
+import { getDarkThemeClasses } from "@/app/theme";
 type ObjectChildrenProps = {
   nodeId: string;
   title: string;
@@ -99,10 +99,15 @@ const Item: FC<ItemProps> = ({
           className={cn(
             isObj ? " pr-1" : "pr-[18px]",
             // isHovering && (isObj ? 'bg-primary-50 ' : 'bg-gray-50'),
+            // isHovering &&
+            //   (isObj
+            //     ? "bg-primary-50 dark:bg-gray-800"
+            //     : "bg-gray-50 dark:bg-zinc-800"),
+
             isHovering &&
               (isObj
-                ? "bg-primary-50 dark:bg-gray-800"
-                : "bg-gray-50 dark:bg-zinc-800"),
+                ? `bg-primary-50 ${getDarkThemeClasses('background4')}`
+                : `bg-gray-50 ${getDarkThemeClasses('background2')}`),
 
             "relative w-full flex items-center h-6 pl-3  rounded-md cursor-pointer"
           )}
@@ -114,14 +119,14 @@ const Item: FC<ItemProps> = ({
             {/* <div title={itemData.variable} className='ml-1 w-0 grow truncate text-[13px] font-normal text-gray-900 '>{itemData.variable}</div> */}
             <div
               title={itemData.variable}
-              className="ml-1 w-0 grow truncate text-[13px] font-normal text-gray-900 dark:text-[#FCFCFC]"
+              className={`ml-1 w-0 grow truncate text-[13px] font-normal text-gray-900 ${getDarkThemeClasses('sub_text1')}`}
             >
               {itemData.variable}
             </div>
           </div>
           {/* <div className='ml-1 shrink-0 text-xs font-normal text-gray-500 dark:text-[#FCFCFC] capitalize'>{itemData.type}</div> */}
 
-          <div className="ml-1 shrink-0 text-xs font-normal text-gray-500 dark:text-[#FCFCFC] capitalize">
+          <div className={`ml-1 shrink-0 text-xs font-normal text-gray-500 ${getDarkThemeClasses('sub_text1')} capitalize`}>
             {itemData.type}
           </div>
 
@@ -278,15 +283,15 @@ const VarReferenceVars: FC<Props> = ({
             // className={cn(searchBoxClassName, isFocus && 'shadow-sm bg-white ', 'mb-2 mx-1 flex items-center px-2 rounded-lg bg-gray-100 ')}
             className={cn(
               searchBoxClassName,
-              isFocus && "shadow-sm bg-white dark:bg-[#3e3e3e]",
-              "mb-2 mx-1 flex items-center px-2 rounded-lg bg-gray-100 dark:bg-[#2C2C2C]"
+              isFocus && `shadow-sm bg-white ${getDarkThemeClasses('background1')}`,
+              `mb-2 mx-1 flex items-center px-2 rounded-lg bg-gray-100 ${getDarkThemeClasses('background2')}`
             )}
             onClick={(e) => e.stopPropagation()}
           >
             <SearchLg className="shrink-0 ml-[1px] mr-[5px] w-3.5 h-3.5 text-gray-400" />
             <input
               value={searchText}
-              className="grow px-0.5 py-[7px] text-[13px] text-gray-700 dark:text-white bg-transparent appearance-none outline-none caret-primary-600 placeholder:text-gray-400 dark:placeholder:text-[#FCFCFC]"
+              className={`grow px-0.5 py-[7px] text-[13px] text-gray-700 ${getDarkThemeClasses('text')} bg-transparent appearance-none outline-none caret-primary-600 placeholder:text-gray-400 ${getDarkThemeClasses('placeholder1')}`}
               placeholder={t("workflow.common.searchVar") || ""}
               onChange={(e) => setSearchText(e.target.value)}
               onFocus={setFocus}
@@ -317,7 +322,7 @@ const VarReferenceVars: FC<Props> = ({
             <div key={i}>
               <div
                 // className='leading-[22px] px-3 text-xs font-medium text-gray-500  uppercase truncate'
-                className="leading-[22px] px-3 text-xs font-medium text-gray-500 dark:text-white uppercase truncate"
+                className="leading-[22px] px-3 text-xs font-medium text-gray-500 ${getDarkThemeClasses('text')} uppercase truncate"
                 title={item.title}
               >
                 {item.title}
@@ -338,7 +343,7 @@ const VarReferenceVars: FC<Props> = ({
         </div>
       ) : (
         // <div className="pl-3 leading-[18px] text-xs font-medium text-gray-500 uppercase">
-        <div className="pl-3 leading-[18px] text-xs font-medium text-gray-500 dark:text-[#A1A2B6] uppercase">
+        <div className="pl-3 leading-[18px] text-xs font-medium text-gray-500 ${getDarkThemeClasses('sub_text3')} uppercase">
           {t("workflow.common.noVar")}
         </div>
       )}

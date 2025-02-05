@@ -77,7 +77,7 @@ export const DescriptionInput = memo(({
       className={`
         group flex px-2 py-[5px] max-h-[60px] rounded-lg overflow-y-auto
         border border-transparent hover:bg-gray-50 ${getDarkThemeClasses('hover')} leading-0
-        ${focus && `!border-gray-300 ${getDarkThemeClasses('border')} shadow-xs !bg-gray-50 ${getDarkThemeClasses('hover')}`}
+        ${focus && `!border-gray-300 ${getDarkThemeClasses('border')} shadow-xs !bg-gray-50 ${getDarkThemeClasses('background2')}`}
       `}
     >
       <Textarea

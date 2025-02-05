@@ -17,7 +17,7 @@ import {
   useToolIcon,
 } from '@/app/components/workflow/hooks'
 import Button from '@/app/components/base/button'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type ItemProps = {
   nodeId: string
   sourceHandle: string
@@ -50,8 +50,8 @@ const Item = ({
         //   ${open && '!bg-gray-100 !flex'}
         // `}
         className={`
-          hidden group-hover:flex px-2 py-0 h-6 bg-white dark:bg-[#383838] text-xs text-gray-700 dark:text-white dark:border-[#5F5F5F] font-medium rounded-md dark:hover:border-[#5F5F5F] dark:hover:bg-transparent
-          ${open && '!bg-gray-100 dark:!bg-zinc-800 !flex'}
+          hidden group-hover:flex px-2 py-0 h-6 bg-white ${getDarkThemeClasses('background3')} text-xs text-gray-700 ${getDarkThemeClasses('text')} ${getDarkThemeClasses('border')} font-medium rounded-md ${getDarkThemeClasses('borderhover')} ${getDarkThemeClasses('hovertransparent')}
+          ${open && `!bg-gray-100 ${getDarkThemeClasses('background2')} !flex`}
         `}
       >
         {t('workflow.panel.change')}
@@ -62,7 +62,7 @@ const Item = ({
   return (
     <div
       // className='relative group flex items-center mb-3 last-of-type:mb-0 px-2 h-9 rounded-lg border-[0.5px] border-gray-200 bg-white hover:bg-gray-50 shadow-xs text-xs text-gray-700 cursor-pointer'
-      className='relative group flex items-center mb-3 last-of-type:mb-0 px-2 h-9 rounded-lg border-[0.5px] border-gray-200 dark:border-[#5F5F5F] bg-white dark:bg-[#3E3E3E] hover:bg-gray-50 dark:hover:bg-[#2E2E2E] shadow-xs text-xs text-gray-700 cursor-pointer'
+      className={`relative group flex items-center mb-3 last-of-type:mb-0 px-2 h-9 rounded-lg border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} bg-white ${getDarkThemeClasses('background1')} hover:bg-gray-50 ${getDarkThemeClasses('hover7')} shadow-xs text-xs text-gray-700 cursor-pointer`}
     >
       {
         branchName && (
@@ -71,7 +71,7 @@ const Item = ({
             title={branchName.toLocaleUpperCase()}
           >
             {/* <div className='inline-block px-0.5 rounded-[5px] bg-white truncate'>{branchName.toLocaleUpperCase()}</div> */}
-            <div className='inline-block px-0.5 rounded-[5px] bg-white dark:bg-[#383838] truncate'>{branchName.toLocaleUpperCase()}</div>
+            <div className={`inline-block px-0.5 rounded-[5px] bg-white ${getDarkThemeClasses('background3')} truncate`}>{branchName.toLocaleUpperCase()}</div>
           </div>
         )
       }
@@ -81,7 +81,7 @@ const Item = ({
         className='shrink-0 mr-1.5'
       />
       {/* <div className='grow'>{data.title}</div> */}
-      <div className='grow dark:text-white'>{data.title}</div>
+      <div className={`grow ${getDarkThemeClasses('text')}`}>{data.title}</div>
       {
         !nodesReadOnly && (
           <BlockSelector

@@ -11,7 +11,7 @@ import Field from '@/app/components/workflow/nodes/_base/components/field'
 import AddButton from '@/app/components/base/button/add-button'
 import ConfigVarModal from '@/app/components/app/configuration/config-var/config-modal'
 import type { InputVar, NodePanelProps } from '@/app/components/workflow/types'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const i18nPrefix = 'workflow.nodes.start'
 
 const Panel: FC<NodePanelProps<StartNodeType>> = ({
@@ -68,7 +68,7 @@ const Panel: FC<NodePanelProps<StartNodeType>> = ({
                     } as any}
                     rightContent={
                       // <div className='text-xs font-normal text-gray-500'>
-                      <div className='text-xs font-normal text-gray-500 dark:text-[#FCFCFC]'>
+                      <div className={`text-xs font-normal text-gray-500 ${getDarkThemeClasses('sub_text1')}`}>
                         String
                       </div>
                     }
@@ -82,7 +82,7 @@ const Panel: FC<NodePanelProps<StartNodeType>> = ({
                 } as any}
                 rightContent={
                   // <div className='text-xs font-normal text-gray-500'>
-                  <div className='text-xs font-normal text-gray-500 dark:text-[#FCFCFC]'>
+                  <div className={`text-xs font-normal text-gray-500 ${getDarkThemeClasses('sub_text1')}`}>
                     Array[File]
                   </div>
                 }
@@ -96,7 +96,7 @@ const Panel: FC<NodePanelProps<StartNodeType>> = ({
                     } as any}
                     rightContent={
                       // <div className='text-xs font-normal text-gray-500'>
-                      <div className='text-xs font-normal text-gray-500 dark:text-[#FCFCFC]'>
+                      <div className={`text-xs font-normal text-gray-500 ${getDarkThemeClasses('sub_text1')}`}>
                         String
                       </div>
                     }
@@ -112,7 +112,7 @@ const Panel: FC<NodePanelProps<StartNodeType>> = ({
                     } as any}
                     rightContent={
                       // <div className='text-xs font-normal text-gray-500'>
-                      <div className='text-xs font-normal text-gray-500 dark:text-[#FCFCFC]'>
+                      <div className={`text-xs font-normal text-gray-500 ${getDarkThemeClasses('sub_text1')}`}>
                         Object
                       </div>
                     }
@@ -126,7 +126,7 @@ const Panel: FC<NodePanelProps<StartNodeType>> = ({
                 } as any}
                 rightContent={
                   // <div className='text-xs font-normal text-gray-500'>
-                  <div className='text-xs font-normal text-gray-500 dark:text-[#FCFCFC]'>
+                  <div className={`text-xs font-normal text-gray-500 ${getDarkThemeClasses('sub_text1')}`}>
                     String
                   </div>
                 }

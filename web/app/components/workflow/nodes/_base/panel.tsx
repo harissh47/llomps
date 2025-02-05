@@ -27,7 +27,7 @@ import { Play } from "@/app/components/base/icons/src/vender/line/mediaAndDevice
 import TooltipPlus from "@/app/components/base/tooltip-plus";
 import type { Node } from "@/app/components/workflow/types";
 import { useStore as useAppStore } from "@/app/components/app/store";
-import { getDarkThemeClasses } from "@/utils/theme";
+import { getDarkThemeClasses } from "@/app/theme";
 type BasePanelProps = {
   children: ReactElement;
 } & Node;
