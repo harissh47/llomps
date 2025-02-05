@@ -435,3 +435,4 @@ export const AvgUserInteractions: FC<IBizChartProps> = ({ id, period }) => {
 }
 
 export default Chart
+

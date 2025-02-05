@@ -14,3 +14,4 @@ const Icon = React.forwardRef<React.MutableRefObject<SVGElement>, Omit<IconBaseP
 Icon.displayName = 'FileSearch02'
 
 export default Icon
+

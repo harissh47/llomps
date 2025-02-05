@@ -31,3 +31,4 @@ const ShortcutsName = ({
 }
 
 export default memo(ShortcutsName)
+

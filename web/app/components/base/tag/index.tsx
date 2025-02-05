@@ -44,3 +44,4 @@ export default function Tag({ children, color = 'green', className = '', bordere
     </div>
   )
 }
+

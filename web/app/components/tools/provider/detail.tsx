@@ -347,3 +347,4 @@ const ProviderDetail = ({
   )
 }
 export default ProviderDetail
+

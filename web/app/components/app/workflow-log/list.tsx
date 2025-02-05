@@ -132,3 +132,4 @@ const WorkflowAppLogList: FC<ILogs> = ({ logs, appDetail, onRefresh }) => {
 }
 
 export default WorkflowAppLogList
+

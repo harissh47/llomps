@@ -38,3 +38,4 @@ const CrawledResultItem: FC<Props> = ({
   )
 }
 export default React.memo(CrawledResultItem)
+

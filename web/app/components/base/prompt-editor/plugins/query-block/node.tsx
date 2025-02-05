@@ -57,3 +57,4 @@ export function $isQueryBlockNode(
 ): node is QueryBlockNode {
   return node instanceof QueryBlockNode
 }
+

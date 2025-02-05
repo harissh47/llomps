@@ -14,3 +14,4 @@ const Icon = React.forwardRef<React.MutableRefObject<SVGElement>, Omit<IconBaseP
 Icon.displayName = 'OrganizeGrid'
 
 export default Icon
+

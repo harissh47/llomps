@@ -74,3 +74,4 @@ const VarPanel: FC<Props> = ({
   )
 }
 export default React.memo(VarPanel)
+

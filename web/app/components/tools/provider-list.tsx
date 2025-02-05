@@ -16,6 +16,7 @@ import ProviderCard from '@/app/components/tools/provider/card'
 import ProviderDetail from '@/app/components/tools/provider/detail'
 import Empty from '@/app/components/tools/add-tool-modal/empty'
 import { fetchCollectionList } from '@/service/tools'
+import { getDarkThemeClasses } from '@/app/theme'
 
 const ProviderList = () => {
   const { t } = useTranslation()
@@ -82,7 +83,7 @@ const ProviderList = () => {
           currentProvider && 'pr-6',
         )}> */}
            <div className={cn(
-          'sticky top-0 flex justify-between items-center pt-4 px-12 pb-2 leading-[56px] bg-gray-100 z-20 flex-wrap gap-y-2 dark:bg-[#202020]',
+          'sticky top-0 flex justify-between items-center pt-4 px-12 pb-2 leading-[56px] bg-gray-100 z-20 flex-wrap gap-y-2', getDarkThemeClasses('background'),
           currentProvider && 'pr-6',
         )}>
           <TabSliderNew
@@ -96,7 +97,7 @@ const ProviderList = () => {
           />
           <div className='flex items-center gap-2 '>
             <LabelFilter value={tagFilterValue} onChange={handleTagsChange} />
-            <SearchInput className='w-[200px] dark:bg-[#3f3f3f]' value={keywords} onChange={handleKeywordsChange} />
+            <SearchInput className='w-[200px]' value={keywords} onChange={handleKeywordsChange} />
           </div>
         </div>
         {/* <div className={cn(
@@ -104,7 +105,7 @@ const ProviderList = () => {
           currentProvider && 'pr-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
         )}> */}
           <div className={cn(
-          'relative grid content-start grid-cols-1 gap-4 px-12 pt-2 pb-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grow shrink-0 dark:bg-[#202020]',
+          'relative grid content-start grid-cols-1 gap-4 px-12 pt-2 pb-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grow shrink-0', getDarkThemeClasses('background'),
           currentProvider && 'pr-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
         )}>
           {/* {activeTab === 'builtin' && <ContributeCard />} */}
@@ -121,15 +122,16 @@ const ProviderList = () => {
         </div>
       </div>
       <div className={cn(
-        'shrink-0 w-0 border-l-[0.5px] border-black/8 overflow-y-auto transition-all duration-200 ease-in-out dark:bg-[#202020]',
+        'shrink-0 w-0 border-l-[0.5px] border-black/8 overflow-y-auto transition-all duration-200 ease-in-out', getDarkThemeClasses('background'),
         currentProvider && 'w-[420px]',
       )}>
         {currentProvider && <ProviderDetail collection={currentProvider} onRefreshData={getProviderList} />}
       </div>
       {/* <div className='absolute top-5 right-5 p-1 cursor-pointer' onClick={() => setCurrentProvider(undefined)}><XClose className='w-4 h-4' /></div> */}
-      <div className='absolute top-5 right-5 p-1 border dark:border-[#5F5F5F] cursor-pointer' onClick={() => setCurrentProvider(undefined)}><XClose className='w-4 h-4' /></div>
+      <div className='absolute top-5 right-5 p-1 border cursor-pointer' onClick={() => setCurrentProvider(undefined)}><XClose className='w-4 h-4' /></div>
     </div>
   )
 }
 ProviderList.displayName = 'ToolProviderList'
 export default ProviderList
+

@@ -50,3 +50,4 @@ const Question: FC<IQuestionProps> = ({ id, content, more, useCurrentUserAvatar,
   )
 }
 export default React.memo(Question)
+

@@ -19,6 +19,7 @@ import {
   fetchFileIndexingEstimate as didFetchFileIndexingEstimate,
   fetchDefaultProcessRule,
 } from '@/service/datasets'
+import { getDarkThemeClasses } from '@/app/theme'
 import Button from '@/app/components/base/button'
 import Loading from '@/app/components/base/loading'
 import FloatRightContainer from '@/app/components/base/float-right-container'
@@ -547,10 +548,10 @@ const StepTwo = ({
     // <div className='flex w-full h-screen overflow-y-scroll grow'>
     <div className='flex w-full h-screen'>
       {/* <div ref={scrollRef} className='relative h-full w-full overflow-y-scroll grow'> */}
-      <div ref={scrollRef} className='relative h-full w-full overflow-y-scroll grow dark:bg-[#202020]'>
+      <div ref={scrollRef} className={`relative h-full w-full overflow-y-scroll grow ${getDarkThemeClasses('background')}`}>
         {/* <div className={cn(s.pageHeader, scrolled && s.fixed, isMobile && '!px-6')}> */}
-      <div className={cn("absolute z-10 inset-0 pt-[42px] pb-[12px] px-16 flex justify-between items-center overflow-y-auto grow sticky top-0 left-0 bg-white dark:bg-[#202020] font-semibold text-[18px] leading-[28px] text-[#101828] dark:text-white",
-       scrolled && "pt-[12px] font-normal text-[12px] leading-[18px] bg-[rgba(255,255,255,0.9)] dark:bg-[#202020] border-b-[0.5px] border-[#EAECF0] dark:border-[#5F5F5F] backdrop-blur-[4px] animation-fix",
+      <div className={cn(`absolute z-10 inset-0 pt-[42px] pb-[12px] px-16 flex justify-between items-center overflow-y-auto grow sticky top-0 left-0 bg-white ${getDarkThemeClasses('background')} font-semibold text-[18px] leading-[28px] text-[#101828] dark:text-white`,
+       scrolled && `pt-[12px] font-normal text-[12px] leading-[18px] bg-[rgba(255,255,255,0.9)] ${getDarkThemeClasses('background')} border-b-[0.5px] border-[#EAECF0] dark:border-[#5F5F5F] backdrop-blur-[4px] animation-fix`,
        isMobile && "!px-6"
       )}
       >
@@ -985,11 +986,11 @@ const StepTwo = ({
         {/* {showPreview && <div ref={previewScrollRef} className={cn(s.previewWrap, isMobile && s.isMobile, 'relative h-full overflow-y-scroll border-l border-[#F2F4F7]')}> */}
         {/* {showPreview && <div ref={previewScrollRef} className={cn(s.previewWrap, isMobile && s.isMobile, 'relative h-screen overflow-y-scroll border-l border-[#F2F4F7]')}> */}
         {showPreview && <div ref={previewScrollRef}
-         className={`relative h-screen overflow-y-scroll border-l border-[#F2F4F7] dark:bg-[#202020] ${isMobile ? 'max-w-full' : 'max-w-[70vh]'} flex-shrink-0`}
+         className={`relative h-screen overflow-y-scroll border-l border-[#F2F4F7] ${getDarkThemeClasses('background')} ${isMobile ? 'max-w-full' : 'max-w-[70vh]'} flex-shrink-0`}
         >
           {/* <div className={cn(s.previewHeader, previewScrolled && `${s.fixed} pb-3`)}> */}
-          {/* <div className={`sticky top-0 left-0 pt-[42px] bg-white dark:bg-[#202020] font-semibold text-lg leading-7 text-[#101828] dark:text-white z-10 ${previewScrolled ? 'pb-3 text-sm leading-5 bg-opacity-90 border-b border-[#EAECF0] backdrop-blur' : ''}`} */}
-          <div className={`sticky top-0 left-0 pt-[42px] bg-white dark:bg-[#202020] font-semibold text-lg leading-7 text-[#101828] dark:text-white z-10 ${previewScrolled ? 'pb-3 text-sm leading-5 bg-opacity-90 border-b border-[#EAECF0] dark:border-[#5F5F5F] backdrop-blur' : ''}`}
+          {/* <div className={`sticky top-0 left-0 pt-[42px] bg-white ${getDarkThemeClasses('background')} font-semibold text-lg leading-7 text-[#101828] dark:text-white z-10 ${previewScrolled ? 'pb-3 text-sm leading-5 bg-opacity-90 border-b border-[#EAECF0] backdrop-blur' : ''}`} */}
+          <div className={`sticky top-0 left-0 pt-[42px] bg-white ${getDarkThemeClasses('background')} font-semibold text-lg leading-7 text-[#101828] dark:text-white z-10 ${previewScrolled ? 'pb-3 text-sm leading-5 bg-opacity-90 border-b border-[#EAECF0] dark:border-[#5F5F5F] backdrop-blur' : ''}`}
 >
             <div className='flex items-center justify-between px-8'>
               <div className='grow flex items-center'>
@@ -1056,3 +1057,4 @@ const StepTwo = ({
 }
 
 export default StepTwo
+

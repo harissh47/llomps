@@ -14,3 +14,4 @@ const Icon = React.forwardRef<React.MutableRefObject<SVGElement>, Omit<IconBaseP
 Icon.displayName = 'Expand04'
 
 export default Icon
+

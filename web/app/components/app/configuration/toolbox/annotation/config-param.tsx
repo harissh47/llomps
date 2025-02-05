@@ -124,3 +124,4 @@ const AnnotationReplyConfig: FC<Props> = ({
   )
 }
 export default React.memo(AnnotationReplyConfig)
+

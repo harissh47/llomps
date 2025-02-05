@@ -123,7 +123,7 @@ const LabelFilter: FC<LabelFilterProps> = ({
         </PortalToFollowElemTrigger>
         <PortalToFollowElemContent className='z-[1002]'>
           {/* <div className='relative w-[240px] bg-white rounded-lg border-[0.5px] border-gray-200  shadow-lg'> */}
-          {/* <div className='relative w-[240px] bg-white dark:bg-[#202020] rounded-lg border-[0.5px] border-gray-200 dark:border-[#5f5f5f]  shadow-lg'> */}
+          {/* <div className='relative w-[240px] bg-white ${getDarkThemeClasses('background')} rounded-lg border-[0.5px] border-gray-200 dark:border-[#5f5f5f]  shadow-lg'> */}
           <div className='relative w-[240px] bg-white dark:bg-[#333333] rounded-lg border-[0.5px] border-gray-200 dark:border-[#5F5F5F] shadow-lg dark:overflow-hidden'>
             <div className='p-2 border-b-[0.5px] border-black/5'>
               <SearchInput white value={keywords} onChange={handleKeywordsChange} />
@@ -160,3 +160,4 @@ const LabelFilter: FC<LabelFilterProps> = ({
 }
 
 export default LabelFilter
+

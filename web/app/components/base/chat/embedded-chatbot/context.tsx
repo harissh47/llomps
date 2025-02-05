@@ -62,3 +62,4 @@ export const EmbeddedChatbotContext = createContext<EmbeddedChatbotContextValue>
   currentChatInstanceRef: { current: { handleStop: () => {} } },
 })
 export const useEmbeddedChatbotContext = () => useContext(EmbeddedChatbotContext)
+

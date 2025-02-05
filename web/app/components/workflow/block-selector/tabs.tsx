@@ -73,3 +73,4 @@ const Tabs: FC<TabsProps> = ({
 }
 
 export default memo(Tabs)
+

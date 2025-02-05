@@ -44,9 +44,9 @@ const ParamsConfig = ({
         </div>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent style={{ zIndex: 50 }}>
-        {/* <div className='w-80 sm:w-[412px] p-4 bg-white dark:bg-[#202020] rounded-lg border-[0.5px] border-gray-200 shadow-lg space-y-3'> */}
+        {/* <div className='w-80 sm:w-[412px] p-4 bg-white ${getDarkThemeClasses('background')} rounded-lg border-[0.5px] border-gray-200 shadow-lg space-y-3'> */}
          
-        {/* <div className='w-80 sm:w-[412px] p-4 bg-white dark:bg-[#202020] rounded-lg border-[0.5px] border-gray-200 shadow-lg space-y-3'> */}
+        {/* <div className='w-80 sm:w-[412px] p-4 bg-white ${getDarkThemeClasses('background')} rounded-lg border-[0.5px] border-gray-200 shadow-lg space-y-3'> */}
         <div className={`w-80 sm:w-[412px] p-4 ${getDarkThemeClasses('background')} rounded-lg border-[0.5px] border-gray-200 dark:border-[#5F5F5F] shadow-lg space-y-3`}>
         <ParamConfigContent onChange={onChange} />
         </div>
@@ -55,3 +55,4 @@ const ParamsConfig = ({
   )
 }
 export default memo(ParamsConfig)
+

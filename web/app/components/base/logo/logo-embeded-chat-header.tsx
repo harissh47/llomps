@@ -16,3 +16,4 @@ const LogoEmbededChatHeader: FC<LogoEmbededChatHeaderProps> = ({
 }
 
 export default LogoEmbededChatHeader
+

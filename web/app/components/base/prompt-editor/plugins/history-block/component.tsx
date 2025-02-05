@@ -89,3 +89,4 @@ const HistoryBlockComponent: FC<HistoryBlockComponentProps> = ({
 }
 
 export default HistoryBlockComponent
+

@@ -47,3 +47,4 @@ const AutomaticBtn: FC<IAutomaticBtnProps> = ({
   )
 }
 export default React.memo(AutomaticBtn)
+

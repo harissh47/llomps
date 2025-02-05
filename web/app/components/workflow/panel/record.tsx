@@ -31,3 +31,4 @@ const Record = () => {
 }
 
 export default memo(Record)
+

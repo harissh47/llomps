@@ -50,3 +50,4 @@ const SuggestedQuestions: FC<SuggestedQuestionsProps> = ({
 }
 
 export default memo(SuggestedQuestions)
+

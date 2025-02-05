@@ -260,3 +260,4 @@ const SegmentCard: FC<ISegmentCardProps> = ({
 }
 
 export default SegmentCard
+

@@ -126,3 +126,4 @@ const AppTypeSelector = ({ value, onChange }: AppSelectorProps) => {
 }
 
 export default React.memo(AppTypeSelector)
+

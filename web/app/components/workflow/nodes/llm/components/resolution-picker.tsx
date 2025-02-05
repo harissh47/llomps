@@ -63,3 +63,4 @@ const ResolutionPicker: FC<Props> = ({
   )
 }
 export default React.memo(ResolutionPicker)
+

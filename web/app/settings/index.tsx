@@ -44,6 +44,7 @@ import { useRouter } from "next/navigation";
 import WorkspacePage from "./workspace-page";
 import { BriefcaseIcon } from "@heroicons/react/24/outline";
 import { BriefcaseIcon as BriefcaseSolid } from "@heroicons/react/20/solid";
+import { getDarkThemeClasses } from '@/app/theme';
 
 const iconClassName = `
   w-4 h-4 ml-3 mr-2
@@ -198,7 +199,7 @@ export default function AccountSetting({
     // <div className="flex bg-white h-screen">
     <div className="flex bg-white h-screen w-screen overflow-hidden">
       {/* <div className="w-[44px] sm:w-[200px] px-1 py-4 sm:p-4 border border-gray-100 flex flex-col items-center sm:items-start overflow-y-auto"> */}
-      <div className="w-[44px] sm:w-[200px] px-1 py-4 sm:p-4 border border-gray-100 dark:border-[#5f5f5f] flex flex-col items-center sm:items-start overflow-y-auto dark:bg-[#202020] ">
+      <div className="w-[44px] sm:w-[200px] px-1 py-4 sm:p-4 border border-gray-100 dark:border-[#5f5f5f] flex flex-col items-center sm:items-start overflow-y-auto ${getDarkThemeClasses('background')}">
         {/* Sidebar header */}
         <div className="flex items-center mb-8 text-sm sm:text-base font-medium leading-6 text-gray-900">
           {/* <div onClick={navBackHandle} className="cursor-pointer" /> */}
@@ -251,11 +252,11 @@ export default function AccountSetting({
         </div>
       </div>
       {/* <div ref={scrollRef} className="flex-1 overflow-y-auto"> */}
-      <div ref={scrollRef} className="flex-1 overflow-y-auto dark:bg-[#202020]">
+      <div ref={scrollRef} className={`flex-1 overflow-y-auto ${getDarkThemeClasses('background')}`}>
         {/* <div className={cn('sticky top-0 px-6 py-4 flex items-center h-14 mb-4 bg-white text-base font-medium text-gray-900 z-20', scrolled && scrolledClassName)}> */}
         <div
           className={cn(
-            "sticky top-0 px-6 py-4 flex items-center h-14 mb-4 bg-white text-base font-medium text-gray-900 z-20 dark:bg-[#202020] dark:text-white",
+            `sticky top-0 px-6 py-4 flex items-center h-14 mb-4 bg-white text-base font-medium text-gray-900 z-20 ${getDarkThemeClasses('background')} dark:text-white`,
             scrolled && scrolledClassName
           )}
         >
@@ -356,3 +357,4 @@ export default function AccountSetting({
 //     </div>
 //   </div>
 // </Modal>
+

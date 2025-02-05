@@ -65,3 +65,4 @@ const BatchModal: FC<IBatchModalProps> = ({
   )
 }
 export default React.memo(BatchModal)
+

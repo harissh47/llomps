@@ -96,3 +96,4 @@ const CandidateNode = () => {
 }
 
 export default memo(CandidateNode)
+

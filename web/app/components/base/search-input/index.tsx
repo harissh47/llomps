@@ -88,3 +88,4 @@ const SearchInput: FC<SearchInputProps> = ({
 };
 
 export default SearchInput;
+

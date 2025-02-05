@@ -163,3 +163,4 @@ const PricingTable: React.FC = () => {
 };
 
 export default PricingTable;
+

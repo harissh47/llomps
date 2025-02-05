@@ -24,3 +24,4 @@ const SpeechToTextConfig: FC = () => {
   )
 }
 export default React.memo(SpeechToTextConfig)
+

@@ -35,3 +35,4 @@ const CreateAppTemplateDialog = ({ show, onSuccess, onClose }: CreateAppDialogPr
 }
 
 export default CreateAppTemplateDialog
+

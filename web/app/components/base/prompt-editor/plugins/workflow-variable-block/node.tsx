@@ -90,3 +90,4 @@ export function $isWorkflowVariableBlockNode(
 ): node is WorkflowVariableBlockNode {
   return node instanceof WorkflowVariableBlockNode
 }
+

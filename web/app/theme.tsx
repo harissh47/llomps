@@ -43,7 +43,7 @@ export type DarkThemeColors = {
 
 export const getDarkTheme = (): DarkThemeColors => ({
   // background: `dark:${getProviderBackground(storedProvider)}`,
-  background: 'dark:bg-[#220020]',
+  background: 'dark:bg-[#202020]',
   text: 'dark:text-white',
   hover: 'dark:hover:bg-zinc-800',
   border: 'dark:border-zinc-700'

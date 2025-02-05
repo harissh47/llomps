@@ -46,3 +46,4 @@ const Main: FC<Props> = ({
   return isInNode ? <Wrap {...otherProps} /> : <WrapInWebApp {...otherProps} />
 }
 export default React.memo(Main)
+

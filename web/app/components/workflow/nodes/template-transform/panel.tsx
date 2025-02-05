@@ -125,3 +125,4 @@ const Panel: FC<NodePanelProps<TemplateTransformNodeType>> = ({
 }
 
 export default React.memo(Panel)
+

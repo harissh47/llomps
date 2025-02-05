@@ -82,3 +82,4 @@ const Form2: FC<Form2Props> = ({ onSend, handleModal }) => {
 }
 
 export default Form2
+

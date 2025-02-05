@@ -249,3 +249,4 @@ const Prompt: FC<ISimplePromptInput> = ({
 }
 
 export default React.memo(Prompt)
+

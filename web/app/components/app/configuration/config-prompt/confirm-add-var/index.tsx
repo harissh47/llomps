@@ -71,3 +71,4 @@ const ConfirmAddVar: FC<IConfirmAddVarProps> = ({
   )
 }
 export default React.memo(ConfirmAddVar)
+

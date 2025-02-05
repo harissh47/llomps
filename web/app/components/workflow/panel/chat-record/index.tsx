@@ -123,3 +123,4 @@ const ChatRecord = () => {
 }
 
 export default memo(ChatRecord)
+

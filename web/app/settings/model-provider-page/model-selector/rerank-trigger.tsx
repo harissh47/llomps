@@ -23,3 +23,4 @@ const ModelTrigger = () => {
 }
 
 export default ModelTrigger
+

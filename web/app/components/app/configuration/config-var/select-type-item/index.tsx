@@ -36,3 +36,4 @@ const SelectTypeItem: FC<ISelectTypeItemProps> = ({
   )
 }
 export default React.memo(SelectTypeItem)
+

@@ -24,3 +24,4 @@ const DetailPanel: FC<ILogDetail> = ({ runID, onClose }) => {
 }
 
 export default DetailPanel
+

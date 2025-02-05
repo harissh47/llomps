@@ -44,3 +44,4 @@ const ScoreSlider: FC<Props> = ({
   )
 }
 export default React.memo(ScoreSlider)
+

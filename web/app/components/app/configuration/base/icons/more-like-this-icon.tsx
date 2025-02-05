@@ -12,3 +12,4 @@ const MoreLikeThisIcon: FC = () => {
   )
 }
 export default React.memo(MoreLikeThisIcon)
+

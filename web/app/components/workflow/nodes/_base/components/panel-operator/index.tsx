@@ -75,3 +75,4 @@ const PanelOperator = ({
 }
 
 export default memo(PanelOperator)
+

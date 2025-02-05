@@ -129,3 +129,4 @@ export const VarBlockIcon: FC<BlockIconProps> = ({
 }
 
 export default memo(BlockIcon)
+

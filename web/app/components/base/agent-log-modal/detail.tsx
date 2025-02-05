@@ -130,3 +130,4 @@ const AgentLogDetail: FC<AgentLogDetailProps> = ({
 }
 
 export default AgentLogDetail
+

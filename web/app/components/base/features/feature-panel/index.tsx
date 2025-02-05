@@ -114,3 +114,4 @@ const FeaturePanel = ({
   )
 }
 export default memo(FeaturePanel)
+

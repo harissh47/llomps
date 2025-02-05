@@ -59,7 +59,7 @@ const Contribute = ({ onRefreshData }: Props) => {
         <div className='group grow rounded-t-xl' onClick={() => setIsShowEditCustomCollectionModal(true)}>
           <div className='shrink-0 flex items-center p-4 pb-3'>
             {/* <div className='w-10 h-10 flex items-center justify-center border border-gray-200 bg-gray-100 rounded-lg group-hover:border-primary-100 group-hover:bg-primary-50'> */}
-            <div className='w-10 h-10 flex items-center justify-center border border-gray-200 dark:border-[#5f5f5f] bg-gray-100 dark:bg-[#202020] rounded-lg group-hover:border-primary-100 group-hover:bg-primary-50'>
+            <div className='w-10 h-10 flex items-center justify-center border border-gray-200 dark:border-[#5f5f5f] bg-gray-100 ${getDarkThemeClasses('background')} rounded-lg group-hover:border-primary-100 group-hover:bg-primary-50'>
               <Plus className='w-4 h-4 text-gray-500 group-hover:text-primary-600' />
             </div>
             <div className='ml-3 text-sm font-semibold leading-5 text-gray-800 dark:text-white group-hover:text-primary-600'>
@@ -86,3 +86,4 @@ const Contribute = ({ onRefreshData }: Props) => {
   )
 }
 export default Contribute
+

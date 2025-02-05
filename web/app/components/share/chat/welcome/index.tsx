@@ -386,3 +386,4 @@ const Welcome: FC<IWelcomeProps> = ({
 }
 
 export default React.memo(Welcome)
+

@@ -30,3 +30,4 @@ const RemoveVarConfirm: FC<Props> = ({
   )
 }
 export default React.memo(RemoveVarConfirm)
+

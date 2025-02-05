@@ -31,3 +31,4 @@ const AppsFull: FC<{ loc: string }> = ({
   )
 }
 export default React.memo(AppsFull)
+

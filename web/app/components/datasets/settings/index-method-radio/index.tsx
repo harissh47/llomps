@@ -72,3 +72,4 @@ const IndexMethodRadio = ({
 }
 
 export default IndexMethodRadio
+

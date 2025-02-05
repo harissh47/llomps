@@ -117,3 +117,4 @@ const WorkflowVariableBlockComponent = ({
 }
 
 export default memo(WorkflowVariableBlockComponent)
+

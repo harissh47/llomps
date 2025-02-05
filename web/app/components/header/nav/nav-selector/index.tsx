@@ -210,3 +210,4 @@ const NavSelector = ({ curNav, navs, createText, isApp, onCreate, onLoadmore }: 
 }
 
 export default NavSelector
+

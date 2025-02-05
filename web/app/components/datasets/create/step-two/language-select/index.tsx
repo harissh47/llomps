@@ -42,3 +42,4 @@ const LanguageSelect: FC<ILanguageSelectProps> = ({
   )
 }
 export default React.memo(LanguageSelect)
+

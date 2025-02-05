@@ -73,3 +73,4 @@ const ResultTab = ({
 }
 
 export default memo(ResultTab)
+

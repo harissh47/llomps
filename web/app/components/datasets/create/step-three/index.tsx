@@ -3,7 +3,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import cn from 'classnames'
 import EmbeddingProcess from '../embedding-process'
-
+import { getDarkThemeClasses } from '@/app/theme'
 import s from './index.module.css'
 import useBreakpoints, { MediaType } from '@/hooks/use-breakpoints'
 import type { FullDocumentDetail, createDocumentResponse } from '@/models/datasets'
@@ -22,7 +22,7 @@ const StepThree = ({ datasetId, datasetName, indexingType, creationCache }: Step
   const isMobile = media === MediaType.mobile
 
   return (
-    <div className='flex w-full h-full dark:bg-[#202020]'>
+    <div className={`flex w-full h-full ${getDarkThemeClasses('background')}`}>
       <div className={'h-full w-full overflow-y-scroll px-6 sm:px-16'}>
         <div className='max-w-[636px]'>
           {!datasetId && (
@@ -82,3 +82,4 @@ const StepThree = ({ datasetId, datasetName, indexingType, creationCache }: Step
 }
 
 export default StepThree
+

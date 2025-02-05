@@ -44,3 +44,4 @@ const RenameModal: FC<IRenameModalProps> = ({
   )
 }
 export default React.memo(RenameModal)
+

@@ -291,3 +291,4 @@ export const useEmbeddedChatbot = () => {
     currentChatInstanceRef,
   }
 }
+

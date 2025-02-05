@@ -44,3 +44,4 @@ const Doc = ({ appDetail }: IDocProps) => {
 }
 
 export default Doc
+

@@ -21,6 +21,7 @@ import { Plan } from '@/app/components/billing/type'
 import UpgradeBtn from '@/app/components/billing/upgrade-btn'
 import { NUM_INFINITE } from '@/app/components/billing/config'
 import { LanguagesSupported } from '@/i18n/language'
+import { getDarkThemeClasses } from '@/app/theme'
 dayjs.extend(relativeTime)
 
 const MembersPage = () => {
@@ -79,7 +80,7 @@ const MembersPage = () => {
           )}
           <div className={
             `shrink-0 flex items-center py-[7px] px-3 border-[0.5px] border-gray-200 dark:border-[#5f5f5f]
-            text-[13px] font-medium text-primary-600 bg-white dark:bg-[#3f3f3f]
+            text-[13px] font-medium text-primary-600 bg-white ${getDarkThemeClasses('background')}
             shadow-xs rounded-lg ${(isCurrentWorkspaceManager && !isMemberFull) ? 'cursor-pointer' : 'grayscale opacity-50 cursor-default'}`
           } onClick={() => (isCurrentWorkspaceManager && !isMemberFull) && setInviteModalVisible(true)}>
             <UserPlusIcon className='w-4 h-4 mr-2 ' />
@@ -156,3 +157,4 @@ const MembersPage = () => {
 }
 
 export default MembersPage
+

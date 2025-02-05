@@ -274,3 +274,4 @@ const OpeningStatement: FC<IOpeningStatementProps> = ({
   )
 }
 export default React.memo(OpeningStatement)
+

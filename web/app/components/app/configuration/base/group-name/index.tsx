@@ -23,3 +23,4 @@ const GroupName: FC<IGroupNameProps> = ({
   )
 }
 export default React.memo(GroupName)
+

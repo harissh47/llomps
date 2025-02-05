@@ -120,3 +120,4 @@ const ChatWrapper = forwardRef<ChatWrapperRefType>((_, ref) => {
 ChatWrapper.displayName = 'ChatWrapper'
 
 export default memo(ChatWrapper)
+

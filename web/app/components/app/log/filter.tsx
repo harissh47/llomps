@@ -82,3 +82,4 @@ const Filter: FC<IFilterProps> = ({ appId, queryParams, setQueryParams }: IFilte
 }
 
 export default Filter
+

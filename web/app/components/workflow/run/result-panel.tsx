@@ -92,3 +92,4 @@ const ResultPanel: FC<ResultPanelProps> = ({
 }
 
 export default ResultPanel
+

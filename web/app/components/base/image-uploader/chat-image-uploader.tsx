@@ -90,7 +90,7 @@ const UploaderButton: FC<UploaderButtonProps> = ({
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className="z-50">
         {/* <div className="p-2 w-[260px] bg-white rounded-lg border-[0.5px] border-gray-200 shadow-lg"> */}
-        {/* <div className="p-2 w-[260px] bg-white dark:bg-[#202020] rounded-lg border-[0.5px] border-gray-200 shadow-lg"> */}
+        {/* <div className="p-2 w-[260px] bg-white ${getDarkThemeClasses('background')} rounded-lg border-[0.5px] border-gray-200 shadow-lg"> */}
         <div className={`p-2 w-[260px] ${getDarkThemeClasses('background')} rounded-lg border-[0.5px] border-gray-200 dark:border-[#5F5F5F] shadow-lg`}>
           <ImageLinkInput onUpload={handleUpload} disabled={disabled} />
           {hasUploadFromLocal && (
@@ -161,3 +161,4 @@ const ChatImageUploader: FC<ChatImageUploaderProps> = ({
 }
 
 export default ChatImageUploader
+

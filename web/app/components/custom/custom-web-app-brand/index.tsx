@@ -247,3 +247,4 @@ const CustomWebAppBrand = () => {
 }
 
 export default CustomWebAppBrand
+

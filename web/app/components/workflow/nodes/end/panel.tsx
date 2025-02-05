@@ -47,3 +47,4 @@ const Panel: FC<NodePanelProps<EndNodeType>> = ({
 }
 
 export default React.memo(Panel)
+

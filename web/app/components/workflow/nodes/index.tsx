@@ -50,3 +50,4 @@ export const Panel = memo((props: Node) => {
 Panel.displayName = 'Panel'
 
 export default memo(CustomNode)
+

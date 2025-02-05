@@ -64,3 +64,4 @@ const TabSliderNew: FC<TabSliderProps> = ({
 }
 
 export default TabSliderNew
+

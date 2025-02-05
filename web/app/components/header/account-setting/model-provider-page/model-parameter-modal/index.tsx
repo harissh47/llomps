@@ -260,7 +260,7 @@ const ModelParameterModal: FC<ModelParameterModalProps> = ({
               //   onClick={() => onDebugWithMultipleModelChange?.()}
               // >
                 <div
-                className='flex items-center justify-between px-6 h-[50px] bg-gray-50 border-t border-t-gray-100 dark:border-t-[#5F5F5F] text-xs font-medium text-primary-600 cursor-pointer rounded-b-xl dark:bg-[#202020]'
+                className='flex items-center justify-between px-6 h-[50px] bg-gray-50 border-t border-t-gray-100 dark:border-t-[#5F5F5F] text-xs font-medium text-primary-600 cursor-pointer rounded-b-xl ${getDarkThemeClasses('background')}'
                 onClick={() => onDebugWithMultipleModelChange?.()}
               >
                 {
@@ -279,3 +279,4 @@ const ModelParameterModal: FC<ModelParameterModalProps> = ({
 }
 
 export default ModelParameterModal
+

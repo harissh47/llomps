@@ -127,3 +127,4 @@ const Panel: FC<NodePanelProps<VariableAssignerNodeType>> = ({
 }
 
 export default React.memo(Panel)
+

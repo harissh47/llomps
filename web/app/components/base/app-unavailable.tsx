@@ -27,3 +27,4 @@ const AppUnavailable: FC<IAppUnavailableProps> = ({
   )
 }
 export default React.memo(AppUnavailable)
+

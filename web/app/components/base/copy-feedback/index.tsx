@@ -95,3 +95,4 @@ export const CopyFeedbackNew = ({ content, className }: Pick<Props, 'className' 
     </TooltipPlus>
   )
 }
+

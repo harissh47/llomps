@@ -18,3 +18,4 @@ const Divider: FC<Props> = ({ type = 'horizontal', className = '', style }) => {
 }
 
 export default Divider
+

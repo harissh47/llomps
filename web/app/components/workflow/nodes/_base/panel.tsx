@@ -175,3 +175,4 @@ const BasePanel: FC<BasePanelProps> = ({ id, data, children }) => {
 };
 
 export default memo(BasePanel);
+

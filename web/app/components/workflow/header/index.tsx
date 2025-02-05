@@ -157,7 +157,7 @@ const Header: FC = () => {
     <div
       // className='absolute top-2 left-1 z-10 flex items-center justify-between w-full px-3 h-14'
       // className=' flex top-2 left-1 z-10 flex items-center justify-between w-full px-3 h-14'
-      className=' flex top-2 left-1 z-10 flex items-center justify-between w-full px-3 h-14 dark:bg-[#202020]'
+      className=' flex top-2 left-1 z-10 flex items-center justify-between w-full px-3 h-14 ${getDarkThemeClasses('background')}'
 
       style={{
         background: 'linear-gradient(180deg, #F9FAFB 0% dark:#202020 0%, rgba(249, 250, 251, 0.00) 100%)',
@@ -320,3 +320,4 @@ const Header: FC = () => {
 }
 
 export default memo(Header)
+

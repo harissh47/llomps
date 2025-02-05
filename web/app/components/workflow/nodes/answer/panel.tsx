@@ -70,3 +70,4 @@ const Panel: FC<NodePanelProps<AnswerNodeType>> = ({
 }
 
 export default React.memo(Panel)
+

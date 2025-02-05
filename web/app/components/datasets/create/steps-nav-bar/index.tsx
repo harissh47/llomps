@@ -6,7 +6,7 @@ import cn from 'classnames'
 import { useCallback } from 'react'
 import s from './index.module.css'
 import useBreakpoints, { MediaType } from '@/hooks/use-breakpoints'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type IStepsNavBarProps = {
   step: number
   datasetId?: string
@@ -40,7 +40,7 @@ const StepsNavBar = ({
   }, [router, datasetId])
 
   return (
-    <div className='w-full pt-4 dark:bg-[#202020]'>
+    <div className={`w-full pt-4 ${getDarkThemeClasses('background')}`}>
       {/* <div className={cn(s.stepsHeader, isMobile && '!px-0 justify-center')}> */}
       <div
         className={`flex items-center py-6 font-semibold text-[14px] leading-[20px] 
@@ -66,3 +66,4 @@ const StepsNavBar = ({
 }
 
 export default StepsNavBar
+

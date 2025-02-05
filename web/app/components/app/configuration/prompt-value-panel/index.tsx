@@ -256,3 +256,4 @@ export function replaceStringWithValues(str: string, promptVariables: PromptVari
 function format(str: string) {
   return str.replaceAll('\n', '<br>')
 }
+

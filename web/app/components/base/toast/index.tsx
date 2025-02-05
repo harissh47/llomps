@@ -134,3 +134,4 @@ Toast.notify = ({
 }
 
 export default Toast
+

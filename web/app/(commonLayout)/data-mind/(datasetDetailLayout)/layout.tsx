@@ -14,3 +14,4 @@ const AppDetail: FC<IDatasetDetail> = ({ children }) => {
 }
 
 export default React.memo(AppDetail)
+

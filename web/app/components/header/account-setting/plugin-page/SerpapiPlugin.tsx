@@ -78,3 +78,4 @@ const SerpapiPlugin = ({
 }
 
 export default SerpapiPlugin
+

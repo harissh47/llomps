@@ -55,3 +55,4 @@ const ApiBasedExtensionPage = () => {
 }
 
 export default ApiBasedExtensionPage
+

@@ -40,3 +40,4 @@ const InstalledApp: FC<IInstalledAppProps> = ({
   )
 }
 export default React.memo(InstalledApp)
+

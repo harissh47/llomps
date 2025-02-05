@@ -121,3 +121,4 @@ const Trigger: FC<TriggerProps> = ({
 }
 
 export default Trigger
+

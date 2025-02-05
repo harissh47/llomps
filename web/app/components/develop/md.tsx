@@ -140,3 +140,4 @@ export function SubProperty({ name, type, children }: ISubProperty) {
     </li>
   )
 }
+

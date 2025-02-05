@@ -48,10 +48,11 @@ const FeatureItem: FC<IFeatureItemProps> = ({
       {
         // previewImgClassName && (
         //   // <div className={cn(s.preview, s[previewImgClassName])}>
-        //   <div className={cn(s.preview, s[previewImgClassName], 'dark:bg-[#202020]')}>
+        //   <div className={cn(s.preview, s[previewImgClassName], '${getDarkThemeClasses('background')}')}>
         //   </div>)
       }
     </div>
   )
 }
 export default React.memo(FeatureItem)
+

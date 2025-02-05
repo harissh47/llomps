@@ -397,3 +397,4 @@ export const useChatWithHistory = (installedAppInfo?: InstalledApp) => {
     currentChatInstanceRef,
   }
 }
+

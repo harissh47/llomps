@@ -70,3 +70,4 @@ const TabSlider: FC<Props> = ({
   )
 }
 export default React.memo(TabSlider)
+

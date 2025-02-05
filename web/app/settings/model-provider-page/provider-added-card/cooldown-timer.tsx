@@ -62,3 +62,4 @@ const CooldownTimer = ({ secondsRemaining, onFinish }: CooldownTimerProps) => {
 }
 
 export default memo(CooldownTimer)
+

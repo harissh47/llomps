@@ -21,3 +21,4 @@ const FloatRightContainer = ({ isMobile, children, isOpen, ...drawerProps }: IFl
 }
 
 export default FloatRightContainer
+

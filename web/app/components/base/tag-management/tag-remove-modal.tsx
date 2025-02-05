@@ -50,3 +50,4 @@ const TagRemoveModal = ({ show, tag, onConfirm, onClose }: TagRemoveModalProps) 
 }
 
 export default TagRemoveModal
+

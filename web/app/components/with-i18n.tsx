@@ -18,3 +18,4 @@ const withI18N = (Component: any) => {
 }
 
 export default withI18N
+

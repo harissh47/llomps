@@ -6,6 +6,7 @@ import { PlusIcon } from '@heroicons/react/24/solid'
 import cn from 'classnames'
 import type { ConfigItemType } from './config-item'
 import ConfigItem from './config-item'
+import { getDarkThemeClasses } from '@/app/theme'
 
 import s from './style.module.css'
 import { DataSourceType } from './types'
@@ -50,7 +51,7 @@ const Panel: FC<Props> = ({
             <div className='text-sm font-medium text-gray-800 dark:text-white'>{t(`common.dataSource.${type}.title`)}</div>
             {isWebsite && (
               // <div className='ml-1 leading-[18px] px-1.5 rounded-md bg-white border border-gray-100 text-xs font-medium text-gray-700'>
-              <div className='ml-1 leading-[18px] px-1.5 rounded-md bg-white dark:bg-[#202020] border border-gray-100 dark:border-[#5F5F5F] text-xs font-medium text-gray-700 dark:text-[#FCFCFC]'>
+              <div className={`ml-1 leading-[18px] px-1.5 rounded-md bg-white ${getDarkThemeClasses('background')} border border-gray-100 dark:border-[#5F5F5F] text-xs font-medium text-gray-700 dark:text-[#FCFCFC]`}>
                 <span className='text-gray-500 dark:text-[#A1A6B2]'>{t('common.dataSource.website.with')}</span> 🔥 FireCrawl
               </div>
             )}
@@ -142,3 +143,4 @@ const Panel: FC<Props> = ({
   )
 }
 export default React.memo(Panel)
+

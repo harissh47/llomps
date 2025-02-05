@@ -29,3 +29,4 @@ const RemoveIcon = ({
   )
 }
 export default React.memo(RemoveIcon)
+

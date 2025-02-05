@@ -48,3 +48,4 @@ export const CopyIcon = ({ content }: Props) => {
 }
 
 export default CopyIcon
+

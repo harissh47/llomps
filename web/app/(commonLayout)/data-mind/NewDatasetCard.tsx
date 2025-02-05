@@ -30,3 +30,4 @@ const CreateAppCard = forwardRef<HTMLAnchorElement>((_, ref) => {
 CreateAppCard.displayName = 'CreateAppCard'
 
 export default CreateAppCard
+

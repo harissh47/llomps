@@ -62,3 +62,4 @@ const WorkflowVariableBlockReplacementBlock = ({
 }
 
 export default memo(WorkflowVariableBlockReplacementBlock)
+

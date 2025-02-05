@@ -104,3 +104,4 @@ const Panel: FC<NodePanelProps<ActionsNodeType>> = ({
 }
 
 export default React.memo(Panel)
+

@@ -86,3 +86,4 @@ const FontSizeSelector = () => {
 }
 
 export default memo(FontSizeSelector)
+

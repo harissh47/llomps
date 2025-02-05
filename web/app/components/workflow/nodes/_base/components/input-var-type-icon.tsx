@@ -29,3 +29,4 @@ const InputVarTypeIcon: FC<Props> = ({
   )
 }
 export default React.memo(InputVarTypeIcon)
+

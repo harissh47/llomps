@@ -235,8 +235,8 @@ const Apps = () => {
         </div>
       </div> */}
 
-      {/* <div className='sticky top-0 flex justify-between items-center pt-4 px-2 sm:px-12 pb-2 leading-[56px] bg-gray-100 z-10 flex-wrap gap-y-2'> */}
-      <div className='sticky top-0 flex justify-between items-center pt-4 px-2 sm:px-12 pb-2 leading-[56px] bg-gray-100 z-10 flex-wrap gap-y-2 '>
+      {/* <div className='sticky top-0 flex justify-between items-center pt-4 px-2 sm:px-12 pb-2 leading-[56px] bg-gray-100 z-10 flex-wrap gap-y-2 da '> */}
+      <div className={`sticky top-0 flex justify-between items-center pt-4 px-2 sm:px-12 pb-2 leading-[56px] bg-gray-100 z-10 flex-wrap gap-y-2 ${getDarkThemeClasses('background')}`}>
         <div className='flex items-center gap-2'>
           <NewAppCard onSuccess={mutate} />
         </div>
@@ -266,8 +266,8 @@ const Apps = () => {
       </div>
 
 
-      {/* <div className='dark:bg-[#202020] dark:text-white '> */}
-      <div className={`${getDarkThemeClasses('background')} dark:text-white `}>
+      {/* <div className='${getDarkThemeClasses('background')} dark:text-white '> */}
+      <div className={`${getDarkThemeClasses('background')}  ${getDarkThemeClasses('text')}`}>
 
         {options.map((option) => (
           <div key={option.value}>
@@ -284,8 +284,8 @@ const Apps = () => {
                 </svg>
               )}
               <div className={cn(
-                'flex ml-2 items-center px-2.5 py-2 rounded-lg border-[0.5px] border-transparent text-gray-700 dark:white text-[13px] leading-[18px] cursor-pointer hover:bg-gray-200 dark:hover:bg-zinc-800 cursor-pointer dark:text-white',
-                activeTab === option.value && 'bg-white border-gray-200 shadow-xs text-primary-600 hover:bg-white dark:bg-zinc-700',
+                `flex ml-2 items-center px-2.5 py-2 rounded-lg border-[0.5px] border-transparent text-gray-700 dark:white text-[13px] leading-[18px] cursor-pointer hover:bg-gray-200 dark:hover:bg-zinc-800 cursor-pointer ${getDarkThemeClasses('text')}`,
+                activeTab === option.value && `bg-white border-gray-200 shadow-xs text-primary-600 hover:bg-white dark:bg-zinc-700 ${getDarkThemeClasses('text')}`,
               )} onClick={() => handleTabSelect(option.value)}>
                 
                 {/* <div className={cn(
@@ -1205,3 +1205,4 @@ export default Apps
 // }
 
 // export default Apps
+

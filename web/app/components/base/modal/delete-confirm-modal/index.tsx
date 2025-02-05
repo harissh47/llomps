@@ -64,3 +64,4 @@ const DeleteConfirmModal: FC<Props> = ({
   )
 }
 export default React.memo(DeleteConfirmModal)
+

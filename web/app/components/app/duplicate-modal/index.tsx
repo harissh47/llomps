@@ -104,3 +104,4 @@ const DuplicateAppModal = ({
 }
 
 export default DuplicateAppModal
+

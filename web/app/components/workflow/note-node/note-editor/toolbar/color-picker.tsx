@@ -103,3 +103,4 @@ const ColorPicker = ({
 }
 
 export default memo(ColorPicker)
+

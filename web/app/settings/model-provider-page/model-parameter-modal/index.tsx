@@ -31,6 +31,7 @@ import Loading from '@/app/components/base/loading'
 import { useProviderContext } from '@/context/provider-context'
 import { TONE_LIST } from '@/config'
 import { ArrowNarrowLeft } from '@/app/components/base/icons/src/vender/line/arrows'
+import { getDarkThemeClasses } from '@/app/theme'
 
 export type ModelParameterModalProps = {
   popupClassName?: string
@@ -254,7 +255,7 @@ const ModelParameterModal: FC<ModelParameterModalProps> = ({
               //   onClick={() => onDebugWithMultipleModelChange?.()}
               // >
                 <div
-                className='flex items-center justify-between px-6 h-[50px] bg-gray-50 border-t border-t-gray-100 text-xs font-medium text-primary-600 cursor-pointer rounded-b-xl dark:bg-[#202020]'
+                className={`flex items-center justify-between px-6 h-[50px] bg-gray-50 border-t border-t-gray-100 text-xs font-medium text-primary-600 cursor-pointer rounded-b-xl ${getDarkThemeClasses('background')}`}
                 onClick={() => onDebugWithMultipleModelChange?.()}
               >
                 {
@@ -273,3 +274,4 @@ const ModelParameterModal: FC<ModelParameterModalProps> = ({
 }
 
 export default ModelParameterModal
+

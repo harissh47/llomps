@@ -163,3 +163,4 @@ const Panel: FC<NodePanelProps<KnowledgeRetrievalNodeType>> = ({
 }
 
 export default React.memo(Panel)
+

@@ -164,3 +164,4 @@ const Sidebar: FC<ISidebarProps> = ({
 }
 
 export default React.memo(Sidebar)
+

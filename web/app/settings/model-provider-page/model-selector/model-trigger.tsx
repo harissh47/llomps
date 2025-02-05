@@ -74,3 +74,4 @@ const ModelTrigger: FC<ModelTriggerProps> = ({
 }
 
 export default ModelTrigger
+

@@ -230,3 +230,4 @@ const GetAutomaticRes: FC<IGetAutomaticResProps> = ({
   )
 }
 export default React.memo(GetAutomaticRes)
+

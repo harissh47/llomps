@@ -21,3 +21,4 @@ const BasicContent: FC<BasicContentProps> = ({
 }
 
 export default memo(BasicContent)
+

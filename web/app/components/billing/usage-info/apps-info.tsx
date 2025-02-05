@@ -30,3 +30,4 @@ const AppsInfo: FC<Props> = ({
   )
 }
 export default React.memo(AppsInfo)
+

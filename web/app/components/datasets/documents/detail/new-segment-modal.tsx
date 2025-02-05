@@ -155,3 +155,4 @@ const NewSegmentModal: FC<NewSegmentModalProps> = ({
 }
 
 export default memo(NewSegmentModal)
+

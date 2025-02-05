@@ -29,3 +29,4 @@ const IconBase = forwardRef<React.MutableRefObject<HTMLOrSVGElement>, IconBasePr
 })
 
 export default IconBase
+

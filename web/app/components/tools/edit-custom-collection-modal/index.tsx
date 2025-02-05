@@ -364,3 +364,4 @@ const EditCustomCollectionModal: FC<Props> = ({
   )
 }
 export default React.memo(EditCustomCollectionModal)
+

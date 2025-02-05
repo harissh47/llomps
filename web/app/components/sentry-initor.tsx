@@ -28,3 +28,4 @@ const SentryInit = ({
 }
 
 export default SentryInit
+

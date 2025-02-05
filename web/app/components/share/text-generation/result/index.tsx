@@ -406,3 +406,4 @@ const Result: FC<IResultProps> = ({
   )
 }
 export default React.memo(Result)
+

@@ -308,3 +308,4 @@ const EmbeddingDetail: FC<Props> = ({ detail, stopPosition = 'top', datasetId: d
 }
 
 export default React.memo(EmbeddingDetail)
+

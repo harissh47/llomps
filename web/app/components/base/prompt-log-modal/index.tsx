@@ -70,3 +70,4 @@ const PromptLogModal: FC<PromptLogModalProps> = ({
 }
 
 export default PromptLogModal
+

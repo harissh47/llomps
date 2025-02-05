@@ -34,3 +34,4 @@ const ProviderIcon: FC<ProviderIconProps> = ({
 }
 
 export default ProviderIcon
+

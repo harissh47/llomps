@@ -88,7 +88,7 @@ const RunAndHistory: FC = () => {
   const isChatMode = useIsChatMode()
 
   return (
-    // <div className='flex items-center px-0.5 h-8 rounded-lg border-[0.5px] border-gray-200 bg-white dark:bg-[#202020] shadow-xs dark:hover:bg-zinc-800'>
+    // <div className='flex items-center px-0.5 h-8 rounded-lg border-[0.5px] border-gray-200 bg-white ${getDarkThemeClasses('background')} shadow-xs dark:hover:bg-zinc-800'>
     <div className='flex items-center px-0.5 h-8 rounded-lg border-[0.5px] border-gray-200 bg-white dark:bg-[#333333] shadow-xs dark:hover:bg-zinc-800 dark:border-2 dark:border-[#3F3F3F] dark:border-solid dark:shadow-sm'>
       {
         !isChatMode && <RunMode />
@@ -104,3 +104,4 @@ const RunAndHistory: FC = () => {
 }
 
 export default memo(RunAndHistory)
+

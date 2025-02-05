@@ -72,3 +72,4 @@ const AppIcon: FC<AppIconProps> = ({
 }
 
 export default AppIcon
+

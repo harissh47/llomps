@@ -83,7 +83,7 @@ const PanelOperatorPopup = ({
   const link = useNodeHelpLink(data.type)
 
   return (
-    // <div className='w-[240px] border-[0.5px] border-gray-200 rounded-lg shadow-xl bg-white dark:bg-[#202020]'>
+    // <div className='w-[240px] border-[0.5px] border-gray-200 rounded-lg shadow-xl bg-white ${getDarkThemeClasses('background')}'>
 
     <div className='w-[240px] border-[0.5px] border-gray-200 dark:border-[#5f5f5f] rounded-lg shadow-xl bg-white dark:bg-[#3f3f3f]'>
       {
@@ -213,3 +213,4 @@ const PanelOperatorPopup = ({
 }
 
 export default memo(PanelOperatorPopup)
+

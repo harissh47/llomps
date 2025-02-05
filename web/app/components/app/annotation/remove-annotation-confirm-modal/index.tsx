@@ -27,3 +27,4 @@ const RemoveAnnotationConfirmModal: FC<Props> = ({
   )
 }
 export default React.memo(RemoveAnnotationConfirmModal)
+

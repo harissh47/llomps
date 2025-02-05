@@ -147,3 +147,4 @@ const AppDetailNav = ({ title, desc, icon, icon_background, navigation, extraInf
 }
 
 export default React.memo(AppDetailNav)
+

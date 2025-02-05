@@ -67,7 +67,7 @@ const PanelContextmenu = () => {
   return (
     <div
       // className='absolute w-[200px] rounded-lg border-[0.5px] border-gray-200 bg-white shadow-xl z-[9]'
-      className='absolute w-[200px] rounded-lg border-[0.5px] border-gray-200 dark:border-[#5F5F5F] bg-white dark:bg-[#202020] shadow-xl z-[9]'
+      className='absolute w-[200px] rounded-lg border-[0.5px] border-gray-200 dark:border-[#5F5F5F] bg-white ${getDarkThemeClasses('background')} shadow-xl z-[9]'
       style={{
         left: panelMenu.left,
         top: panelMenu.top,
@@ -141,3 +141,4 @@ const PanelContextmenu = () => {
 }
 
 export default memo(PanelContextmenu)
+

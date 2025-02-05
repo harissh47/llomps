@@ -23,3 +23,4 @@ const LinkEditorPlugin = ({
 }
 
 export default memo(LinkEditorPlugin)
+

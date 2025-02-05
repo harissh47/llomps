@@ -36,3 +36,4 @@ const PluginPage = () => {
 }
 
 export default PluginPage
+

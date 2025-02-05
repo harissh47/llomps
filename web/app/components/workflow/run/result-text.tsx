@@ -54,3 +54,4 @@ const ResultText: FC<ResultTextProps> = ({
 }
 
 export default ResultText
+

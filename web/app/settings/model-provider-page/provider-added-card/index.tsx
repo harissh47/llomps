@@ -164,3 +164,4 @@ const ProviderAddedCard: FC<ProviderAddedCardProps> = ({
 }
 
 export default ProviderAddedCard
+

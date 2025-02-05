@@ -41,3 +41,4 @@ const ResDownload: FC<IResDownloadProps> = ({
   )
 }
 export default React.memo(ResDownload)
+

@@ -71,3 +71,4 @@ const CustomAppHeaderBrand = () => {
 }
 
 export default CustomAppHeaderBrand
+
