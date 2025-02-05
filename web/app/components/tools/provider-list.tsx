@@ -16,7 +16,7 @@ import ProviderCard from '@/app/components/tools/provider/card'
 import ProviderDetail from '@/app/components/tools/provider/detail'
 import Empty from '@/app/components/tools/add-tool-modal/empty'
 import { fetchCollectionList } from '@/service/tools'
-import { getDarkThemeClasses } from '@/utils/theme'
+import { getDarkThemeClasses } from '@/app/theme'
 const ProviderList = () => {
   const { t } = useTranslation()
 

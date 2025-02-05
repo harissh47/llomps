@@ -3,7 +3,7 @@ import type { FC } from 'react'
 import React from 'react'
 import { useTranslation } from 'react-i18next'
 import Button from '../button'
-import { getDarkThemeClasses } from '@/utils/theme'
+import { getDarkThemeClasses } from '@/app/theme'
  
 export type IConfirmUIProps = {
   type: 'info' | 'warning'

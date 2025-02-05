@@ -33,7 +33,7 @@ import {
   Loading02,
 } from '@/app/components/base/icons/src/vender/line/general'
 import { AlertCircle } from '@/app/components/base/icons/src/vender/line/alertsAndFeedback'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type BaseNodeProps = {
   children: ReactElement
 } & NodeProps
@@ -91,7 +91,7 @@ const BaseNode: FC<BaseNodeProps> = ({
         className={cn(
           'group relative pb-1 shadow-xs',
           // 'border border-transparent rounded-[15px] ',
-          'border border-transparent rounded-[15px] dark:bg-[#202020]',
+          `border border-transparent rounded-[15px] ${getDarkThemeClasses('main_background')}`,
           data.type !== BlockEnum.Iteration && 'w-[240px] bg-[#fcfdff]',
           data.type === BlockEnum.Iteration && 'flex flex-col w-full h-full bg-[#fcfdff]/80',
           !data._runningStatus && 'hover:shadow-lg',
@@ -146,7 +146,7 @@ const BaseNode: FC<BaseNodeProps> = ({
           )
         }
         <div className={cn(
-          'flex items-center px-3 pt-3 pb-2 rounded-t-2xl rounded-b-2xl dark:bg-[#202020]',
+          `flex items-center px-3 pt-3 pb-2 rounded-t-2xl rounded-b-2xl ${getDarkThemeClasses('main_background')}`,
           data.type === BlockEnum.Iteration && 'bg-[rgba(250,252,255,0.9)]',
         )}>
           <BlockIcon
@@ -157,7 +157,7 @@ const BaseNode: FC<BaseNodeProps> = ({
           />
           <div
             title={data.title}
-            className='grow mr-1 text-[13px] font-semibold text-gray-700 dark:text-white truncate'
+            className={`grow mr-1 text-[13px] font-semibold text-gray-700 ${getDarkThemeClasses('text')} truncate`}
           >
             {data.title}
           </div>
@@ -199,7 +199,7 @@ const BaseNode: FC<BaseNodeProps> = ({
         {
           data.desc && data.type !== BlockEnum.Iteration && (
             // <div className='px-3 pt-1 pb-2 text-xs leading-[18px] text-gray-500 whitespace-pre-line break-words'>
-             <div className='px-3 pt-1 pb-2 text-xs leading-[18px] text-gray-500 dark:text-[#FCFCFC] whitespace-pre-line break-words'>
+             <div className={`px-3 pt-1 pb-2 text-xs leading-[18px] text-gray-500 ${getDarkThemeClasses('text')} whitespace-pre-line break-words`}>
               {data.desc}
             </div>
           )

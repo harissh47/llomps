@@ -327,7 +327,7 @@ import cn from 'classnames'
 import s from './style.module.css'
 import workflow from '../apps/assets/workflow.svg'
 import { MoonIcon, SunIcon } from '@heroicons/react/20/solid'
-import { getDarkThemeClasses } from '@/utils/theme'
+import { getDarkThemeClasses } from '@/app/theme'
 import { get } from 'sortablejs'
  
 const getKey = (

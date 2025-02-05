@@ -13,7 +13,7 @@ import { ArrowUpRight, ChevronDown } from '@/app/components/base/icons/src/vende
 import { LogOut01 } from '@/app/components/base/icons/src/vender/line/general'
 import { useModalContext } from '@/context/modal-context'
 import { LanguagesSupported } from '@/i18n/language'
-import { getDarkThemeClasses } from '@/utils/theme'
+import { getDarkThemeClasses } from '@/app/theme'
 export type IAppSelecotr = {
   isMobile: boolean
 }

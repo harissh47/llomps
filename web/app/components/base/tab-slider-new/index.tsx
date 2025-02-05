@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 import cn from 'classnames'
-import { getDarkThemeClasses } from '@/utils/theme'
+import { getDarkThemeClasses } from '@/app/theme'
 type Option = {
   value: string
   text: string

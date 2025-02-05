@@ -15,7 +15,7 @@ import { BlockEnum } from '../../../../types'
 import Add from './add'
 import Item from './item'
 import Line from './line'
-import { getDarkThemeClasses } from '@/utils/theme'
+import { getDarkThemeClasses } from '@/app/theme'
 type NextStepProps = {
   selectedNode: Node
 }

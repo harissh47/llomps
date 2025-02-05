@@ -19,7 +19,7 @@ import type { Label } from '@/app/components/tools/labels/constant'
 import { fetchLabelList } from '@/service/tools'
 import I18n from '@/context/i18n'
 import { getLanguage } from '@/i18n/language'
-import { getDarkThemeClasses } from '@/utils/theme'
+import { getDarkThemeClasses } from '@/app/theme'
 type LabelFilterProps = {
   value: string[]
   onChange: (v: string[]) => void

@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useSelectedLayoutSegment } from 'next/navigation'
 import classNames from 'classnames'
 import { Tools, ToolsActive } from '../../base/icons/src/public/header-nav/tools'
-import { getDarkThemeClasses } from '@/utils/theme'
+import { getDarkThemeClasses } from '@/app/theme'
 type ToolsNavProps = {
   className?: string
   isCollapsed?: boolean

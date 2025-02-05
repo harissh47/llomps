@@ -8,7 +8,7 @@ import type { INavSelectorProps } from './nav-selector'
 import NavSelector from './nav-selector'
 import { ArrowNarrowLeft } from '@/app/components/base/icons/src/vender/line/arrows'
 import { useStore as useAppStore } from '@/app/components/app/store'
-import { getDarkThemeClasses } from '@/utils/theme'
+import { getDarkThemeClasses } from '@/app/theme'
 type INavProps = {
   icon: React.ReactNode
   activeIcon?: React.ReactNode

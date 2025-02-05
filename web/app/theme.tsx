@@ -60,6 +60,10 @@ export type DarkThemeColors = {
   caret:string;
   focus1:string;
   background5: string
+  hover5: string
+  divide: string
+  hover6: string
+  hovershadow1: string
 }
  
 // // Function to determine background color based on provider
@@ -132,7 +136,11 @@ export const getDarkTheme = (): DarkThemeColors => ({
   hovershadow:'dark:hover:bg-transparent dark:hover:shadow-[#5F5F5F]',
   groupBorderHover:'dark:group-hover:border-gray-700',
   ring:'dark:ring-primary-500',
-  background5: 'dark:bg-[#a1a6b2]'
+  background5: 'dark:bg-[#a1a6b2]',
+  hover5:'dark:hover:bg-[#E35B5B]',
+  divide:'dark:divide-[#5f5f5f]',
+  hover6:'dark:hover-!bg-[#202020]',
+  hovershadow1:'dark:hover:shadow:bg-[#3f3f3f]'
 });
  
 export const getDarkThemeClasses = (componet: keyof DarkThemeColors): string => {

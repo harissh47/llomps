@@ -9,7 +9,7 @@ import EmojiPicker from '@/app/components/base/emoji-picker'
 import { useProviderContext } from '@/context/provider-context'
 import AppsFull from '@/app/components/billing/apps-full-in-dialog'
 import { XClose } from '@/app/components/base/icons/src/vender/line/general'
-import { getDarkThemeClasses } from '@/utils/theme'
+import { getDarkThemeClasses } from '@/app/theme'
  
 export type CreateAppModalProps = {
   show: boolean

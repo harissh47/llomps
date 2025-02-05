@@ -3,7 +3,7 @@ import { Fragment } from 'react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
 import classNames from 'classnames'
 // https://headlessui.com/react/dialog
-import { getDarkThemeClasses } from '@/utils/theme'
+import { getDarkThemeClasses } from '@/app/theme'
  
 type IModal = {
   className?: string

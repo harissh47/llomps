@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useContext } from 'use-context-selector'
 import { useTranslation } from 'react-i18next'
-import { getDarkThemeClasses } from '@/utils/theme'
+import { getDarkThemeClasses } from '@/app/theme'
 import { useStore as useTagStore } from './store'
 import TagItemEditor from './tag-item-editor'
 import Modal from '@/app/components/base/modal'

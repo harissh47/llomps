@@ -22,7 +22,7 @@ import { Route } from '@/app/components/base/icons/src/vender/solid/mapsAndTrave
 import TooltipPlus from '@/app/components/base/tooltip-plus'
 import { NEED_REFRESH_APP_LIST_KEY } from '@/config'
 import { getRedirection } from '@/utils/app-redirection'
-import { getDarkThemeClasses } from '@/utils/theme'
+import { getDarkThemeClasses } from '@/app/theme'
  
 type CreateAppDialogProps = {
   show: boolean

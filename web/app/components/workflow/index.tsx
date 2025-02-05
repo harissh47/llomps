@@ -60,6 +60,7 @@ import { FeaturesProvider } from "@/app/components/base/features";
 import type { Features as FeaturesData } from "@/app/components/base/features/types";
 import { useEventEmitterContextContext } from "@/context/event-emitter";
 import Confirm from "@/app/components/base/confirm/common";
+import { getDarkThemeClasses } from "@/app/theme";
 
 const nodeTypes = {
   [CUSTOM_NODE]: CustomNode,
@@ -237,7 +238,7 @@ const Workflow: FC<WorkflowProps> = memo(
       //   ${nodeAnimation && "workflow-node-animation"}
       // `}
       className={`
-        relative w-full min-w-[960px] h-full bg-[#F0F2F7] dark:bg-[#2c2c2c]
+        relative w-full min-w-[960px] h-full bg-[#F0F2F7] ${getDarkThemeClasses('background2')}
         ${workflowReadOnly && "workflow-panel-animation"}
         ${nodeAnimation && "workflow-node-animation"}
       `}

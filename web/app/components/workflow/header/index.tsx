@@ -41,7 +41,7 @@ import AppIcon from '../../base/app-icon'
 import s from './style.module.css'
 import cn from 'classnames'
 import router, { useRouter } from 'next/navigation'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const Header: FC = () => {
   const { t } = useTranslation()
   const workflowStore = useWorkflowStore()
@@ -157,10 +157,10 @@ const Header: FC = () => {
     <div
       // className='absolute top-2 left-1 z-10 flex items-center justify-between w-full px-3 h-14'
       // className=' flex top-2 left-1 z-10 flex items-center justify-between w-full px-3 h-14'
-      className=' flex top-2 left-1 z-10 flex items-center justify-between w-full px-3 h-14 dark:bg-[#202020]'
+      className={` flex top-2 left-1 z-10 flex items-center justify-between w-full px-3 h-14 ${getDarkThemeClasses('main_background')}`}
 
       style={{
-        background: 'linear-gradient(180deg, #F9FAFB 0% dark:#202020 0%, rgba(249, 250, 251, 0.00) 100%)',
+        background: `linear-gradient(180deg, #F9FAFB 0% ${getDarkThemeClasses('main_background')} 0%, rgba(249, 250, 251, 0.00) 100%)`,
       }}
     >
       <div className='flex items-center justify-center mt-3'>
@@ -171,7 +171,7 @@ const Header: FC = () => {
           )
         } */}
         {/* <div onClick={navBackHandle} className={cn(s.navBack)} /> */}
-        <div onClick={navBackHandle} className={cn(s.navBack, 'dark:bg-[#383838]')} />
+        <div onClick={navBackHandle} className={cn(s.navBack, `${getDarkThemeClasses('background3')}`)} />
         {
           <div className='mr-2'>
             {appDetail?.mode === 'advanced-chat' && (
@@ -199,7 +199,7 @@ const Header: FC = () => {
           </div>
         }
         <div className='flex flex-col'>
-          <div className='text-xs font-medium text-gray-700 dark:text-white'>{appDetail?.name}</div>
+          <div className={`text-xs font-medium text-gray-700 ${getDarkThemeClasses('text')}`}>{appDetail?.name}</div>
           <div className='flex items-center w-max'>
             {
               normal && <EditingTitle />
@@ -227,8 +227,8 @@ const Header: FC = () => {
               //   ${nodesReadOnly && 'opacity-50 !cursor-not-allowed'}
               // `}
               className={`
-                mr-2 px-3 py-0 h-8 bg-white dark:bg-[#333333] text-[13px] font-medium text-gray-700 dark:text-primary-600
-                border-[0.5px] border-gray-200 dark:border-[#5F5F5F] dark:hover:bg-zinc-800 shadow-xs dark:hover:shadow-[#5F5F5F]
+                mr-2 px-3 py-0 h-8 bg-white ${getDarkThemeClasses('background1')} text-[13px] font-medium text-gray-700 ${getDarkThemeClasses('green_border')}
+                border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} ${getDarkThemeClasses('hover')} shadow-xs ${getDarkThemeClasses('hovershadow')}
                 ${nodesReadOnly && 'opacity-50 !cursor-not-allowed'}
               `}
               onClick={handleShowFeatures}
@@ -269,7 +269,7 @@ const Header: FC = () => {
               // `}
               className={`
                 mr-2 px-3 py-0 h-8 text-[13px] font-medium
-                border-[0.5px] border-gray-200 dark:border-[#5F5F5F] shadow-xs 
+                border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} shadow-xs 
                 
               `}
               onClick={handleGoBackToEdit}
@@ -289,7 +289,7 @@ const Header: FC = () => {
               //   border-[0.5px] border-gray-200 shadow-xs
               // `}
               className={`
-                px-3 py-0 h-8 bg-white dark:bg-[#333333] text-[13px] font-medium text-gray-700 dark:text-white dark:border-[#5F5F5F] dark:border-[#5F5F5F] dark:hover:shadow-[#5F5F5F] dark:hover:bg-transparent
+                px-3 py-0 h-8 bg-white ${getDarkThemeClasses('background1')} text-[13px] font-medium text-gray-700 ${getDarkThemeClasses('text')} ${getDarkThemeClasses('border')} ${getDarkThemeClasses('hovershadow')}
                 border-[0.5px] border-gray-200 shadow-xs
               `}
               onClick={handleShowFeatures}
@@ -300,7 +300,7 @@ const Header: FC = () => {
             <div className='mx-2 w-[1px] h-3.5 bg-gray-200'></div>
             <Button
               // className='mr-2 px-3 py-0 h-8 bg-white  text-[13px] text-gray-700 font-medium border-[0.5px] border-gray-200 shadow-xs'
-              className='mr-2 px-3 py-0 h-8 bg-white dark:bg-[#333333] text-[13px] text-gray-700 dark:text-white font-medium border-[0.5px] border-gray-200 dark:border-[#5F5F5F] dark:hover:shadow-[#5F5F5F] dark:hover:bg-transparent shadow-xs'
+              className={`mr-2 px-3 py-0 h-8 bg-white ${getDarkThemeClasses('background1')} text-[13px] text-gray-700 ${getDarkThemeClasses('text')} font-medium border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} ${getDarkThemeClasses('hovershadow')} shadow-xs`}
               onClick={handleCancelRestore}
             >
               {t('common.operation.cancel')}

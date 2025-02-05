@@ -34,7 +34,7 @@ import { useProviderContext } from '@/context/provider-context'
 import { ConfigurationMethodEnum } from '@/app/components/header/account-setting/model-provider-page/declarations'
 import Loading from '@/app/components/base/loading'
 import { useAppContext } from '@/context/app-context'
-import { getDarkThemeClasses } from '@/utils/theme'
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   collection: Collection
   onRefreshData: () => void

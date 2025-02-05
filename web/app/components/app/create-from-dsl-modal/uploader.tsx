@@ -8,7 +8,7 @@ import { Yaml as YamlIcon } from '@/app/components/base/icons/src/public/files'
 import { ToastContext } from '@/app/components/base/toast'
 import { Trash03, UploadCloud01 } from '@/app/components/base/icons/src/vender/line/general'
 import Button from '@/app/components/base/button'
-import { getDarkThemeClasses } from '@/utils/theme'
+import { getDarkThemeClasses } from '@/app/theme'
 export type Props = {
   file: File | undefined
   updateFile: (file?: File) => void

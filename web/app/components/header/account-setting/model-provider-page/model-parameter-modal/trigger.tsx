@@ -15,7 +15,7 @@ import { SlidersH } from '@/app/components/base/icons/src/vender/line/mediaAndDe
 import { AlertTriangle } from '@/app/components/base/icons/src/vender/line/alertsAndFeedback'
 import TooltipPlus from '@/app/components/base/tooltip-plus'
 import { ChevronDown } from '@/app/components/base/icons/src/vender/line/arrows'
-import { getDarkThemeClasses } from '@/utils/theme'
+import { getDarkThemeClasses } from '@/app/theme'
 export type TriggerProps = {
   open?: boolean
   disabled?: boolean

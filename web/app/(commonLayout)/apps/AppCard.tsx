@@ -504,7 +504,7 @@ import Image from 'next/image'
 import Chatbot from './assets/chatbot.png'
 import { Edit03, Edit04 } from '@/app/components/base/icons/src/vender/solid/general'
 import TooltipPlus from '@/app/components/base/tooltip-plus'
-import { getDarkThemeClasses } from '@/utils/theme';
+import { getDarkThemeClasses } from '@/app/theme';
 
 export type AppCardProps = {
   app: App

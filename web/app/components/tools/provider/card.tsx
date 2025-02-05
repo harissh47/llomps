@@ -9,7 +9,7 @@ import { Tag01 } from '@/app/components/base/icons/src/vender/line/financeAndECo
 import I18n from '@/context/i18n'
 import { getLanguage } from '@/i18n/language'
 import { useStore as useLabelStore } from '@/app/components/tools/labels/store'
-import { getDarkThemeClasses } from '@/utils/theme'
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   active: boolean
   collection: Collection

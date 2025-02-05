@@ -22,7 +22,7 @@ import type { Node } from '@/app/components/workflow/types'
 import { BlockEnum } from '@/app/components/workflow/types'
 import { useGetLanguage } from '@/context/i18n'
 import { CollectionType } from '@/app/components/tools/types'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type PanelOperatorPopupProps = {
   id: string
   data: Node['data']
@@ -85,7 +85,7 @@ const PanelOperatorPopup = ({
   return (
     // <div className='w-[240px] border-[0.5px] border-gray-200 rounded-lg shadow-xl bg-white dark:bg-[#202020]'>
 
-    <div className='w-[240px] border-[0.5px] border-gray-200 dark:border-[#5f5f5f] rounded-lg shadow-xl bg-white dark:bg-[#3f3f3f]'>
+    <div className={`w-[240px] border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} rounded-lg shadow-xl bg-white ${getDarkThemeClasses('background3')}`}>
       {
         (showChangeBlock || canRunBySingle(data.type)) && (
           <>
@@ -98,8 +98,8 @@ const PanelOperatorPopup = ({
                     //   hover:bg-gray-50 
                     // `}
                     className={`
-                      flex items-center px-3 h-8 text-sm text-gray-700 dark:text-white rounded-lg cursor-pointer
-                      hover:bg-gray-50 dark:hover:bg-zinc-800
+                      flex items-center px-3 h-8 text-sm text-gray-700 ${getDarkThemeClasses('text')} rounded-lg cursor-pointer
+                      hover:bg-gray-50 ${getDarkThemeClasses('hover')}
                     `}
                     onClick={() => {
                       handleNodeSelect(id)
@@ -132,7 +132,7 @@ const PanelOperatorPopup = ({
             <div className='p-1'>
               <div
                 // className='flex items-center justify-between px-3 h-8 text-sm text-gray-700 rounded-lg cursor-pointer hover:bg-gray-50 '
-                className='flex items-center justify-between px-3 h-8 text-sm text-gray-700 dark:text-white rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-zinc-800'
+                className={`flex items-center justify-between px-3 h-8 text-sm text-gray-700 ${getDarkThemeClasses('text')} rounded-lg cursor-pointer hover:bg-gray-50 ${getDarkThemeClasses('hover')}`}
 
                 onClick={() => {
                   onClosePopup()
@@ -144,7 +144,7 @@ const PanelOperatorPopup = ({
               </div>
               <div
                 // className='flex items-center justify-between px-3 h-8 text-sm text-gray-700 rounded-lg cursor-pointer hover:bg-gray-50'
-                className='flex items-center justify-between px-3 h-8 text-sm text-gray-700  dark:text-white  rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-zinc-800'
+                className={`flex items-center justify-between px-3 h-8 text-sm text-gray-700 ${getDarkThemeClasses('text')} rounded-lg cursor-pointer hover:bg-gray-50 ${getDarkThemeClasses('hover')}`}
 
                 onClick={() => {
                   onClosePopup()
@@ -163,8 +163,8 @@ const PanelOperatorPopup = ({
                 // hover:bg-rose-50 hover:text-red-500
                 // `}
                 className={`
-                  flex items-center justify-between px-3 h-8 text-sm text-gray-700 dark:text-white  rounded-lg cursor-pointer
-                  hover:bg-rose-50 hover:text-red-500 dark:hover:bg-zinc-800
+                  flex items-center justify-between px-3 h-8 text-sm text-gray-700 ${getDarkThemeClasses('text')} rounded-lg cursor-pointer
+                  hover:bg-rose-50 hover:text-red-500 ${getDarkThemeClasses('hover')}
                   `}
                 onClick={() => handleNodeDelete(id)}
               >
@@ -193,16 +193,16 @@ const PanelOperatorPopup = ({
           </>
         )
       }
-      <div className='p-1'>
+      <div className={`p-1 ${getDarkThemeClasses('background3')} overflow-hidden`}>
       {/* <div className='px-3 py-2 text-xs text-gray-500 dark:text-white'> */}
 
-        <div className='px-3 py-2 text-xs text-gray-500 dark:text-white'>
+        <div className={`px-3 py-2 text-xs text-gray-500 ${getDarkThemeClasses('text')}`}>
           <div className='flex items-center mb-1 h-[22px] font-medium'>
             {t('workflow.panel.about').toLocaleUpperCase()}
           </div>
           {/* <div className='mb-1 text-gray-700 dark:text-white leading-[18px]'>{about}</div> */}
 
-          <div className='mb-1 text-gray-700 dark:text-white leading-[18px]'>{about}</div>
+          <div className={`mb-1 text-gray-700 ${getDarkThemeClasses('text')} leading-[18px]`}>{about}</div>
           {/* <div className='leading-[18px]'>
             {t('workflow.panel.createdBy')} {author}
           </div> */}

@@ -3,7 +3,7 @@ import style from '../list.module.css'
 import Apps from './Apps'
 import { getLocaleOnServer, useTranslation as translate } from '@/i18n/server'
 import { getDarkThemeClasses } from '@/app/theme';
-// import { getDarkThemeClasses } from '@/utils/theme';
+// import { getDarkThemeClasses } from '@/app/theme';
 
 const AppList = async () => {
   const locale = getLocaleOnServer()

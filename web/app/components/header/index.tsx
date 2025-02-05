@@ -20,7 +20,7 @@ import { useProviderContext } from '@/context/provider-context'
 import { useModalContext } from '@/context/modal-context'
 import { SidebarProps } from '../base/chat/chat-with-history/sidebar'
 import { AlignLeft01, AlignRight01 } from '../base/icons/src/vender/line/layout'
-import { getDarkThemeClasses } from '@/utils/theme'
+import { getDarkThemeClasses } from '@/app/theme'
 const navClassName = `
   flex items-center relative mr-0 sm:mr-3 px-3 h-8 rounded-xl
    text-sm

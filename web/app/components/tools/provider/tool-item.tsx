@@ -6,7 +6,7 @@ import type { Collection, Tool } from '../types'
 import I18n from '@/context/i18n'
 import { getLanguage } from '@/i18n/language'
 import SettingBuiltInTool from '@/app/components/app/configuration/config/agent/agent-tools/setting-built-in-tool'
-import { getDarkThemeClasses } from '@/utils/theme'
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   disabled?: boolean
   collection: Collection

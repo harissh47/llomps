@@ -5,7 +5,7 @@ import {
 } from 'react'
 import Textarea from 'rc-textarea'
 import { useTranslation } from 'react-i18next'
-import { getDarkThemeClasses } from '@/utils/theme'
+import { getDarkThemeClasses } from '@/app/theme'
 type TitleInputProps = {
   value: string
   onBlur: (value: string) => void
