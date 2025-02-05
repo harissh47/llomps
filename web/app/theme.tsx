@@ -73,6 +73,7 @@ export type DarkThemeColors = {
   appcardBorder:string
   outline:string
   focusoutline:string
+  borderradius:string
 }
  
 // // Function to determine background color based on provider
@@ -158,7 +159,8 @@ export const getDarkTheme = (): DarkThemeColors => ({
   hover7:'dark:hover:bg-[#2E2E2E]',
   appcardBorder:'dark:border-[#3f3f3f] dark:border-2',
   outline:'dark:hover:outline-[#5f5f5f]',
-  focusoutline:'dark:focus:outline-none'
+  focusoutline:'dark:focus:outline-none',
+  borderradius:'dark:border-2'
 
 });
  
