@@ -27,7 +27,7 @@ import ShareQRCode from '@/app/components/base/qrcode';
 import SecretKeyButton from '@/app/components/develop/secret-key/secret-key-button';
 import type { AppDetailResponse } from '@/models/app';
 import { useAppContext } from '@/context/app-context';
-
+import { getDarkThemeClasses } from '@/app/theme';
 export type IAppCardProps = {
   className?: string;
   appInfo: AppDetailResponse;
@@ -37,11 +37,11 @@ export type IAppCardProps = {
   onSaveSiteConfig?: (params: ConfigParams) => Promise<void>;
   onGenerateCode?: () => Promise<void>;
 };
-
+ 
 const EmbedIcon = ({ className = '' }: HTMLProps<HTMLDivElement>) => {
   return <div className={`${style.codeBrowserIcon} ${className}`}></div>;
 };
-
+ 
 function AppCard({
   appInfo,
   cardType = 'webapp',
@@ -58,9 +58,9 @@ function AppCard({
   const [showEmbedded, setShowEmbedded] = useState(false);
   const [genLoading, setGenLoading] = useState(false);
   const [showConfirmDelete, setShowConfirmDelete] = useState(false);
-
+ 
   const { t } = useTranslation();
-
+ 
   const OPERATIONS_MAP = useMemo(() => {
     const operationsMap = {
       webapp: [
@@ -73,13 +73,13 @@ function AppCard({
     };
     if (appInfo.mode !== 'completion' && appInfo.mode !== 'workflow')
       operationsMap.webapp.push({ opName: t('appOverview.overview.appInfo.embedded.entry'), opIcon: EmbedIcon });
-
+ 
     if (isCurrentWorkspaceEditor)
       operationsMap.webapp.push({ opName: t('appOverview.overview.appInfo.settings.entry'), opIcon: Cog8ToothIcon });
-
+ 
     return operationsMap;
   }, [isCurrentWorkspaceEditor, appInfo, t]);
-
+ 
   const isApp = cardType === 'webapp';
   const basicName = isApp
     ? appInfo?.site?.title
@@ -90,11 +90,11 @@ function AppCard({
   const appMode = (appInfo.mode !== 'completion' && appInfo.mode !== 'workflow') ? 'chat' : appInfo.mode;
   const appUrl = `${app_base_url}/${appMode}/${access_token}`;
   const apiUrl = appInfo?.api_base_url;
-
+ 
   let bgColor = 'bg-primary-50 bg-opacity-40';
   if (cardType === 'api')
     bgColor = 'white';
-
+ 
   const genClickFuncByName = (opName: string) => {
     switch (opName) {
       case t('appOverview.overview.appInfo.preview'):
@@ -122,7 +122,7 @@ function AppCard({
         };
     }
   };
-
+ 
   const onGenCode = async () => {
     if (onGenerateCode) {
       setGenLoading(true);
@@ -130,10 +130,10 @@ function AppCard({
       setGenLoading(false);
     }
   };
-
+ 
   return (
     <div
-      className={`shadow-xs border-[0.5px] rounded-lg border-gray-200 dark:border-[#3f3f3f] dark:border-2 ${className ?? ''}`}
+      className={`shadow-xs border-[0.5px] rounded-lg border-gray-200  ${getDarkThemeClasses('appcardBorder')} ${className ?? ''}`}
     >
       <div className={`px-6 py-5 ${customBgColor ?? bgColor} rounded-lg`}>
         <div className="mb-2.5 flex flex-row items-start justify-between">
@@ -160,30 +160,30 @@ function AppCard({
         <div className="flex flex-col justify-center py-2">
           <div className="py-1">
             {/* <div className="pb-1 text-xs text-gray-500"> */}
-            <div className="pb-1 text-xs text-gray-500 dark:text-white">
+            <div className={`pb-1 text-xs text-gray-500 ${getDarkThemeClasses('text')}`}>
               {isApp
                 ? t('appOverview.overview.appInfo.accessibleAddress')
                 : t('appOverview.overview.apiInfo.accessibleAddress')}
             </div>
             {/* <div className="w-full h-9 pl-2 pr-0.5 py-0.5 bg-black bg-opacity-2 rounded-lg border border-black border-opacity-5 justify-start items-center inline-flex"> */}
-            <div className="w-full h-9 pl-2 pr-0.5 py-0.5 bg-black dark:bg-[#2c2c2c] bg-opacity-2 rounded-lg border border-black border-opacity-5 justify-start items-center inline-flex">
-
+            <div className={`w-full h-9 pl-2 pr-0.5 py-0.5 bg-black ${getDarkThemeClasses('background2')} bg-opacity-2 rounded-lg border border-black border-opacity-5 justify-start items-center inline-flex`}>
+ 
               <div className="h-4 px-2 justify-start items-start gap-2 flex flex-1 min-w-0">
                 {/* <div className="text-gray-700 text-xs font-medium text-ellipsis overflow-hidden whitespace-nowrap"> */}
-                <div className="text-gray-700 dark:text-[#FCFCFC] text-xs font-medium text-ellipsis overflow-hidden whitespace-nowrap">
+                <div className={`text-gray-700 ${getDarkThemeClasses('sub_text1')} text-xs font-medium text-ellipsis overflow-hidden whitespace-nowrap`}>
                   {isApp ? appUrl : apiUrl}
                 </div>
               </div>
               <Divider type="vertical" className="!h-3.5 shrink-0 !mx-0.5" />
-              {/* {isApp && <ShareQRCode content={isApp ? appUrl : apiUrl} selectorId={randomString(8)} className={'hover:bg-gray-200 dark:hover:bg-[#B8B8B8]'} />} */}
-              {isApp && <ShareQRCode content={isApp ? appUrl : apiUrl} selectorId={randomString(8)} className={'hover:bg-gray-200 dark:hover:bg-[#B8B8B8]'} />}
-
+              {/* {isApp && <ShareQRCode content={isApp ? appUrl : apiUrl} selectorId={randomString(8)} className={'hover:bg-gray-200 ${getDarkThemeClasses('hover5')}'} />} */}
+              {isApp && <ShareQRCode content={isApp ? appUrl : apiUrl} selectorId={randomString(8)} className={`hover:bg-gray-200 ${getDarkThemeClasses('hover5')}`} />}
+ 
               <CopyFeedback
                 content={isApp ? appUrl : apiUrl}
                 selectorId={randomString(8)}
                 // className={'hover:bg-gray-200'}
-                className={'hover:bg-gray-200 dark:hover:bg-[#B8B8B8]'}
-
+                className={`hover:bg-gray-200 ${getDarkThemeClasses('hover5')}`}
+ 
               />
               {/* button copy link/ button regenerate */}
               {showConfirmDelete && (
@@ -206,9 +206,9 @@ function AppCard({
                   selector={`code-generate-${randomString(8)}`}
                 >
                   <div
-                    // className="w-8 h-8 ml-0.5 cursor-pointer hover:bg-gray-200 dark:hover:bg-[#B8B8B8] rounded-lg"
-                    className="w-8 h-8 ml-0.5 cursor-pointer hover:bg-gray-200 dark:hover:bg-[#B8B8B8] rounded-lg"
-
+                    // className="w-8 h-8 ml-0.5 cursor-pointer hover:bg-gray-200 ${getDarkThemeClasses('hover5')} rounded-lg"
+                    className={`w-8 h-8 ml-0.5 cursor-pointer hover:bg-gray-200 ${getDarkThemeClasses('hover5')} rounded-lg`}
+ 
                     onClick={() => setShowConfirmDelete(true)}
                   >
                     <div
@@ -223,8 +223,8 @@ function AppCard({
         </div>
         <div className={'pt-2 flex flex-row items-center flex-wrap gap-y-2 '}>
         {/* {!isApp && <SecretKeyButton className='flex-shrink-0 !h-8  bg-white  mr-2  ' textCls='font-medium ' iconCls='stroke-[1.2px]' appId={appInfo.id} />} */}
-
-          {!isApp && <SecretKeyButton className='flex-shrink-0 !h-8 bg-white dark:bg-[#202020] mr-2 dark:border-[#5f5f5f] dark:hover:!bg-[#202020] dark:hover:!border-[#5f5f5f] dark:hover:shadow-[#3f3f3f]' textCls='!text-gray-700 dark:!text-white font-medium ' iconCls='stroke-[1.2px]' appId={appInfo.id} />}
+ 
+          {!isApp && <SecretKeyButton className={`flex-shrink-0 !h-8 bg-white ${getDarkThemeClasses('main_background')} mr-2 ${getDarkThemeClasses('border')} ${getDarkThemeClasses('hover6')} ${getDarkThemeClasses('borderhover')}  ${getDarkThemeClasses('hovershadow1')}`} textCls={`!text-gray-700 ${getDarkThemeClasses('sub_text1')} font-medium `} iconCls='stroke-[1.2px]' appId={appInfo.id} />}
           {OPERATIONS_MAP[cardType].map((op) => {
             const disabled = op.opName === t('appOverview.overview.appInfo.settings.entry')
               ? false
@@ -232,8 +232,8 @@ function AppCard({
             return (
               <Button
                 // className="mx-2 border-[0.5px] !h-8 hover:outline hover:outline-[0.5px] hover:outline-gray-300 text-gray-700 font-medium bg-white shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]"
-                className="mx-2 border-[0.5px] !h-8 hover:outline hover:outline-[0.5px] hover:outline-gray-300 dark:hover:outline-[#5f5f5f] dark:hover:!bg-[#202020] dark:hover:!border-[#5F5F5F] text-gray-700 dark:text-white font-medium bg-white dark:bg-[#202020] dark:border-[#5f5f5f] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]"
-
+                className={`mx-2 border-[0.5px] !h-8 hover:outline hover:outline-[0.5px] hover:outline-gray-300 ${getDarkThemeClasses('outline')} ${getDarkThemeClasses('hover6')} ${getDarkThemeClasses('borderhover')} text-gray-700 ${getDarkThemeClasses('text')} font-medium bg-white ${getDarkThemeClasses('main_background')} ${getDarkThemeClasses('border')} shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]`}
+ 
                 key={op.opName}
                 onClick={genClickFuncByName(op.opName)}
                 disabled={disabled}
@@ -282,5 +282,5 @@ function AppCard({
     </div>
   );
 }
-
+ 
 export default AppCard;

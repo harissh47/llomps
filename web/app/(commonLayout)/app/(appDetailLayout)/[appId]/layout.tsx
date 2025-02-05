@@ -16,7 +16,7 @@ import Loading from '@/app/components/base/loading'
 import { BarChartSquare02, FileHeart02, PromptEngineering, TerminalSquare } from '@/app/components/base/icons/src/vender/line/development'
 import { BarChartSquare02 as BarChartSquare02Solid, FileHeart02 as FileHeart02Solid, PromptEngineering as PromptEngineeringSolid, TerminalSquare as TerminalSquareSolid } from '@/app/components/base/icons/src/vender/solid/development'
 import useBreakpoints, { MediaType } from '@/hooks/use-breakpoints'
-
+import { getDarkThemeClasses } from '@/app/theme'
 export type IAppDetailLayoutProps = {
   children: React.ReactNode
   params: { appId: string }
@@ -124,7 +124,7 @@ const AppDetailLayout: FC<IAppDetailLayoutProps> = (props) => {
     return (
       // <div className='flex h-full items-center justify-center bg-white'>
       // <div className='flex h-full w-full items-center justify-center bg-white'>
-         <div className='flex h-full w-full items-center justify-center bg-white dark:bg-[#202020]'>
+         <div className={`flex h-full w-full items-center justify-center bg-white ${getDarkThemeClasses('main_background')}`}>
         <Loading />
       </div>
     )
@@ -140,7 +140,7 @@ const AppDetailLayout: FC<IAppDetailLayoutProps> = (props) => {
         {children}
       </div> */}
             {/* <div className="bg-white grow overflow-hidden"></div> */}
-      <div className="bg-white dark:bg-[#202020] grow overflow-hidden">
+      <div className={`bg-white ${getDarkThemeClasses('main_background')} grow overflow-hidden`}>
         {children}
       </div>
       {appDetail && (
