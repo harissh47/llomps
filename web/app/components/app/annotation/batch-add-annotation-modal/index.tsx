@@ -126,7 +126,3 @@ const BatchModal: FC<IBatchModalProps> = ({
   )
 }
 export default React.memo(BatchModal)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

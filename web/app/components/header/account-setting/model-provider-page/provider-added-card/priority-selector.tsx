@@ -70,7 +70,3 @@ const Selector: FC<SelectorProps> = ({
 }
 
 export default Selector
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

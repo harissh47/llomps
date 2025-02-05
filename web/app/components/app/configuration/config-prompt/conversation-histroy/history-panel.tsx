@@ -59,7 +59,3 @@ const HistoryPanel: FC<Props> = ({
   )
 }
 export default React.memo(HistoryPanel)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

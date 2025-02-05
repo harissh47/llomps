@@ -143,7 +143,3 @@ export const AppContextProvider: FC<AppContextProviderProps> = ({ children }) =>
 export const useAppContext = () => useContext(AppContext)
 
 export default AppContext
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

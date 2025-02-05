@@ -60,7 +60,3 @@ const AgentContent: FC<AgentContentProps> = ({
 }
 
 export default memo(AgentContent)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

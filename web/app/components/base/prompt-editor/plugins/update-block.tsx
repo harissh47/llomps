@@ -40,7 +40,3 @@ const UpdateBlock = ({
 }
 
 export default UpdateBlock
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

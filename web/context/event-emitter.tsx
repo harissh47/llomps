@@ -26,7 +26,3 @@ export const EventEmitterContextProvider = ({
 }
 
 export default EventEmitterContext
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

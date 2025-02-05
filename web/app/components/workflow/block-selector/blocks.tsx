@@ -122,7 +122,3 @@ const Blocks = ({
 }
 
 export default memo(Blocks)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

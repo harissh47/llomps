@@ -95,7 +95,3 @@ const TypeSelector: FC<Props> = ({
   )
 }
 export default React.memo(TypeSelector)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

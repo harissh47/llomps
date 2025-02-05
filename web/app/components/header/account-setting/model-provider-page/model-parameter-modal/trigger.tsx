@@ -15,11 +15,7 @@ import { SlidersH } from '@/app/components/base/icons/src/vender/line/mediaAndDe
 import { AlertTriangle } from '@/app/components/base/icons/src/vender/line/alertsAndFeedback'
 import TooltipPlus from '@/app/components/base/tooltip-plus'
 import { ChevronDown } from '@/app/components/base/icons/src/vender/line/arrows'
-<<<<<<< HEAD
-
-=======
 import { getDarkThemeClasses } from '@/app/theme'
->>>>>>> origin/rupa
 export type TriggerProps = {
   open?: boolean
   disabled?: boolean
@@ -49,19 +45,11 @@ const Trigger: FC<TriggerProps> = ({
     <div
       className={cn(
         // 'relative flex items-center px-2 h-8 rounded-lg  cursor-pointer',
-<<<<<<< HEAD
-        'relative flex items-center px-2 h-8 rounded-lg  cursor-pointer dark:bg-[#3F3F3F]',
-        !isInWorkflow && 'border hover:border-[1.5px]',
-        !isInWorkflow && (disabled ? 'border-[#4CAF50] bg-[#FFFAEB]' : 'border-[#4CAF50] bg-primary-50'),
-        // isInWorkflow && 'pr-[30px] bg-gray-100 border border-[#4CAF50] hover:border-gray-200',
-        isInWorkflow && 'pr-[30px] bg-gray-100 border border-[#4CAF50] hover:border-gray-200 dark:hover:border-[#3F3F3F]',
-=======
         `relative flex items-center px-2 h-8 rounded-lg  cursor-pointer ${getDarkThemeClasses('background3')}`,
         !isInWorkflow && 'border hover:border-[1.5px]',
         !isInWorkflow && (disabled ? 'border-[#4CAF50] bg-[#FFFAEB]' : 'border-[#4CAF50] bg-primary-50'),
         // isInWorkflow && 'pr-[30px] bg-gray-100 border border-[#4CAF50] hover:border-gray-200',
         isInWorkflow && `pr-[30px] bg-gray-100 border border-[#4CAF50] hover:border-gray-200 dark:hover:border-[#3F3F3F]`,
->>>>>>> origin/rupa
       )}
       // className={cn(
       //   'relative flex items-center px-2 h-8 rounded-lg cursor-pointer',
@@ -103,13 +91,9 @@ const Trigger: FC<TriggerProps> = ({
       }
       {
         !currentModel && (
-<<<<<<< HEAD
-          <div className='mr-1 text-[13px] font-medium text-gray-900 truncate'>
-=======
           // <div className='mr-1 text-[13px] font-medium text-gray-900 truncate'>
           <div className='mr-1 text-[13px] font-medium text-gray-900 dark:text-white truncate'>
 
->>>>>>> origin/rupa
             {modelId}
           </div>
         )
@@ -139,7 +123,3 @@ const Trigger: FC<TriggerProps> = ({
 }
 
 export default Trigger
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

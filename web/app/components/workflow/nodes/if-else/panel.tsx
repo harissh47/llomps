@@ -64,7 +64,3 @@ const Panel: FC<NodePanelProps<IfElseNodeType>> = ({
 }
 
 export default React.memo(Panel)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -67,7 +67,3 @@ const FormList: FC<Props> = ({
 }
 
 export default React.memo(FormList)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

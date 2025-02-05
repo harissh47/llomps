@@ -15,10 +15,6 @@ import AppPublisher from '../app-publisher'
 import AgentSettingButton from './config/agent-setting-button'
 import useAdvancedPromptConfig from './hooks/use-advanced-prompt-config'
 import EditHistoryModal from './config-prompt/conversation-histroy/edit-modal'
-<<<<<<< HEAD
-import { getDarkThemeClasses } from '@/app/theme'
-=======
->>>>>>> origin/rupa
 import {
   useDebugWithSingleOrMultipleModel,
   useFormattingChangedDispatcher,
@@ -763,20 +759,12 @@ const Configuration: FC = () => {
             {/* Header */}
             <div className='absolute top-0 left-0 w-full bg-white h-14'>
               {/* <div className='flex items-center justify-between px-6 h-14'> */}
-<<<<<<< HEAD
-              <div className={cn('flex items-center justify-between px-6 h-14', getDarkThemeClasses('background'))}>
-=======
               <div className='flex items-center justify-between px-6 h-14 dark:bg-[#202020]'>
->>>>>>> origin/rupa
                 <div className='flex items-center'>
                   {/* <div onClick={navBackHandle} className={cn(s.navBack)} /> */}
                   <div
                     onClick={navBackHandle}
-<<<<<<< HEAD
-                    className={cn(s.navBack, getDarkThemeClasses('background'))}
-=======
                     className={cn(s.navBack, 'dark:bg-[#202020]')}
->>>>>>> origin/rupa
                   />
                   {/* <div className='text-base font-semibold leading-6 text-gray-900'>{t('appDebug.orchestrate')}</div> */}
                   <div className='text-base font-semibold leading-6 text-gray-900 dark:text-white'>{t('appDebug.orchestrate')}</div>
@@ -843,11 +831,7 @@ const Configuration: FC = () => {
             </div>
             {!isMobile && <div className="relative flex flex-col w-1/2 h-full overflow-y-auto grow " style={{ borderColor: 'rgba(0, 0, 0, 0.02)' }}>
               {/* <div className='flex flex-col h-0 border-t border-l grow rounded-tl-2xl bg-gray-50 '> */}
-<<<<<<< HEAD
-              <div className={cn('flex flex-col h-0 border-t border-l grow rounded-tl-2xl bg-gray-50', getDarkThemeClasses('background'))}>
-=======
               <div className='flex flex-col h-0 border-t border-l grow rounded-tl-2xl bg-gray-50 dark:border-[#3F3F3F] dark:bg-[#202020]'>
->>>>>>> origin/rupa
 
                 <Debug
                   isAPIKeySet={isAPIKeySet}
@@ -931,7 +915,3 @@ const Configuration: FC = () => {
   )
 }
 export default React.memo(Configuration)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

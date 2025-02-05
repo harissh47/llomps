@@ -71,7 +71,3 @@ const ConfirmAddVar: FC<IConfirmAddVarProps> = ({
   )
 }
 export default React.memo(ConfirmAddVar)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

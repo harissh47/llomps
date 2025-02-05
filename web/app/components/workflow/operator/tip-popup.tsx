@@ -36,7 +36,3 @@ const TipPopup = ({
 }
 
 export default memo(TipPopup)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -203,7 +203,3 @@ const VoiceParamConfig = ({
 }
 
 export default React.memo(VoiceParamConfig)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

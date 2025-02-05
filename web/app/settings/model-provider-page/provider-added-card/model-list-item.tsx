@@ -119,7 +119,3 @@ const ModelListItem = ({ model, provider, isConfigurable, onConfig, onModifyLoad
 }
 
 export default memo(ModelListItem)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

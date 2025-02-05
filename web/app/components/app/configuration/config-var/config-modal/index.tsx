@@ -116,11 +116,7 @@ const ConfigModal: FC<IConfigModalProps> = ({
       return
     }
     if (isStringInput || type === InputVarType.number) {
-<<<<<<< HEAD
-      onConfirm({ ...tempPayload, show_input: isSwitchOn }, moreInfo)
-=======
       onConfirm(tempPayload, moreInfo)
->>>>>>> origin/rupa
     }
     else {
       if (options?.length === 0) {
@@ -140,11 +136,7 @@ const ConfigModal: FC<IConfigModalProps> = ({
         Toast.notify({ type: 'error', message: t('appDebug.variableConig.errorMsg.optionRepeat') })
         return
       }
-<<<<<<< HEAD
-      onConfirm({ ...tempPayload, show_input: isSwitchOn }, moreInfo)
-=======
       onConfirm(tempPayload, moreInfo)
->>>>>>> origin/rupa
     }
   }
 
@@ -220,7 +212,3 @@ const ConfigModal: FC<IConfigModalProps> = ({
   )
 }
 export default React.memo(ConfigModal)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

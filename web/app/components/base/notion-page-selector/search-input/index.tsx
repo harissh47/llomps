@@ -40,7 +40,3 @@ const SearchInput = ({
 }
 
 export default SearchInput
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -29,7 +29,3 @@ const AnnotationFull: FC = () => {
   )
 }
 export default React.memo(AnnotationFull)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

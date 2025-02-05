@@ -27,7 +27,3 @@ const Progress: FC<IProgressProps> = ({
   )
 }
 export default React.memo(Progress)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

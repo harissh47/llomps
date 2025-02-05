@@ -23,7 +23,3 @@ const ModelBadge: FC<ModelBadgeProps> = ({
 }
 
 export default ModelBadge
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

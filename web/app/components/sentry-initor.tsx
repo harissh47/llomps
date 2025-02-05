@@ -28,7 +28,3 @@ const SentryInit = ({
 }
 
 export default SentryInit
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

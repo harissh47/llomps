@@ -41,7 +41,3 @@ const EditingTitle = () => {
 }
 
 export default memo(EditingTitle)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

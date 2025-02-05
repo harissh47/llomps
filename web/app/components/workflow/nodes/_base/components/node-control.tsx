@@ -18,11 +18,7 @@ import {
   Stop,
 } from '@/app/components/base/icons/src/vender/line/mediaAndDevices'
 import TooltipPlus from '@/app/components/base/tooltip-plus'
-<<<<<<< HEAD
-
-=======
 import { getDarkThemeClasses } from '@/app/theme'
->>>>>>> origin/rupa
 type NodeControlProps = Pick<Node, 'id' | 'data'>
 const NodeControl: FC<NodeControlProps> = ({
   id,
@@ -48,11 +44,7 @@ const NodeControl: FC<NodeControlProps> = ({
     >
       <div
         // className='flex items-center px-0.5 h-6 bg-white rounded-lg border-[0.5px] border-gray-100 shadow-xs text-gray-500'
-<<<<<<< HEAD
-         className='flex items-center px-0.5 h-6 bg-white dark:bg-[#3F3F3F] rounded-lg border-[0.5px] border-gray-100 dark:border-[#5F5F5F] shadow-xs text-gray-500'
-=======
          className={`flex items-center px-0.5 h-6 bg-white ${getDarkThemeClasses('background3')} rounded-lg border-[0.5px] border-gray-100 ${getDarkThemeClasses('border')} shadow-xs text-gray-500`}
->>>>>>> origin/rupa
         onClick={e => e.stopPropagation()}
       >
         {
@@ -98,7 +90,3 @@ const NodeControl: FC<NodeControlProps> = ({
 }
 
 export default memo(NodeControl)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

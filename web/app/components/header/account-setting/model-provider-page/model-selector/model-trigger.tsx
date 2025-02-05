@@ -76,7 +76,3 @@ const ModelTrigger: FC<ModelTriggerProps> = ({
 }
 
 export default ModelTrigger
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

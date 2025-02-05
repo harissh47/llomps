@@ -249,7 +249,3 @@ const Item: FC<ItemProps> = ({
   )
 }
 export default React.memo(Item)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

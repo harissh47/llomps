@@ -90,7 +90,3 @@ const IterationResultPanel: FC<Props> = ({
   )
 }
 export default React.memo(IterationResultPanel)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

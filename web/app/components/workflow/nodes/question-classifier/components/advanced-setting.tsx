@@ -79,7 +79,3 @@ const AdvancedSetting: FC<Props> = ({
   )
 }
 export default React.memo(AdvancedSetting)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

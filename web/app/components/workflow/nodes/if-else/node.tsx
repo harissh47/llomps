@@ -64,7 +64,3 @@ const IfElseNode: FC<NodeProps<IfElseNodeType>> = (props) => {
 }
 
 export default React.memo(IfElseNode)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

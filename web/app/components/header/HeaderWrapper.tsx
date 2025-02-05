@@ -34,7 +34,3 @@ const HeaderWrapper = ({
   )
 }
 export default HeaderWrapper
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

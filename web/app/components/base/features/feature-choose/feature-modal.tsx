@@ -145,7 +145,3 @@ const FeatureModal: FC<FeatureModalProps> = ({
   )
 }
 export default React.memo(FeatureModal)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

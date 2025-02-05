@@ -541,7 +541,3 @@ const DocumentList: FC<IDocumentListProps> = ({ embeddingAvailable, documents = 
 }
 
 export default DocumentList
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

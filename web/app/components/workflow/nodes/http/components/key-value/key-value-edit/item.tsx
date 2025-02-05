@@ -79,7 +79,3 @@ const KeyValueItem: FC<Props> = ({
   )
 }
 export default React.memo(KeyValueItem)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -10,10 +10,6 @@ import {
   AlignRight01,
 } from '@/app/components/base/icons/src/vender/line/layout'
 import { useStore as useAppStore } from '@/app/components/app/store'
-<<<<<<< HEAD
-import { getDarkThemeClasses } from '@/app/theme'
-=======
->>>>>>> origin/rupa
 
 export type IAppDetailNavProps = {
   iconType?: 'app' | 'dataset' | 'notion'
@@ -113,11 +109,7 @@ const AppDetailNav = ({ title, desc, icon, icon_background, navigation, extraInf
           
         // `}
         className={`
-<<<<<<< HEAD
-          grow space-y-1 rounded-md bg-white flex items-center px-2 py-0 ${getDarkThemeClasses('background')} dark:border-0 cursor-pointer
-=======
           grow space-y-1 rounded-md bg-white flex items-center px-2 py-0 dark:bg-[#202020] dark:border-0 cursor-pointer
->>>>>>> origin/rupa
           
         `}
       >
@@ -154,7 +146,3 @@ const AppDetailNav = ({ title, desc, icon, icon_background, navigation, extraInf
 }
 
 export default React.memo(AppDetailNav)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

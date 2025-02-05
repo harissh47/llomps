@@ -99,7 +99,3 @@ const List: FC<Props> = ({
   )
 }
 export default React.memo(List)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

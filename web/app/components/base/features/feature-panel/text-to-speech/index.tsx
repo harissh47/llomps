@@ -64,7 +64,3 @@ const TextToSpeech = ({
   )
 }
 export default React.memo(TextToSpeech)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

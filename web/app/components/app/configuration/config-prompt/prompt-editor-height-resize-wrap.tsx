@@ -96,7 +96,3 @@ const PromptEditorHeightResizeWrap: FC<Props> = ({
   )
 }
 export default React.memo(PromptEditorHeightResizeWrap)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

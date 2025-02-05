@@ -62,7 +62,3 @@ const Editor = ({
 }
 
 export default memo(Editor)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

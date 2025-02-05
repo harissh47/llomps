@@ -46,7 +46,3 @@ const TopKItem: FC<Props> = ({
   )
 }
 export default React.memo(TopKItem)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

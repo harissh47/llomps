@@ -131,7 +131,3 @@ const DebugItem: FC<DebugItemProps> = ({
 }
 
 export default memo(DebugItem)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

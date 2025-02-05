@@ -6,11 +6,7 @@ import type { Collection, Tool } from '../types'
 import I18n from '@/context/i18n'
 import { getLanguage } from '@/i18n/language'
 import SettingBuiltInTool from '@/app/components/app/configuration/config/agent/agent-tools/setting-built-in-tool'
-<<<<<<< HEAD
-
-=======
 import { getDarkThemeClasses } from '@/app/theme'
->>>>>>> origin/rupa
 type Props = {
   disabled?: boolean
   collection: Collection
@@ -34,15 +30,6 @@ const ToolItem = ({
     <>
       <div
         // className={cn('mb-2 px-4 py-3 rounded-xl bg-gray-25 border-[0.5px] border-gary-200  shadow-xs cursor-pointer', disabled && 'opacity-50 !cursor-not-allowed')}
-<<<<<<< HEAD
-        className={cn('mb-2 px-4 py-3 rounded-xl bg-gray-25 dark:bg-[#3f3f3f] border-[0.5px] border-gary-200 dark:border-[#5f5f5f]  shadow-xs cursor-pointer', disabled && 'opacity-50 !cursor-not-allowed')}
-        onClick={() => !disabled && setShowDetail(true)}
-      >
-        {/* <div className='text-gray-800 font-semibold text-sm leading-5'>{tool.label[language]}</div> */}
-        <div className='text-gray-800 dark:text-white font-semibold text-sm leading-5'>{tool.label[language]}</div>
-        {/* <div className='mt-0.5 text-xs leading-[18px] text-gray-500 line-clamp-2' title={tool.description[language]}>{tool.description[language]}</div> */}
-        <div className='mt-0.5 text-xs leading-[18px] text-gray-500 dark:text-[#FCFCFC] line-clamp-2' title={tool.description[language]}>{tool.description[language]}</div>
-=======
         className={cn(`mb-2 px-4 py-3 rounded-xl bg-gray-25 ${getDarkThemeClasses('background3')} border-[0.5px] border-gary-200 ${getDarkThemeClasses('border')}  shadow-xs cursor-pointer`, disabled && 'opacity-50 !cursor-not-allowed')}
         onClick={() => !disabled && setShowDetail(true)}
       >
@@ -50,7 +37,6 @@ const ToolItem = ({
         <div className={`text-gray-800 ${getDarkThemeClasses('text')} font-semibold text-sm leading-5`}>{tool.label[language]}</div>
         {/* <div className='mt-0.5 text-xs leading-[18px] text-gray-500 line-clamp-2' title={tool.description[language]}>{tool.description[language]}</div> */}
         <div className={`mt-0.5 text-xs leading-[18px] text-gray-500 ${getDarkThemeClasses('sub_text1')} line-clamp-2`} title={tool.description[language]}>{tool.description[language]}</div>
->>>>>>> origin/rupa
       </div>
       {showDetail && (
         <SettingBuiltInTool
@@ -68,7 +54,3 @@ const ToolItem = ({
   )
 }
 export default ToolItem
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

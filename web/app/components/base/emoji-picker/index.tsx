@@ -208,7 +208,3 @@ const EmojiPicker: FC<IEmojiPickerProps> = ({
   </>
 }
 export default EmojiPicker
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

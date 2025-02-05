@@ -64,7 +64,3 @@ const Button: FC<IButtonProps> = ({
 }
 
 export default memo(Button)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

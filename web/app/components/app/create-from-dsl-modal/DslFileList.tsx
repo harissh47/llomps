@@ -13,11 +13,7 @@ import { NEED_REFRESH_APP_LIST_KEY } from "@/config";
 import { getRedirection } from "@/utils/app-redirection";
 import Check from "../../base/icons/src/vender/line/general/Check";
 import * as yaml from "js-yaml";
-<<<<<<< HEAD
-
-=======
 import { getDarkThemeClasses } from "@/utils/theme";
->>>>>>> origin/rupa
 interface AppData {
   name: string;
   description: string;
@@ -81,11 +77,7 @@ const DSLFileList = ({
 
   if (!dslFiles.length) {
     return (
-<<<<<<< HEAD
-      <div className="text-gray-500 dark:text-gray-400">
-=======
       <div className={`text-gray-500 ${getDarkThemeClasses('sub_text7')}`}>
->>>>>>> origin/rupa
         {t("app.noFilesAvailable")}
       </div>
     );
@@ -138,11 +130,7 @@ const DSLFileList = ({
 
   return (
     <div className="mt-4">
-<<<<<<< HEAD
-      <h4 className="font-medium text-lg dark:text-white mb-3">
-=======
       <h4 className={`font-medium text-lg ${getDarkThemeClasses('text')} mb-3`}>
->>>>>>> origin/rupa
         Create from Templates
       </h4>
       <div className="flex flex-col gap-3">
@@ -174,26 +162,16 @@ const DSLFileList = ({
               //   group-hover:border-gray-300 dark:group-hover:border-gray-600
               //   bg-white dark:bg-gray-800
               //   transition-all duration-200 ease-in-out
-<<<<<<< HEAD
-              className={`w-full h-auto min-h-[80px] p-4 rounded-lg border border-gray-200 dark:border-gray-700
-                group-hover:border-gray-300 dark:group-hover:border-gray-600 dark:group-hover:bg-zinc-900
-                bg-white dark:bg-[#2e2e2e] 
-=======
               className={`w-full h-auto min-h-[80px] p-4 rounded-lg border border-gray-200 ${getDarkThemeClasses('border')}
                 group-hover:border-gray-300 ${getDarkThemeClasses('groupBorderHover')} ${getDarkThemeClasses('grouphover')}
 
                 bg-white ${getDarkThemeClasses('background2')}
->>>>>>> origin/rupa
                 transition-all duration-200 ease-in-out
                 ${isCreating ? "opacity-50 cursor-not-allowed" : ""} 
                 ${
                   selectedFile === fileName
-<<<<<<< HEAD
-                    ? "ring-2 ring-primary-600 dark:ring-primary-500"
-=======
                     ? `ring-2 ring-primary-600 ${getDarkThemeClasses('ring')}1
 `
->>>>>>> origin/rupa
                     : ""
                 }
                 group-hover:z-10 group-hover:relative`}
@@ -223,11 +201,7 @@ const DSLFileList = ({
                   {fileData[index]?.mode === "workflow" && (
                     <img className="w-8 h-8" src="/assets/3.png" alt="chat" />
                   )}
-<<<<<<< HEAD
-                  <span className="ml-1 text-gray-700 dark:text-gray-200 font-medium line-clamp-1">
-=======
                   <span className={`ml-1 text-gray-700 ${getDarkThemeClasses('sub_text6')} font-medium line-clamp-1`}>
->>>>>>> origin/rupa
                     {fileData[index]?.name || "Untitled App"}
                   </span>
                   {selectedFile === fileName && (
@@ -241,15 +215,9 @@ const DSLFileList = ({
                   line-clamp-2 group-hover:line-clamp-none
                   transition-all duration-200 break-words`}> */}
                 <p
-<<<<<<< HEAD
-                  className="relative text-sm text-gray-500 dark:text-gray-400
-                  line-clamp-1 group-hover:line-clamp-none
-                  transition-all duration-200 break-words whitespace-normal text-ellipsis overflow-hidden"
-=======
                   className={`relative text-sm text-gray-500 ${getDarkThemeClasses('sub_text7')}
                   line-clamp-1 group-hover:line-clamp-none
                   transition-all duration-200 break-words whitespace-normal text-ellipsis overflow-hidden`}
->>>>>>> origin/rupa
                 >
                   {fileData[index]?.description || "No description available."}
                 </p>
@@ -263,7 +231,3 @@ const DSLFileList = ({
 };
 
 export default DSLFileList;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

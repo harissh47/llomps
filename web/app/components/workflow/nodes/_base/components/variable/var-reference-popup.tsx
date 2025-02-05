@@ -30,7 +30,3 @@ const VarReferencePopup: FC<Props> = ({
   )
 }
 export default React.memo(VarReferencePopup)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

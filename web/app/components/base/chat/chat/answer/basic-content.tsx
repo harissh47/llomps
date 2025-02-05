@@ -21,7 +21,3 @@ const BasicContent: FC<BasicContentProps> = ({
 }
 
 export default memo(BasicContent)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

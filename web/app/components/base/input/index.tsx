@@ -65,7 +65,3 @@ const Input = ({ value, defaultValue, onChange, className = '', wrapperClassName
 }
 
 export default Input
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

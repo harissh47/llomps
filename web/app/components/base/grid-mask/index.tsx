@@ -91,7 +91,3 @@ const GridMask: FC<GridMaskProps> = ({
 }
 
 export default GridMask
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

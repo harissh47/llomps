@@ -129,7 +129,3 @@ export const VarBlockIcon: FC<BlockIconProps> = ({
 }
 
 export default memo(BlockIcon)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

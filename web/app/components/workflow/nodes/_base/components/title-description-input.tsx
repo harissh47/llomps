@@ -5,11 +5,7 @@ import {
 } from 'react'
 import Textarea from 'rc-textarea'
 import { useTranslation } from 'react-i18next'
-<<<<<<< HEAD
-
-=======
 import { getDarkThemeClasses } from '@/app/theme'
->>>>>>> origin/rupa
 type TitleInputProps = {
   value: string
   onBlur: (value: string) => void
@@ -42,16 +38,10 @@ export const TitleInput = memo(({
       //   focus:border-gray-300 focus:shadow-xs focus:bg-white caret-[#295EFF]
       // `}
       className={`
-<<<<<<< HEAD
-      grow mr-2 px-1 h-6 text-base text-gray-900 dark:text-white font-semibold rounded-lg border border-transparent  appearance-none outline-none
-        hover:bg-gray-50 dark:hover:bg-zinc-800 dark:bg-[#3e3e3e]
-        focus:border-gray-300 dark:focus:border-[#5f5f5f] focus:shadow-xs focus:bg-white caret-[#295EFF] dark:focus:bg-[#3e3e3e]
-=======
       grow mr-2 px-1 h-6 text-base text-gray-900 ${getDarkThemeClasses('text')} font-semibold rounded-lg border border-transparent  appearance-none outline-none
         hover:bg-gray-50 ${getDarkThemeClasses('hover')} ${getDarkThemeClasses('background1')}
         focus:border-gray-300 ${getDarkThemeClasses('borderfocus')} focus:shadow-xs focus:bg-white caret-[#295EFF] ${getDarkThemeClasses('focus1')}
 
->>>>>>> origin/rupa
          `}
       placeholder={t('workflow.common.addTitle') || ''}
       onBlur={handleBlur}
@@ -86,13 +76,8 @@ export const DescriptionInput = memo(({
       // `}
       className={`
         group flex px-2 py-[5px] max-h-[60px] rounded-lg overflow-y-auto
-<<<<<<< HEAD
-        border border-transparent hover:bg-gray-50 dark:hover:bg-zinc-800 leading-0
-        ${focus && '!border-gray-300 dark:!border-[#5f5f5f] shadow-xs !bg-gray-50 dark:!bg-zinc-800'}
-=======
         border border-transparent hover:bg-gray-50 ${getDarkThemeClasses('hover')} leading-0
         ${focus && `!border-gray-300 ${getDarkThemeClasses('border')} shadow-xs !bg-gray-50 ${getDarkThemeClasses('hover')}`}
->>>>>>> origin/rupa
       `}
     >
       <Textarea
@@ -105,15 +90,9 @@ export const DescriptionInput = memo(({
           // w-full text-xs text-gray-900 leading-[18px] bg-transparent
           // appearance-none outline-none resize-none
           // placeholder:text-gray-400 caret-[#295EFF]
-<<<<<<< HEAD
-          w-full text-xs text-gray-900  dark:text-[#FCFCFC] leading-[18px] bg-transparent
-          appearance-none outline-none resize-none
-          placeholder:text-gray-400 dark:placeholder:text-[#FCFCFC] caret-[#295EFF] dark:caret-primary-600
-=======
           w-full text-xs text-gray-900  ${getDarkThemeClasses('sub_text1')} leading-[18px] bg-transparent
           appearance-none outline-none resize-none
           placeholder:text-gray-400 ${getDarkThemeClasses('placeholder1')} caret-[#295EFF] ${getDarkThemeClasses('caret')}
->>>>>>> origin/rupa
         `}
         placeholder={t('workflow.common.addDescription') || ''}
         autoSize
@@ -122,7 +101,3 @@ export const DescriptionInput = memo(({
   )
 })
 DescriptionInput.displayName = 'DescriptionInput'
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

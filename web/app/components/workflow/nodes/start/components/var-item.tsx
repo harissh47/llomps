@@ -118,7 +118,3 @@ const VarItem: FC<Props> = ({
   )
 }
 export default React.memo(VarItem)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

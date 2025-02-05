@@ -38,11 +38,7 @@ import { useStore } from '@/app/components/app/store'
 import { AiText, ChatBot, CuteRobote } from '@/app/components/base/icons/src/vender/solid/communication'
 import { Route } from '@/app/components/base/icons/src/vender/solid/mapsAndTravel'
 import { getLocaleOnClient } from '@/i18n'
-<<<<<<< HEAD
-import { getDarkThemeClasses } from '@/app/theme'
-=======
 
->>>>>>> origin/rupa
 export type IAppDetailLayoutProps = {
   children: React.ReactNode
   params: { datasetId: string }
@@ -259,11 +255,7 @@ const DatasetDetailLayout: FC<IAppDetailLayoutProps> = (props) => {
         mutateDatasetRes: () => mutateDatasetRes(),
       }}>
         {/* <div className="bg-white grow overflow-hidden ">{children}</div> */}
-<<<<<<< HEAD
-        <div className={`bg-white grow overflow-hidden ${getDarkThemeClasses('background')}`}>{children}</div>
-=======
         <div className="bg-white grow overflow-hidden dark:bg-[#202020]">{children}</div>
->>>>>>> origin/rupa
 
       </DatasetDetailContext.Provider>
     </div>

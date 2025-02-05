@@ -90,7 +90,3 @@ const ConfigSelect: FC<IConfigSelectProps> = ({
 }
 
 export default React.memo(ConfigSelect)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

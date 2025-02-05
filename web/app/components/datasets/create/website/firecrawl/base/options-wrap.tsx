@@ -53,7 +53,3 @@ const OptionsWrap: FC<Props> = ({
   )
 }
 export default React.memo(OptionsWrap)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -194,7 +194,3 @@ const AddExtractParameter: FC<Props> = ({
   )
 }
 export default React.memo(AddExtractParameter)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

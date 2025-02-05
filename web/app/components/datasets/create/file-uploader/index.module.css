@@ -2,10 +2,7 @@
   @apply mb-6;
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .fileUploader .title {
   @apply mb-2;
   font-weight: 500;
@@ -14,10 +11,7 @@
   color: #344054;
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .fileUploader .tip {
   font-weight: 400;
   font-size: 12px;
@@ -25,10 +19,7 @@
   color: #667085;
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .uploader {
   @apply relative box-border flex justify-center items-center mb-2 p-3;
   flex-direction: column;
@@ -43,19 +34,13 @@
   color: #667085;
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .uploader.dragging {
   background: #F5F8FF;
   border: 1px dashed #B2CCFF;
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .uploader .draggingCover {
   position: absolute;
   top: 0;
@@ -64,10 +49,7 @@
   height: 100%;
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .uploader .uploadIcon {
   content: '';
   display: block;
@@ -78,28 +60,19 @@
   background-size: contain;
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .uploader .browse {
   @apply pl-1 cursor-pointer;
   /* color: #155eef; */
   color: #8AB40A;
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .fileList {
   @apply space-y-2;
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .file {
   @apply box-border relative flex items-center justify-between;
   padding: 8px 12px 8px 8px;
@@ -113,59 +86,39 @@
   cursor: pointer;
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .progressbar {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
-<<<<<<< HEAD
-  background-color: #F2F4F7;
-}
-
-=======
   /* background-color: #F2F4F7; */
   background-color: #6b7280;
 }
 
 
->>>>>>> origin/rupa
 .file.uploading,
 .file.uploading:hover {
   background: #FCFCFD;
   border: 0.5px solid #EAECF0;
 }
 
-<<<<<<< HEAD
-.file.active {
-=======
 
 
 
 /* .file.active {
->>>>>>> origin/rupa
   background: #F5F8FF;
   border: 1px solid #D1E0FF;
   box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .file:hover {
   background: #F5F8FF;
   border: 1px solid #D1E0FF;
   box-shadow: 0px 4px 8px -2px rgba(16, 24, 40, 0.1), 0px 2px 4px -2px rgba(16, 24, 40, 0.06);
-<<<<<<< HEAD
-}
-=======
 } */
 
->>>>>>> origin/rupa
 
 .fileIcon {
   @apply shrink-0 w-6 h-6 mr-2 bg-center bg-no-repeat;
@@ -173,85 +126,55 @@
   background-size: 24px;
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .fileIcon.csv {
   background-image: url(../assets/csv.svg);
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .fileIcon.doc {
   background-image: url(../assets/doc.svg);
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .fileIcon.docx {
   background-image: url(../assets/docx.svg);
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .fileIcon.xlsx,
 .fileIcon.xls {
   background-image: url(../assets/xlsx.svg);
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .fileIcon.pdf {
   background-image: url(../assets/pdf.svg);
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .fileIcon.html,
 .fileIcon.htm {
   background-image: url(../assets/html.svg);
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .fileIcon.md,
 .fileIcon.markdown {
   background-image: url(../assets/md.svg);
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .fileIcon.txt {
   background-image: url(../assets/txt.svg);
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .fileIcon.json {
   background-image: url(../assets/json.svg);
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .fileInfo {
   @apply grow flex items-center;
   z-index: 1;
@@ -260,10 +183,7 @@
   white-space: nowrap;
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .filename {
   font-weight: 500;
   font-size: 13px;
@@ -271,10 +191,7 @@
   color: #1D2939;
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .size {
   @apply ml-3;
   font-weight: 400;
@@ -283,19 +200,13 @@
   color: #667085;
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .actionWrapper {
   @apply flex items-center shrink-0;
   z-index: 1;
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .actionWrapper .percent {
   font-weight: 400;
   font-size: 13px;
@@ -303,10 +214,7 @@
   color: #344054;
 }
 
-<<<<<<< HEAD
-=======
 
->>>>>>> origin/rupa
 .actionWrapper .remove {
   display: none;
   width: 24px;
@@ -316,13 +224,7 @@
   cursor: pointer;
 }
 
-<<<<<<< HEAD
-.file:hover .actionWrapper .remove {
-  display: block;
-}
-=======
 
 .file:hover .actionWrapper .remove {
   display: block;
 }
->>>>>>> origin/rupa

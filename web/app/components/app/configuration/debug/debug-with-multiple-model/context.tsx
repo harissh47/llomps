@@ -40,7 +40,3 @@ export const DebugWithMultipleModelContextProvider = ({
 }
 
 export default DebugWithMultipleModelContext
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

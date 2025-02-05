@@ -33,7 +33,3 @@ const SuggestedAction = ({ icon, link, disabled, children, className, ...props }
 )
 
 export default SuggestedAction
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

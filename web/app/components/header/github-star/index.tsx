@@ -50,7 +50,3 @@ const GithubStar = () => {
 }
 
 export default GithubStar
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

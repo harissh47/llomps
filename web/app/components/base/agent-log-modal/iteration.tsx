@@ -48,7 +48,3 @@ const Iteration: FC<Props> = ({ iterationInfo, isFinal, index }) => {
 }
 
 export default Iteration
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

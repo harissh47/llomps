@@ -280,7 +280,3 @@ const WorkflowToolAsModal: FC<Props> = ({
   )
 }
 export default React.memo(WorkflowToolAsModal)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

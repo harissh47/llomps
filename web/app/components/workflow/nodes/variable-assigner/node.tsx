@@ -59,7 +59,3 @@ const Node: FC<NodeProps<VariableAssignerNodeType>> = (props) => {
 }
 
 export default memo(Node)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

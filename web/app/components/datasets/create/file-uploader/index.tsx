@@ -259,14 +259,6 @@ const FileUploader = ({
       {!hideUpload && (
 
         <div ref={dropRef} 
-<<<<<<< HEAD
-        className={cn(s.uploader, dragging && s.dragging)}>
-        {/*  className={cn(
-        //   "relative box-border flex justify-center items-center mb-2 p-3 flex-col max-w-[640px] min-h-[80px] bg-[#F9FAFB] dark:bg-[#3F3F3F] border border-dashed border-[#EAECF0] dark:border-[#5F5F5F] rounded-[12px] font-normal text-[14px] leading-[20px] text-[#667085]",
-        //   dragging &&
-        //   "bg-[#F5F8FF] border-[#B2CCFF] dark:border-[#5F5F5F]"
-        //   )} */}
-=======
         // className={cn(s.uploader, dragging && s.dragging)}
         className={cn(
             s.uploader,
@@ -274,7 +266,6 @@ const FileUploader = ({
             dragging && s.dragging
           )}>
 
->>>>>>> origin/rupa
         
           <div className='flex justify-center items-center min-h-6 mb-2 '>
           {/* <div className='flex justify-center items-center min-h-6 mb-2 dark:text-white'> */}
@@ -312,11 +303,6 @@ const FileUploader = ({
           <div
             key={`${fileItem.fileID}-${index}`}
             onClick={() => fileItem.file?.id && onPreview(fileItem.file)}
-<<<<<<< HEAD
-            className={cn(
-              s.file,
-              fileItem.progress < 100 && s.uploading,
-=======
             // className={cn(
             //   s.file,
             //   fileItem.progress < 100 && s.uploading,
@@ -324,7 +310,6 @@ const FileUploader = ({
             className={cn(s.file,
               "box-border relative flex items-center justify-between p-2 pr-3 max-w-[640px] h-[40px] bg-white dark:bg-[#202020] border border-gray-300 dark:border-[#5f5f5f] shadow-sm rounded-lg overflow-hidden cursor-pointer hover:bg-[#D1E0FF] hover:border-[#D1E0FF] dark:hover:border-[#D1E0FF] hover:shadow-md",
               fileItem.progress < 100 && "bg-[#FCFCFD] dark:bg-[#202020] border border-gray-300 dark:border-[#5f5f5f] hover:bg-[#FCFCFD] dark:hover:bg-[#2e2e2e] hover:border-gray-300 dark:hover:border-[#D1E0FF]"
->>>>>>> origin/rupa
             )}
             // className={cn(
             //   "box-border relative flex items-center justify-between p-2 max-w-[640px] h-10 bg-white dark:bg-[#3F3F3F] border border-[#EAECF0] dark:border-[#5f5f5f] shadow-sm rounded-md overflow-hidden cursor-pointer",
@@ -339,11 +324,7 @@ const FileUploader = ({
               <div className={cn(s.fileIcon, s[getFileType(fileItem.file)])} />
               {/* <div className={s.filename}>{fileItem.file.name}</div>
               <div className={s.size}>{getFileSize(fileItem.file.size)}</div> */}
-<<<<<<< HEAD
-              <div className="font-medium text-[13px] leading-[18px] text-[#1D2939]">
-=======
               <div className="font-medium text-[13px] leading-[18px] text-[#1D2939] dark:text-white">
->>>>>>> origin/rupa
               {fileItem.file.name}
               </div>
               <div className="ml-3 font-normal text-[12px] leading-[18px] text-[#667085] ">
@@ -370,7 +351,3 @@ const FileUploader = ({
 }
 
 export default FileUploader
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

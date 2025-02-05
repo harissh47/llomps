@@ -98,7 +98,3 @@ export function $isContextBlockNode(
 ): boolean {
   return node instanceof ContextBlockNode
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

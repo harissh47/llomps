@@ -262,7 +262,3 @@ const ParameterItem: FC<ParameterItemProps> = ({
 }
 
 export default ParameterItem
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

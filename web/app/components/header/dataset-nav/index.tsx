@@ -112,7 +112,3 @@ const DatasetNav = ({
 }
 
 export default DatasetNav
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

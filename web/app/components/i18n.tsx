@@ -30,7 +30,3 @@ const I18n: FC<II18nProps> = ({
   )
 }
 export default React.memo(I18n)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

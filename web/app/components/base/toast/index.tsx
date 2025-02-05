@@ -134,7 +134,3 @@ Toast.notify = ({
 }
 
 export default Toast
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

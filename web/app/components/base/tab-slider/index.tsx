@@ -64,7 +64,3 @@ const TabSlider: FC<TabSliderProps> = ({
 }
 
 export default TabSlider
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -9,12 +9,7 @@ import { useLanguage } from '../hooks'
 import PopupItem from './popup-item'
 import { SearchLg } from '@/app/components/base/icons/src/vender/line/general'
 import { XCircle } from '@/app/components/base/icons/src/vender/solid/general'
-<<<<<<< HEAD
-import { getDarkThemeClasses } from '@/app/theme'
-
-=======
  
->>>>>>> origin/rupa
 type PopupProps = {
   defaultModel?: DefaultModel
   modelList: Model[]
@@ -27,44 +22,23 @@ const Popup: FC<PopupProps> = ({
 }) => {
   const language = useLanguage()
   const [searchText, setSearchText] = useState('')
-<<<<<<< HEAD
-
-=======
  
->>>>>>> origin/rupa
   const filteredModelList = modelList.filter(
     model => model.models.filter(
       (modelItem) => {
         if (modelItem.label[language] !== undefined)
           return modelItem.label[language].toLowerCase().includes(searchText.toLowerCase())
-<<<<<<< HEAD
-
-=======
  
->>>>>>> origin/rupa
         let found = false
         Object.keys(modelItem.label).forEach((key) => {
           if (modelItem.label[key].toLowerCase().includes(searchText.toLowerCase()))
             found = true
         })
-<<<<<<< HEAD
-
-=======
  
->>>>>>> origin/rupa
         return found
       },
     ).length,
   )
-<<<<<<< HEAD
-
-  return (
-    <div className={`w-[320px] max-h-[480px] rounded-lg border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} bg-white ${getDarkThemeClasses('background')} shadow-lg overflow-y-auto`}>
-      <div className={`sticky top-0 pl-3 pt-3 pr-2 pb-1 bg-white ${getDarkThemeClasses('background')} z-10 `}>
-        <div className={`
-          flex items-center pl-[9px] pr-[10px] h-8 rounded-lg border
-          ${searchText ? `bg-white ${getDarkThemeClasses('background')} border-gray-300 ${getDarkThemeClasses('border')} shadow-xs ` : `bg-gray-100 ${getDarkThemeClasses('background')} border-transparent`}
-=======
  
   return (
     <div className='w-[320px] max-h-[480px] rounded-lg border-[0.5px] border-gray-200 dark:border-[#5f5f5f] bg-white dark:bg-[#202020] shadow-lg overflow-y-auto'>
@@ -72,7 +46,6 @@ const Popup: FC<PopupProps> = ({
         <div className={`
           flex items-center pl-[9px] pr-[10px] h-8 rounded-lg border
           ${searchText ? 'bg-white dark:bg-[#3f3f3f] border-gray-300 dark:border-[#5f5f5f] shadow-xs ' : 'bg-gray-100  dark:bg-[#3f3f3f] border-transparent'}
->>>>>>> origin/rupa
         `}>
           <SearchLg
             className={`
@@ -118,11 +91,5 @@ const Popup: FC<PopupProps> = ({
     </div>
   )
 }
-<<<<<<< HEAD
-
-export default Popup
-
-=======
  
 export default Popup
->>>>>>> origin/rupa

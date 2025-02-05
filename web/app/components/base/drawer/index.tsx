@@ -81,7 +81,3 @@ export default function Drawer({
     </Dialog>
   )
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

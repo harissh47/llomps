@@ -76,7 +76,3 @@ const AllTools = ({
 }
 
 export default AllTools
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

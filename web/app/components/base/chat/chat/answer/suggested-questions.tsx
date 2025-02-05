@@ -50,7 +50,3 @@ const SuggestedQuestions: FC<SuggestedQuestionsProps> = ({
 }
 
 export default memo(SuggestedQuestions)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

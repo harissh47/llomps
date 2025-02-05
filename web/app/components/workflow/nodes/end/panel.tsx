@@ -47,7 +47,3 @@ const Panel: FC<NodePanelProps<EndNodeType>> = ({
 }
 
 export default React.memo(Panel)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

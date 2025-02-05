@@ -32,7 +32,3 @@ const Forms = () => {
 }
 
 export default Forms
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

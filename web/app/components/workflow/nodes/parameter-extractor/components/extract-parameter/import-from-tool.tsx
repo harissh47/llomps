@@ -94,7 +94,3 @@ const ImportFromTool: FC<Props> = ({
   )
 }
 export default memo(ImportFromTool)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

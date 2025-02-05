@@ -165,7 +165,3 @@ const SwitchAppModal = ({ show, appDetail, inAppDetail = false, onSuccess, onClo
 }
 
 export default SwitchAppModal
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

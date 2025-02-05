@@ -107,7 +107,3 @@ const Dropdown: FC<DropdownProps> = ({
 }
 
 export default Dropdown
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

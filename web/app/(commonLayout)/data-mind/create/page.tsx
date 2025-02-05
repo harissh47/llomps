@@ -10,7 +10,3 @@ const DatasetCreation = async (props: Props) => {
 }
 
 export default DatasetCreation
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

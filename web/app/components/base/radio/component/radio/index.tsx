@@ -63,7 +63,3 @@ export default function Radio({
     </div>
   )
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

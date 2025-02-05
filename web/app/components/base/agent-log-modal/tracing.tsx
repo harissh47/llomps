@@ -23,7 +23,3 @@ const TracingPanel: FC<TracingPanelProps> = ({ list }) => {
 }
 
 export default TracingPanel
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

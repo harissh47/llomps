@@ -168,7 +168,3 @@ React.HTMLProps<HTMLDivElement>
 })
 
 PortalToFollowElemContent.displayName = 'PortalToFollowElemContent'
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

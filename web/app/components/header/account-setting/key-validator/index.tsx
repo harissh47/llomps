@@ -120,7 +120,3 @@ const KeyValidator = ({
 }
 
 export default KeyValidator
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

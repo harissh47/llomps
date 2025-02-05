@@ -38,7 +38,3 @@ const ContextVar: FC<Props> = (props) => {
 }
 
 export default React.memo(ContextVar)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -13,7 +13,3 @@ const Radio = RadioComps as CompoundedComponent
  */
 Radio.Group = Group
 export default Radio
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -138,7 +138,3 @@ const ToolCallItem: FC<Props> = ({ toolCall, isLLM = false, isFinal, tokens, obs
 }
 
 export default ToolCallItem
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

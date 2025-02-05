@@ -24,7 +24,3 @@ const NoData: FC<INoDataProps> = () => {
   )
 }
 export default React.memo(NoData)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

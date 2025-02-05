@@ -95,11 +95,7 @@ const ApiBasedExtensionModal: FC<ApiBasedExtensionModalProps> = ({
           value={localeData.name || ''}
           onChange={e => handleDataChange('name', e.target.value)}
           // className='block px-3 w-full h-9 bg-gray-100 rounded-lg text-sm text-gray-900 outline-none appearance-none'
-<<<<<<< HEAD
-          className='block px-3 w-full h-9 bg-gray-100 dark:bg-[#3F3F3F] rounded-lg text-sm text-gray-900 dark:text-[#FCFCFC] outline-none appearance-none'
-=======
           className='block px-3 w-full h-9 bg-gray-100 dark:bg-[#2c2c2c] rounded-lg text-sm text-gray-900 dark:text-[#FCFCFC] outline-none appearance-none'
->>>>>>> origin/rupa
           placeholder={t('common.apiBasedExtension.modal.name.placeholder') || ''}
         />
       </div>
@@ -120,11 +116,7 @@ const ApiBasedExtensionModal: FC<ApiBasedExtensionModalProps> = ({
           value={localeData.api_endpoint || ''}
           onChange={e => handleDataChange('api_endpoint', e.target.value)}
           // className='block px-3 w-full h-9 bg-gray-100 rounded-lg text-sm text-gray-900 outline-none appearance-none'
-<<<<<<< HEAD
-          className='block px-3 w-full h-9 bg-gray-100 dark:bg-[#3F3F3F] rounded-lg text-sm text-gray-900 dark:text-[#FCFCFC] outline-none appearance-none'
-=======
           className='block px-3 w-full h-9 bg-gray-100 dark:bg-[#2c2c2c] rounded-lg text-sm text-gray-900 dark:text-[#FCFCFC] outline-none appearance-none'
->>>>>>> origin/rupa
           placeholder={t('common.apiBasedExtension.modal.apiEndpoint.placeholder') || ''}
         />
       </div>
@@ -138,11 +130,7 @@ const ApiBasedExtensionModal: FC<ApiBasedExtensionModalProps> = ({
             value={localeData.api_key || ''}
             onChange={e => handleDataChange('api_key', e.target.value)}
             // className='block grow mr-2 px-3 h-9 bg-gray-100 rounded-lg text-sm text-gray-900 outline-none appearance-none'
-<<<<<<< HEAD
-            className='block grow mr-2 px-3 h-9 bg-gray-100 dark:bg-[#3F3F3F] rounded-lg text-sm text-gray-900 dark:text-[#FCFCFC] outline-none appearance-none'
-=======
             className='block grow mr-2 px-3 h-9 bg-gray-100 dark:bg-[#2c2c2c] rounded-lg text-sm text-gray-900 dark:text-[#FCFCFC] outline-none appearance-none'
->>>>>>> origin/rupa
             placeholder={t('common.apiBasedExtension.modal.apiKey.placeholder') || ''}
           />
         </div>
@@ -168,7 +156,3 @@ const ApiBasedExtensionModal: FC<ApiBasedExtensionModalProps> = ({
 }
 
 export default ApiBasedExtensionModal
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -14,7 +14,3 @@ const Icon = React.forwardRef<React.MutableRefObject<SVGElement>, Omit<IconBaseP
 Icon.displayName = 'Tag03'
 
 export default Icon
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

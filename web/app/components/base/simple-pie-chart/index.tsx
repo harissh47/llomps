@@ -64,7 +64,3 @@ const SimplePieChart = ({ percentage = 80, fill = '#fdb022', stroke = '#f79009',
 }
 
 export default memo(SimplePieChart)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

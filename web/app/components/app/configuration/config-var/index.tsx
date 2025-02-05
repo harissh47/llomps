@@ -412,7 +412,3 @@ const ConfigVar: FC<IConfigVarProps> = ({ promptVariables, readonly, onPromptVar
   )
 }
 export default React.memo(ConfigVar)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

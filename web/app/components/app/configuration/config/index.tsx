@@ -27,10 +27,6 @@ import ConfigParamModal from '@/app/components/app/configuration/toolbox/annotat
 import AnnotationFullModal from '@/app/components/billing/annotation-full/modal'
 import { useDefaultModel } from '@/app/components/header/account-setting/model-provider-page/hooks'
 import { ModelTypeEnum } from '@/app/components/header/account-setting/model-provider-page/declarations'
-<<<<<<< HEAD
-import { getDarkThemeClasses } from '@/app/theme'
-=======
->>>>>>> origin/rupa
 
 const Config: FC = () => {
   const {
@@ -216,11 +212,7 @@ const Config: FC = () => {
       > */}
         <div
         ref={wrapRef}
-<<<<<<< HEAD
-        className={`grow h-0 relative px-6 pb-[50px] overflow-y-auto mb-10 ${getDarkThemeClasses('background')}`}
-=======
         className="grow h-0 relative px-6 pb-[50px] overflow-y-auto mb-10 dark:bg-[#202020]"
->>>>>>> origin/rupa
         // className="grow h-0 relative px-6 pb-[50px] overflow-y-auto"
       >
         <AddFeatureBtn toBottomHeight={toBottomHeight} onClick={showChooseFeatureTrue} />
@@ -335,7 +327,3 @@ const Config: FC = () => {
   )
 }
 export default React.memo(Config)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

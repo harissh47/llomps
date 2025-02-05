@@ -14,7 +14,3 @@ const Icon = React.forwardRef<React.MutableRefObject<SVGElement>, Omit<IconBaseP
 Icon.displayName = 'OpenaiBlack'
 
 export default Icon
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

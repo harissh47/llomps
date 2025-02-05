@@ -81,7 +81,3 @@ const EmptyDatasetCreationModal = ({
 }
 
 export default EmptyDatasetCreationModal
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

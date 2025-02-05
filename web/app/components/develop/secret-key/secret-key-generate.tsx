@@ -40,7 +40,3 @@ const SecretKeyGenerateModal = ({
 }
 
 export default SecretKeyGenerateModal
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -90,7 +90,3 @@ export function $isWorkflowVariableBlockNode(
 ): node is WorkflowVariableBlockNode {
   return node instanceof WorkflowVariableBlockNode
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

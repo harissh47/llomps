@@ -72,7 +72,3 @@ ContextBlock.displayName = 'ContextBlock'
 export { ContextBlock }
 export { ContextBlockNode } from './node'
 export { default as ContextBlockReplacementBlock } from './context-block-replacement-block'
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

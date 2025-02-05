@@ -93,7 +93,3 @@ const ConfirmCommon: FC<ConfirmCommonProps> = ({
 }
 
 export default ConfirmCommon
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

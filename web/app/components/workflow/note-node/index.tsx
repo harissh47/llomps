@@ -127,7 +127,3 @@ const NoteNode = ({
 }
 
 export default memo(NoteNode)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

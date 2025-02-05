@@ -22,7 +22,3 @@ const Spinner: FC<Props> = ({ loading = false, children, className }) => {
 }
 
 export default Spinner
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

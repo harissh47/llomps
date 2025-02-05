@@ -60,7 +60,3 @@ const NotionPageSelectorModal = ({
 }
 
 export default NotionPageSelectorModal
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

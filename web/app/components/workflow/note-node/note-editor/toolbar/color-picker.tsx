@@ -73,13 +73,9 @@ const ColorPicker = ({
         </div>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent>
-<<<<<<< HEAD
-        <div className='grid grid-cols-3 grid-rows-2 gap-0.5 p-0.5 rounded-lg border-[0.5px] border-black/8 bg-white shadow-lg'>
-=======
         {/* <div className='grid grid-cols-3 grid-rows-2 gap-0.5 p-0.5 rounded-lg border-[0.5px] border-black/8 bg-white shadow-lg'> */}
         <div className='grid grid-cols-3 grid-rows-2 gap-0.5 p-0.5 rounded-lg border-[0.5px] border-black/8 bg-white dark:bg-[#3f3f3f] shadow-lg'>
 
->>>>>>> origin/rupa
           {
             COLOR_LIST.map(color => (
               <div
@@ -109,7 +105,3 @@ const ColorPicker = ({
 }
 
 export default memo(ColorPicker)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

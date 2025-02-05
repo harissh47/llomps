@@ -35,7 +35,3 @@ const PromptMenu = ({
 }
 
 export default memo(PromptMenu)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -24,12 +24,7 @@ import { useProviderContext } from '@/context/provider-context'
 import { updateDefaultModel } from '@/service/common'
 import { useToastContext } from '@/app/components/base/toast'
 import { useAppContext } from '@/context/app-context'
-<<<<<<< HEAD
-import { setCurrentProvider } from '@/app/theme'
-let firstProvider:string | undefined;
-=======
 
->>>>>>> origin/rupa
 type SystemModelSelectorProps = {
   textGenerationDefaultModel: DefaultModelResponse | undefined
   embeddingsDefaultModel: DefaultModelResponse | undefined
@@ -62,24 +57,6 @@ const SystemModel: FC<SystemModelSelectorProps> = ({
   const [open, setOpen] = useState(false)
 
   const getCurrentDefaultModelByModelType = (modelType: ModelTypeEnum) => {
-<<<<<<< HEAD
-    let model;
-    if (modelType === ModelTypeEnum.textGeneration)
-      model = currentTextGenerationDefaultModel
-    else if (modelType === ModelTypeEnum.textEmbedding)
-      model = currentEmbeddingsDefaultModel
-    else if (modelType === ModelTypeEnum.rerank)
-      model = currentRerankDefaultModel
-    else if (modelType === ModelTypeEnum.speech2text)
-      model = currentSpeech2textDefaultModel
-    else if (modelType === ModelTypeEnum.tts)
-      model = currentTTSDefaultModel
-    if(!firstProvider){
-      firstProvider = model?.provider || ''
-      
-    }
-    return model
-=======
     if (modelType === ModelTypeEnum.textGeneration)
       return currentTextGenerationDefaultModel
     else if (modelType === ModelTypeEnum.textEmbedding)
@@ -92,7 +69,6 @@ const SystemModel: FC<SystemModelSelectorProps> = ({
       return currentTTSDefaultModel
 
     return undefined
->>>>>>> origin/rupa
   }
   const handleChangeDefaultModel = (modelType: ModelTypeEnum, model: DefaultModel) => {
     if (modelType === ModelTypeEnum.textGeneration)
@@ -114,18 +90,8 @@ const SystemModel: FC<SystemModelSelectorProps> = ({
       url: '/workspaces/current/default-model',
       body: {
         model_settings: [ModelTypeEnum.textGeneration, ModelTypeEnum.textEmbedding, ModelTypeEnum.rerank, ModelTypeEnum.speech2text, ModelTypeEnum.tts].map((modelType) => {
-<<<<<<< HEAD
-          // console.log('modelType:', getCurrentDefaultModelByModelType(modelType)?.provider)
-          // const provider = getCurrentDefaultModelByModelType(modelType)?.provider  use this to set the theme according to the selected model provider
-          // setCurrentProvider(provider || '')
-          return {
-
-            model_type: modelType,
-            
-=======
           return {
             model_type: modelType,
->>>>>>> origin/rupa
             provider: getCurrentDefaultModelByModelType(modelType)?.provider,
             model: getCurrentDefaultModelByModelType(modelType)?.model,
           }
@@ -313,7 +279,3 @@ const SystemModel: FC<SystemModelSelectorProps> = ({
 }
 
 export default SystemModel
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

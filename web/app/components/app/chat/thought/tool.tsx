@@ -102,7 +102,3 @@ const Tool: FC<Props> = ({
   )
 }
 export default React.memo(Tool)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

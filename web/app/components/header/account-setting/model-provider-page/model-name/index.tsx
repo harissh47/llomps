@@ -85,7 +85,3 @@ const ModelName: FC<ModelNameProps> = ({
 }
 
 export default ModelName
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -123,7 +123,3 @@ const AddVariablePopupWithPosition = ({
 }
 
 export default memo(AddVariablePopupWithPosition)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

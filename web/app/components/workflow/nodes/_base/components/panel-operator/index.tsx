@@ -75,7 +75,3 @@ const PanelOperator = ({
 }
 
 export default memo(PanelOperator)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

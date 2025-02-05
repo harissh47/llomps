@@ -18,7 +18,3 @@ export default function DataSourcePage() {
     </div>
   )
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

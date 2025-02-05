@@ -142,7 +142,3 @@ const EditAnnotationModal: FC<Props> = ({
   )
 }
 export default React.memo(EditAnnotationModal)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -310,7 +310,3 @@ const Embedded = ({ isShow, onClose, appBaseUrl, accessToken, className }: Props
 };
 
 export default Embedded;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

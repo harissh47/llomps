@@ -13,7 +13,3 @@ const OperationBtn = ({ innerContent, onClick, className }: { innerContent: Reac
 )
 
 export default OperationBtn
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

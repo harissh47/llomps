@@ -304,7 +304,3 @@ const EmbeddingProcess: FC<Props> = ({ datasetId, batchId, documents = [], index
 }
 
 export default EmbeddingProcess
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

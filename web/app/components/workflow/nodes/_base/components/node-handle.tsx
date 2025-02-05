@@ -185,7 +185,3 @@ export const NodeSourceHandle = memo(({
   )
 })
 NodeSourceHandle.displayName = 'NodeSourceHandle'
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

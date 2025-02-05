@@ -50,7 +50,3 @@ const ParamsConfig = ({
   )
 }
 export default memo(ParamsConfig)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

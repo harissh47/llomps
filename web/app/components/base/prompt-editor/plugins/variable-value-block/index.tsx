@@ -50,7 +50,3 @@ const VariableValueBlock = () => {
 }
 
 export default VariableValueBlock
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

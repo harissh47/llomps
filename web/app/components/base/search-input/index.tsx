@@ -4,11 +4,7 @@ import { useTranslation } from "react-i18next";
 import cn from "classnames";
 import { SearchLg } from "@/app/components/base/icons/src/vender/line/general";
 import { XCircle } from "@/app/components/base/icons/src/vender/solid/general";
-<<<<<<< HEAD
-import { getDarkThemeClasses } from "@/app/theme";
-=======
 import { getDarkThemeClasses } from "@/utils/theme";
->>>>>>> origin/rupa
 type SearchInputProps = {
   placeholder?: string;
   className?: string;
@@ -25,11 +21,7 @@ const SearchInput: FC<SearchInputProps> = ({
 }) => {
   const { t } = useTranslation();
   const [focus, setFocus] = useState<boolean>(false);
-<<<<<<< HEAD
-
-=======
  
->>>>>>> origin/rupa
   return (
     // <div className={cn(
     //   'group flex items-center px-2 h-8 rounded-lg bg-gray-200 hover:bg-gray-300  border border-transparent overflow-hidden',
@@ -40,16 +32,6 @@ const SearchInput: FC<SearchInputProps> = ({
     // )}
     <div
       className={cn(
-<<<<<<< HEAD
-         ` group flex items-center px-2 h-8 rounded-lg bg-gray-200 ${getDarkThemeClasses('background')} hover:bg-gray-300 dark:hover:bg-zinc-800 border border-transparent overflow-hidden `,
-        focus &&
-          "!bg-white dark:!bg-[#3e3e3e] hover:bg-white dark:hover:bg-zinc-800 shawdow-xs !border-gray-300 dark:!border-[#5F5F5F]",
-        !focus &&
-          value &&
-          "hover:!bg-gray-200 hover:!shawdow-xs hover:!border-black/5 dark:hover:!bg-zinc-800",
-        white &&
-          "!bg-white dark:!bg-[#3e3e3e] hover:!bg-white dark:hover:!bg-zinc-800 shawdow-xs !border-gray-300 dark:!border-[#202020] hover:!border-gray-300",
-=======
         `group flex items-center px-2 h-8 rounded-lg bg-gray-200 ${getDarkThemeClasses('background3')} hover:bg-gray-300 ${getDarkThemeClasses('hover')} border border-transparent overflow-hidden ${getDarkThemeClasses('border1')}`,
         focus &&
           `!bg-white !${getDarkThemeClasses('background1')} hover:bg-white ${getDarkThemeClasses('hover')} shawdow-xs !border-gray-300 ${getDarkThemeClasses('border')}`,
@@ -58,7 +40,6 @@ const SearchInput: FC<SearchInputProps> = ({
           `hover:!bg-gray-200 hover:!shawdow-xs hover:!border-black/5 !${getDarkThemeClasses('hover')}  ${getDarkThemeClasses('border')}`,
         white &&
           `!bg-white !${getDarkThemeClasses('background1')} hover:!bg-white !${getDarkThemeClasses('hover')} shawdow-xs !border-gray-300 dark:!border-[#202020] hover:!border-gray-300  ${getDarkThemeClasses('border')}`,
->>>>>>> origin/rupa
         className
       )}
     >
@@ -76,16 +57,6 @@ const SearchInput: FC<SearchInputProps> = ({
         //   white && '!bg-white hover:!bg-white group-hover:!bg-white placeholder:!text-gray-400',
         // )}
         className={cn(
-<<<<<<< HEAD
-          "grow block h-[18px] bg-gray-200 dark:bg-[#2c2c2c] rounded-md border-0 text-gray-700 dark:text-white text-[13px] placeholder:text-gray-500 dark:placeholder:text-white appearance-none outline-none group-hover:bg-gray-300 dark:group-hover:bg-zinc-800 caret-blue-600 dark:caret-primary-600",
-          focus &&
-            "!bg-white dark:!bg-[#3e3e3e] hover:bg-white dark:hover:bg-zinc-800 group-hover:bg-white dark:group-hover:bg-zinc-800 placeholder:!text-gray-400 dark:placeholder:!text-white",
-          !focus &&
-            value &&
-            "hover:!bg-gray-200 dark:hover:!bg-zinc-800 group-hover:!bg-gray-200 dark:group-hover:!bg-zinc-800 dark:bg-[#3F3F3F]",
-          white &&
-            "!bg-white dark:!bg-[#3f3f3f] hover:!bg-white dark:hover:!bg-zinc-800 group-hover:!bg-white dark:group-hover:!bg-zinc-800 placeholder:!text-gray-400 dark:placeholder:!text-white"
-=======
           `grow block h-[18px] bg-gray-200 ${getDarkThemeClasses('background3')} rounded-md border-0 text-gray-700 ${getDarkThemeClasses('text')} text-[13px] placeholder:text-gray-500  ${getDarkThemeClasses('placeholder')} appearance-none outline-none group-hover:bg-gray-300 ${getDarkThemeClasses('grouphover')} caret-blue-600 dark:caret-primary-600`,
           focus &&
             `!bg-white !${getDarkThemeClasses('background1')} hover:bg-white ${getDarkThemeClasses('hover')} group-hover:bg-white ${getDarkThemeClasses('grouphover')} placeholder:!text-gray-400 !${getDarkThemeClasses('placeholder')}`,
@@ -94,7 +65,6 @@ const SearchInput: FC<SearchInputProps> = ({
             `hover:!bg-gray-200 !${getDarkThemeClasses('hover')} group-hover:!bg-gray-200 !${getDarkThemeClasses('grouphover')} ${getDarkThemeClasses('background3')}`,
           white &&
             `!bg-white !${getDarkThemeClasses('background3')} hover:!bg-white !${getDarkThemeClasses('hover')} group-hover:!bg-white !${getDarkThemeClasses('grouphover')} placeholder:!text-gray-400 !${getDarkThemeClasses('placeholder')}`
->>>>>>> origin/rupa
         )}
         placeholder={placeholder || t("common.operation.search")!}
         value={value}
@@ -116,11 +86,5 @@ const SearchInput: FC<SearchInputProps> = ({
     </div>
   );
 };
-<<<<<<< HEAD
-
-export default SearchInput;
-
-=======
  
 export default SearchInput;
->>>>>>> origin/rupa

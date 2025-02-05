@@ -128,7 +128,3 @@ const ModelParameterTrigger: FC<ModelParameterTriggerProps> = ({
 }
 
 export default memo(ModelParameterTrigger)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -125,7 +125,3 @@ const Panel: FC<NodePanelProps<TemplateTransformNodeType>> = ({
 }
 
 export default React.memo(Panel)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

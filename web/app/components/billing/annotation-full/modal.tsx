@@ -45,7 +45,3 @@ const AnnotationFullModal: FC<Props> = ({
   )
 }
 export default React.memo(AnnotationFullModal)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

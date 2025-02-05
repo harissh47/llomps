@@ -41,7 +41,3 @@ const Log: FC<LogProps> = ({
 }
 
 export default Log
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

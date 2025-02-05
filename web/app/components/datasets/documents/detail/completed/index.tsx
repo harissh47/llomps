@@ -377,12 +377,8 @@ const Completed: FC<ICompletedProps> = ({
 
   return (
     <>
-<<<<<<< HEAD
-      <div className={s.docSearchWrapper}>
-=======
       {/* <div className={s.docSearchWrapper}> */}
       <div className="sticky w-full py-1 -top-3 bg-white dark:bg-[#202020] flex items-center mb-3 justify-between z-10 flex-wrap gap-y-1">
->>>>>>> origin/rupa
         <div className={s.totalText}>{total ? formatNumber(total) : '--'} {t('datasetDocuments.segment.paragraphs')}</div>
         <SimpleSelect
           onSelect={onChangeStatus}
@@ -428,7 +424,3 @@ const Completed: FC<ICompletedProps> = ({
 }
 
 export default Completed
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

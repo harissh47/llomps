@@ -54,7 +54,3 @@ const UserInput = () => {
 }
 
 export default memo(UserInput)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

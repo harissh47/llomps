@@ -375,7 +375,3 @@ const ModerationSettingModal: FC<ModerationSettingModalProps> = ({
 }
 
 export default memo(ModerationSettingModal)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

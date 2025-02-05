@@ -299,7 +299,3 @@ const PageSelector = ({
 }
 
 export default PageSelector
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

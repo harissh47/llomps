@@ -303,8 +303,4 @@ export function Pre({ children, ...props }: IChildrenProps) {
  
   return <CodeGroup {...props}>{children}</CodeGroup>
 }
-<<<<<<< HEAD
  
-=======
- 
->>>>>>> origin/rupa

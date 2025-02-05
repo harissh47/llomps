@@ -57,7 +57,3 @@ const CardItem: FC<ICardItemProps> = ({
   )
 }
 export default React.memo(CardItem)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

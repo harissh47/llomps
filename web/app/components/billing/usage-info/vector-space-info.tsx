@@ -32,7 +32,3 @@ const VectorSpaceInfo: FC<Props> = ({
   )
 }
 export default React.memo(VectorSpaceInfo)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

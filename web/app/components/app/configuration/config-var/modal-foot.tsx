@@ -23,7 +23,3 @@ const ModalFoot: FC<IModalFootProps> = ({
   )
 }
 export default React.memo(ModalFoot)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

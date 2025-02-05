@@ -386,7 +386,3 @@ const Welcome: FC<IWelcomeProps> = ({
 }
 
 export default React.memo(Welcome)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -75,7 +75,3 @@ export const PromptMenuItem = memo(
   }
 );
 PromptMenuItem.displayName = "PromptMenuItem";
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

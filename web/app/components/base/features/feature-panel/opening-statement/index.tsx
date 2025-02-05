@@ -496,7 +496,3 @@ const OpeningStatement: FC<OpeningStatementProps> = ({
   )
 }
 export default React.memo(OpeningStatement)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -157,7 +157,3 @@ const TextAreaWithButton = ({
 }
 
 export default TextAreaWithButton
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

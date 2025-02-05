@@ -30,11 +30,7 @@ const Features = () => {
     // <div className='fixed top-16 left-2 bottom-2 w-[600px] rounded-2xl border-[0.5px] border-gray-200 bg-white shadow-xl z-10'>
     // <div className='fixed top-16 right-2 bottom-4 w-[600px] rounded-2xl border-[0.5px] border-gray-200 bg-white shadow-xl z-10'>
     // <div className='fixed top-16 right-6 bottom-4 w-[600px] rounded-2xl border-[0.5px] border-gray-200 bg-white shadow-xl z-10 overflow-y-auto'>
-<<<<<<< HEAD
-    <div className='fixed top-16 right-6 bottom-4 w-[600px] rounded-2xl border-[0.5px] border-gray-200 dark:border-[#202020] bg-white ${getDarkThemeClasses('background')} shadow-xl z-10 overflow-y-auto'>
-=======
     <div className='fixed top-16 right-6 bottom-4 w-[600px] rounded-2xl border-[0.5px] border-gray-200 dark:border-[#202020] bg-white dark:bg-[#202020] shadow-xl z-10 overflow-y-auto'>
->>>>>>> origin/rupa
        {/* <div className='flex items-center justify-between px-4 pt-3'> */}
       <div className='flex items-center justify-between px-4 pt-3 dark:text-white'>
         {t('workflow.common.features')} 
@@ -72,7 +68,3 @@ const Features = () => {
 }
 
 export default memo(Features)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

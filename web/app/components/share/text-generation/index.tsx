@@ -646,7 +646,3 @@ const TextGeneration: FC<IMainProps> = ({
 }
 
 export default TextGeneration
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

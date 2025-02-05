@@ -47,7 +47,3 @@ const AutomaticBtn: FC<IAutomaticBtnProps> = ({
   )
 }
 export default React.memo(AutomaticBtn)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

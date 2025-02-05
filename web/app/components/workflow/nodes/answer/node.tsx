@@ -39,7 +39,3 @@ const Node: FC<NodeProps<AnswerNodeType>> = ({
 }
 
 export default React.memo(Node)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

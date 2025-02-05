@@ -95,7 +95,3 @@ const Add = ({ nodeId, nodeData, sourceHandle, branchName }: AddProps) => {
 };
 
 export default memo(Add);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

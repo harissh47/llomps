@@ -31,7 +31,3 @@ const ShortcutsName = ({
 }
 
 export default memo(ShortcutsName)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

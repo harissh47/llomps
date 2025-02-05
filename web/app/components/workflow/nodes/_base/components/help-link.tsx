@@ -29,7 +29,3 @@ const HelpLink = ({
 }
 
 export default memo(HelpLink)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

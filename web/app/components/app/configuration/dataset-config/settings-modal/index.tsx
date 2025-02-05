@@ -304,7 +304,3 @@ const SettingsModal: FC<SettingsModalProps> = ({
 }
 
 export default SettingsModal
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

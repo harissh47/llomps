@@ -15,10 +15,6 @@ import { Tag01, Tag03 } from '@/app/components/base/icons/src/vender/line/financ
 import { Check } from '@/app/components/base/icons/src/vender/line/general'
 import { XCircle } from '@/app/components/base/icons/src/vender/solid/general'
 import type { Tag } from '@/app/components/base/tag-management/constant'
-<<<<<<< HEAD
-import { getDarkThemeClasses } from '@/app/theme'
-=======
->>>>>>> origin/rupa
 
 import { fetchTagList } from '@/service/tag'
 
@@ -85,11 +81,7 @@ const TagFilter: FC<TagFilterProps> = ({
             // 'flex items-center gap-1 px-2 h-8 rounded-lg border-[0.5px] border-transparent bg-gray-200 cursor-pointer hover:bg-gray-300',
             'flex items-center gap-1 px-2 h-8 rounded-lg border-[0.5px] border-transparent bg-gray-200 dark:!bg-[#3f3f3f] cursor-pointer hover:bg-gray-300 dark:hover:!bg-zinc-800',
 
-<<<<<<< HEAD
-            open && !value.length && '!bg-gray-300 hover:bg-gray-300',
-=======
             open && !value.length && '!bg-gray-300 hover:bg-gray-300 ',
->>>>>>> origin/rupa
             !open && !!value.length && '!bg-white/80 shadow-xs !border-black/5 hover:!bg-gray-200',
             open && !!value.length && '!bg-gray-200 !border-black/5 shadow-xs hover:!bg-gray-200',
           )}>
@@ -124,17 +116,10 @@ const TagFilter: FC<TagFilterProps> = ({
         <PortalToFollowElemContent className='z-[1002]'>
           {/* <div className='relative w-[240px] bg-white rounded-lg border-[0.5px] border-gray-200  shadow-lg overflow-hidden'> */}
           <div className='relative w-[240px] bg-white rounded-lg border-[0.5px] border-gray-200 dark:border-[#5F5F5F] shadow-lg overflow-hidden'>
-<<<<<<< HEAD
-            <div className={`p-2 border-b-[0.5px] border-black/5 ${getDarkThemeClasses('background')}`}>
-              <SearchInput white value={keywords} onChange={handleKeywordsChange} />
-            </div>
-            <div className={`p-1 ${getDarkThemeClasses('background')}`}>
-=======
             <div className='p-2 border-b-[0.5px] border-black/5 dark:bg-[#202020]'>
               <SearchInput white value={keywords} onChange={handleKeywordsChange} />
             </div>
             <div className='p-1 dark:bg-[#202020]'>
->>>>>>> origin/rupa
               {filteredTagList.map(tag => (
                 <div
                   key={tag.id}
@@ -165,7 +150,3 @@ const TagFilter: FC<TagFilterProps> = ({
 }
 
 export default TagFilter
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

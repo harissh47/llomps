@@ -37,7 +37,3 @@ const MaintenanceNotice = () => {
 }
 
 export default MaintenanceNotice
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

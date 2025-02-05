@@ -61,13 +61,7 @@ export default function WorkspacePage() {
 
       // Send the API request to /guesttenantapi
       // const response = await fetch('http://localhost:5001/console/api/guesttenantapi', {
-<<<<<<< HEAD
-      // 
-      // const response = await fetch(`${apiPrefix}/guesttenantapi`, {
-      const response = await fetch(`${apiPrefix}/newworkspaceowner`, {
-=======
       const response = await fetch(`${apiPrefix}/guesttenantapi`, {
->>>>>>> origin/rupa
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -427,7 +421,3 @@ export default function WorkspacePage() {
 // }
 
 // export default WorkspacePage
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -5,10 +5,7 @@ import Link from 'next/link'
 import { useSelectedLayoutSegment } from 'next/navigation'
 import classNames from 'classnames'
 import { Tools, ToolsActive } from '../../base/icons/src/public/header-nav/tools'
-<<<<<<< HEAD
-=======
 import { getDarkThemeClasses } from '@/app/theme'
->>>>>>> origin/rupa
 type ToolsNavProps = {
   className?: string
   isCollapsed?: boolean
@@ -38,20 +35,6 @@ const ToolsNav = ({
   )
 
   return (
-<<<<<<< HEAD
-    // <Link href="/tools" className={classNames(
-    <Link href="/app-fusion" className={classNames(
-      // className, 'group',
-      // className, 'flex items-center w-full h-9 px-3.5 cursor-pointer rounded-[10px] dark:hover:bg-gray-800 cursor-pointer dark:text-white ',
-      className, 'flex items-center w-full h-9 px-3.5 cursor-pointer rounded-[10px] dark:hover:bg-gray-800 cursor-pointer  dark:hover:bg-zinc-800 cursor-pointer dark:text-white ',
-      // actived && 'bg-white',
-      actived && 'bg-gray-50 cursor-pointer dark:bg-zinc-600 ',
-      // actived ? 'rounded-lg text-primary-600' : 'text-gray-500 hover:bg-gray-50 cursor-pointer mb-1',
-      actived ? 'rounded-lg font-normal mb-2' : 'text-gray-500 hover:bg-gray-50 cursor-pointer mb-1',
-      isCollapsed && 'justify-center px-2',
-      // actived ? 'text-primary-600' : 'text-gray-500 hover:bg-gray-200',
-    )}>
-=======
     // // <Link href="/tools" className={classNames(
     // <Link href="/app-fusion" className={classNames(
     //   // className, 'group',
@@ -76,7 +59,6 @@ const ToolsNav = ({
         isCollapsed && 'justify-center px-2',
         // actived ? 'text-primary-600' : 'text-gray-500 hover:bg-gray-200',
       )}>
->>>>>>> origin/rupa
 
 
       {
@@ -95,7 +77,3 @@ const ToolsNav = ({
 
 export default ToolsNav
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

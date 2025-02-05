@@ -90,7 +90,3 @@ const Panel: FC = () => {
 }
 
 export default memo(Panel)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

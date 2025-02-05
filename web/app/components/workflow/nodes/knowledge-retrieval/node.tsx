@@ -54,7 +54,3 @@ const Node: FC<NodeProps<KnowledgeRetrievalNodeType>> = ({
 }
 
 export default React.memo(Node)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

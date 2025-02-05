@@ -5,11 +5,7 @@ import { useEffect, useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDebounceFn } from 'ahooks'
 import useSWR from 'swr'
-<<<<<<< HEAD
-import { getDarkThemeClasses } from '@/app/theme'
-=======
 
->>>>>>> origin/rupa
 // Components
 import Datasets from './Datasets'
 import DatasetFooter from './DatasetFooter'
@@ -71,13 +67,8 @@ const Container = () => {
 
   return (
     // <div ref={containerRef} className='grow relative flex flex-col bg-gray-100 overflow-y-auto'>
-<<<<<<< HEAD
-      <div ref={containerRef} className={`grow relative flex flex-col bg-gray-100 overflow-y-auto ${getDarkThemeClasses('background')}`}>
-      <div className={`sticky top-0 flex justify-between pt-4 px-12 pb-2 leading-[56px] bg-gray-100 z-10 flex-wrap gap-y-2 ${getDarkThemeClasses('background')}`}>
-=======
       <div ref={containerRef} className='grow relative flex flex-col bg-gray-100 overflow-y-auto dark:bg-[#202020]'>
       <div className='sticky top-0 flex justify-between pt-4 px-12 pb-2 leading-[56px] bg-gray-100 z-10 flex-wrap gap-y-2 dark:bg-[#202020]'>
->>>>>>> origin/rupa
         <TabSliderNew
           value={activeTab}
           onChange={newActiveTab => setActiveTab(newActiveTab)}
@@ -109,7 +100,3 @@ const Container = () => {
 }
 
 export default Container
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

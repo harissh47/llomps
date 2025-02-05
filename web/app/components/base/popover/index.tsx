@@ -121,7 +121,3 @@ export default function CustomPopover({
     </Popover>
   )
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

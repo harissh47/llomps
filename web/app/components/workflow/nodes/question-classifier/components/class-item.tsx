@@ -64,7 +64,3 @@ const ClassItem: FC<Props> = ({
   )
 }
 export default React.memo(ClassItem)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

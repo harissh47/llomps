@@ -123,7 +123,3 @@ const ChatRecord = () => {
 }
 
 export default memo(ChatRecord)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

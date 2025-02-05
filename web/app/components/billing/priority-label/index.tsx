@@ -59,7 +59,3 @@ const PriorityLabel = () => {
 }
 
 export default PriorityLabel
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

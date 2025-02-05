@@ -98,7 +98,3 @@ const FeatureItem: FC<IFeatureItemProps> = ({
   )
 }
 export default React.memo(FeatureItem)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

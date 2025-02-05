@@ -75,7 +75,3 @@ const ModerationContent: FC<ModerationContentProps> = ({
 }
 
 export default ModerationContent
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

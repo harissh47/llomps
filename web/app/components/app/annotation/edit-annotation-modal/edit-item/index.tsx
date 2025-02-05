@@ -138,7 +138,3 @@ const EditItem: FC<Props> = ({
   )
 }
 export default React.memo(EditItem)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -109,11 +109,7 @@ const NodeSelector: FC<NodeSelectorProps> = ({
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className='z-[1000]'>
       {/* <div className={`rounded-lg border-[0.5px] border-gray-200 bg-white shadow-lg ${popupClassName}`}> */}
-<<<<<<< HEAD
-        {/* <div className={`rounded-lg border-[0.5px] border-gray-200 bg-white ${getDarkThemeClasses('background')} shadow-lg ${popupClassName}`}> */}
-=======
         {/* <div className={`rounded-lg border-[0.5px] border-gray-200 bg-white dark:bg-[#202020] shadow-lg ${popupClassName}`}> */}
->>>>>>> origin/rupa
         <div className={`rounded-lg border-[0.5px] border-gray-200 dark:border-[#5F5F5F] bg-white dark:bg-[#3E3E3E] shadow-lg ${popupClassName}`}>
           <div className='px-2 pt-2'>
             <div
@@ -155,7 +151,3 @@ const NodeSelector: FC<NodeSelectorProps> = ({
 }
 
 export default memo(NodeSelector)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

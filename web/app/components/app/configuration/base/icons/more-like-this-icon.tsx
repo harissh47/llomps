@@ -12,7 +12,3 @@ const MoreLikeThisIcon: FC = () => {
   )
 }
 export default React.memo(MoreLikeThisIcon)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

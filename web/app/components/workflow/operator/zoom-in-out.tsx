@@ -216,19 +216,11 @@ const ZoomInOut: FC = () => {
     >
       <PortalToFollowElemTrigger asChild onClick={handleTrigger}>
         {/* <div className={`
-<<<<<<< HEAD
-          p-0.5 h-9 cursor-pointer text-[13px] text-gray-500 font-medium rounded-lg bg-white ${getDarkThemeClasses('background')} shadow-lg border-[0.5px] border-gray-100
-          ${workflowReadOnly && '!cursor-not-allowed opacity-50'}
-        `}> */}
-        <div className={`
-          p-0.5 h-9 cursor-pointer text-[13px] text-gray-500 font-medium rounded-lg bg-white ${getDarkThemeClasses('background')} shadow-lg border-[0.5px] border-gray-100 dark:border-[#3F3F3F] dark:border-solid dark:shadow-sm
-=======
           p-0.5 h-9 cursor-pointer text-[13px] text-gray-500 font-medium rounded-lg bg-white dark:bg-[#202020] shadow-lg border-[0.5px] border-gray-100
           ${workflowReadOnly && '!cursor-not-allowed opacity-50'}
         `}> */}
         <div className={`
           p-0.5 h-9 cursor-pointer text-[13px] text-gray-500 font-medium rounded-lg bg-white dark:bg-[#202020] shadow-lg border-[0.5px] border-gray-100 dark:border-[#3F3F3F] dark:border-solid dark:shadow-sm
->>>>>>> origin/rupa
           ${workflowReadOnly && '!cursor-not-allowed opacity-50'}
         `}>
           <div className={cn(
@@ -320,7 +312,3 @@ const ZoomInOut: FC = () => {
 }
 
 export default memo(ZoomInOut)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

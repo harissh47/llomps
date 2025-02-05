@@ -184,7 +184,3 @@ const Tools = () => {
 }
 
 export default Tools
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

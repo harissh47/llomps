@@ -49,7 +49,3 @@ const CopyBtn = ({
 }
 
 export default CopyBtn
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

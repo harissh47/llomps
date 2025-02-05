@@ -52,7 +52,3 @@ const ApiBasedExtensionPage = () => {
 }
 
 export default ApiBasedExtensionPage
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

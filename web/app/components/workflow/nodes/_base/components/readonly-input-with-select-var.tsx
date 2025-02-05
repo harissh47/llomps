@@ -76,7 +76,3 @@ const ReadonlyInputWithSelectVar: FC<Props> = ({
   )
 }
 export default React.memo(ReadonlyInputWithSelectVar)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

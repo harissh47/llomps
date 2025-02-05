@@ -107,7 +107,3 @@ const ConfigCredential: FC<Props> = ({
   )
 }
 export default React.memo(ConfigCredential)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

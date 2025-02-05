@@ -40,7 +40,3 @@ const Card: FC<CardProps> = ({
 }
 
 export default Card
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -22,7 +22,3 @@ const RunningTitle = () => {
 }
 
 export default memo(RunningTitle)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

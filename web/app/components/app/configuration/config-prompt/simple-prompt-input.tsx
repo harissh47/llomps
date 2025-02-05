@@ -134,22 +134,14 @@ const Prompt: FC<ISimplePromptInput> = ({
   return (
     <div className={cn(!readonly ? `${s.gradientBorder}` : 'bg-gray-50', ' relative shadow-md')}>
       {/* <div className='rounded-xl bg-[#EEF4FF]'> */}
-<<<<<<< HEAD
-      <div className='rounded-xl bg-[#EEF4FF] dark:bg-[#EEF4FF]'>
-=======
       <div className='rounded-xl bg-[#EEF4FF] dark:bg-[#333333]'>
->>>>>>> origin/rupa
         <div className="flex justify-between items-center h-11 px-3">
         {/* <div className="flex justify-between items-center h-11 px-3 dark:bg-[#1A1A1A] dark:text-white"> */}
         {/* <div className="flex justify-between rounded-t-xl items-center h-11 px-3 dark:bg-[#3f3f3f]  dark:text-white"> */}
           {/* <div className="flex items-center space-x-1"> */}
           <div className="flex items-center space-x-1">
             {/* <div className='h2'>{mode !== AppType.completion ? t('appDebug.chatSubTitle') : t('appDebug.completionSubTitle')}</div> */}
-<<<<<<< HEAD
-            <div className='h2 dark:text-black'>{mode !== AppType.completion ? t('appDebug.chatSubTitle') : t('appDebug.completionSubTitle')}</div>
-=======
             <div className='h2 dark:text-white'>{mode !== AppType.completion ? t('appDebug.chatSubTitle') : t('appDebug.completionSubTitle')}</div>
->>>>>>> origin/rupa
             {!readonly && (
               <Tooltip
                 htmlContent={<div className='w-[180px]'>
@@ -157,11 +149,7 @@ const Prompt: FC<ISimplePromptInput> = ({
                 </div>}
                 selector='config-prompt-tooltip'>
                 {/* <HelpCircle className='w-[14px] h-[14px] text-indigo-400' /> */}
-<<<<<<< HEAD
-                <HelpCircle className='w-[14px] h-[14px] text-black-400' />
-=======
                 <HelpCircle className='w-[14px] h-[14px] text-black-400 dark:text-white' />
->>>>>>> origin/rupa
               </Tooltip>
             )}
           </div>
@@ -261,7 +249,3 @@ const Prompt: FC<ISimplePromptInput> = ({
 }
 
 export default React.memo(Prompt)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

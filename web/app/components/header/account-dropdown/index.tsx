@@ -13,10 +13,7 @@ import { ArrowUpRight, ChevronDown } from '@/app/components/base/icons/src/vende
 import { LogOut01 } from '@/app/components/base/icons/src/vender/line/general'
 import { useModalContext } from '@/context/modal-context'
 import { LanguagesSupported } from '@/i18n/language'
-<<<<<<< HEAD
-=======
 import { getDarkThemeClasses } from '@/app/theme'
->>>>>>> origin/rupa
 export type IAppSelecotr = {
   isMobile: boolean
 }
@@ -28,11 +25,7 @@ export default function AppSelector({ isMobile }: IAppSelecotr) {
   // `
   const itemClassName = `
     flex items-center px-3.5 w-full h-9 px-1 text-gray-700 text-[14px]
-<<<<<<< HEAD
-    rounded-lg font-normal hover:bg-gray-50 dark:hover:bg-gray-800 cursor-pointer dark:text-white
-=======
     rounded-lg font-normal hover:bg-gray-50 ${getDarkThemeClasses('hover')} cursor-pointer ${getDarkThemeClasses('text')}
->>>>>>> origin/rupa
   `
   // const itemClassName = `
   //   flex items-center w-full h-9 px-1 text-gray-700 text-[14px]
@@ -80,16 +73,9 @@ export default function AppSelector({ isMobile }: IAppSelecotr) {
           className={classNames(itemClassName, 'group justify-between')}
         >
           {/* <div className='font-normal text-[14px] text-gray-700 '>{t('common.userProfile.logout')}</div> */}
-<<<<<<< HEAD
-          <div className='font-normal text-[14px] text-gray-700 dark:text-[#E1E1E1]'>{t('common.userProfile.logout')}</div>
-          {/* <LogOut01 className='hidden w-[14px] h-[14px] text-gray-500 group-hover:flex' /> */}
-          <LogOut01 className='hidden w-[14px] h-[14px] text-gray-500 dark:text-[#E1E1E1] group-hover:flex' />
-        </div>
-=======
           <div className={`font-normal text-[14px] text-gray-700 ${getDarkThemeClasses('sub_text4')}`}>{t('common.userProfile.logout')}</div>          {/* <LogOut01 className='hidden w-[14px] h-[14px] text-gray-500 group-hover:flex' /> */}
           <LogOut01 className={`hidden w-[14px] h-[14px] text-gray-500 ${getDarkThemeClasses('sub_text4')} group-hover:flex`} />
           </div>
->>>>>>> origin/rupa
       </div>
     </div>
   )
@@ -99,11 +85,7 @@ export default function AppSelector({ isMobile }: IAppSelecotr) {
       {/* <Avatar name={userProfile.name} size={36} className='mr-3' /> */}
       <Avatar name={userProfile.name} size={32} className='mr-2' />
       <div className='grow'>
-<<<<<<< HEAD
-        <div className='leading-5 font-normal text-[14px] text-gray-800 break-all dark:text-white'>{userProfile.name}</div>
-=======
         <div className={`leading-5 font-normal text-[14px] text-gray-800 break-all ${getDarkThemeClasses('text')}`}>{userProfile.name}</div>
->>>>>>> origin/rupa
         <div className='leading-[18px] text-xs font-normal text-gray-500 break-all'>{userProfile.email}</div>
       </div>
     </div>
@@ -322,7 +304,3 @@ export default function AppSelector({ isMobile }: IAppSelecotr) {
 // </div >
 //   )
 // }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

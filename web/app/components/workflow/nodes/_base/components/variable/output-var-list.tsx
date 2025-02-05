@@ -107,7 +107,3 @@ const OutputVarList: FC<Props> = ({
   )
 }
 export default React.memo(OutputVarList)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

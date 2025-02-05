@@ -113,7 +113,3 @@ const HitDetail: FC<IHitDetailProps> = ({ segInfo, vectorInfo }) => {
 }
 
 export default HitDetail
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

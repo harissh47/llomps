@@ -16,7 +16,3 @@ const Split: FC<Props> = ({
   )
 }
 export default React.memo(Split)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

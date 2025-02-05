@@ -67,7 +67,3 @@ const Thought: FC<IThoughtProps> = ({
   )
 }
 export default React.memo(Thought)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -18,7 +18,3 @@ const LogoSite: FC<LogoSiteProps> = ({
 }
 
 export default LogoSite
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

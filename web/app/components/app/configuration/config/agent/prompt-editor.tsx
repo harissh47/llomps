@@ -143,7 +143,3 @@ const Editor: FC<Props> = ({
   )
 }
 export default React.memo(Editor)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -141,7 +141,3 @@ const NodeGroupItem = ({
 }
 
 export default memo(NodeGroupItem)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

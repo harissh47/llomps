@@ -141,7 +141,3 @@ const List: FC<IListProps> = ({
 }
 
 export default React.memo(List)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

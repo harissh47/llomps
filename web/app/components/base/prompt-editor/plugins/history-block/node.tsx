@@ -88,7 +88,3 @@ export function $isHistoryBlockNode(
 ): node is HistoryBlockNode {
   return node instanceof HistoryBlockNode
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

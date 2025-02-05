@@ -4,11 +4,7 @@ import { useTranslation } from 'react-i18next'
 import Button from '@/app/components/base/button'
 import type { ImageFile } from '@/types/app'
 import { TransferMethod } from '@/types/app'
-<<<<<<< HEAD
-import { getDarkThemeClasses } from '@/app/theme'
-=======
 
->>>>>>> origin/rupa
 type ImageLinkInputProps = {
   onUpload: (imageFile: ImageFile) => void
   disabled?: boolean
@@ -38,19 +34,11 @@ const ImageLinkInput: FC<ImageLinkInputProps> = ({
 
   return (
     // <div className='flex items-center pl-1.5 pr-1 h-8 border border-gray-200 bg-white shadow-xs rounded-lg'>
-<<<<<<< HEAD
-         <div className={`flex items-center pl-1.5 pr-1 h-8 border border-gray-200 dark:border-[#5F5F5F] ${getDarkThemeClasses('background')} shadow-xs rounded-lg`}>
-
-      <input
-        type="text"
-        className={`grow mr-0.5 px-1 h-[18px] text-[13px] outline-none appearance-none ${getDarkThemeClasses('background')} dark:text-white`} 
-=======
          <div className='flex items-center pl-1.5 pr-1 h-8 border border-gray-200 dark:border-[#5F5F5F] bg-white dark:bg-[#202020] shadow-xs rounded-lg'>
 
       <input
         type="text"
         className='grow mr-0.5 px-1 h-[18px] text-[13px] outline-none appearance-none dark:bg-[#202020] dark:text-white' 
->>>>>>> origin/rupa
         value={imageLink}
         onChange={e => setImageLink(e.target.value)}
         placeholder={t('common.imageUploader.pasteImageLinkInputPlaceholder') || ''}
@@ -68,7 +56,3 @@ const ImageLinkInput: FC<ImageLinkInputProps> = ({
 }
 
 export default ImageLinkInput
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -109,7 +109,3 @@ export default function Operate({
     </Menu>
   )
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

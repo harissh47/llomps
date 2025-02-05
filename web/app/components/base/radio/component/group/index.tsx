@@ -23,7 +23,3 @@ export default function Group({ children, value, onChange, className = '' }: TRa
     </div>
   )
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

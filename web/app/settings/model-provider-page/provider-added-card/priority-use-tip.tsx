@@ -18,7 +18,3 @@ const PriorityUseTip = () => {
 }
 
 export default PriorityUseTip
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

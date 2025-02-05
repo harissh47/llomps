@@ -45,7 +45,3 @@ const AgentSettingButton: FC<Props> = ({
   )
 }
 export default React.memo(AgentSettingButton)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

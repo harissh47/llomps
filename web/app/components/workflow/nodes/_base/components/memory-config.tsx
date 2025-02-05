@@ -205,7 +205,3 @@ const MemoryConfig: FC<Props> = ({
   )
 }
 export default React.memo(MemoryConfig)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

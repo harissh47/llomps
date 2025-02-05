@@ -40,7 +40,3 @@ const Header: FC<Props> = ({
   )
 }
 export default React.memo(Header)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

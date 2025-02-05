@@ -219,7 +219,3 @@ const WorkflowPreview = ({
 }
 
 export default memo(WorkflowPreview)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

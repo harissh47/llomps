@@ -24,7 +24,3 @@ const TextGeneration: FC<ITextGenerationProps> = ({
 }
 
 export default React.memo(TextGeneration)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

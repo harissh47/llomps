@@ -82,7 +82,3 @@ export default function WorkspaceSelector({
     </Menu>
   )
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

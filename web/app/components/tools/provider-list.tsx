@@ -17,10 +17,6 @@ import ProviderDetail from '@/app/components/tools/provider/detail'
 import Empty from '@/app/components/tools/add-tool-modal/empty'
 import { fetchCollectionList } from '@/service/tools'
 import { getDarkThemeClasses } from '@/app/theme'
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa
 const ProviderList = () => {
   const { t } = useTranslation()
 
@@ -86,11 +82,7 @@ const ProviderList = () => {
           currentProvider && 'pr-6',
         )}> */}
            <div className={cn(
-<<<<<<< HEAD
-          'sticky top-0 flex justify-between items-center pt-4 px-12 pb-2 leading-[56px] bg-gray-100 z-20 flex-wrap gap-y-2', getDarkThemeClasses('background'),
-=======
           `sticky top-0 flex justify-between items-center pt-4 px-12 pb-2 leading-[56px] bg-gray-100 z-20 flex-wrap gap-y-2 ${getDarkThemeClasses('main_background')}`,
->>>>>>> origin/rupa
           currentProvider && 'pr-6',
         )}>
           <TabSliderNew
@@ -104,11 +96,7 @@ const ProviderList = () => {
           />
           <div className='flex items-center gap-2 '>
             <LabelFilter value={tagFilterValue} onChange={handleTagsChange} />
-<<<<<<< HEAD
-            <SearchInput className='w-[200px]' value={keywords} onChange={handleKeywordsChange} />
-=======
             <SearchInput className={`w-[200px] ${getDarkThemeClasses('background3')}`} value={keywords} onChange={handleKeywordsChange} />
->>>>>>> origin/rupa
           </div>
         </div>
         {/* <div className={cn(
@@ -116,11 +104,7 @@ const ProviderList = () => {
           currentProvider && 'pr-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
         )}> */}
           <div className={cn(
-<<<<<<< HEAD
-          'relative grid content-start grid-cols-1 gap-4 px-12 pt-2 pb-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grow shrink-0', getDarkThemeClasses('background'),
-=======
           `relative grid content-start grid-cols-1 gap-4 px-12 pt-2 pb-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grow shrink-0 ${getDarkThemeClasses('main_background')}`,
->>>>>>> origin/rupa
           currentProvider && 'pr-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
         )}>
           {/* {activeTab === 'builtin' && <ContributeCard />} */}
@@ -137,27 +121,15 @@ const ProviderList = () => {
         </div>
       </div>
       <div className={cn(
-<<<<<<< HEAD
-        'shrink-0 w-0 border-l-[0.5px] border-black/8 overflow-y-auto transition-all duration-200 ease-in-out', getDarkThemeClasses('background'),
-=======
         `shrink-0 w-0 border-l-[0.5px] border-black/8 overflow-y-auto transition-all duration-200 ease-in-out ${getDarkThemeClasses('main_background')}`,
->>>>>>> origin/rupa
         currentProvider && 'w-[420px]',
       )}>
         {currentProvider && <ProviderDetail collection={currentProvider} onRefreshData={getProviderList} />}
       </div>
       {/* <div className='absolute top-5 right-5 p-1 cursor-pointer' onClick={() => setCurrentProvider(undefined)}><XClose className='w-4 h-4' /></div> */}
-<<<<<<< HEAD
-      <div className='absolute top-5 right-5 p-1 border cursor-pointer' onClick={() => setCurrentProvider(undefined)}><XClose className='w-4 h-4' /></div>
-=======
       <div className={`absolute top-5 right-5 p-1 border ${getDarkThemeClasses('border')} cursor-pointer`} onClick={() => setCurrentProvider(undefined)}><XClose className='w-4 h-4' /></div>
->>>>>>> origin/rupa
     </div>
   )
 }
 ProviderList.displayName = 'ToolProviderList'
 export default ProviderList
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -55,7 +55,3 @@ const NewAppDialog = ({
 }
 
 export default NewAppDialog
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

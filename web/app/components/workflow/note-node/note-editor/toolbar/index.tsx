@@ -48,7 +48,3 @@ const Toolbar = ({
 }
 
 export default memo(Toolbar)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

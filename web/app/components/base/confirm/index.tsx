@@ -78,7 +78,3 @@ export default function Confirm({
     </Transition>
   )
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -184,7 +184,3 @@ export function Markdown(props: { content: string; className?: string }) {
     </div>
   )
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -27,11 +27,7 @@ import ShareQRCode from '@/app/components/base/qrcode';
 import SecretKeyButton from '@/app/components/develop/secret-key/secret-key-button';
 import type { AppDetailResponse } from '@/models/app';
 import { useAppContext } from '@/context/app-context';
-<<<<<<< HEAD
-import { getDarkThemeClasses } from '@/app/theme';
-=======
 
->>>>>>> origin/rupa
 export type IAppCardProps = {
   className?: string;
   appInfo: AppDetailResponse;
@@ -228,11 +224,7 @@ function AppCard({
         <div className={'pt-2 flex flex-row items-center flex-wrap gap-y-2 '}>
         {/* {!isApp && <SecretKeyButton className='flex-shrink-0 !h-8  bg-white  mr-2  ' textCls='font-medium ' iconCls='stroke-[1.2px]' appId={appInfo.id} />} */}
 
-<<<<<<< HEAD
-          {!isApp && <SecretKeyButton className={`flex-shrink-0 !h-8 bg-white ${getDarkThemeClasses('background')}  mr-2 dark:border-[#5f5f5f] dark:hover:!bg-[#202020] dark:hover:!border-[#5f5f5f] dark:hover:shadow-[#3f3f3f]`} textCls='!text-gray-700 dark:!text-white font-medium ' iconCls='stroke-[1.2px]' appId={appInfo.id} />}
-=======
           {!isApp && <SecretKeyButton className='flex-shrink-0 !h-8 bg-white dark:bg-[#202020] mr-2 dark:border-[#5f5f5f] dark:hover:!bg-[#202020] dark:hover:!border-[#5f5f5f] dark:hover:shadow-[#3f3f3f]' textCls='!text-gray-700 dark:!text-white font-medium ' iconCls='stroke-[1.2px]' appId={appInfo.id} />}
->>>>>>> origin/rupa
           {OPERATIONS_MAP[cardType].map((op) => {
             const disabled = op.opName === t('appOverview.overview.appInfo.settings.entry')
               ? false
@@ -240,11 +232,7 @@ function AppCard({
             return (
               <Button
                 // className="mx-2 border-[0.5px] !h-8 hover:outline hover:outline-[0.5px] hover:outline-gray-300 text-gray-700 font-medium bg-white shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]"
-<<<<<<< HEAD
-                className={`mx-2 border-[0.5px] !h-8 hover:outline hover:outline-[0.5px] hover:outline-gray-300 dark:hover:outline-[#5f5f5f] dark:hover:!bg-[#202020] dark:hover:!border-[#5F5F5F] text-gray-700 dark:text-white font-medium bg-white ${getDarkThemeClasses('background')} dark:border-[#5f5f5f] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]`}
-=======
                 className="mx-2 border-[0.5px] !h-8 hover:outline hover:outline-[0.5px] hover:outline-gray-300 dark:hover:outline-[#5f5f5f] dark:hover:!bg-[#202020] dark:hover:!border-[#5F5F5F] text-gray-700 dark:text-white font-medium bg-white dark:bg-[#202020] dark:border-[#5f5f5f] shadow-[0px_1px_2px_0px_rgba(16,24,40,0.05)]"
->>>>>>> origin/rupa
 
                 key={op.opName}
                 onClick={genClickFuncByName(op.opName)}
@@ -296,7 +284,3 @@ function AppCard({
 }
 
 export default AppCard;
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

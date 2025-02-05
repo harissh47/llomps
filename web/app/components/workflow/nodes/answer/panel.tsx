@@ -70,7 +70,3 @@ const Panel: FC<NodePanelProps<AnswerNodeType>> = ({
 }
 
 export default React.memo(Panel)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

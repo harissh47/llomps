@@ -61,7 +61,3 @@ const TextEditor: FC<Props> = ({
   )
 }
 export default React.memo(TextEditor)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

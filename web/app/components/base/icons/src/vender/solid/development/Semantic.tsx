@@ -14,7 +14,3 @@ const Icon = React.forwardRef<React.MutableRefObject<SVGElement>, Omit<IconBaseP
 Icon.displayName = 'Semantic'
 
 export default Icon
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

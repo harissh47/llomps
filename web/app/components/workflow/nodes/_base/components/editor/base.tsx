@@ -117,7 +117,3 @@ const Base: FC<Props> = ({
   );
 };
 export default React.memo(Base);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

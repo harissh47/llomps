@@ -34,7 +34,3 @@ export default function AppBack({ curApp }: IAppBackProps) {
     </div>
   )
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

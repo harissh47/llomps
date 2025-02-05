@@ -137,7 +137,3 @@ const ChatWrapper = () => {
 }
 
 export default ChatWrapper
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

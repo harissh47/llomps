@@ -50,7 +50,3 @@ const CustomizedPagination: FC<Props> = ({ current, onChange, total, limit = 10 
 }
 
 export default CustomizedPagination
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

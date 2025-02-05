@@ -96,7 +96,3 @@ const CandidateNode = () => {
 }
 
 export default memo(CandidateNode)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

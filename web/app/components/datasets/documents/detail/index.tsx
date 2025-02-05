@@ -223,7 +223,3 @@ const DocumentDetail: FC<Props> = ({ datasetId, documentId }) => {
 }
 
 export default DocumentDetail
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

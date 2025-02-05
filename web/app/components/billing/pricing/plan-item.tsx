@@ -308,7 +308,3 @@ const PlanItem: FC<Props> = ({
   )
 }
 export default React.memo(PlanItem)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

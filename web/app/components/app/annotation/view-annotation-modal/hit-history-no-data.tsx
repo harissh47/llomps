@@ -19,7 +19,3 @@ const HitHistoryNoData: FC = () => {
 }
 
 export default React.memo(HitHistoryNoData)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

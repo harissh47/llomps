@@ -63,7 +63,3 @@ const ResolutionPicker: FC<Props> = ({
   )
 }
 export default React.memo(ResolutionPicker)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

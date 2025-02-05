@@ -14,7 +14,3 @@ const Icon: FC<IconProps> = ({ icon, className, ...other }) => {
 }
 
 export default Icon
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

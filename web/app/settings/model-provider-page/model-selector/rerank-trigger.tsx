@@ -23,7 +23,3 @@ const ModelTrigger = () => {
 }
 
 export default ModelTrigger
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -177,7 +177,3 @@ const Action: FC<ActionProps> = ({
 }
 
 export default Action
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

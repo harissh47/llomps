@@ -46,7 +46,3 @@ const UrlInput: FC<Props> = ({
   )
 }
 export default React.memo(UrlInput)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

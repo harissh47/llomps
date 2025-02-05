@@ -130,7 +130,3 @@ const CSVUploader: FC<Props> = ({
 }
 
 export default React.memo(CSVUploader)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

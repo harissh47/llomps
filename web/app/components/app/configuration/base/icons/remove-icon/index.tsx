@@ -29,7 +29,3 @@ const RemoveIcon = ({
   )
 }
 export default React.memo(RemoveIcon)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

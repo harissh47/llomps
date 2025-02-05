@@ -14,7 +14,3 @@ const AppDetail: FC<IAppDetail> = ({ children }) => {
 }
 
 export default React.memo(AppDetail)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

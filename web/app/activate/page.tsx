@@ -30,7 +30,3 @@ const Activate = () => {
 }
 
 export default Activate
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

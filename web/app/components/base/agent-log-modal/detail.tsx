@@ -130,7 +130,3 @@ const AgentLogDetail: FC<AgentLogDetailProps> = ({
 }
 
 export default AgentLogDetail
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

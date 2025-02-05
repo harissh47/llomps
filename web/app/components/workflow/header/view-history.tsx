@@ -226,7 +226,3 @@ const ViewHistory = ({
 }
 
 export default memo(ViewHistory)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

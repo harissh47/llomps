@@ -191,7 +191,3 @@ const ConfigPanel = () => {
 }
 
 export default ConfigPanel
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

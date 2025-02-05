@@ -14,7 +14,3 @@ const Icon = React.forwardRef<React.MutableRefObject<SVGElement>, Omit<IconBaseP
 Icon.displayName = 'XorbitsInferenceText'
 
 export default Icon
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

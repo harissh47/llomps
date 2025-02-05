@@ -67,7 +67,3 @@ const Switch = ({ onChange, size = 'lg', defaultValue = false, disabled = false,
   )
 }
 export default React.memo(Switch)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

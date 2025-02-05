@@ -192,7 +192,3 @@ const Answer: FC<AnswerProps> = ({
 }
 
 export default memo(Answer)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

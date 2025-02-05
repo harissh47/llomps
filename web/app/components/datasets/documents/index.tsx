@@ -21,10 +21,6 @@ import type { NotionPage } from '@/models/common'
 import type { CreateDocumentReq } from '@/models/datasets'
 import { DataSourceType } from '@/models/datasets'
 import RetryButton from '@/app/components/base/retry-button'
-<<<<<<< HEAD
-import { getDarkThemeClasses } from '@/app/theme'
-=======
->>>>>>> origin/rupa
 // Custom page count is not currently supported.
 const limit = 15
 
@@ -79,11 +75,7 @@ const EmptyElement: FC<{ canAdd: boolean; onClick: () => void; type?: 'upload' |
       {type === 'upload' && canAdd && (
   <Button
     onClick={onClick}
-<<<<<<< HEAD
-    className="mt-4 w-fit text-[13px] text-primary-600 dark:!text-[#8AB40A] font-medium bg-white ${getDarkThemeClasses('background')} border-[0.5px] dark:border-[#5F5F5F] dark:hover:bg-zinc-800"
-=======
     className="mt-4 w-fit text-[13px] text-primary-600 dark:!text-[#8AB40A] font-medium bg-white dark:bg-[#202020] border-[0.5px] dark:border-[#5F5F5F] dark:hover:bg-zinc-800"
->>>>>>> origin/rupa
   >
     <PlusIcon className="w-4 h-4 mr-2 stroke-[#8AB40A] stroke-[1.5px]" />
     {t('datasetDocuments.list.addFile')}
@@ -224,11 +216,7 @@ const Documents: FC<IDocumentsProps> = ({ datasetId }) => {
 
   return (
     // <div className='flex flex-col h-full overflow-y-auto'>
-<<<<<<< HEAD
-    <div className={`flex flex-col h-full overflow-y-auto ${getDarkThemeClasses('background')}`}>
-=======
     <div className='flex flex-col h-full overflow-y-auto dark:bg-[#202020]'>
->>>>>>> origin/rupa
       {/* <div className='flex items-center justify-start px-3'> */}
       <div className='flex items-center justify-start px-3'>
         <div onClick={navBackHandle} className={cn(s.navBack, "dark:bg-[#383838]")} />
@@ -290,7 +278,3 @@ const Documents: FC<IDocumentsProps> = ({ datasetId }) => {
 }
 
 export default Documents
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

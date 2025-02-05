@@ -30,7 +30,3 @@ const RemoveVarConfirm: FC<Props> = ({
   )
 }
 export default React.memo(RemoveVarConfirm)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

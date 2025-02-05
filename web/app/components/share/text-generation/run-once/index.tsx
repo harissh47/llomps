@@ -141,7 +141,3 @@ const RunOnce: FC<IRunOnceProps> = ({
   )
 }
 export default React.memo(RunOnce)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

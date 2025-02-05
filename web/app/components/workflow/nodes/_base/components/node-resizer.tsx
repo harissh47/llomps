@@ -58,7 +58,3 @@ const NodeResizer = ({
 }
 
 export default memo(NodeResizer)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -50,7 +50,3 @@ const Tooltip: FC<TooltipProps> = ({
 }
 
 export default Tooltip
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

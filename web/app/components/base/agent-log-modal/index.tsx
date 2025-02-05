@@ -59,7 +59,3 @@ const AgentLogModal: FC<AgentLogModalProps> = ({
 }
 
 export default AgentLogModal
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

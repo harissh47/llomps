@@ -54,7 +54,3 @@ const Filter: FC<IFilterProps> = ({
   )
 }
 export default React.memo(Filter)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

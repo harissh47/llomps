@@ -53,7 +53,3 @@ const Filter: FC<IFilterProps> = ({ queryParams, setQueryParams }: IFilterProps)
 }
 
 export default Filter
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

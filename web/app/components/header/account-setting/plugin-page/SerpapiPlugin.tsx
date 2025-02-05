@@ -78,7 +78,3 @@ const SerpapiPlugin = ({
 }
 
 export default SerpapiPlugin
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -52,7 +52,3 @@ const FileIcon: FC<FileIconProps> = ({
 }
 
 export default FileIcon
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

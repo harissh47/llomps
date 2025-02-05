@@ -132,7 +132,3 @@ const GetSchema: FC<Props> = ({
   )
 }
 export default React.memo(GetSchema)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

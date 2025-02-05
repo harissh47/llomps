@@ -236,7 +236,3 @@ const ViewAnnotationModal: FC<Props> = ({
   )
 }
 export default React.memo(ViewAnnotationModal)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -13,7 +13,3 @@ const Icon = React.forwardRef<HTMLSpanElement, React.DetailedHTMLProps<React.HTM
 Icon.displayName = 'Minimax'
 
 export default Icon
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

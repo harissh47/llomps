@@ -25,7 +25,3 @@ const Operator = () => {
 }
 
 export default memo(Operator)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

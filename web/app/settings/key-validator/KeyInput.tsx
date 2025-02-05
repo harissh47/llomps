@@ -75,7 +75,3 @@ const KeyInput = ({
 }
 
 export default KeyInput
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -50,7 +50,3 @@ const BrowerInitor = ({
 }
 
 export default BrowerInitor
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

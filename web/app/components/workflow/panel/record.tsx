@@ -31,7 +31,3 @@ const Record = () => {
 }
 
 export default memo(Record)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

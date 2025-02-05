@@ -131,7 +131,3 @@ const WorkflowProcessItem = ({
 }
 
 export default WorkflowProcessItem
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

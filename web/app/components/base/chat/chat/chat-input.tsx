@@ -312,7 +312,3 @@ const ChatInput: FC<ChatInputProps> = ({
 }
 
 export default memo(ChatInput)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -453,7 +453,3 @@ const GenerationItem: FC<IGenerationItemProps> = ({
   )
 }
 export default React.memo(GenerationItem)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

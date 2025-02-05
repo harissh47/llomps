@@ -346,7 +346,3 @@ const VarReferenceVars: FC<Props> = ({
   );
 };
 export default React.memo(VarReferenceVars);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

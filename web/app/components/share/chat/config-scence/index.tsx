@@ -11,7 +11,3 @@ const ConfigSence: FC<IWelcomeProps> = (props) => {
   )
 }
 export default React.memo(ConfigSence)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -39,7 +39,3 @@ const ChooseFeature = ({
   )
 }
 export default React.memo(ChooseFeature)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

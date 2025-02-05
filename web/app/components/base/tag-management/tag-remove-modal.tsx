@@ -1,9 +1,5 @@
 'use client'
-<<<<<<< HEAD
-
-=======
  
->>>>>>> origin/rupa
 import { useTranslation } from 'react-i18next'
 import cn from 'classnames'
 import s from './style.module.css'
@@ -12,29 +8,18 @@ import Modal from '@/app/components/base/modal'
 import { XClose } from '@/app/components/base/icons/src/vender/line/general'
 import { AlertTriangle } from '@/app/components/base/icons/src/vender/solid/alertsAndFeedback'
 import type { Tag } from '@/app/components/base/tag-management/constant'
-<<<<<<< HEAD
-
-=======
 import { getDarkThemeClasses } from '@/app/theme'
  
->>>>>>> origin/rupa
 type TagRemoveModalProps = {
   show: boolean
   tag: Tag
   onConfirm: () => void
   onClose: () => void
 }
-<<<<<<< HEAD
-
-const TagRemoveModal = ({ show, tag, onConfirm, onClose }: TagRemoveModalProps) => {
-  const { t } = useTranslation()
-
-=======
  
 const TagRemoveModal = ({ show, tag, onConfirm, onClose }: TagRemoveModalProps) => {
   const { t } = useTranslation()
  
->>>>>>> origin/rupa
   return (
     <Modal
       wrapperClassName='!z-[1020]'
@@ -49,24 +34,12 @@ const TagRemoveModal = ({ show, tag, onConfirm, onClose }: TagRemoveModalProps) 
         <AlertTriangle className='w-6 h-6 text-[rgb(247,144,9)]' />
       </div>
       {/* <div className='mt-3 text-xl font-semibold leading-[30px] text-gray-900'> */}
-<<<<<<< HEAD
-      <div className='mt-3 text-xl font-semibold leading-[30px] text-gray-900 dark:text-white'>
-=======
       {/* <div className='mt-3 text-xl font-semibold leading-[30px] text-gray-900 dark:text-white'> */}
       <div className={`mt-3 text-xl font-semibold leading-[30px] text-gray-900 ${getDarkThemeClasses('text')}`}>
->>>>>>> origin/rupa
         {`${t('common.tag.delete')} `}
         <span>{`"${tag.name}"`}</span>
       </div>
       {/* <div className='my-1 text-gray-500 text-sm leading-5'> */}
-<<<<<<< HEAD
-      <div className='my-1 text-gray-500 text-sm leading-5 dark:text-[#FCFCFC]'>
-        {t('common.tag.deleteTip')}
-      </div>
-      <div className='pt-6 flex items-center justify-end'>
-        <Button className='mr-2 text-gray-700 text-sm font-medium' onClick={onClose}>{t('common.operation.cancel')}</Button>
-        <Button className='text-sm font-medium border-red-700 border-[0.5px]' type="warning" onClick={onConfirm}>{t('common.operation.delete')}</Button>
-=======
       {/* <div className='my-1 text-gray-500 text-sm leading-5 dark:text-[#FCFCFC]'> */}
       <div className={`my-1 text-gray-500 text-sm leading-5 ${getDarkThemeClasses('sub_text1')}`}>
         {t('common.tag.deleteTip')}
@@ -76,16 +49,9 @@ const TagRemoveModal = ({ show, tag, onConfirm, onClose }: TagRemoveModalProps) 
         <Button className={`mr-2 text-gray-700 text-sm font-medium ${getDarkThemeClasses('background1')} ${getDarkThemeClasses('border')} ${getDarkThemeClasses('hover')}`} onClick={onClose}>{t('common.operation.cancel')}</Button>
         {/* <Button className='text-sm font-medium border-red-700 border-[0.5px]' type="warning" onClick={onConfirm}>{t('common.operation.delete')}</Button> */}
         <Button className={`text-sm font-medium border-red-700 border-[0.5px] ${getDarkThemeClasses('hover4')}`} type="warning" onClick={onConfirm}>{t('common.operation.delete')}</Button>
->>>>>>> origin/rupa
       </div>
     </Modal>
   )
 }
-<<<<<<< HEAD
-
-export default TagRemoveModal
-
-=======
  
 export default TagRemoveModal
->>>>>>> origin/rupa

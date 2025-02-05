@@ -152,7 +152,3 @@ const WebSSOForm: FC = () => {
 }
 
 export default React.memo(WebSSOForm)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

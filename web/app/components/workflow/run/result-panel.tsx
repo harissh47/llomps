@@ -92,7 +92,3 @@ const ResultPanel: FC<ResultPanelProps> = ({
 }
 
 export default ResultPanel
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

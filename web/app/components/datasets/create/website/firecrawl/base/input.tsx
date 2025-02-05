@@ -57,7 +57,3 @@ const Input: FC<Props> = ({
   )
 }
 export default React.memo(Input)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

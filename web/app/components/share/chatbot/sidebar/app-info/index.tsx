@@ -26,7 +26,3 @@ const AppInfo: FC<IAppInfoProps> = ({
   )
 }
 export default React.memo(AppInfo)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

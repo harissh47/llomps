@@ -218,7 +218,3 @@ const PromptEditor: FC<PromptEditorProps> = ({
 }
 
 export default PromptEditor
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

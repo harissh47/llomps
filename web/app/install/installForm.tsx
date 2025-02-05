@@ -172,7 +172,3 @@ const InstallForm = () => {
 }
 
 export default InstallForm
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

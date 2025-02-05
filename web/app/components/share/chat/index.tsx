@@ -952,7 +952,3 @@ const Main: FC<IMainProps> = ({
   )
 }
 export default React.memo(Main)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -97,7 +97,3 @@ const InvitedModal = ({
 }
 
 export default InvitedModal
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -3,10 +3,7 @@
 import { useEffect, useState } from 'react'
 import { useContext } from 'use-context-selector'
 import { useTranslation } from 'react-i18next'
-<<<<<<< HEAD
-=======
 import { getDarkThemeClasses } from '@/app/theme'
->>>>>>> origin/rupa
 import { useStore as useTagStore } from './store'
 import TagItemEditor from './tag-item-editor'
 import Modal from '@/app/components/base/modal'
@@ -70,12 +67,8 @@ const TagManagementModal = ({ show, type }: TagManagementModalProps) => {
       onClose={() => setShowTagManagementModal(false)}
     >
       {/* <div className='relative pb-2 text-xl font-semibold leading-[30px] text-gray-900'>{t('common.tag.manageTags')}</div> */}
-<<<<<<< HEAD
-      <div className='relative pb-2 text-xl font-semibold leading-[30px] text-gray-900 dark:text-white'>{t('common.tag.manageTags')}</div>
-=======
       {/* <div className='relative pb-2 text-xl font-semibold leading-[30px] text-gray-900 dark:text-white'>{t('common.tag.manageTags')}</div> */}
       <div className={`relative pb-2 text-xl font-semibold leading-[30px] text-gray-900 ${getDarkThemeClasses('text')}`}>{t('common.tag.manageTags')}</div>
->>>>>>> origin/rupa
       <div className='absolute right-4 top-4 p-2 cursor-pointer' onClick={() => setShowTagManagementModal(false)}>
         <XClose className='w-4 h-4 text-gray-500' />
       </div>
@@ -99,16 +92,6 @@ const TagManagementModal = ({ show, type }: TagManagementModalProps) => {
       <div className='mt-3 flex flex-wrap gap-2'>
   <input
     // className='shrink-0 w-[125px] px-2 py-1 rounded-lg border border-dashed border-gray-200 text-sm leading-5 text-gray-700 outline-none appearance-none placeholder:text-gray-300 caret-primary-600 focus:border-solid'
-<<<<<<< HEAD
-    className='shrink-0 w-[125px] px-2 py-1 rounded-lg 
-              border border-dashed border-gray-200 dark:border-[#5F5F5F]
-              text-sm leading-5 text-gray-700 dark:text-[#F5F5F5]
-              outline-none appearance-none 
-              placeholder:text-gray-300 caret-primary-600 
-              dark:bg-[#3f3f3f] 
-              dark:hover:bg-zinc-800 
-             dark:focus:bg-[#3f3f3f]'
-=======
     className={`shrink-0 w-[125px] px-2 py-1 rounded-lg 
               border border-dashed border-gray-200 ${getDarkThemeClasses('border')}
               text-sm leading-5 text-gray-700 ${getDarkThemeClasses('sub_text5')}
@@ -117,7 +100,6 @@ const TagManagementModal = ({ show, type }: TagManagementModalProps) => {
               ${getDarkThemeClasses('background3')}
               ${getDarkThemeClasses('hover')}
              ${getDarkThemeClasses('focus')}`}
->>>>>>> origin/rupa
 
     placeholder={t('common.tag.addNew') || ''}
     autoFocus
@@ -139,7 +121,3 @@ const TagManagementModal = ({ show, type }: TagManagementModalProps) => {
 }
 
 export default TagManagementModal
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

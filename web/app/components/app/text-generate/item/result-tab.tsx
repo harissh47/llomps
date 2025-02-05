@@ -73,7 +73,3 @@ const ResultTab = ({
 }
 
 export default memo(ResultTab)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

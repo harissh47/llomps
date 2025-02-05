@@ -140,7 +140,3 @@ const Operation = ({
 }
 
 export default Operation
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

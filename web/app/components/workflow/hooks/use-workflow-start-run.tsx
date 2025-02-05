@@ -86,7 +86,3 @@ export const useWorkflowStartRun = () => {
     handleWorkflowStartRunInChatflow,
   }
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

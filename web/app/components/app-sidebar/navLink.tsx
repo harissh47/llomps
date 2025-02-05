@@ -3,10 +3,6 @@
 import { useSelectedLayoutSegment } from 'next/navigation'
 import classNames from 'classnames'
 import Link from 'next/link'
-<<<<<<< HEAD
-import { getDarkThemeClasses } from '@/app/theme'
-=======
->>>>>>> origin/rupa
 
 export type NavIcon = React.ComponentType<
   React.PropsWithoutRef<React.ComponentProps<'svg'>> & {
@@ -56,11 +52,7 @@ export default function NavLink({
         // isActive ? ' text-primary-600 font-semibold' : 'text-gray-700 hover:bg-gray-100 hover:text-gray-700',
         isActive ? ' text-primary-600 font-semibold' : 'text-gray-700 hover:bg-gray-100 dark:hover:bg-zinc-800 hover:text-gray-700 dark:text-white',
         // 'group flex items-start h-9 px-3 rounded-md py-2 text-sm font-normal',
-<<<<<<< HEAD
-        `group flex items-center h-9 px-3 rounded-md py-2 text-sm font-normal ${getDarkThemeClasses('background')} cursor-pointer`,
-=======
         'group flex items-center h-9 px-3 rounded-md py-2 text-sm font-normal dark:bg-[#202020] cursor-pointer',
->>>>>>> origin/rupa
         // mode === 'expand' ? 'px-3' : 'px-2.5',
       )}
       title={mode === 'collapse' ? name : ''}
@@ -83,7 +75,3 @@ export default function NavLink({
     </Link>
   )
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -97,7 +97,3 @@ const MessageLogModal: FC<MessageLogModalProps> = ({
 }
 
 export default MessageLogModal
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

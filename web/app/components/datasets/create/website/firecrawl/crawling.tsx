@@ -35,7 +35,3 @@ const Crawling: FC<Props> = ({
   )
 }
 export default React.memo(Crawling)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

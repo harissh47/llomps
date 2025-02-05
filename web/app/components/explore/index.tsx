@@ -55,7 +55,3 @@ const Explore: FC<IExploreProps> = ({
   )
 }
 export default React.memo(Explore)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

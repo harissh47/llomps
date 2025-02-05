@@ -385,7 +385,3 @@ const ModerationSettingModal: FC<ModerationSettingModalProps> = ({
 }
 
 export default ModerationSettingModal
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

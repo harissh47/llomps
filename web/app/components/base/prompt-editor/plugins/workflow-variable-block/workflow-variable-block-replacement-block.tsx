@@ -62,7 +62,3 @@ const WorkflowVariableBlockReplacementBlock = ({
 }
 
 export default memo(WorkflowVariableBlockReplacementBlock)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

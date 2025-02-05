@@ -13,7 +13,3 @@ const SyncingDataModal = () => {
 }
 
 export default SyncingDataModal
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

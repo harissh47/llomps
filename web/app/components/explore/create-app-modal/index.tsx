@@ -9,12 +9,8 @@ import EmojiPicker from '@/app/components/base/emoji-picker'
 import { useProviderContext } from '@/context/provider-context'
 import AppsFull from '@/app/components/billing/apps-full-in-dialog'
 import { XClose } from '@/app/components/base/icons/src/vender/line/general'
-<<<<<<< HEAD
-
-=======
 import { getDarkThemeClasses } from '@/app/theme'
  
->>>>>>> origin/rupa
 export type CreateAppModalProps = {
   show: boolean
   isEditModal?: boolean
@@ -30,11 +26,7 @@ export type CreateAppModalProps = {
   }) => Promise<void>
   onHide: () => void
 }
-<<<<<<< HEAD
-
-=======
  
->>>>>>> origin/rupa
 const CreateAppModal = ({
   show = false,
   isEditModal = false,
@@ -46,26 +38,15 @@ const CreateAppModal = ({
   onHide,
 }: CreateAppModalProps) => {
   const { t } = useTranslation()
-<<<<<<< HEAD
-
-=======
  
->>>>>>> origin/rupa
   const [name, setName] = React.useState(appName)
   const [showEmojiPicker, setShowEmojiPicker] = useState(false)
   const [emoji, setEmoji] = useState({ icon: appIcon, icon_background: appIconBackground })
   const [description, setDescription] = useState(appDescription || '')
-<<<<<<< HEAD
-
-  const { plan, enableBilling } = useProviderContext()
-  const isAppsFull = (enableBilling && plan.usage.buildApps >= plan.total.buildApps)
-
-=======
  
   const { plan, enableBilling } = useProviderContext()
   const isAppsFull = (enableBilling && plan.usage.buildApps >= plan.total.buildApps)
  
->>>>>>> origin/rupa
   const submit = () => {
     if (!name.trim()) {
       Toast.notify({ type: 'error', message: t('explore.appCustomize.nameRequired') })
@@ -78,11 +59,7 @@ const CreateAppModal = ({
     })
     onHide()
   }
-<<<<<<< HEAD
-
-=======
  
->>>>>>> origin/rupa
   return (
     <>
       <Modal
@@ -96,12 +73,8 @@ const CreateAppModal = ({
         </div>
         {isEditModal && (
           // <div className='mb-1 font-semibold text-xl leading-[30px] text-gray-900'>{t('app.editAppTitle')}</div>
-<<<<<<< HEAD
-          <div className='mb-1 font-semibold text-xl leading-[30px] text-gray-900 dark:text-white'>{t('app.editAppTitle')}</div>
-=======
           // <div className='mb-1 font-semibold text-xl leading-[30px] text-gray-900 dark:text-white'>{t('app.editAppTitle')}</div>
           <div className={`mb-1 font-semibold text-xl leading-[30px] text-gray-900 ${getDarkThemeClasses('text')}`}>{t('app.editAppTitle')}</div>
->>>>>>> origin/rupa
         )}
         {!isEditModal && (
           // <div className='mb-9 font-semibold text-xl leading-[30px] text-gray-900'>{t('explore.appCustomize.title', { name: appName })}</div>
@@ -111,12 +84,8 @@ const CreateAppModal = ({
           {/* icon & name */}
           <div className='pt-2'>
             {/* <div className='py-2 text-sm font-medium leading-[20px] text-gray-900'>{t('app.newApp.captionName')}</div> */}
-<<<<<<< HEAD
-            <div className='py-2 text-sm font-medium leading-[20px] text-gray-900 dark:text-white'>{t('app.newApp.captionName')}</div>
-=======
             {/* <div className='py-2 text-sm font-medium leading-[20px] text-gray-900 dark:text-white'>{t('app.newApp.captionName')}</div> */}
             <div className={`py-2 text-sm font-medium leading-[20px] text-gray-900 ${getDarkThemeClasses('text')}`}>{t('app.newApp.captionName')}</div>
->>>>>>> origin/rupa
             <div className='flex items-center justify-between space-x-2'>
               {/* <AppIcon size='large' onClick={() => { setShowEmojiPicker(true) }} className='cursor-pointer' icon={emoji.icon} background={emoji.icon_background} /> */}
               <input
@@ -124,31 +93,20 @@ const CreateAppModal = ({
                 onChange={e => setName(e.target.value)}
                 placeholder={t('app.newApp.appNamePlaceholder') || ''}
                 // className='grow h-10 px-3 text-sm font-normal bg-gray-100 rounded-lg border border-transparent outline-none appearance-none caret-primary-600 placeholder:text-gray-400 hover:bg-gray-50 hover:border hover:border-gray-300 focus:bg-gray-50 focus:border focus:border-gray-300 focus:shadow-xs'
-<<<<<<< HEAD
-                className='grow h-10 px-3 text-sm font-normal bg-gray-100 dark:bg-[#3F3F3F] rounded-lg border border-transparent outline-none appearance-none caret-primary-600 placeholder:text-gray-400 dark:text-[#FCFCFC] hover:bg-gray-50 hover:border hover:border-gray-300 dark:hover:border-[#5F5F5F] focus:bg-gray-50 focus:border focus:border-gray-300 dark:focus:border-[#5F5F5F] focus:shadow-xs'
-=======
                 // className='grow h-10 px-3 text-sm font-normal bg-gray-100 dark:bg-[#3F3F3F] rounded-lg border border-transparent outline-none appearance-none caret-primary-600 placeholder:text-gray-400 dark:text-[#FCFCFC] hover:bg-gray-50 hover:border hover:border-gray-300 dark:hover:border-[#5F5F5F] focus:bg-gray-50 focus:border focus:border-gray-300 dark:focus:border-[#5F5F5F] focus:shadow-xs'
                 className={`grow h-10 px-3 text-sm font-normal bg-gray-100 ${getDarkThemeClasses('background3')} rounded-lg border border-transparent outline-none appearance-none caret-primary-600 placeholder:text-gray-400 ${getDarkThemeClasses('sub_text1')} hover:bg-gray-50 hover:border hover:border-gray-300 ${getDarkThemeClasses('borderhover')} focus:bg-gray-50 focus:border focus:border-gray-300 ${getDarkThemeClasses('borderfocus')} focus:shadow-xs`}
->>>>>>> origin/rupa
               />
             </div>
           </div>
           {/* description */}
           <div className='pt-2'>
             {/* <div className='py-2 text-sm font-medium leading-[20px] text-gray-900'>{t('app.newApp.captionDescription')}</div> */}
-<<<<<<< HEAD
-            <div className='py-2 text-sm font-medium leading-[20px] text-gray-900 dark:text-white'>{t('app.newApp.captionDescription')}</div>
-            <textarea
-              // className='w-full h-10 px-3 py-2 text-sm font-normal bg-gray-100 rounded-lg border border-transparent outline-none appearance-none caret-primary-600 placeholder:text-gray-400 hover:bg-gray-50 hover:border hover:border-gray-300 focus:bg-gray-50 focus:border focus:border-gray-300 focus:shadow-xs h-[80px] resize-none'
-              className='w-full h-10 px-3 py-2 text-sm font-normal bg-gray-100 dark:bg-[#3F3F3F] rounded-lg border border-transparent outline-none appearance-none caret-primary-600 placeholder:text-gray-400 dark:text-[#FCFCFC] hover:bg-gray-50 hover:border hover:border-gray-300 dark:hover:border-[#5F5F5F] focus:bg-gray-50 focus:border focus:border-gray-300 dark:focus:border-[#5F5F5F] focus:shadow-xs h-[80px] resize-none'
-=======
             {/* <div className='py-2 text-sm font-medium leading-[20px] text-gray-900 dark:text-white'>{t('app.newApp.captionDescription')}</div> */}
             <div className={`py-2 text-sm font-medium leading-[20px] text-gray-900 ${getDarkThemeClasses('text')}`}>{t('app.newApp.captionDescription')}</div>
             <textarea
               // className='w-full h-10 px-3 py-2 text-sm font-normal bg-gray-100 rounded-lg border border-transparent outline-none appearance-none caret-primary-600 placeholder:text-gray-400 hover:bg-gray-50 hover:border hover:border-gray-300 focus:bg-gray-50 focus:border focus:border-gray-300 focus:shadow-xs h-[80px] resize-none'
               // className='w-full h-10 px-3 py-2 text-sm font-normal bg-gray-100 dark:bg-[#3F3F3F] rounded-lg border border-transparent outline-none appearance-none caret-primary-600 placeholder:text-gray-400 dark:text-[#FCFCFC] hover:bg-gray-50 hover:border hover:border-gray-300 dark:hover:border-[#5F5F5F] focus:bg-gray-50 focus:border focus:border-gray-300 dark:focus:border-[#5F5F5F] focus:shadow-xs h-[80px] resize-none'
                className={`w-full h-10 px-3 py-2 text-sm font-normal bg-gray-100 ${getDarkThemeClasses('background3')}  rounded-lg border border-transparent outline-none appearance-none caret-primary-600 placeholder:text-gray-400 ${getDarkThemeClasses('sub_text1')} hover:bg-gray-50 hover:border hover:border-gray-300 ${getDarkThemeClasses('borderhover')}  focus:bg-gray-50 focus:border focus:border-gray-300 ${getDarkThemeClasses('borderfocus')} focus:shadow-xs h-[80px] resize-none`}
->>>>>>> origin/rupa
               placeholder={t('app.newApp.appDescriptionPlaceholder') || ''}
               value={description}
               onChange={e => setDescription(e.target.value)}
@@ -172,17 +130,8 @@ const CreateAppModal = ({
         }}
       />}
     </>
-<<<<<<< HEAD
-
-  )
-}
-
-export default CreateAppModal
-
-=======
  
   )
 }
  
 export default CreateAppModal
->>>>>>> origin/rupa

@@ -94,7 +94,3 @@ function useFeature({
 }
 
 export default useFeature
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

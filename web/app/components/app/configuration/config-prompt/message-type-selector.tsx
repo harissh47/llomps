@@ -48,7 +48,3 @@ const MessageTypeSelector: FC<Props> = ({
   )
 }
 export default React.memo(MessageTypeSelector)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

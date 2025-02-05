@@ -188,7 +188,3 @@ const ModelLoadBalancingModal = ({ provider, model, open = false, onClose, onSav
 }
 
 export default memo(ModelLoadBalancingModal)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

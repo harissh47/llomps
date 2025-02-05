@@ -36,7 +36,3 @@ const Node: FC<NodeProps<ToolNodeType>> = ({
 }
 
 export default React.memo(Node)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

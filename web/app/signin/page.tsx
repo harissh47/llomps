@@ -215,7 +215,3 @@ export default SignIn
 // }
 
 // export default SignIn
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -172,7 +172,3 @@ const AssistantTypePicker: FC<Props> = ({
   )
 }
 export default React.memo(AssistantTypePicker)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

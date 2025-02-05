@@ -7,7 +7,3 @@ const FormatDetectorPlugin = () => {
 }
 
 export default FormatDetectorPlugin
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

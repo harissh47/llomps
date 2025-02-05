@@ -84,7 +84,3 @@ const AppCard = ({
 }
 
 export default AppCard
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

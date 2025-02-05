@@ -31,7 +31,3 @@ const TypeIcon: FC<ITypeIconProps> = ({
   )
 }
 export default React.memo(TypeIcon)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -25,7 +25,3 @@ const Placeholder = ({
 }
 
 export default memo(Placeholder)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

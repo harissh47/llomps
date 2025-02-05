@@ -254,7 +254,3 @@ const AppPublisher = ({
 }
 
 export default memo(AppPublisher)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

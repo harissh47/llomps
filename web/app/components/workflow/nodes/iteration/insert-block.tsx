@@ -59,7 +59,3 @@ const InsertBlock = ({
 }
 
 export default memo(InsertBlock)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

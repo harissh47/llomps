@@ -152,7 +152,3 @@ export default memo(Header)
 
 
 
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

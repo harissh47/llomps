@@ -44,7 +44,3 @@ const HeaderBillingBtn: FC<Props> = ({
   )
 }
 export default React.memo(HeaderBillingBtn)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

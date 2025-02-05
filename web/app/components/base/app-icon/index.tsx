@@ -72,7 +72,3 @@ const AppIcon: FC<AppIconProps> = ({
 }
 
 export default AppIcon
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

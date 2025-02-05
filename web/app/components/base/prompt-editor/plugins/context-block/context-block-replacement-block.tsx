@@ -61,7 +61,3 @@ const ContextBlockReplacementBlock = ({
 }
 
 export default memo(ContextBlockReplacementBlock)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -52,7 +52,3 @@ const Avatar = ({
 }
 
 export default Avatar
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

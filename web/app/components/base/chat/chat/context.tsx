@@ -64,7 +64,3 @@ export const ChatContextProvider = ({
 export const useChatContext = () => useContext(ChatContext)
 
 export default ChatContext
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

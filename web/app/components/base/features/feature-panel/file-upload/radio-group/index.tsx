@@ -67,10 +67,6 @@
 'use client';
 import type { FC } from 'react';
 import React from 'react';
-<<<<<<< HEAD
-import { getDarkThemeClasses } from '@/app/theme';
-=======
->>>>>>> origin/rupa
 import cn from 'classnames';
 
 type OPTION = {
@@ -127,7 +123,3 @@ const RadioGroup: FC<Props> = ({
 };
 
 export default React.memo(RadioGroup);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

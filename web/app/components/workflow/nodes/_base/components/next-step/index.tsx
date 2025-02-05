@@ -15,11 +15,7 @@ import { BlockEnum } from '../../../../types'
 import Add from './add'
 import Item from './item'
 import Line from './line'
-<<<<<<< HEAD
-
-=======
 import { getDarkThemeClasses } from '@/app/theme'
->>>>>>> origin/rupa
 type NextStepProps = {
   selectedNode: Node
 }
@@ -38,11 +34,7 @@ const NextStep = ({
   return (
     <div className='flex py-1'>
       {/* <div className='shrink-0 relative flex items-center justify-center w-9 h-9 bg-white  rounded-lg border-[0.5px] border-gray-200 shadow-xs'> */}
-<<<<<<< HEAD
-      <div className='shrink-0 relative flex items-center justify-center w-9 h-9 bg-white dark:bg-[#3e3e3e] rounded-lg border-[0.5px] border-gray-200 dark:border-[#5f5f5f] shadow-xs'>
-=======
       <div className={`shrink-0 relative flex items-center justify-center w-9 h-9 bg-white ${getDarkThemeClasses('background1')} rounded-lg border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} shadow-xs`}>
->>>>>>> origin/rupa
 
         <BlockIcon
           type={selectedNode!.data.type}
@@ -112,7 +104,3 @@ const NextStep = ({
 }
 
 export default memo(NextStep)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

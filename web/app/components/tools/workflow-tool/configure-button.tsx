@@ -236,7 +236,3 @@ const WorkflowToolConfigureButton = ({
   )
 }
 export default WorkflowToolConfigureButton
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

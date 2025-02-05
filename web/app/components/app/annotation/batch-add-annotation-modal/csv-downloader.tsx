@@ -86,7 +86,3 @@ const CSVDownload: FC = () => {
   )
 }
 export default React.memo(CSVDownload)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

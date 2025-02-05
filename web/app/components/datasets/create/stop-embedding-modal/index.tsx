@@ -43,7 +43,3 @@ const StopEmbeddingModal = ({
 }
 
 export default StopEmbeddingModal
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

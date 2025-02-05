@@ -31,7 +31,3 @@ const Install = () => {
 }
 
 export default Install
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

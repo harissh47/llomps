@@ -114,7 +114,3 @@ const TagInput: FC<TagInputProps> = ({
 }
 
 export default TagInput
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

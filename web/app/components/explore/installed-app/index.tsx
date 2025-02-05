@@ -40,7 +40,3 @@ const InstalledApp: FC<IInstalledAppProps> = ({
   )
 }
 export default React.memo(InstalledApp)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

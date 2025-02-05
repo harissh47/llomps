@@ -39,7 +39,3 @@ const WebsitePreview = ({
 }
 
 export default WebsitePreview
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

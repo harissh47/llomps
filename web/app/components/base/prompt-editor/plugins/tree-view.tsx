@@ -17,7 +17,3 @@ const TreeViewPlugin = () => {
 }
 
 export default TreeViewPlugin
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

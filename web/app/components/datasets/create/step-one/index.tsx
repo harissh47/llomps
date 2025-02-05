@@ -17,10 +17,6 @@ import { NotionPageSelector } from '@/app/components/base/notion-page-selector'
 import { useDatasetDetailContext } from '@/context/dataset-detail'
 import { useProviderContext } from '@/context/provider-context'
 import VectorSpaceFull from '@/app/components/billing/vector-space-full'
-<<<<<<< HEAD
-import { getDarkThemeClasses } from '@/app/theme'
-=======
->>>>>>> origin/rupa
 
 type IStepOneProps = {
   datasetId?: string
@@ -134,11 +130,7 @@ const StepOne = ({
     return false
   }, [files])
   return (
-<<<<<<< HEAD
-    <div className={`flex w-full h-full ${getDarkThemeClasses('background')}`}>
-=======
     <div className='flex w-full h-full dark:bg-[#202020]'>
->>>>>>> origin/rupa
       <div className='grow overflow-y-auto relative'>
         {
           shouldShowDataSourceTypeList && (
@@ -149,11 +141,7 @@ const StepOne = ({
           )
         }
         {/* <div className={s.form}> */}
-<<<<<<< HEAD
-        <div className={`relative p-[12px] px-[64px] ${getDarkThemeClasses('background')}`}>
-=======
         <div className="relative p-[12px] px-[64px] bg-white dark:bg-[#202020]">
->>>>>>> origin/rupa
 
           {
             shouldShowDataSourceTypeList && (
@@ -302,7 +290,3 @@ const StepOne = ({
 }
 
 export default StepOne
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

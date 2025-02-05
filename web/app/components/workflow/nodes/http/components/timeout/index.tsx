@@ -105,7 +105,3 @@ const Timeout: FC<Props> = ({ readonly, payload, onChange }) => {
   )
 }
 export default React.memo(Timeout)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

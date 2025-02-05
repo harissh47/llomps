@@ -11,10 +11,6 @@ import { Settings01, Trash03 } from '@/app/components/base/icons/src/vender/line
 import { Folder } from '@/app/components/base/icons/src/vender/solid/files'
 import Drawer from '@/app/components/base/drawer'
 import useBreakpoints, { MediaType } from '@/hooks/use-breakpoints'
-<<<<<<< HEAD
-import { getDarkThemeClasses } from '@/app/theme'
-=======
->>>>>>> origin/rupa
 
 type ItemProps = {
   className?: string
@@ -43,11 +39,7 @@ const Item: FC<ItemProps> = ({
 
   return (
     // <div className='group relative flex items-center mb-1 last-of-type:mb-0  pl-2.5 py-2 pr-3 w-full bg-white rounded-lg border-[0.5px] border-gray-200 shadow-xs'>
-<<<<<<< HEAD
-    <div className={`group relative flex items-center mb-1 last-of-type:mb-0  pl-2.5 py-2 pr-3 w-full bg-white ${getDarkThemeClasses('background')} rounded-lg border-[0.5px] border-gray-200 dark:border-[#5F5F5F] shadow-xs`}>
-=======
     <div className='group relative flex items-center mb-1 last-of-type:mb-0  pl-2.5 py-2 pr-3 w-full bg-white dark:bg-[#202020] rounded-lg border-[0.5px] border-gray-200 dark:border-[#5F5F5F] shadow-xs'>
->>>>>>> origin/rupa
       {
         config.data_source_type === DataSourceType.FILE && (
           // <div className='shrink-0 flex items-center justify-center mr-2 w-6 h-6 bg-[#F5F8FF] rounded-md border-[0.5px] border-[#E0EAFF]'>
@@ -105,7 +97,3 @@ const Item: FC<ItemProps> = ({
 }
 
 export default Item
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

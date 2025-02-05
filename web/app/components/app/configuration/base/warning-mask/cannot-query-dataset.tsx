@@ -29,7 +29,3 @@ const FormattingChanged: FC<IFormattingChangedProps> = ({
   )
 }
 export default React.memo(FormattingChanged)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

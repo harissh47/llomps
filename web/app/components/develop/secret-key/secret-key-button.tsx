@@ -36,7 +36,3 @@ const SecretKeyButton = ({ className, appId, iconCls, textCls }: ISecretKeyButto
 }
 
 export default SecretKeyButton
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

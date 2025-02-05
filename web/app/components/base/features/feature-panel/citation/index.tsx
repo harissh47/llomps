@@ -23,7 +23,3 @@ const Citation: FC = () => {
   )
 }
 export default React.memo(Citation)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

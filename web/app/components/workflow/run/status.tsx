@@ -98,7 +98,3 @@ const StatusPanel: FC<ResultProps> = ({
 }
 
 export default StatusPanel
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -157,7 +157,3 @@ const DebugWithMultipleModelWrapper: FC<DebugWithMultipleModelContextType> = ({
 }
 
 export default memo(DebugWithMultipleModelWrapper)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

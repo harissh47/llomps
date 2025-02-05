@@ -31,10 +31,6 @@ import Loading from '@/app/components/base/loading'
 import { useProviderContext } from '@/context/provider-context'
 import { TONE_LIST } from '@/config'
 import { ArrowNarrowLeft } from '@/app/components/base/icons/src/vender/line/arrows'
-<<<<<<< HEAD
-import { getDarkThemeClasses } from '@/app/theme'
-=======
->>>>>>> origin/rupa
 
 export type ModelParameterModalProps = {
   popupClassName?: string
@@ -258,11 +254,7 @@ const ModelParameterModal: FC<ModelParameterModalProps> = ({
               //   onClick={() => onDebugWithMultipleModelChange?.()}
               // >
                 <div
-<<<<<<< HEAD
-                className={`flex items-center justify-between px-6 h-[50px] bg-gray-50 border-t border-t-gray-100 text-xs font-medium text-primary-600 cursor-pointer rounded-b-xl ${getDarkThemeClasses('background')}`}
-=======
                 className='flex items-center justify-between px-6 h-[50px] bg-gray-50 border-t border-t-gray-100 text-xs font-medium text-primary-600 cursor-pointer rounded-b-xl dark:bg-[#202020]'
->>>>>>> origin/rupa
                 onClick={() => onDebugWithMultipleModelChange?.()}
               >
                 {
@@ -281,7 +273,3 @@ const ModelParameterModal: FC<ModelParameterModalProps> = ({
 }
 
 export default ModelParameterModal
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -36,7 +36,3 @@ const HasNotSetAPI: FC<IHasNotSetAPIProps> = ({
   )
 }
 export default React.memo(HasNotSetAPI)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

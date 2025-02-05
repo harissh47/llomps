@@ -33,7 +33,3 @@ const Types = ({
   )
 }
 export default Types
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

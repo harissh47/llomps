@@ -117,7 +117,3 @@ const CustomizeModal: FC<IShareLinkProps> = ({
 }
 
 export default CustomizeModal
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -63,7 +63,3 @@ const PresetsParameter: FC<PresetsParameterProps> = ({
 }
 
 export default PresetsParameter
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

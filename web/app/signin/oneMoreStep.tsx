@@ -171,7 +171,3 @@ const OneMoreStep = () => {
 }
 
 export default OneMoreStep
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

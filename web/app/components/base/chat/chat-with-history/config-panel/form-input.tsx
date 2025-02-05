@@ -46,7 +46,3 @@ const FormInput: FC<InputProps> = ({
 }
 
 export default memo(FormInput)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

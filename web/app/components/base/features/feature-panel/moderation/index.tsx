@@ -106,7 +106,3 @@ const Moderation = ({
 }
 
 export default memo(Moderation)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -12,11 +12,6 @@ import {
 } from '@/app/components/base/portal-to-follow-elem'
 import type { IInputTypeIconProps } from '@/app/components/app/configuration/config-var/input-type-icon'
 import IconTypeIcon from '@/app/components/app/configuration/config-var/input-type-icon'
-<<<<<<< HEAD
-import { getDarkThemeClasses } from '@/app/theme'
-
-=======
->>>>>>> origin/rupa
 
 type Option = { name: string; value: string; type: string }
 export type Props = {
@@ -64,13 +59,8 @@ const VarPicker: FC<Props> = ({
           s.trigger,
           className,
           // notSetVar ? 'bg-[#FFFCF5] border-[#FEDF89] text-[#DC6803]' : ' hover:bg-gray-50 border-gray-200 text-primary-600',
-<<<<<<< HEAD
-          notSetVar ? `bg-[#FFFCF5] ${getDarkThemeClasses('background')} border-[#FEDF89] text-[#DC6803]` : `hover:bg-gray-50 border-gray-200 dark:border-[#5F5F5F] text-primary-600`,
-          open ? `bg-gray-50 ${getDarkThemeClasses('background')}` : `bg-white ${getDarkThemeClasses('background')}`,
-=======
           notSetVar ? 'bg-[#FFFCF5] dark:bg-[#202020] border-[#FEDF89] text-[#DC6803]' : ' hover:bg-gray-50 border-gray-200 dark:border-[#5F5F5F] text-primary-600',
           open ? 'bg-gray-50 dark:bg-[#333333]' : 'bg-white dark:bg-[#202020]',
->>>>>>> origin/rupa
           `
           flex items-center h-8 justify-center px-2 space-x-1 rounded-lg border  shadow-xs cursor-pointer
           text-[13px]  font-medium
@@ -90,11 +80,7 @@ const VarPicker: FC<Props> = ({
       <PortalToFollowElemContent style={{ zIndex: 1000 }}>
         {options.length > 0
           // ? (<div className='w-[240px] max-h-[50vh] overflow-y-auto p-1  border bg-white border-gray-200 rounded-lg shadow-lg'>
-<<<<<<< HEAD
-          ? (<div className={`w-[240px] max-h-[50vh] overflow-y-auto p-1  border bg-white ${getDarkThemeClasses('background')} border-gray-200 dark:border-[#5F5F5F] rounded-lg shadow-lg`}>
-=======
           ? (<div className='w-[240px] max-h-[50vh] overflow-y-auto p-1  border bg-white dark:bg-[#202020] border-gray-200 dark:border-[#5F5F5F] rounded-lg shadow-lg'>
->>>>>>> origin/rupa
             {options.map(({ name, value, type }, index) => (
               <div
                 key={index}
@@ -120,7 +106,3 @@ const VarPicker: FC<Props> = ({
   )
 }
 export default React.memo(VarPicker)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

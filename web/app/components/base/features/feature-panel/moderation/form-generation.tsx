@@ -78,7 +78,3 @@ const FormGeneration: FC<FormGenerationProps> = ({
 }
 
 export default memo(FormGeneration)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

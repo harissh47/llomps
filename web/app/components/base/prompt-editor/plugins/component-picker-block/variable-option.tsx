@@ -87,7 +87,3 @@ export const VariableMenuItem = memo(({
   )
 })
 VariableMenuItem.displayName = 'VariableMenuItem'
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

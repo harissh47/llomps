@@ -27,11 +27,7 @@ import { Play } from "@/app/components/base/icons/src/vender/line/mediaAndDevice
 import TooltipPlus from "@/app/components/base/tooltip-plus";
 import type { Node } from "@/app/components/workflow/types";
 import { useStore as useAppStore } from "@/app/components/app/store";
-<<<<<<< HEAD
-
-=======
 import { getDarkThemeClasses } from "@/utils/theme";
->>>>>>> origin/rupa
 type BasePanelProps = {
   children: ReactElement;
 } & Node;
@@ -104,22 +100,14 @@ const BasePanel: FC<BasePanelProps> = ({ id, data, children }) => {
       <div
         ref={containerRef}
         // className='relative h-full bg-white shadow-lg border-[0.5px] border-gray-200 rounded-2xl overflow-y-auto'
-<<<<<<< HEAD
-        className="relative h-full bg-white dark:bg-[#3e3e3e] shadow-lg border-[0.5px] border-gray-200 dark:border-[#3e3e3e] dark:shadow-[#3e3e3e] rounded-2xl overflow-y-auto"
-=======
         className={`relative h-full bg-white ${getDarkThemeClasses('background1')} shadow-lg border-[0.5px] border-gray-200 ${getDarkThemeClasses('border4')} ${getDarkThemeClasses('shadow2')} rounded-2xl overflow-y-auto`}
->>>>>>> origin/rupa
         style={{
           width: `${panelWidth}px`,
         }}
       >
         {/* <div className='sticky top-0 bg-white border-b-[0.5px] border-black/5 z-10'> */}
         {/* <div className='sticky top-0 bg-white border-b-[0.5px] border-black/5 z-10'></div> */}
-<<<<<<< HEAD
-        <div className="sticky top-0 bg-white dark:bg-[#3e3e3e] border-b-[0.5px] border-black/5 z-10">
-=======
         <div className={`sticky top-0 bg-white ${getDarkThemeClasses('background1')} border-b-[0.5px] border-black/5 z-10`}>
->>>>>>> origin/rupa
           <div className="flex items-center px-4 pt-4 pb-1">
             <BlockIcon
               className="shrink-0 mr-1"
@@ -164,24 +152,11 @@ const BasePanel: FC<BasePanelProps> = ({ id, data, children }) => {
           </div>
         </div>
         {/* <div className='py-2'> */}
-<<<<<<< HEAD
-        <div className="py-2 dark:bg-[#3e3e3e]">
-=======
         <div className={`py-2 ${getDarkThemeClasses('background1')}`}>
->>>>>>> origin/rupa
           {cloneElement(children, { id, data })}
         </div>
         {!!availableNextBlocks.length && (
           // <div className='p-4 border-t-[0.5px] border-t-black/5 '>
-<<<<<<< HEAD
-          <div className="p-4 border-t-[0.5px] border-t-black/5 dark:bg-[#3e3e3e]">
-            {/* <div className='flex items-center mb-1 text-gray-700 text-[13px] font-semibold'> */}
-            <div className="flex items-center mb-1 text-gray-700 dark:text-white text-[13px] font-semibold">
-              {t("workflow.panel.nextStep").toLocaleUpperCase()}
-            </div>
-            {/* <div className='mb-2 text-xs text-gray-400'> */}
-            <div className="mb-2 text-xs text-gray-400 dark:text-[#FCFCFC]">
-=======
           <div className={`p-4 border-t-[0.5px] border-t-black/5 ${getDarkThemeClasses('background1')}`}>
             {/* <div className='flex items-center mb-1 text-gray-700 text-[13px] font-semibold'> */}
             <div className={`flex items-center mb-1 text-gray-700 ${getDarkThemeClasses('text')} text-[13px] font-semibold`}>
@@ -189,7 +164,6 @@ const BasePanel: FC<BasePanelProps> = ({ id, data, children }) => {
             </div>
             {/* <div className='mb-2 text-xs text-gray-400'> */}
             <div className="mb-2 text-xs text-gray-400 ${getDarkThemeClasses('sub_text1')}">
->>>>>>> origin/rupa
               {t("workflow.panel.addNextStep")}
             </div>
             <NextStep selectedNode={{ id, data } as Node} />
@@ -201,7 +175,3 @@ const BasePanel: FC<BasePanelProps> = ({ id, data, children }) => {
 };
 
 export default memo(BasePanel);
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

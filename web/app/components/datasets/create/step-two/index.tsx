@@ -19,10 +19,6 @@ import {
   fetchFileIndexingEstimate as didFetchFileIndexingEstimate,
   fetchDefaultProcessRule,
 } from '@/service/datasets'
-<<<<<<< HEAD
-import { getDarkThemeClasses } from '@/app/theme'
-=======
->>>>>>> origin/rupa
 import Button from '@/app/components/base/button'
 import Loading from '@/app/components/base/loading'
 import FloatRightContainer from '@/app/components/base/float-right-container'
@@ -551,17 +547,10 @@ const StepTwo = ({
     // <div className='flex w-full h-screen overflow-y-scroll grow'>
     <div className='flex w-full h-screen'>
       {/* <div ref={scrollRef} className='relative h-full w-full overflow-y-scroll grow'> */}
-<<<<<<< HEAD
-      <div ref={scrollRef} className={`relative h-full w-full overflow-y-scroll grow ${getDarkThemeClasses('background')}`}>
-        {/* <div className={cn(s.pageHeader, scrolled && s.fixed, isMobile && '!px-6')}> */}
-      <div className={cn(`absolute z-10 inset-0 pt-[42px] pb-[12px] px-16 flex justify-between items-center overflow-y-auto grow sticky top-0 left-0 bg-white ${getDarkThemeClasses('background')} font-semibold text-[18px] leading-[28px] text-[#101828] dark:text-white`,
-       scrolled && `pt-[12px] font-normal text-[12px] leading-[18px] bg-[rgba(255,255,255,0.9)] ${getDarkThemeClasses('background')} border-b-[0.5px] border-[#EAECF0] dark:border-[#5F5F5F] backdrop-blur-[4px] animation-fix`,
-=======
       <div ref={scrollRef} className='relative h-full w-full overflow-y-scroll grow dark:bg-[#202020]'>
         {/* <div className={cn(s.pageHeader, scrolled && s.fixed, isMobile && '!px-6')}> */}
       <div className={cn("absolute z-10 inset-0 pt-[42px] pb-[12px] px-16 flex justify-between items-center overflow-y-auto grow sticky top-0 left-0 bg-white dark:bg-[#202020] font-semibold text-[18px] leading-[28px] text-[#101828] dark:text-white",
        scrolled && "pt-[12px] font-normal text-[12px] leading-[18px] bg-[rgba(255,255,255,0.9)] dark:bg-[#202020] border-b-[0.5px] border-[#EAECF0] dark:border-[#5F5F5F] backdrop-blur-[4px] animation-fix",
->>>>>>> origin/rupa
        isMobile && "!px-6"
       )}
       >
@@ -592,14 +581,10 @@ const StepTwo = ({
               className={cn(
                 s.radioItem,
                 s.segmentationItem,
-<<<<<<< HEAD
-                segmentationType === SegmentType.AUTO && s.active,
-=======
                 
                 // segmentationType === SegmentType.AUTO && s.active,
                 segmentationType === SegmentType.AUTO ? s.active : 'dark:border-[#5F5F5F]'
                 
->>>>>>> origin/rupa
               )}
              // className={cn(
                // "relative mb-2 rounded-xl border border-gray-100 dark:border-[#5F5F5F] cursor-pointer bg-[#fcfcfd]",
@@ -633,13 +618,9 @@ const StepTwo = ({
               className={cn(
                 s.radioItem,
                 s.segmentationItem,
-<<<<<<< HEAD
-                segmentationType === SegmentType.CUSTOM && s.active,
-=======
                 // segmentationType === SegmentType.CUSTOM && s.active ,
                 segmentationType === SegmentType.CUSTOM ? s.active : 'dark:border-[#5F5F5F]',
 
->>>>>>> origin/rupa
                 segmentationType === SegmentType.CUSTOM && s.custom,
               )}
               onClick={() => setSegmentationType(SegmentType.CUSTOM)}
@@ -657,13 +638,8 @@ const StepTwo = ({
                   <div className="font-normal text-[13px] leading-5 text-[#667085] dark:text-[#FCFCFC]">
                   {t('datasetCreation.stepTwo.customDescription')}
                   </div>
-<<<<<<< HEAD
-              </div>
- 
-=======
               
  <div>
->>>>>>> origin/rupa
               {segmentationType === SegmentType.CUSTOM && (
                 // <div className={s.typeFormBody}>
                 <div className="p-4 bg-white dark:bg-[#3F3F3F] shadow-lg rounded-b-xl">
@@ -738,11 +714,8 @@ const StepTwo = ({
                   </div>
                 </div>
               )}
-<<<<<<< HEAD
-=======
               </div>
               </div>
->>>>>>> origin/rupa
             </div>
 
           </div>
@@ -756,16 +729,10 @@ const StepTwo = ({
                 <div
                   className={cn(
                     s.radioItem,
-<<<<<<< HEAD
-                    s.indexItem,
-                    !isAPIKeySet && s.disabled,
-                    !hasSetIndexType && indexType === IndexingType.QUALIFIED && s.active,
-=======
                     "dark:bg-[#3f3f3f] border dark:border-[#5f5f5f] dark:text-white",
                     s.indexItem,
                     !isAPIKeySet && s.disabled&& "dark:hover:bg-zinc-800 dark:text-white border dark:hover:border-[#5f5f5f]",
                     !hasSetIndexType && indexType === IndexingType.QUALIFIED && s.active ,
->>>>>>> origin/rupa
                     hasSetIndexType && s.disabled,
                     hasSetIndexType && '!w-full',
                   )}
@@ -778,17 +745,10 @@ const StepTwo = ({
                   {!hasSetIndexType && <span className={cn(s.radio)} />}
                   <div className={s.typeHeader}>
                   {/* <div className="flex flex-col px-16 py-3 justify-center dark:bg-[#3F3F3F] rounded-xl"> */}
-<<<<<<< HEAD
-                    <div className={s.title}>
-                    {/* <div className="text-xl font-bold mb-4 dark:text-white">  */}
-                      {t('datasetCreation.stepTwo.qualified')}
-                      {!hasSetIndexType && <span className={s.recommendTag}>{t('datasetCreation.stepTwo.recommend')}</span>}
-=======
                     <div className={`${s.title} dark:!text-white`}>
                     {/* <div className="text-xl font-bold mb-4 dark:text-white">  */}
                       {t('datasetCreation.stepTwo.qualified')}
                       {!hasSetIndexType && <span className={`${s.recommendTag} border dark:!border-[#5f5f5f]`}>{t('datasetCreation.stepTwo.recommend')}</span>}
->>>>>>> origin/rupa
                     </div>
                     <div className={s.tip}>{t('datasetCreation.stepTwo.qualifiedTip')}</div>
                     {/* <div className="text-sm text-gray-600 dark:text-[#FCFCFC]">{t('datasetCreation.stepTwo.qualifiedTip')}</div> */}
@@ -825,27 +785,17 @@ const StepTwo = ({
                 >
                   <span className={cn(s.typeIcon, s.economical)} />
                   {!hasSetIndexType && <span className={cn(s.radio)} />}
-<<<<<<< HEAD
-                  <div className={s.typeHeader}>
-                  {/* <div className="flex flex-col px-16 py-3 justify-center dark:bg-[#3F3F3F] rounded-xl"> */}
-                    <div className={s.title}>{t('datasetCreation.stepTwo.economical')}</div>
-=======
                   {/* <div className={s.typeHeader}> */}
                   <div className={`${s.typeHeader} dark:!bg-[#3f3f3f] dark:rounded-xl`}>
                   {/* <div className="flex flex-col px-16 py-3 justify-center dark:bg-[#3F3F3F] rounded-xl"> */}
                     {/* <div className={s.title}>{t('datasetCreation.stepTwo.economical')}</div> */}
                     <div className={`${s.title} dark:!text-white`}>{t('datasetCreation.stepTwo.economical')}</div>
->>>>>>> origin/rupa
                     <div className={s.tip}>{t('datasetCreation.stepTwo.economicalTip')}</div>
                     {/* <div className="text-xl font-semibold text-gray-900 dark:text-white">{t('datasetCreation.stepTwo.economical')}</div>
                     <div className="text-sm text-gray-500 dark:text-[#FCFCFC] mt-2">{t('datasetCreation.stepTwo.economicalTip')}</div> */}
                     <div className='pb-0.5 text-xs font-medium text-gray-500'>{t('datasetCreation.stepTwo.emstimateCost')}</div>
-<<<<<<< HEAD
-                    <div className='text-xs font-medium text-gray-800'>0 tokens</div>
-=======
                    {/* <div className='text-xs font-medium text-gray-800'>0 tokens</div> */}
                    <div className='text-xs font-medium text-gray-800 dark:!text-[#FCFCFC]'>0 tokens</div>
->>>>>>> origin/rupa
                     {/* <div className='text-xs font-medium text-gray-800 dark:text-[#FCFCFC]'>0 tokens</div> */}
                   </div>
                 </div>
@@ -1046,19 +996,11 @@ const StepTwo = ({
         {/* {showPreview && <div ref={previewScrollRef} className={cn(s.previewWrap, isMobile && s.isMobile, 'relative h-full overflow-y-scroll border-l border-[#F2F4F7]')}> */}
         {/* {showPreview && <div ref={previewScrollRef} className={cn(s.previewWrap, isMobile && s.isMobile, 'relative h-screen overflow-y-scroll border-l border-[#F2F4F7]')}> */}
         {showPreview && <div ref={previewScrollRef}
-<<<<<<< HEAD
-         className={`relative h-screen overflow-y-scroll border-l border-[#F2F4F7] ${getDarkThemeClasses('background')} ${isMobile ? 'max-w-full' : 'max-w-[70vh]'} flex-shrink-0`}
-        >
-          {/* <div className={cn(s.previewHeader, previewScrolled && `${s.fixed} pb-3`)}> */}
-          {/* <div className={`sticky top-0 left-0 pt-[42px] bg-white ${getDarkThemeClasses('background')} font-semibold text-lg leading-7 text-[#101828] dark:text-white z-10 ${previewScrolled ? 'pb-3 text-sm leading-5 bg-opacity-90 border-b border-[#EAECF0] backdrop-blur' : ''}`} */}
-          <div className={`sticky top-0 left-0 pt-[42px] bg-white ${getDarkThemeClasses('background')} font-semibold text-lg leading-7 text-[#101828] dark:text-white z-10 ${previewScrolled ? 'pb-3 text-sm leading-5 bg-opacity-90 border-b border-[#EAECF0] dark:border-[#5F5F5F] backdrop-blur' : ''}`}
-=======
          className={`relative h-screen overflow-y-scroll border-l border-[#F2F4F7] dark:bg-[#202020] ${isMobile ? 'max-w-full' : 'max-w-[70vh]'} flex-shrink-0`}
         >
           {/* <div className={cn(s.previewHeader, previewScrolled && `${s.fixed} pb-3`)}> */}
           {/* <div className={`sticky top-0 left-0 pt-[42px] bg-white dark:bg-[#202020] font-semibold text-lg leading-7 text-[#101828] dark:text-white z-10 ${previewScrolled ? 'pb-3 text-sm leading-5 bg-opacity-90 border-b border-[#EAECF0] backdrop-blur' : ''}`} */}
           <div className={`sticky top-0 left-0 pt-[42px] bg-white dark:bg-[#202020] font-semibold text-lg leading-7 text-[#101828] dark:text-white z-10 ${previewScrolled ? 'pb-3 text-sm leading-5 bg-opacity-90 border-b border-[#EAECF0] dark:border-[#5F5F5F] backdrop-blur' : ''}`}
->>>>>>> origin/rupa
 >
             <div className='flex items-center justify-between px-8'>
               <div className='grow flex items-center'>
@@ -1125,7 +1067,3 @@ const StepTwo = ({
 }
 
 export default StepTwo
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

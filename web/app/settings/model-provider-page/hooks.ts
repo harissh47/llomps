@@ -26,10 +26,6 @@ import {
   getPayUrl,
 } from '@/service/common'
 import { useProviderContext } from '@/context/provider-context'
-<<<<<<< HEAD
-import { getDarkThemeClasses } from '@/app/theme'
-=======
->>>>>>> origin/rupa
 
 type UseDefaultModelAndModelList = (
   defaultModel: DefaultModelResponse | undefined,
@@ -135,18 +131,6 @@ export const useDefaultModel = (type: ModelTypeEnum) => {
     isLoading,
   }
 }
-<<<<<<< HEAD
-// export const useThemed = (type: ModelTypeEnum) => {
-//   const { data } = useSWR(`/workspaces/current/default-model?model_type=${type}`, fetchDefaultModal)
-//   const currentModel = data?.data?.provider.provider ?? "default";
-
-//   return {
-//     currentModel,
-//     theme: getDarkThemeClasses(currentModel),
-//   }
-// }
-=======
->>>>>>> origin/rupa
 
 export const useCurrentProviderAndModel = (modelList: Model[], defaultModel?: DefaultModel) => {
   const currentProvider = modelList.find(provider => provider.provider === defaultModel?.provider)

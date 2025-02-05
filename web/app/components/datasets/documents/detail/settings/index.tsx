@@ -101,7 +101,3 @@ const DocumentSettings = ({ datasetId, documentId }: DocumentSettingsProps) => {
 }
 
 export default DocumentSettings
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

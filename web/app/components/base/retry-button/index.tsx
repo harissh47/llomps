@@ -84,7 +84,3 @@ const RetryButton: FC<Props> = ({ datasetId }) => {
   )
 }
 export default RetryButton
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

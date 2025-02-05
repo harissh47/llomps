@@ -31,7 +31,3 @@ const Node: FC<NodeProps<HttpNodeType>> = ({
 }
 
 export default React.memo(Node)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -9,10 +9,6 @@ import DatasetCard from './DatasetCard'
 import type { DataSetListResponse } from '@/models/datasets'
 import { fetchDatasets } from '@/service/datasets'
 import { useAppContext } from '@/context/app-context'
-<<<<<<< HEAD
-import { getDarkThemeClasses } from '@/app/theme'
-=======
->>>>>>> origin/rupa
 
 const getKey = (
   pageIndex: number,
@@ -81,11 +77,7 @@ const Datasets = ({
 
   return (
     // <nav className='grid content-start grid-cols-1 gap-4 px-12 pt-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grow shrink-0 '>
-<<<<<<< HEAD
-      <nav className={`grid content-start grid-cols-1 gap-4 px-12 pt-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grow shrink-0 ${getDarkThemeClasses('background')}`}>
-=======
       <nav className='grid content-start grid-cols-1 gap-4 px-12 pt-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 grow shrink-0 dark:bg-[#202020]'>
->>>>>>> origin/rupa
       { isCurrentWorkspaceEditor && <NewDatasetCard ref={anchorRef} /> }
       {data?.map(({ data: datasets }) => datasets.map(dataset => (
         <DatasetCard key={dataset.id} dataset={dataset} onSuccess={mutate} />),
@@ -95,7 +87,3 @@ const Datasets = ({
 }
 
 export default Datasets
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

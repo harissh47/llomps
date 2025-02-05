@@ -110,7 +110,3 @@ const RenameDatasetModal = ({ show, dataset, onSuccess, onClose }: RenameDataset
 }
 
 export default RenameDatasetModal
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa

@@ -165,7 +165,3 @@ const AgentSetting: FC<Props> = ({
   )
 }
 export default React.memo(AgentSetting)
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/rupa
