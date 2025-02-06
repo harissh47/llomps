@@ -9,7 +9,7 @@ import { useLanguage } from '../hooks'
 import PopupItem from './popup-item'
 import { SearchLg } from '@/app/components/base/icons/src/vender/line/general'
 import { XCircle } from '@/app/components/base/icons/src/vender/solid/general'
- 
+import { getDarkThemeClasses } from '@/app/theme'
 type PopupProps = {
   defaultModel?: DefaultModel
   modelList: Model[]
@@ -41,11 +41,11 @@ const Popup: FC<PopupProps> = ({
   )
  
   return (
-    <div className='w-[320px] max-h-[480px] rounded-lg border-[0.5px] border-gray-200 dark:border-[#5f5f5f] bg-white dark:bg-[#202020] shadow-lg overflow-y-auto'>
-      <div className='sticky top-0 pl-3 pt-3 pr-2 pb-1 bg-white dark:bg-[#202020] z-10 '>
+    <div className={`w-[320px] max-h-[480px] rounded-lg border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')}  bg-white ${getDarkThemeClasses('main_background')}  shadow-lg overflow-y-auto`}>
+      <div className={`sticky top-0 pl-3 pt-3 pr-2 pb-1 bg-white ${getDarkThemeClasses('main_background')}  z-10 `}>
         <div className={`
           flex items-center pl-[9px] pr-[10px] h-8 rounded-lg border
-          ${searchText ? 'bg-white dark:bg-[#3f3f3f] border-gray-300 dark:border-[#5f5f5f] shadow-xs ' : 'bg-gray-100  dark:bg-[#3f3f3f] border-transparent'}
+          ${searchText ? `bg-white ${getDarkThemeClasses('background3')}  border-gray-300 ${getDarkThemeClasses('border')}  shadow-xs ` : `bg-gray-100  ${getDarkThemeClasses('background3')}  border-transparent`}
         `}>
           <SearchLg
             className={`
@@ -54,7 +54,7 @@ const Popup: FC<PopupProps> = ({
             `}
           />
           <input
-            className='block grow h-[18px] text-[13px] appearance-none outline-none bg-transparent dark:text-white '
+            className={`block grow h-[18px] text-[13px] appearance-none outline-none bg-transparent dark:text-white `}
             placeholder='Search model'
             value={searchText}
             onChange={e => setSearchText(e.target.value)}

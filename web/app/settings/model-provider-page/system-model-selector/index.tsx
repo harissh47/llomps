@@ -2,6 +2,7 @@ import type { FC } from 'react'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import ModelSelector from '../model-selector'
+import { getDarkThemeClasses } from '@/app/theme'
 import {
   useModelList,
   useSystemDefaultModelAndModelList,
@@ -140,7 +141,7 @@ const SystemModel: FC<SystemModelSelectorProps> = ({
         `}> */}
           <div className={`
           flex items-center px-2 h-6 text-xs text-gray-700 cursor-pointer bg-white rounded-md border-[0.5px] border-gray-200 shadow-xs
-          hover:bg-gray-100 hover:shadow-none dark:bg-[#1A1A1A] dark:border-2 dark:border-[#3F3F3F] dark:border-solid dark:rounded-xl dark:shadow-sm dark:hover:bg-zinc-600 cursor-pointer dark:text-white
+          hover:bg-gray-100 hover:shadow-none ${getDarkThemeClasses('background4')}  ${getDarkThemeClasses('border')} border-solid rounded-xl shadow-sm ${getDarkThemeClasses('hover3')}  cursor-pointer ${getDarkThemeClasses('text')} 
           ${open && 'bg-gray-100 shadow-none'}
         `}>
           <Settings01 className='mr-1 w-3 h-3 text-gray-500' />
@@ -150,17 +151,17 @@ const SystemModel: FC<SystemModelSelectorProps> = ({
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className='z-50'>
         {/* <div className='pt-4 w-[360px] rounded-xl border-[0.5px] border-black/5 bg-white shadow-xl'> */}
-        <div className='pt-4 w-[360px] rounded-xl border-[0.5px] border-black/5 bg-white dark:bg-[#333333] shadow-xl'>
+        <div className={`pt-4 w-[360px] rounded-xl border-[0.5px] border-black/5 bg-white ${getDarkThemeClasses('background1')}  shadow-xl`}>
 
           <div className='px-6 py-1'>
             {/* <div className='flex items-center h-8 text-[13px] font-medium text-gray-900'> */}
-            <div className='flex items-center h-8 text-[13px] font-medium text-gray-900 dark:text-white'>
+            <div className={`flex items-center h-8 text-[13px] font-medium text-gray-900 ${getDarkThemeClasses('text')} `}>
 
               {t('common.modelProvider.systemReasoningModel.key')}
               <Tooltip
                 selector='model-page-system-reasoning-model-tip'
                 htmlContent={
-                  <div className='w-[261px] text-gray-500 dark:text-white'>{t('common.modelProvider.systemReasoningModel.tip')}</div>
+                  <div className={`w-[261px] text-gray-500 ${getDarkThemeClasses('text')} `}>{t('common.modelProvider.systemReasoningModel.tip')}</div>
                 }
               >
                 <HelpCircle className='ml-0.5 w-[14px] h-[14px] text-gray-400'/>
@@ -175,12 +176,12 @@ const SystemModel: FC<SystemModelSelectorProps> = ({
             </div>
           </div>
           <div className='px-6 py-1'>
-            <div className='flex items-center h-8 text-[13px] font-medium text-gray-900 dark:text-white'>
+            <div className={`flex items-center h-8 text-[13px] font-medium text-gray-900 ${getDarkThemeClasses('text')} `}>
               {t('common.modelProvider.embeddingModel.key')}
               <Tooltip
                 selector='model-page-system-embedding-model-tip'
                 htmlContent={
-                  <div className='w-[261px] text-gray-500 dark:text-white'>{t('common.modelProvider.embeddingModel.tip')}</div>
+                  <div className={`w-[261px] text-gray-500 ${getDarkThemeClasses('text')} `}>{t('common.modelProvider.embeddingModel.tip')}</div>
                 }
               >
                 <HelpCircle className='ml-0.5 w-[14px] h-[14px] text-gray-400 '/>
@@ -195,12 +196,12 @@ const SystemModel: FC<SystemModelSelectorProps> = ({
             </div>
           </div>
           <div className='px-6 py-1'>
-            <div className='flex items-center h-8 text-[13px] font-medium text-gray-900 dark:text-white'>
+            <div className={`flex items-center h-8 text-[13px] font-medium text-gray-900 ${getDarkThemeClasses('text')} `}>
               {t('common.modelProvider.rerankModel.key')}
               <Tooltip
                 selector='model-page-system-rerankModel-model-tip'
                 htmlContent={
-                  <div className='w-[261px] text-gray-500 dark:text-white'>{t('common.modelProvider.rerankModel.tip')}</div>
+                  <div className={`w-[261px] text-gray-500 ${getDarkThemeClasses('text')} `}>{t('common.modelProvider.rerankModel.tip')}</div>
                 }
               >
                 <HelpCircle className='ml-0.5 w-[14px] h-[14px] text-gray-400'/>
@@ -215,12 +216,12 @@ const SystemModel: FC<SystemModelSelectorProps> = ({
             </div>
           </div>
           <div className='px-6 py-1'>
-            <div className='flex items-center h-8 text-[13px] font-medium text-gray-900 dark:text-white'>
+            <div className={`flex items-center h-8 text-[13px] font-medium text-gray-900 ${getDarkThemeClasses('text')} `}>
               {t('common.modelProvider.speechToTextModel.key')}
               <Tooltip
                 selector='model-page-system-speechToText-model-tip'
                 htmlContent={
-                  <div className='w-[261px] text-gray-500 dark:text-white'>{t('common.modelProvider.speechToTextModel.tip')}</div>
+                  <div className={`w-[261px] text-gray-500 ${getDarkThemeClasses('text')} `}>{t('common.modelProvider.speechToTextModel.tip')}</div>
                 }
               >
                 <HelpCircle className='ml-0.5 w-[14px] h-[14px] text-gray-400'/>
@@ -235,12 +236,12 @@ const SystemModel: FC<SystemModelSelectorProps> = ({
             </div>
           </div>
           <div className='px-6 py-1'>
-            <div className='flex items-center h-8 text-[13px] font-medium text-gray-900 dark:text-white'>
+            <div className={`flex items-center h-8 text-[13px] font-medium text-gray-900 ${getDarkThemeClasses('text')} `}>
               {t('common.modelProvider.ttsModel.key')}
               <Tooltip
                 selector='model-page-system-tts-model-tip'
                 htmlContent={
-                  <div className='w-[261px] text-gray-500 dark:text-white dark:border-0'>{t('common.modelProvider.ttsModel.tip')}</div>
+                  <div className={`w-[261px] text-gray-500 ${getDarkThemeClasses('text')}  border-0`}>{t('common.modelProvider.ttsModel.tip')}</div>
                 }
               >
                 <HelpCircle className='ml-0.5 w-[14px] h-[14px] text-gray-400  '/>
@@ -257,7 +258,7 @@ const SystemModel: FC<SystemModelSelectorProps> = ({
           <div className='flex items-center justify-end px-6 py-4'>
             <Button
               // className='mr-2 !h-8 !text-[13px] '
-              className='mr-2 !h-8 !text-[13px] dark:hover:bg-zinc-800 dark:border-0 dark:bg-[#3f3f3f] '
+              className={`mr-2 !h-8 !text-[13px] ${getDarkThemeClasses('hover')} border ${getDarkThemeClasses('border')}  ${getDarkThemeClasses('background1')}  `}
 
               onClick={() => setOpen(false)}
             >

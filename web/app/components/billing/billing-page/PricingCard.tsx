@@ -1,7 +1,7 @@
 import { PricingPlan } from './types';
 import { useState, useEffect } from 'react';
 import { CheckIcon } from '@heroicons/react/20/solid';
-
+import { getDarkThemeClasses } from '@/app/theme';
 interface PricingCardProps {
     plan: PricingPlan;
     isYearly: boolean;
@@ -55,42 +55,42 @@ export default function PricingCard({ plan, isYearly }: PricingCardProps) {
     return (
         <div
             // className={`rounded-lg border border-gray-200 dark:border-gray-700 p-8 relative hover:shadow-lg transition-shadow duration-300 cursor-pointer ${plan.popular ? 'bg-[#f7f7f7] dark:bg-gray-800' : 'bg-white dark:bg-gray-900'} flex flex-col justify-between`}
-            className={`rounded-lg border border-gray-200 dark:border-[#5f5f5f] p-8 relative hover:shadow-lg transition-shadow duration-300 cursor-pointer ${plan.popular ? 'bg-[#f7f7f7] dark:bg-[#333131]' : 'bg-white dark:bg-[#3f3f3f]'} flex flex-col justify-between`}
+            className={`rounded-lg border border-gray-200  ${getDarkThemeClasses('border')} p-8 relative hover:shadow-lg transition-shadow duration-300 cursor-pointer ${plan.popular ? `bg-[#f7f7f7]  ${getDarkThemeClasses('background2')}` : `bg-white ${getDarkThemeClasses('background3')}`} flex flex-col justify-between`}
 
         >
             {/* Popular Badge */}
             {plan.popular && (
                 // <span className="absolute top-0 right-0 -translate-y-1/2 px-3 py-1 bg-black text-white text-xs rounded-full">
-                <span className="absolute top-0 right-0 -translate-y-1/2 px-3 py-1 bg-black text-white text-xs rounded-full dark:bg-[#3F3F3F]">
+                <span className={`absolute top-0 right-0 -translate-y-1/2 px-3 py-1 bg-black text-white text-xs rounded-full ${getDarkThemeClasses('background3')}`}>
                     POPULAR
                 </span>
             )}
 
             {/* Plan Name */}
-            <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">{plan.name}</h3>
+            <h3 className={`text-lg font-semibold mb-2 text-gray-900 ${getDarkThemeClasses('text')}`}>{plan.name}</h3>
 
             {/* Price Display */}
-            <div className="text-3xl font-bold mb-4 text-gray-900 dark:text-white">
+            <div className={`text-3xl font-bold mb-4 text-gray-900 ${getDarkThemeClasses('text')}`}>
                 {typeof totalPrice === 'number' ? `$${totalPrice.toFixed(2)}` : totalPrice}
                 {plan.billing && (
-                    <span className="text-base font-normal text-gray-500 dark:text-gray-400">
+                    <span className={`text-base font-normal text-gray-500 ${getDarkThemeClasses('sub_text7')}`}>
                         {plan.billing}
                     </span>
                 )}
             </div>
 
             {/* Description */}
-            <p className="text-gray-600 dark:text-gray-300 text-sm mb-6">{plan.description}</p>
+            <p className={`text-gray-600  ${getDarkThemeClasses('sub_text4')} text-sm mb-6`}>{plan.description}</p>
 
             {/* Add-ons Section */}
             {plan.addons && plan.addons.length > 0 && (
                 <div className="mb-6 space-y-3">
                     {plan.addons.map((addon) => (
                         <div key={addon.name} className="flex items-center justify-between text-sm">
-                            <label className="flex items-center cursor-pointer text-gray-900 dark:text-gray-300">
+                            <label className={`flex items-center cursor-pointer text-gray-900  ${getDarkThemeClasses('sub_text4')}`}>
                                 {/* Consistent Toggle Switch for Addons */}
                                 <div
-                                    className={`relative inline-flex items-center cursor-pointer ${addonStates[addon.name] ? 'bg-black dark:bg-[#3f3f3f]' : 'bg-gray-300'} rounded-full w-8 h-4 peer transition duration-200`} // Smaller size toggle for Addons
+                                    className={`relative inline-flex items-center cursor-pointer ${addonStates[addon.name] ? `bg-black ${getDarkThemeClasses('background3')}` : 'bg-gray-300'} rounded-full w-8 h-4 peer transition duration-200`} // Smaller size toggle for Addons
                                     onClick={() => handleAddonChange(addon.name)}
                                 >
                                     <span
@@ -99,7 +99,7 @@ export default function PricingCard({ plan, isYearly }: PricingCardProps) {
                                 </div>
                                 <span className="ml-2">{addon.name}</span>
                             </label>
-                            <span className="text-gray-900 dark:text-gray-300">{addon.price}</span>
+                            <span className={`text-gray-900  ${getDarkThemeClasses('sub_text4')}`}>{addon.price}</span>
                         </div>
                     ))}
                 </div>
@@ -108,12 +108,12 @@ export default function PricingCard({ plan, isYearly }: PricingCardProps) {
             {/* Features List */}
             <ul className="space-y-3 text-left mb-6">
                 {plan.features.map((feature) => (
-                    <li key={feature.name} className="flex items-center text-sm text-gray-900 dark:text-gray-300">
-                        <CheckIcon className="h-4 w-4 mr-2 text-gray-500 dark:text-gray-400 flex-shrink-0" />
+                    <li key={feature.name} className={`flex items-center text-sm text-gray-900  ${getDarkThemeClasses('sub_text4')}`}>
+                        <CheckIcon className={`h-4 w-4 mr-2 text-gray-500 ${getDarkThemeClasses('sub_text7')} flex-shrink-0`} />
                         <span>
                             {feature.name}
                             {feature.details && (
-                                <span className="text-gray-500 dark:text-gray-400 ml-1">({feature.details})</span>
+                                <span className={`text-gray-500 ${getDarkThemeClasses('sub_text7')} ml-1`}>({feature.details})</span>
                             )}
                         </span>
                     </li>
@@ -124,15 +124,15 @@ export default function PricingCard({ plan, isYearly }: PricingCardProps) {
             {/* <button
                 className={`w-full py-2 px-4 rounded-lg mb-6 transition-colors duration-200 cursor-pointer ${plan.buttonVariant === 'primary'
                         ? 'bg-black text-white hover:bg-gray-800 dark:bg-gray-700 dark:hover:bg-gray-600'
-                        : 'bg-white text-black border border-gray-200 hover:bg-gray-50 dark:bg-gray-800 dark:text-white dark:border-gray-700 hover:bg-gray-100'
+                        : 'bg-white text-black border border-gray-200 hover:bg-gray-50 dark:bg-gray-800 ${getDarkThemeClasses('text')} dark:border-gray-700 hover:bg-gray-100'
                     }`}
             >
                 {plan.buttonText}
             </button> */}
             <button
                 className={`w-full py-2 px-4 rounded-lg mb-6 transition-colors duration-200 cursor-pointer ${plan.buttonVariant === 'primary'
-                        ? 'bg-black text-white hover:bg-gray-800 dark:bg-[#3f3f3f]  dark:hover:bg-zinc-800'
-                        : 'bg-white text-black border border-gray-200 dark:border-[#5f5f5f] hover:bg-gray-50 dark:bg-[#333131]  dark:text-white hover:bg-gray-100 dark:hover:bg-zinc-700'
+                        ? `bg-black text-white hover:bg-gray-800  ${getDarkThemeClasses('background3')}   ${getDarkThemeClasses('hover')}`
+                        : `bg-white text-black border border-gray-200  ${getDarkThemeClasses('border')} hover:bg-gray-50  ${getDarkThemeClasses('background2')} ${getDarkThemeClasses('text')} hover:bg-gray-100  ${getDarkThemeClasses('hover3')}`
                     }`}
             >
                 {plan.buttonText}

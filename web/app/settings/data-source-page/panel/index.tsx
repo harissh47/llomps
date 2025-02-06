@@ -9,7 +9,7 @@ import ConfigItem from './config-item'
 
 import s from './style.module.css'
 import { DataSourceType } from './types'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   type: DataSourceType
   isConfigured: boolean
@@ -41,24 +41,24 @@ const Panel: FC<Props> = ({
     // <div className='mb-2 border-[0.5px] border-gray-200 bg-gray-50 rounded-xl'>
     //   <div className='flex items-center px-3 py-[9px]'>
 
-      <div className='mb-2 border-[0.5px] border-gray-200 bg-gray-50 rounded-xl dark:bg-[#1A1A1A] dark:border-2 dark:border-[#3F3F3F] dark:border-solid dark:rounded-xl dark:shadow-sm dark:hover:bg-zinc-800 cursor-pointer dark:text-white'>
-      <div className='flex items-center px-3 py-[9px] dark:bg-[#1A1A1A] dark:border-[#3F3F3F] dark:border-solid dark:rounded-xl dark:shadow-sm dark:hover:bg-zinc-800 cursor-pointer dark:text-white'>
-        <div className={cn(s[`${type}-icon`], 'w-8 h-8 mr-3 border border-gray-100 dark:border-[#5f5f5f] rounded-lg dark:bg-[#a1a6b2]')} />
+      <div className={`mb-2 border-[0.5px] border-gray-200 bg-gray-50 rounded-xl ${getDarkThemeClasses('background4')} border-2 ${getDarkThemeClasses('border')} border-solid rounded-xl shadow-sm ${getDarkThemeClasses('hover')} cursor-pointer ${getDarkThemeClasses('text')}`}>
+      <div className={`flex items-center px-3 py-[9px] ${getDarkThemeClasses('background4')} ${getDarkThemeClasses('border')} border-solid rounded-xl shadow-sm ${getDarkThemeClasses('hover')} cursor-pointer ${getDarkThemeClasses('text')}`}>
+        <div className={cn(s[`${type}-icon`], `w-8 h-8 mr-3 border border-gray-100 ${getDarkThemeClasses('border')} rounded-lg  ${getDarkThemeClasses('background5')}`)} />
         <div className='grow'>
           <div className='flex items-center h-5'>
             {/* <div className='text-sm font-medium text-gray-800'>{t(`common.dataSource.${type}.title`)}</div> */}
-            <div className='text-sm font-medium text-gray-800 dark:text-white'>{t(`common.dataSource.${type}.title`)}</div>
+            <div className={`text-sm font-medium text-gray-800 ${getDarkThemeClasses('text')}`}>{t(`common.dataSource.${type}.title`)}</div>
             {isWebsite && (
               // <div className='ml-1 leading-[18px] px-1.5 rounded-md bg-white border border-gray-100 text-xs font-medium text-gray-700'>
-              <div className='ml-1 leading-[18px] px-1.5 rounded-md bg-white dark:bg-[#202020] border border-gray-100 dark:border-[#5F5F5F] text-xs font-medium text-gray-700 dark:text-[#FCFCFC]'>
-                <span className='text-gray-500 dark:text-[#A1A6B2]'>{t('common.dataSource.website.with')}</span> 🔥 FireCrawl
+              <div className={`ml-1 leading-[18px] px-1.5 rounded-md bg-white  ${getDarkThemeClasses('main_background')} border border-gray-100 ${getDarkThemeClasses('border')} text-xs font-medium text-gray-700  ${getDarkThemeClasses('sub_text1')}`}>
+                <span className={`text-gray-500 ${getDarkThemeClasses('sub_text3')}`}>{t('common.dataSource.website.with')}</span> 🔥 FireCrawl
               </div>
             )}
           </div>
           {
             !isConfigured && (
               // <div className='leading-5 text-xs text-gray-500'>
-                <div className='leading-5 text-xs text-gray-500 dark:text-white'>
+                <div className={`leading-5 text-xs text-gray-500 ${getDarkThemeClasses('text')}`}>
                 {t(`common.dataSource.${type}.description`)}
               </div>
             )
@@ -84,7 +84,7 @@ const Panel: FC<Props> = ({
                   <>
                     {isSupportList && <div
                       className={
-                        `flex items-center px-3 py-1 min-h-7 bg-white dark:bg-[#3f3f3f] border-[0.5px] border-gray-200 dark:border-[#5f5f5f] -xs font-medium text-primary-600 rounded-md
+                        `flex items-center px-3 py-1 min-h-7 bg-white ${getDarkThemeClasses('background3')} border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} -xs font-medium text-primary-600 rounded-md
                   ${!readonly ? 'cursor-pointer' : 'grayscale opacity-50 cursor-default'}`
                       }
                       onClick={onConfigure}
@@ -101,8 +101,8 @@ const Panel: FC<Props> = ({
         {isWebsite && !isConfigured && (
           <div
             className={
-              `flex items-center ml-3 px-3 h-7 bg-white dark:bg-[#3f3f3f] border border-gray-200 dark:border-[#5f5f5f] 
-        rounded-md text-xs font-medium text-gray-700 dark:text-white
+              `flex items-center ml-3 px-3 h-7 bg-white ${getDarkThemeClasses('background3')} border border-gray-200 ${getDarkThemeClasses('border')} 
+        rounded-md text-xs font-medium text-gray-700 ${getDarkThemeClasses('text')}
         ${!readonly ? 'cursor-pointer' : 'grayscale opacity-50 cursor-default'}`
             }
             onClick={onConfigure}

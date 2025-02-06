@@ -1,7 +1,7 @@
 import type { FC } from 'react'
 import { ChevronDown } from '@/app/components/base/icons/src/vender/line/arrows'
 import { CubeOutline } from '@/app/components/base/icons/src/vender/line/shapes'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type ModelTriggerProps = {
   open: boolean
   className?: string
@@ -13,9 +13,9 @@ const ModelTrigger: FC<ModelTriggerProps> = ({
   return (
     <div
       className={`
-        flex items-center px-2 h-8 rounded-lg bg-gray-100 dark:bg-[#3f3f3f] hover:bg-gray-200 dark:hover:bg-zinc-800 cursor-pointer
+        flex items-center px-2 h-8 rounded-lg bg-gray-100 ${getDarkThemeClasses('background2')}  hover:bg-gray-200 ${getDarkThemeClasses('hover')}  cursor-pointer
         ${className}
-        ${open && '!bg-gray-200 dark:!bg-zinc-800'}
+        ${open && `!bg-gray-200 ${getDarkThemeClasses('hover')} `}
       `}
     >
       <div className='grow flex items-center '>
