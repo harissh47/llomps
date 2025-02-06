@@ -33,10 +33,10 @@ const COLOR_TYPE_MAP = {
 const COMMON_COLOR_MAP = {
   label: '#9CA3AF',
   // splitLineLight: '#F3F4F6',
-  splitLineLight: '#616875',
+  splitLineLight: '#7C8291',
 
   // splitLineDark: '#E5E7EB',
-  splitLineDark: '#616875',
+  splitLineDark: '#7C8291',
 
 }
 

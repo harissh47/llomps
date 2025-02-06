@@ -5,7 +5,7 @@ import {
 import Tooltip from '../base/tooltip'
 import AppIcon from '../base/app-icon'
 import { randomString } from '@/utils'
-
+import { getDarkThemeClasses } from '@/app/theme'
 export type IAppBasicProps = {
   iconType?: 'app' | 'api' | 'dataset' | 'webapp' | 'notion'
   icon?: string
@@ -83,7 +83,7 @@ export default function AppBasic({ icon, icon_background, name, type, hoverTip, 
 
       }
       {mode === 'expand' && <div className="group">
-        <div className={` dark:text-white flex flex-row items-center text-sm font-semibold text-gray-700 group-hover:text-gray-900 dark:group-hover:text-[#e0dede] break-all ${textStyle?.main ?? ''}`}>
+        <div className={`${getDarkThemeClasses('text')} flex flex-row items-center text-sm font-semibold text-gray-700 group-hover:text-gray-900  ${getDarkThemeClasses('grouphovertext2')} break-all ${textStyle?.main ?? ''}`}>
         {/* <div className={`flex flex-row items-center text-sm font-semibold text-gray-700 group-hover:text-gray-900 break-all ${textStyle?.main ?? ''}`}> */}
           {name}
           {hoverTip
@@ -92,7 +92,7 @@ export default function AppBasic({ icon, icon_background, name, type, hoverTip, 
             </Tooltip>}
         </div>
         {/* <div className={`text-xs font-normal text-gray-500 group-hover:text-gray-700 break-all ${textStyle?.extra ?? ''}`}>{type}</div> */}
-        <div className={`dark:text-white text-xs font-normal text-gray-500 group-hover:text-gray-700 dark:group-hover:text-[#a8a8a8] break-all ${textStyle?.extra ?? ''}`}>{type}</div>
+        <div className={`${getDarkThemeClasses('text')} text-xs font-normal text-gray-500 group-hover:text-gray-700 ${getDarkThemeClasses('grouphovertext1')} break-all ${textStyle?.extra ?? ''}`}>{type}</div>
       </div>}
     </div>
   )

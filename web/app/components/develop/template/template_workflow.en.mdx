@@ -1,32 +1,32 @@
 import { CodeGroup } from '../code.tsx'
 import { Row, Col, Properties, Property, Heading, SubProperty, Paragraph } from '../md.tsx'
-
+ 
 <div className='text-black text-2xl dark:text-white font-semibold'>Workflow App API</div>
-
+ 
 Workflow applications offers non-session support and is ideal for translation, article writing, summarization AI, and more.
-
+ 
 <div>
-  <div className='text-black text-base dark:text-white '>Base URL</div>
-  <CodeGroup title="Code" targetCode={props.appDetail.api_base_url}>
+<div className='text-black text-base dark:text-white '>Base URL</div>
+<CodeGroup title="Code" targetCode={props.appDetail.api_base_url}>
     ```javascript
     ```
-  </CodeGroup>
-
+</CodeGroup>
+ 
   <div className='text-black text-base dark:text-white '>Authentication</div>
-
+ 
   The Service API uses `API-Key` authentication.Strongly recommend storing your API Key on the server-side, not shared or stored on the client-side, to avoid possible API-Key leakage that can lead to serious consequences.
   For all API requests, include your API Key in the `Authorization` HTTP Header, as shown below:
-
+ 
   <CodeGroup title="Code">
     ```javascript
       Authorization: Bearer {API_KEY}
-
+ 
     ```
-  </CodeGroup>
+</CodeGroup>
 </div>
-
+ 
 ---
-
+ 
 <Heading
   url='/workflows/run'
   method='POST'
@@ -34,9 +34,9 @@ Workflow applications offers non-session support and is ideal for translation, a
   name='#Execute-Workflow'
 />
 <Row>
-  <Col>
+<Col>
     Execute workflow, cannot be executed without a published workflow.
-
+ 
     <div className='text-black text-base dark:text-white '>Request Body</div>
       - `inputs` (object) Required
         Allows the entry of various variable values defined by the App.
@@ -46,7 +46,7 @@ Workflow applications offers non-session support and is ideal for translation, a
         The mode of response return, supporting:
         - `streaming` Streaming mode (recommended), implements a typewriter-like output through SSE ([Server-Sent Events](https://developer.mozilla.org/en-US/docs/Web/API/Server-sent_events/Using_server-sent_events)).
         - `blocking` Blocking mode, returns result after execution is complete. (Requests may be interrupted if the process is long)
-        <i>Due to Cloudflare restrictions, the request will be interrupted without a return after 100 seconds.</i>
+<i>Due to Cloudflare restrictions, the request will be interrupted without a return after 100 seconds.</i>
       - `user` (string) Required
         User identifier, used to define the identity of the end-user for retrieval and statistics.
         Should be uniquely defined by the developer within the application.
@@ -56,11 +56,11 @@ Workflow applications offers non-session support and is ideal for translation, a
           - `transfer_method` (string) Transfer method, `remote_url` for image URL / `local_file` for file upload
           - `url` (string) Image URL (when the transfer method is `remote_url`)
           - `upload_file_id` (string) Uploaded file ID, which must be obtained by uploading through the File Upload API in advance (when the transfer method is `local_file`)
-
+ 
     <div className='text-black text-base dark:text-white '>Response</div>
     When `response_mode` is `blocking`, return a CompletionResponse object.
     When `response_mode` is `streaming`, return a ChunkCompletionResponse stream.
-
+ 
     <div className='text-black text-base dark:text-white '>CompletionResponse</div>
     Returns the App result, `Content-Type` is `application/json`.
     - `workflow_run_id` (string) Unique ID of workflow execution
@@ -76,15 +76,15 @@ Workflow applications offers non-session support and is ideal for translation, a
       - `total_steps` (int) default 0
       - `created_at` (timestamp) start time
       - `finished_at` (timestamp) end time
-
+ 
     <div className='text-black text-base dark:text-white '>ChunkCompletionResponse</div>
     Returns the stream chunks outputted by the App, `Content-Type` is `text/event-stream`.
     Each streaming chunk starts with `data:`, separated by two newline characters `\n\n`, as shown below:
-    <CodeGroup>
+<CodeGroup>
     ```streaming {{ title: 'Response' }}
     data: {"event": "message", "task_id": "900bbd43-dc0b-4383-a372-aa6e6c414227", "id": "663c5084-a254-4040-8ad3-51f2a3c1a77c", "answer": "Hi", "created_at": 1705398420}\n\n
     ```
-    </CodeGroup>
+</CodeGroup>
     The structure of the streaming chunks varies depending on the `event`:
     - `event: workflow_started` workflow starts execution
       - `task_id` (string) Task ID, used for request tracking and the below Stop Generate API
@@ -98,7 +98,7 @@ Workflow applications offers non-session support and is ideal for translation, a
     - `event: node_started` node execution started
       - `task_id` (string) Task ID, used for request tracking and the below Stop Generate API
       - `workflow_run_id` (string) Unique ID of workflow execution
-      - `event` (string) fixed to `node_started`
+     - `event` (string) fixed to `node_started`
       - `data` (object) detail
         - `id` (string) Unique ID of workflow execution
         - `node_id` (string) ID of node
@@ -146,7 +146,7 @@ Workflow applications offers non-session support and is ideal for translation, a
         - `created_at` (timestamp) start time
         - `finished_at` (timestamp) end time
     - `event: ping` Ping event every 10 seconds to keep the connection alive.
-
+ 
     <div className='text-black text-base dark:text-white '>Errors</div>
     - 400, `invalid_param`, abnormal parameter input
     - 400, `app_unavailable`, App configuration unavailable
@@ -155,11 +155,11 @@ Workflow applications offers non-session support and is ideal for translation, a
     - 400, `model_currently_not_support`, current model unavailable
     - 400, `workflow_request_error`, workflow execution failed
     - 500, internal server error
-
+ 
   </Col>
-  <Col sticky>
-     <CodeGroup title="Request" tag="POST" label="/workflows/run" targetCode={`curl -X POST '${props.appDetail.api_base_url}/workflows/run' \\\n--header 'Authorization: Bearer {api_key}' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    "inputs": ${JSON.stringify(props.inputs)},\n    "response_mode": "streaming",\n    "user": "abc-123"\n}'\n`}>
-
+<Col sticky>
+<CodeGroup title="Request" tag="POST" label="/workflows/run" targetCode={`curl -X POST '${props.appDetail.api_base_url}/workflows/run' \\\n--header 'Authorization: Bearer {api_key}' \\\n--header 'Content-Type: application/json' \\\n--data-raw '{\n    "inputs": ${JSON.stringify(props.inputs)},\n    "response_mode": "streaming",\n    "user": "abc-123"\n}'\n`}>
+ 
     ```bash {{ title: 'cURL' }}
     curl -X POST '${props.appDetail.api_base_url}/workflows/run' \
     --header 'Authorization: Bearer {api_key}' \
@@ -170,10 +170,10 @@ Workflow applications offers non-session support and is ideal for translation, a
         "user": "abc-123"
     }'
     ```
-
+ 
     </CodeGroup>
-    <div className='text-black text-base dark:text-white '>Blocking Mode</div>
-    <CodeGroup title="Response">
+<div className='text-black text-base dark:text-white '>Blocking Mode</div>
+<CodeGroup title="Response">
     ```json {{ title: 'Response' }}
     {
         "workflow_run_id": "djflajgkldjgd",
@@ -194,22 +194,22 @@ Workflow applications offers non-session support and is ideal for translation, a
         }
     }
     ```
-    </CodeGroup>
-    <div className='text-black text-base dark:text-white '>Streaming Mode</div>
-    <CodeGroup title="Response">
+</CodeGroup>
+<div className='text-black text-base dark:text-white '>Streaming Mode</div>
+<CodeGroup title="Response">
     ```streaming {{ title: 'Response' }}
       data: {"event": "workflow_started", "task_id": "5ad4cb98-f0c7-4085-b384-88c403be6290", "workflow_run_id": "5ad498-f0c7-4085-b384-88cbe6290", "data": {"id": "5ad498-f0c7-4085-b384-88cbe6290", "workflow_id": "dfjasklfjdslag", "sequence_number": 1, "created_at": 1679586595}}
       data: {"event": "node_started", "task_id": "5ad4cb98-f0c7-4085-b384-88c403be6290", "workflow_run_id": "5ad498-f0c7-4085-b384-88cbe6290", "data": {"id": "5ad498-f0c7-4085-b384-88cbe6290", "node_id": "dfjasklfjdslag", "node_type": "start", "title": "Start", "index": 0, "predecessor_node_id": "fdljewklfklgejlglsd", "inputs": {}, "created_at": 1679586595}}
       data: {"event": "node_finished", "task_id": "5ad4cb98-f0c7-4085-b384-88c403be6290", "workflow_run_id": "5ad498-f0c7-4085-b384-88cbe6290", "data": {"id": "5ad498-f0c7-4085-b384-88cbe6290", "node_id": "dfjasklfjdslag", "node_type": "start", "title": "Start", "index": 0, "predecessor_node_id": "fdljewklfklgejlglsd", "inputs": {}, "outputs": {}, "status": "succeeded", "elapsed_time": 0.324, "execution_metadata": {"total_tokens": 63127864, "total_price": 2.378, "currency": "USD"},  "created_at": 1679586595}}
       data: {"event": "workflow_finished", "task_id": "5ad4cb98-f0c7-4085-b384-88c403be6290", "workflow_run_id": "5ad498-f0c7-4085-b384-88cbe6290", "data": {"id": "5ad498-f0c7-4085-b384-88cbe6290", "workflow_id": "dfjasklfjdslag", "outputs": {}, "status": "succeeded", "elapsed_time": 0.324, "total_tokens": 63127864, "total_steps": "1", "created_at": 1679586595, "finished_at": 1679976595}}
     ```
-    </CodeGroup>
-
+</CodeGroup>
+ 
   </Col>
 </Row>
-
+ 
 ---
-
+ 
 <Heading
   url='/workflows/:task_id/stop'
   method='POST'
@@ -217,19 +217,19 @@ Workflow applications offers non-session support and is ideal for translation, a
   name='#stop-generatebacks'
 />
 <Row>
-  <Col>
+<Col>
   Only supported in streaming mode.
-  <div className='text-black text-base dark:text-white '>Path</div>
+<div className='text-black text-base dark:text-white '>Path</div>
   - `task_id` (string) Task ID, can be obtained from the streaming chunk return
-  <div className='text-black text-base dark:text-white '>Request Body</div>
+<div className='text-black text-base dark:text-white '>Request Body</div>
   - `user` (string) Required
     User identifier, used to define the identity of the end-user, must be consistent with the user passed in the send message interface.
-  <div className='text-black text-base dark:text-white '>Response</div>
+<div className='text-black text-base dark:text-white '>Response</div>
   - `result` (string) Always returns "success"
-  </Col>
-  <Col sticky>
-  <div className='text-black text-base dark:text-white '>Request Example</div>
-  <CodeGroup title="Request" tag="POST" label="/workflows/:task_id/stop" targetCode={`curl -X POST '${props.appDetail.api_base_url}/workflows/:task_id/stop' \\\n-H 'Authorization: Bearer {api_key}' \\\n-H 'Content-Type: application/json' \\\n--data-raw '{"user": "abc-123"}'`}>
+</Col>
+<Col sticky>
+<div className='text-black text-base dark:text-white '>Request Example</div>
+<CodeGroup title="Request" tag="POST" label="/workflows/:task_id/stop" targetCode={`curl -X POST '${props.appDetail.api_base_url}/workflows/:task_id/stop' \\\n-H 'Authorization: Bearer {api_key}' \\\n-H 'Content-Type: application/json' \\\n--data-raw '{"user": "abc-123"}'`}>
     ```bash {{ title: 'cURL' }}
     curl -X POST '${props.appDetail.api_base_url}/workflows/:task_id/stop' \
     -H 'Authorization: Bearer {api_key}' \
@@ -238,21 +238,20 @@ Workflow applications offers non-session support and is ideal for translation, a
         "user": "abc-123"
     }'
     ```
-    </CodeGroup>
-
+</CodeGroup>
+ 
     <div className='text-black text-base dark:text-white '>Response Example</div>
-    <CodeGroup title="Response">
+<CodeGroup title="Response">
     ```json {{ title: 'Response' }}
     {
       "result": "success"
     }
     ```
-    </CodeGroup>
-  </Col>
+</CodeGroup>
+</Col>
 </Row>
-
+ 
 ---
-
 <Heading
   url='/parameters'
   method='GET'
@@ -260,17 +259,17 @@ Workflow applications offers non-session support and is ideal for translation, a
   name='#parameters'
 />
 <Row>
-  <Col>
+<Col>
     Used at the start of entering the page to obtain information such as features, input parameter names, types, and default values.
-
+ 
      <div className='text-black text-base dark:text-white '>Query</div>
-
+ 
     <Properties>
-      <Property name='user' type='string' key='user'>
+<Property name='user' type='string' key='user'>
           User identifier, defined by the developer's rules, must be unique within the application.
-      </Property>
-    </Properties>
-
+</Property>
+</Properties>
+ 
     <div className='text-black text-base dark:text-white '>Response</div>
     - `user_input_form` (array[object]) User input form configuration
       - `text-input` (object) Text input control
@@ -297,19 +296,19 @@ Workflow applications offers non-session support and is ideal for translation, a
         - `transfer_methods` (array[string]) List of transfer methods, remote_url, local_file, must choose one
     - `system_parameters` (object) System parameters
       - `image_file_size_limit` (string) Image file upload size limit (MB)
-
+ 
   </Col>
-  <Col sticky>
-
+<Col sticky>
+ 
     <CodeGroup title="Request" tag="GET" label="/parameters" targetCode={` curl -X GET '${props.appDetail.api_base_url}/parameters?user=abc-123'`}>
-
+ 
     ```bash {{ title: 'cURL' }}
     curl -X GET '${props.appDetail.api_base_url}/parameters?user=abc-123' \
     --header 'Authorization: Bearer {api_key}'
     ```
-
+ 
     </CodeGroup>
-
+ 
     <CodeGroup title="Response">
     ```json {{ title: 'Response' }}
     {
@@ -339,6 +338,6 @@ Workflow applications offers non-session support and is ideal for translation, a
       }
     }
     ```
-    </CodeGroup>
-  </Col>
+</CodeGroup>
+</Col>
 </Row>

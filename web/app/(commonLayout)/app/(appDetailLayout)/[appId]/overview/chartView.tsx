@@ -9,7 +9,7 @@ import type { Item } from '@/app/components/base/select'
 import { SimpleSelect } from '@/app/components/base/select'
 import { TIME_PERIOD_LIST } from '@/app/components/app/log/filter'
 import { useStore as useAppStore } from '@/app/components/app/store'
-
+import { getDarkThemeClasses } from '@/app/theme'
 dayjs.extend(quarterOfYear)
 
 const today = dayjs()
@@ -94,7 +94,7 @@ export default function ChartView({ appId }: IChartViewProps) {
 // }
     <div>
     <div className='flex flex-row items-center mt-8 mb-4 text-gray-900 text-base'>
-    <span className='mr-3 dark:text-white'>{t('appOverview.analysis.title')}</span>
+    <span className={`mr-3 ${getDarkThemeClasses('text')}`}>{t('appOverview.analysis.title')}</span>
     {/* <span className='mr-3'>{t('appOverview.analysis.title')}</span> */}
 <SimpleSelect
   items={TIME_PERIOD_LIST.map(item => ({ value: item.value, name: t(`appLog.filter.period.${item.name}`) }))}

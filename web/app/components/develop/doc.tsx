@@ -10,7 +10,7 @@ import TemplateChatEn from './template/template_chat.en.mdx'
 import TemplateChatZh from './template/template_chat.zh.mdx'
 import I18n from '@/context/i18n'
 import { LanguagesSupported } from '@/i18n/language'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type IDocProps = {
   appDetail: any
 }
@@ -26,7 +26,7 @@ const Doc = ({ appDetail }: IDocProps) => {
 
   return (
     // <article className="prose prose-xl" >
-    <article className="prose prose-xl dark:prose-h1:text-white dark:prose-h3:text-white dark:prose-p:text-[#FCFCFC] dark:prose-strong:text-[#FCFCFC]" >
+    <article className={`prose prose-xl ${getDarkThemeClasses('prose')}`} >
       {(appDetail?.mode === 'chat' || appDetail?.mode === 'agent-chat') && (
         locale !== LanguagesSupported[1] ? <TemplateChatEn appDetail={appDetail} variables={variables} inputs={inputs} /> : <TemplateChatZh appDetail={appDetail} variables={variables} inputs={inputs} />
       )}

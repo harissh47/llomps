@@ -9,7 +9,7 @@ import {
 } from 'react'
 import { Tab } from '@headlessui/react'
 import classNames from 'classnames'
- 
+import { getDarkThemeClasses } from '@/app/theme'
 import { Tag } from './tag'
  
 const languageNames = {
@@ -69,7 +69,7 @@ function CopyButton({ code }: { code: string }) {
         'group/button absolute top-3.5 right-4 overflow-hidden rounded-full py-1 pl-2 pr-3 text-2xs font-medium opacity-0 backdrop-blur transition focus:opacity-100 group-hover:opacity-100',
         copied
           ? 'bg-emerald-400/10 ring-1 ring-inset ring-emerald-400/20'
-          : 'bg-white/5 hover:bg-white/7.5 dark:bg-white/2.5 dark:hover:bg-white/5',
+          : 'bg-white/5 hover:bg-white/7.5 ',
       )}
       onClick={() => {
         window.navigator.clipboard.writeText(code).then(() => {
@@ -105,7 +105,7 @@ function CodePanelHeader({ tag, label }: { tag: string; label: string }) {
     return null
  
   return (
-    <div className="flex h-9 items-center gap-2 border-y border-t-transparent border-b-white/7.5 bg-zinc-900 bg-white/2.5 px-4 dark:border-b-white/5 dark:bg-white/1">
+    <div className={`flex h-9 items-center gap-2 border-y border-t-transparent border-b-white/7.5 ${getDarkThemeClasses('borderb')} bg-zinc-900 bg-white/2.5 px-4 `}>
       {tag && (
         <div className="flex dark">
           <Tag variant="small">{tag}</Tag>
@@ -132,7 +132,7 @@ function CodePanel({ tag, label, code, children, targetCode }: ICodePanelProps) 
   const child = Children.only(children)
  
   return (
-    <div className="group dark:bg-white/2.5 ">
+    <div className="group bg-white/2.5 ">
       <CodePanelHeader
         tag={child.props.tag ?? tag}
         label={child.props.label ?? label}
@@ -155,7 +155,7 @@ function CodeGroupHeader({ title, children, selectedIndex }: IChildrenProps) {
     return null
  
   return (
-    <div className="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 dark:border-zinc-800 dark:bg-transparent ">
+    <div className="flex min-h-[calc(theme(spacing.12)+1px)] flex-wrap items-start gap-x-4 border-b border-zinc-700 bg-zinc-800 px-4 ${getDarkThemeClasses('border')} bg-transparent ">
       {title && (
         <h3 className="pt-3 mr-auto text-xs font-semibold text-white ">
           {title}
@@ -271,7 +271,7 @@ export function CodeGroup({ children, title, inputs, targetCode, ...props }: ICh
     <CodeGroupContext.Provider value={true}>
       <Container
         {...containerProps}
-        className="my-6 overflow-hidden shadow-md not-prose rounded-2xl bg-zinc-900 dark:ring-1 dark:ring-white/10 "
+        className={`my-6 overflow-hidden shadow-md not-prose rounded-2xl bg-zinc-900 ${getDarkThemeClasses('ring1')} `}
       >
         <CodeGroupHeader title={title} {...headerProps}>
           {children}

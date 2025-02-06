@@ -5,7 +5,7 @@ import { t } from 'i18next'
 import s from './style.module.css'
 import { randomString } from '@/utils'
 import Tooltip from '@/app/components/base/tooltip'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type IInputCopyProps = {
   value?: string
   className?: string
@@ -37,7 +37,7 @@ const InputCopy = ({
 
   return (
     // <div className={`flex rounded-lg bg-gray-50 hover:bg-gray-50 py-2 items-center ${className}`}>
-      <div className={`flex rounded-lg bg-gray-50 hover:bg-gray-50 py-2 items-center dark:text-white dark:bg-[#3f3f3f] ${className}`}>
+      <div className={`flex rounded-lg bg-gray-50 hover:bg-gray-50 py-2 items-center ${getDarkThemeClasses('text')} ${getDarkThemeClasses('background3')} ${className}`}>
       <div className="flex items-center flex-grow h-5">
         {children}
         <div className='flex-grow bg-gray-50 text-[13px] relative h-full'>
@@ -47,7 +47,7 @@ const InputCopy = ({
             className='z-10'
           >
             {/* <div className='absolute top-0 left-0 w-full pl-2 pr-2 truncate cursor-pointer r-0' onClick={() => { */}
-               <div className='absolute top-0 left-0 w-full pl-2 pr-2 truncate cursor-pointer r-0 dark:bg-[#3f3f3f]' onClick={() => {
+               <div className={`absolute top-0 left-0 w-full pl-2 pr-2 truncate cursor-pointer r-0 ${getDarkThemeClasses('background3')}`} onClick={() => {
               copy(value)
               setIsCopied(true)
             }}>{value}</div>
@@ -61,7 +61,7 @@ const InputCopy = ({
         >
           <div className="px-0.5 flex-shrink-0">
             {/* <div className={`box-border w-[30px] h-[30px] flex items-center justify-center rounded-lg hover:bg-gray-100 cursor-pointer ${s.copyIcon} ${isCopied ? s.copied : ''}`} onClick={() => { */}
-            <div className={`box-border w-[30px] h-[30px] flex items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 cursor-pointer ${s.copyIcon} ${isCopied ? s.copied : ''}`} onClick={() => {
+            <div className={`box-border w-[30px] h-[30px] flex items-center justify-center rounded-lg hover:bg-gray-100 ${getDarkThemeClasses('hover')} cursor-pointer ${s.copyIcon} ${isCopied ? s.copied : ''}`} onClick={() => {
 
               copy(value)
               setIsCopied(true)
