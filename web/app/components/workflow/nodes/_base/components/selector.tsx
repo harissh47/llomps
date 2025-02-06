@@ -5,6 +5,7 @@ import { useBoolean, useClickAway } from 'ahooks'
 import cn from 'classnames'
 import { ChevronSelectorVertical } from '@/app/components/base/icons/src/vender/line/arrows'
 import { Check } from '@/app/components/base/icons/src/vender/line/general'
+import { getDarkThemeClasses } from '@/app/theme'
 type Item = {
   value: string
   label: string
@@ -63,16 +64,16 @@ const TypeSelector: FC<Props> = ({
           <div
             onClick={toggleShow}
             // className={cn(showOption && 'bg-black/5', 'flex items-center h-5 pl-1 pr-0.5 rounded-md text-xs font-semibold text-gray-700 cursor-pointer hover:bg-black/5')}>
-            className={cn(showOption && 'bg-black/5', 'flex items-center h-5 pl-1 pr-0.5 rounded-md text-xs font-semibold text-gray-700 dark:text-white cursor-pointer hover:bg-black/5 dark:hover:bg-zinc-800')}>
+            className={cn(showOption && 'bg-black/5', `flex items-center h-5 pl-1 pr-0.5 rounded-md text-xs font-semibold text-gray-700 ${getDarkThemeClasses('text')} cursor-pointer hover:bg-black/5 ${getDarkThemeClasses('hover')}`)}>
             {/* <div className={cn(triggerClassName, 'text-sm font-semibold', uppercase && 'uppercase', noValue && 'text-gray-400')}>{!noValue ? item?.label : placeholder}</div> */}
-            <div className={cn(triggerClassName, 'text-sm font-semibold dark:text-white', uppercase && 'uppercase', noValue && 'text-gray-400')}>{!noValue ? item?.label : placeholder}</div>
+            <div className={cn(triggerClassName, `text-sm font-semibold ${getDarkThemeClasses('text')}`, uppercase && 'uppercase', noValue && 'text-gray-400')}>{!noValue ? item?.label : placeholder}</div>
             {!readonly && <DropDownIcon className='w-3 h-3 ' />}
           </div>
         )}
 
       {(showOption && !readonly) && (
         // <div className={cn(popupClassName, 'absolute z-10 top-[24px] w-[120px]  p-1 border border-gray-200 shadow-lg rounded-lg bg-white')}>
-        <div className={cn(popupClassName, 'absolute z-10 top-[24px] w-[120px]  p-1 border border-gray-200 dark:border-[#5F5F5F] shadow-lg rounded-lg bg-white dark:bg-[#3e3e3e]')}>
+        <div className={cn(popupClassName, `absolute z-10 top-[24px] w-[120px]  p-1 border border-gray-200 ${getDarkThemeClasses('border')} shadow-lg rounded-lg bg-white ${getDarkThemeClasses('background1')}`)}>
           {list.map(item => (
             <div
               key={item.value}
@@ -81,7 +82,7 @@ const TypeSelector: FC<Props> = ({
                 onChange(item.value)
               }}
               // className={cn(itemClassName, uppercase && 'uppercase', 'flex items-center h-[30px] justify-between min-w-[44px] px-3 rounded-lg cursor-pointer text-[13px] font-medium text-gray-700 hover:bg-gray-50')}
-              className={cn(itemClassName, uppercase && 'uppercase', 'flex items-center h-[30px] justify-between min-w-[44px] px-3 rounded-lg cursor-pointer text-[13px] font-medium text-gray-700 dark:text-white hover:bg-gray-50 hover:dark:bg-zinc-800')}
+              className={cn(itemClassName, uppercase && 'uppercase', `flex items-center h-[30px] justify-between min-w-[44px] px-3 rounded-lg cursor-pointer text-[13px] font-medium text-gray-700 ${getDarkThemeClasses('text')} hover:bg-gray-50 ${getDarkThemeClasses('hover')}`)}
             >
               <div>{item.label}</div>
               {showChecked && item.value === value && <Check className='text-primary-600 w-4 h-4' />}

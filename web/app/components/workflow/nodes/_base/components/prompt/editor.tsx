@@ -28,7 +28,7 @@ import CodeEditor from '@/app/components/workflow/nodes/_base/components/editor/
 import Switch from '@/app/components/base/switch'
 import { Jinja } from '@/app/components/base/icons/src/vender/workflow'
 import { useStore } from '@/app/components/workflow/store'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   className?: string
   headerClassName?: string
@@ -114,17 +114,19 @@ const Editor: FC<Props> = ({
   return (
     <Wrap className={cn(className, wrapClassName)} style={wrapStyle} isInNode isExpand={isExpand}>
       {/* <div ref={ref} className={cn(isFocus ? s.gradientBorder : 'bg-gray-100', isExpand && 'h-full', '!rounded-[9px] p-0.5')}> */}
-      <div ref={ref} className={cn(isFocus ? s.gradientBorder : 'bg-gray-100 dark:bg-[#2C2C2C]', isExpand && 'h-full', '!rounded-[9px] p-0.5')}>
+      {/* <div ref={ref} className={cn(isFocus ? s.gradientBorder : 'bg-gray-100 dark:bg-[#2C2C2C]', isExpand && 'h-full', '!rounded-[9px] p-0.5')}> */}
+      <div ref={ref} className={cn(isFocus ? s.gradientBorder : `bg-gray-100 ${getDarkThemeClasses('background2')}`, isExpand && 'h-full', '!rounded-[9px] p-0.5')}>
         {/* <div className={cn(isFocus ? 'bg-gray-50' : 'bg-gray-100', isExpand && 'h-full flex flex-col', 'rounded-lg')}> */}
-        <div className={cn(isFocus ? 'bg-gray-50 dark:!bg-[#3e3e3e] overflow-hidden' : 'bg-gray-100 dark:!bg-[#2c2c2c]', isExpand && 'h-full flex flex-col', 'rounded-lg')}>
+        {/* <div className={cn(isFocus ? 'bg-gray-50 dark:!bg-[#3e3e3e] overflow-hidden' : 'bg-gray-100 dark:!bg-[#2c2c2c]', isExpand && 'h-full flex flex-col', 'rounded-lg')}> */}
+        <div className={cn(isFocus ? `bg-gray-50 ${getDarkThemeClasses('background1')} overflow-hidden` : `bg-gray-100 ${getDarkThemeClasses('background2')}`, isExpand && 'h-full flex flex-col', 'rounded-lg')}>
           {/* <div className={cn(headerClassName, 'pt-1 pl-3 pr-2 flex justify-between h-6 items-center dark:bg-[#3F3F3F] ')}> */}
                    <div className={cn(headerClassName, 'pt-1 pl-3 pr-2 flex justify-between h-6 items-center ')}>
 
             {/* <div className='leading-4 text-xs font-semibold text-gray-700 uppercase'>{title}</div> */}
-            <div className='leading-4 text-xs font-semibold text-gray-700 dark:text-[#FCFCFC] uppercase'>{title}</div>
+            <div className={`leading-4 text-xs font-semibold text-gray-700 ${getDarkThemeClasses('sub_text1')} uppercase`}>{title}</div>
             <div className='flex items-center'>
               {/* <div className='leading-[18px] text-xs font-medium text-gray-500'>{value?.length || 0}</div> */}
-              <div className='leading-[18px] text-xs font-medium text-gray-500 dark:text-[#FCFCFC]'>{value?.length || 0}</div>
+              <div className={`leading-[18px] text-xs font-medium text-gray-500 ${getDarkThemeClasses('sub_text1')}`}>{value?.length || 0}</div>
               <div className='w-px h-3 ml-2 mr-2 bg-gray-200'></div>
               {/* Operations */}
               <div className='flex items-center space-x-2'>
@@ -140,7 +142,7 @@ const Editor: FC<Props> = ({
                     hideArrow
                   >
                     {/* <div className={cn(editionType === EditionType.jinja2 && 'border-black/5 bg-white', 'flex h-[22px] items-center px-1.5 rounded-[5px] border border-transparent hover:border-black/5 space-x-0.5')}> */}
-                    <div className={cn(editionType === EditionType.jinja2 && 'border-black/5 bg-white dark:bg-[#5F5F5F]', 'flex h-[22px] items-center px-1.5 rounded-[5px] border border-transparent hover:border-black/5 dark:hover:border-[#5F5F5F] space-x-0.5')}>
+                    <div className={cn(editionType === EditionType.jinja2 && `border-black/5 bg-white ${getDarkThemeClasses('background6')}`, `flex h-[22px] items-center px-1.5 rounded-[5px] border border-transparent hover:border-black/5 ${getDarkThemeClasses('borderhover')} space-x-0.5`)}>
                       <Jinja className='w-6 h-3 text-gray-300' />
                       <Switch
                         size='sm'

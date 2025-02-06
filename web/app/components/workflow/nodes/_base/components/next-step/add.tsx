@@ -11,7 +11,7 @@ import type {
   CommonNodeType,
   OnSelectBlock,
 } from "@/app/components/workflow/types";
-
+import { getDarkThemeClasses } from "@/app/theme";
 type AddProps = {
   nodeId: string;
   nodeData: CommonNodeType;
@@ -54,9 +54,9 @@ const Add = ({ nodeId, nodeData, sourceHandle, branchName }: AddProps) => {
           //   ${nodesReadOnly && '!cursor-not-allowed'}
           // `}
           className={`
-          relative flex items-center px-2 h-9 rounded-lg border border-dashed border-gray-200 dark:border-[#5f5f5f] bg-gray-50 dark:bg-[#383838]
-          hover:bg-gray-100 dark:hover:bg-zinc-800 text-xs text-gray-500 dark:text-[#FCFCFC] cursor-pointer
-          ${open && "!bg-gray-100 dark:!bg-[#2c2c2c]"}
+          relative flex items-center px-2 h-9 rounded-lg border border-dashed border-gray-200 ${getDarkThemeClasses('border')} bg-gray-50 ${getDarkThemeClasses('background3')}
+          hover:bg-gray-100 ${getDarkThemeClasses('hover')} text-xs text-gray-500 ${getDarkThemeClasses('sub_text1')} cursor-pointer
+          ${open && `!bg-gray-100 ${getDarkThemeClasses('background2')}`}
           ${nodesReadOnly && "!cursor-not-allowed"}
         `}
         >
@@ -66,12 +66,12 @@ const Add = ({ nodeId, nodeData, sourceHandle, branchName }: AddProps) => {
               title={branchName.toLocaleUpperCase()}
             >
               {/* <div className='inline-block px-0.5 rounded-[5px] bg-white truncate'>{branchName.toLocaleUpperCase()}</div> */}
-              <div className="inline-block px-0.5 rounded-[5px] bg-white dark:bg-[#383838] truncate">
+              <div className={`inline-block px-0.5 rounded-[5px] bg-white ${getDarkThemeClasses('background3')} truncate`}>
                 {branchName.toLocaleUpperCase()}
               </div>
             </div>
           )}
-          <div className="flex items-center justify-center mr-1.5 w-5 h-5 rounded-[5px] bg-gray-200 dark:bg-[#5f5f5f]">
+          <div className={`flex items-center justify-center mr-1.5 w-5 h-5 rounded-[5px] bg-gray-200 ${getDarkThemeClasses('background6')}`}>
             <Plus className="w-3 h-3" />
           </div>
           {t("workflow.panel.selectNextStep")}

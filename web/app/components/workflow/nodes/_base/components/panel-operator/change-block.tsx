@@ -14,7 +14,7 @@ import type {
   Node,
   OnSelectBlock,
 } from '@/app/components/workflow/types'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type ChangeBlockProps = {
   nodeId: string
   nodeData: Node['data']
@@ -48,7 +48,7 @@ const ChangeBlock = ({
   const renderTrigger = useCallback(() => {
     return (
       // <div className='flex items-center px-3 w-[232px] h-8 text-sm text-gray-700 rounded-lg cursor-pointer hover:bg-gray-50'>
-      <div className='flex items-center px-3 w-[232px] h-8 text-sm text-gray-700 dark:text-white rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-zinc-800'>
+      <div className={`flex items-center px-3 w-[232px] h-8 text-sm text-gray-700 ${getDarkThemeClasses('text')} rounded-lg cursor-pointer hover:bg-gray-50 ${getDarkThemeClasses('hover')}`}>
 
         {t('workflow.panel.changeBlock')}
       </div>

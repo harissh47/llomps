@@ -10,7 +10,7 @@ import type { ToolDefaultValue } from './types'
 import Tooltip from '@/app/components/base/tooltip'
 import Empty from '@/app/components/tools/add-tool-modal/empty'
 import { useGetLanguage } from '@/context/i18n'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type ToolsProps = {
   showWorkflowEmpty: boolean
   onSelect: (type: BlockEnum, tool?: ToolDefaultValue) => void
@@ -52,15 +52,15 @@ const Blocks = ({
                   />
                   {/* <div className='mb-1 text-sm leading-5 text-gray-900'>{tool.label[language]}</div>
                   <div className='text-xs text-gray-700 leading-[18px]'>{tool.description[language]}</div> */}
-                  <div className='mb-1 text-sm leading-5 text-gray-900 dark:text-white'>{tool.label[language]}</div>
-                  <div className='text-xs text-gray-700 dark:text-[#FCFCFC] leading-[18px]'>{tool.description[language]}</div>
+                  <div className={`mb-1 text-sm leading-5 text-gray-900 ${getDarkThemeClasses('text')}`}>{tool.label[language]}</div>
+                  <div className={`text-xs text-gray-700 ${getDarkThemeClasses('sub_text1')} leading-[18px]`}>{tool.description[language]}</div>
                 </div>
               )}
               noArrow
             >
               <div
                 // className='flex items-center px-3 w-full h-8 rounded-lg hover:bg-gray-50 cursor-pointer'
-                className='flex items-center px-3 w-full h-8 rounded-lg hover:bg-gray-50 dark:hover:bg-zinc-800 cursor-pointer'
+                className={`flex items-center px-3 w-full h-8 rounded-lg hover:bg-gray-50 ${getDarkThemeClasses('hover')} cursor-pointer`}
                 onClick={() => onSelect(BlockEnum.Tool, {
                   provider_id: toolWithProvider.id,
                   provider_type: toolWithProvider.type,
@@ -76,7 +76,7 @@ const Blocks = ({
                   toolIcon={toolWithProvider.icon}
                 />
                 {/* <div className='text-sm text-gray-900 truncate'>{tool.label[language]}</div> */}
-                <div className='text-sm text-gray-900 dark:text-white truncate'>{tool.label[language]}</div>
+                <div className={`text-sm text-gray-900 ${getDarkThemeClasses('text')} truncate`}>{tool.label[language]}</div>
               </div>
             </Tooltip>
           ))

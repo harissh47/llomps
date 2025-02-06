@@ -23,7 +23,7 @@ import {
   useModelListAndDefaultModelAndCurrentProviderAndModel,
 } from '@/app/components/header/account-setting/model-provider-page/hooks'
 import { ModelTypeEnum } from '@/app/components/header/account-setting/model-provider-page/declarations'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type SettingsModalProps = {
   currentDataset: DataSet
   onCancel: () => void
@@ -35,7 +35,7 @@ const rowClass = `
 `
 
 const labelClass = `
-  flex w-[168px] shrink-0 dark:text-white
+  flex w-[168px] shrink-0 ${getDarkThemeClasses('text')}
 `
 
 const SettingsModal: FC<SettingsModalProps> = ({
@@ -122,16 +122,16 @@ const SettingsModal: FC<SettingsModalProps> = ({
   return (
     <div
       // className='overflow-hidden w-full flex flex-col bg-white border-[0.5px] border-gray-200 rounded-xl shadow-xl'
-      className='overflow-hidden w-full flex flex-col bg-white dark:bg-[#3E3E3E] border-[0.5px] border-gray-200 dark:border-[#5F5F5F] rounded-xl shadow-xl'
+      className={`overflow-hidden w-full flex flex-col bg-white ${getDarkThemeClasses('background1')} border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} rounded-xl shadow-xl`}
       style={{
         height: 'calc(100vh - 72px)',
       }}
       ref={ref}
     >
       {/* <div className='shrink-0 flex justify-between items-center pl-6 pr-5 h-14 border-b border-b-gray-100'> */}
-      <div className='shrink-0 flex justify-between items-center pl-6 pr-5 h-14 border-b border-b-gray-100 dark:border-b-[#5F5F5F]'>
+      <div className={`shrink-0 flex justify-between items-center pl-6 pr-5 h-14 border-b border-b-gray-100 ${getDarkThemeClasses('border')}`}>
         {/* <div className='flex flex-col text-base font-semibold text-gray-900'> */}
-        <div className='flex flex-col text-base font-semibold text-gray-900 dark:text-white'>
+        <div className={`flex flex-col text-base font-semibold text-gray-900 ${getDarkThemeClasses('text')}`}>
           <div className='leading-6'>{t('datasetSettings.title')}</div>
         </div>
         <div className='flex items-center'>
@@ -155,7 +155,7 @@ const SettingsModal: FC<SettingsModalProps> = ({
             value={localeCurrentDataset.name}
             onChange={e => handleValueChange('name', e.target.value)}
             // className='block px-3 w-full h-9 bg-gray-100 rounded-lg text-sm text-gray-900 outline-none appearance-none'
-            className='block px-3 w-full h-9 bg-gray-100 dark:bg-[#2C2C2C] rounded-lg text-sm text-gray-900 dark:text-[#FCFCFC] outline-none appearance-none'
+            className={`block px-3 w-full h-9 bg-gray-100 ${getDarkThemeClasses('background2')} rounded-lg text-sm text-gray-900 ${getDarkThemeClasses('sub_text1')} outline-none appearance-none`}
             placeholder={t('datasetSettings.form.namePlaceholder') || ''}
           />
         </div>
@@ -168,7 +168,7 @@ const SettingsModal: FC<SettingsModalProps> = ({
               value={localeCurrentDataset.description || ''}
               onChange={e => handleValueChange('description', e.target.value)}
               // className='block px-3 py-2 w-full h-[88px] rounded-lg bg-gray-100 text-sm outline-none appearance-none resize-none'
-                className='block px-3 py-2 w-full h-[88px] rounded-lg bg-gray-100 dark:bg-[#2C2C2C] text-sm dark:text-[#FCFCFC] outline-none appearance-none resize-none'
+                className={`block px-3 py-2 w-full h-[88px] rounded-lg bg-gray-100 ${getDarkThemeClasses('background2')} text-sm ${getDarkThemeClasses('sub_text1')} outline-none appearance-none resize-none`}
               placeholder={t('datasetSettings.form.descPlaceholder') || ''}
             />
             {/* <a className='mt-2 flex items-center h-[18px] px-3 text-xs text-gray-500' href="https://docs.dify.ai/features/datasets#how-to-write-a-good-dataset-description" target='_blank' rel='noopener noreferrer'>
@@ -191,7 +191,7 @@ const SettingsModal: FC<SettingsModalProps> = ({
           </div>
         </div>
         {/* <div className="w-full h-0 border-b-[0.5px] border-b-gray-200 my-2"></div> */}
-        <div className="w-full h-0 border-b-[0.5px] border-b-gray-200 dark:border-b-[#5F5F5F] my-2"></div>
+        <div className={`w-full h-0 border-b-[0.5px] border-b-gray-200 ${getDarkThemeClasses('border')} my-2`}></div>
         <div className={cn(rowClass)}>
           <div className={labelClass}>
             {t('datasetSettings.form.indexMethod')}
@@ -222,7 +222,7 @@ const SettingsModal: FC<SettingsModalProps> = ({
                 />
               </div>
               {/* <div className='mt-2 w-full text-xs leading-6 text-gray-500'> */}
-              <div className='mt-2 w-full text-xs leading-6 text-gray-500 dark:text-[#6B7082]'>
+              <div className={`mt-2 w-full text-xs leading-6 text-gray-500 ${getDarkThemeClasses('svg')}`}>
                 {t('datasetSettings.form.embeddingModelTip')}
                 {/* <span className='text-[#155eef] cursor-pointer' onClick={() => setShowAccountSettingModal({ payload: 'provider' })}>{t('datasetSettings.form.embeddingModelTipLink')}</span> */}
 
@@ -238,7 +238,7 @@ const SettingsModal: FC<SettingsModalProps> = ({
             <div>
               <div>{t('datasetSettings.form.retrievalSetting.title')}</div>
               {/* <div className='leading-[18px] text-xs font-normal text-gray-500'> */}
-              <div className='leading-[18px] text-xs font-normal text-gray-500 dark:text-[#6B7082]'>
+              <div className={`leading-[18px] text-xs font-normal text-gray-500 ${getDarkThemeClasses('svg')}`}>
                 {/* <a target='_blank' rel='noopener noreferrer' href='https://docs.dify.ai/features/retrieval-augment' className='text-[#155eef]'>{t('datasetSettings.form.retrievalSetting.learnMore')}</a> */}
                 {t('datasetSettings.form.retrievalSetting.description')}
               </div>
@@ -279,14 +279,14 @@ const SettingsModal: FC<SettingsModalProps> = ({
 
       <div
         // className='sticky z-[5] bottom-0 w-full flex justify-end py-4 px-6 border-t bg-white '
-        className='sticky z-[5] bottom-0 w-full flex justify-end py-4 px-6 border-t dark:border-t-[#5F5F5F] bg-white dark:bg-[#3E3E3E] '
+        className={`sticky z-[5] bottom-0 w-full flex justify-end py-4 px-6 border-t ${getDarkThemeClasses('border')} bg-white ${getDarkThemeClasses('background1')} `}
         style={{
           borderColor: 'rgba(0, 0, 0, 0.05)',
         }}
       >
         <Button
           onClick={onCancel}
-          className='mr-2 text-sm font-medium dark:bg-[#3E3E3E] dark:hover:bg-zinc-800 dark:border-[#5F5F5F]'
+          className={`mr-2 text-sm font-medium ${getDarkThemeClasses('background1')} ${getDarkThemeClasses('border')} ${getDarkThemeClasses('hover')}`}
         >
           {t('common.operation.cancel')}
         </Button>

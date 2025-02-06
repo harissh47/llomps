@@ -16,7 +16,7 @@ import { Settings01 } from '@/app/components/base/icons/src/vender/line/general'
 import type { NodePanelProps } from '@/app/components/workflow/types'
 import BeforeRunForm from '@/app/components/workflow/nodes/_base/components/before-run-form'
 import ResultPanel from '@/app/components/workflow/run/result-panel'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const i18nPrefix = 'workflow.nodes.http'
 
 const Panel: FC<NodePanelProps<HttpNodeType>> = ({
@@ -63,14 +63,14 @@ const Panel: FC<NodePanelProps<HttpNodeType>> = ({
             <div
               onClick={showAuthorization}
               // className={cn(!readOnly && 'cursor-pointer hover:bg-gray-50', 'flex items-center h-6 space-x-1 px-2 rounded-md ')}
-              className={cn(!readOnly && 'cursor-pointer hover:bg-gray-50 dark:hover:bg-zinc-800', 'flex items-center h-6 space-x-1 px-2 rounded-md ')}
+              className={cn(!readOnly && `cursor-pointer hover:bg-gray-50 ${getDarkThemeClasses('hover')}`, 'flex items-center h-6 space-x-1 px-2 rounded-md ')}
 
             >
               {!readOnly && <Settings01 className='w-3 h-3 text-gray-500' />}
               <div className='text-xs font-medium text-gray-500'>
                 {t(`${i18nPrefix}.authorization.authorization`)}
                 {/* <span className='ml-1 text-gray-700'>{t(`${i18nPrefix}.authorization.${inputs.authorization.type}`)}</span> */}
-                <span className='ml-1 text-gray-700 dark:text-[#6B7082]'>{t(`${i18nPrefix}.authorization.${inputs.authorization.type}`)}</span>
+                <span className={`ml-1 text-gray-700 ${getDarkThemeClasses('svg')}`}>{t(`${i18nPrefix}.authorization.${inputs.authorization.type}`)}</span>
               </div>
             </div>
           }

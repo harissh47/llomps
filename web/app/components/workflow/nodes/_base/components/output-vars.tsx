@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next'
 import cn from 'classnames'
 import { useBoolean } from 'ahooks'
 import { ChevronRight } from '@/app/components/base/icons/src/vender/line/arrows'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   className?: string
   title?: string
@@ -26,7 +26,7 @@ const OutputVars: FC<Props> = ({
       <div
         onClick={toggleFold}
         // className={cn(className, 'flex justify-between leading-[18px] text-[13px] font-semibold text-gray-700 uppercase cursor-pointer')}>
-        className={cn(className, 'flex justify-between leading-[18px] text-[13px] font-semibold text-gray-700 dark:text-white uppercase cursor-pointer')}>
+        className={cn(className, `flex justify-between leading-[18px] text-[13px] font-semibold text-gray-700 ${getDarkThemeClasses('text')} uppercase cursor-pointer`)}>
         <div>{title || t('workflow.nodes.common.outputVars')}</div>
         <ChevronRight className='w-4 h-4 text-gray-500 transform transition-transform' style={{ transform: isFold ? 'rotate(0deg)' : 'rotate(90deg)' }} />
       </div>
@@ -59,12 +59,12 @@ export const VarItem: FC<VarItemProps> = ({
     <div className='py-1'>
       <div className='flex leading-[18px] items-center'>
         {/* <div className='text-[13px] font-medium text-gray-900 font-mono'>{name}</div> */}
-        <div className='text-[13px] font-medium text-gray-900 dark:text-white font-mono'>{name}</div>
+        <div className={`text-[13px] font-medium text-gray-900 ${getDarkThemeClasses('text')} font-mono`}>{name}</div>
         {/* <div className='ml-2 text-xs font-normal text-gray-500 capitalize'>{type}</div> */}
-        <div className='ml-2 text-xs font-normal text-gray-500 dark: text-[#FCFCFC] capitalize'>{type}</div>
+        <div className={`ml-2 text-xs font-normal text-gray-500 ${getDarkThemeClasses('sub_text1')} capitalize`}>{type}</div>
       </div>
       {/* <div className='mt-0.5 leading-[18px] text-xs font-normal text-gray-600'> */}
-      <div className='mt-0.5 leading-[18px] text-xs font-normal text-gray-600 dark:text-[#FCFCFC]'>
+      <div className={`mt-0.5 leading-[18px] text-xs font-normal text-gray-600 ${getDarkThemeClasses('sub_text1')}`}>
         {description}
         {subItems && (
           <div className='ml-2 border-l border-gray-200 pl-2'>

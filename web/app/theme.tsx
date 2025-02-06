@@ -73,29 +73,22 @@ export type DarkThemeColors = {
   appcardBorder: string
   outline: string
   focusoutline: string
+  background7: string
+  background8: string
+  borderradius: string
+  grouphovertext1: string
+  grouphovertext2: string
+  focusvisible: string
+  bg1: string
+  sub_text10: string
+  sub_text11: string
+  prose: string
+  ring1: string
+  bordert: string
+  peercheckedbg: string
+  peerfocus: string
 }
  
-// // Function to determine background color based on provider
-// const getProviderBackground = (provider?: string): string => {
-//   if (!provider) return 'bg-zinc-800'; // Default dark theme
- 
-//   if (provider.includes('nvidia')) {
-//     return 'bg-green-800';
-//   }
- 
-//   if (provider.includes('openai')) {
-//     return 'bg-black';
-//   }
- 
-//   return 'bg-zinc-800'; // Fallback dark theme
-// };
- 
-// export const getDarkTheme = (): DarkThemeColors => ({
-//     background: `dark:${getProviderBackground(storedProvider)}`,
-//     text: 'dark:text-white',
-//     hover: 'dark:hover:bg-zinc-800',
-//     border: 'dark:border-zinc-700'
-// });
  
 export const getDarkTheme = (): DarkThemeColors => ({
   // background: `dark:${getProviderBackground(storedProvider)}`,
@@ -113,9 +106,9 @@ export const getDarkTheme = (): DarkThemeColors => ({
   background2: 'dark:!bg-[#2c2c2c]',
   background3: 'dark:!bg-[#3f3f3f]',
   background4: 'dark:bg-[#1A1A1A]',
-  svg: 'dark:text-[#6b7280]',
-  green_text: 'dark:text-primary-600',
-  green_border: 'dark:text-primary-600',
+  svg: 'dark:!text-[#6b7280]',
+  green_text: 'dark:!text-primary-600',
+  green_border: 'dark:border-primary-600',
   shadow:'dark:shadow-[#5f5f5f]',
   lab_activatedbutton:'dark:bg-zinc-600',
   hover1:'dark:hover:bg-[#3f3f3f]',
@@ -139,7 +132,7 @@ export const getDarkTheme = (): DarkThemeColors => ({
   sub_text6: 'dark:text-gray-200',
   sub_text7: 'dark:text-gray-400',
   sub_text8: 'dark:text-slate-400',
-  sub_text9:'dark:text-[#3f3f3f]',
+  sub_text9:'dark:!text-[#3f3f3f]',
   texthover: 'dark:hover:text-[#b7e724]',
   borderhover1:'dark:hover:border-[#B2CCFF]',
   hovershadow:'dark:hover:bg-transparent dark:hover:shadow-[#5F5F5F]',
@@ -158,8 +151,22 @@ export const getDarkTheme = (): DarkThemeColors => ({
   background6: 'dark:bg-[#5f5f5f]',
   appcardBorder:'dark:border-[#3f3f3f] dark:border-2',
   outline: 'dark:hover:outline-[#5f5f5f]',
-  focusoutline:'dark:focus:outline-none'
- 
+  focusoutline:'dark:focus:outline-none',
+  background7:'dark:bg-[#4d4d4d]',
+  background8: 'dark:bg-zinc-800',
+  borderradius:'dark:border-2',
+  grouphovertext1:'dark:group-hover:text-[#a8a8a8]',
+  grouphovertext2:'dark:group-hover:text-[#e0dede] ',
+  focusvisible:'dark:focus-visible:!bg-zinc-800',
+  bg1: 'dark:bg-[#3e3e3e]',
+  sub_text10:'dark:text-yellow-500',
+  sub_text11:'dark:text-yellow-500',
+  prose: 'dark:prose-h1:text-white dark:prose-h3:text-white dark:prose-p:text-[#FCFCFC] dark:prose-strong:text-[#FCFCFC]',
+  ring1:'dark:ring-1 dark:ring-white/10',
+  bordert:'dark:border-t-[#5f5f5f]',
+  peercheckedbg:'dark:peer-checked:bg-[#3f3f3f]',
+  peerfocus:'dark:peer-focus:ring-[#3f3f3f]/20'
+
 });
  
 export const getDarkThemeClasses = (componet: keyof DarkThemeColors): string => {

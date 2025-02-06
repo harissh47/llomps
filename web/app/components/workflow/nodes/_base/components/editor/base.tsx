@@ -11,7 +11,7 @@ import {
 } from "@/app/components/base/icons/src/vender/line/files";
 import ToggleExpandBtn from "@/app/components/workflow/nodes/_base/components/toggle-expand-btn";
 import useToggleExpend from "@/app/components/workflow/nodes/_base/hooks/use-toggle-expend";
-
+import { getDarkThemeClasses } from "@/app/theme";
 type Props = {
   className?: string;
   title: JSX.Element | string;
@@ -71,13 +71,13 @@ const Base: FC<Props> = ({
           isExpand && "h-full",
           "rounded-lg border",
           isFocus
-            ? "bg-white dark:bg-[#3e3e3e] border-gray-200 dark:border-[#5f5f5f] overflow-hidden"
-            : "bg-gray-100 dark:!bg-[#2c2c2c] border-gray-100 dark:border-[#2c2c2c] overflow-hidden"
+            ? `bg-white ${getDarkThemeClasses('background1')} border-gray-200 ${getDarkThemeClasses('border')} overflow-hidden`
+            : `bg-gray-100 ${getDarkThemeClasses('background2')} border-gray-100 ${getDarkThemeClasses('border1')} overflow-hidden`
         )}
       >
         <div className="flex justify-between items-center h-7 pt-1 pl-3 pr-2">
           {/* <div className='text-xs font-semibold text-gray-700'>{title}</div> */}
-          <div className="text-xs font-semibold text-gray-700 dark:text-[#FCFCFC]">
+          <div className={`text-xs font-semibold text-gray-700 ${getDarkThemeClasses('sub_text1')}`}>
             {title}
           </div>
           <div

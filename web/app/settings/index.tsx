@@ -44,7 +44,7 @@ import { useRouter } from "next/navigation";
 import WorkspacePage from "./workspace-page";
 import { BriefcaseIcon } from "@heroicons/react/24/outline";
 import { BriefcaseIcon as BriefcaseSolid } from "@heroicons/react/20/solid";
-
+import { getDarkThemeClasses } from "../theme";
 const iconClassName = `
   w-4 h-4 ml-3 mr-2
 `;

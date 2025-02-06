@@ -24,7 +24,7 @@ import {
   SearchLg,
 } from '@/app/components/base/icons/src/vender/line/general'
 import { XCircle } from '@/app/components/base/icons/src/vender/solid/general'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type NodeSelectorProps = {
   open?: boolean
   onOpenChange?: (open: boolean) => void
@@ -110,18 +110,18 @@ const NodeSelector: FC<NodeSelectorProps> = ({
       <PortalToFollowElemContent className='z-[1000]'>
       {/* <div className={`rounded-lg border-[0.5px] border-gray-200 bg-white shadow-lg ${popupClassName}`}> */}
         {/* <div className={`rounded-lg border-[0.5px] border-gray-200 bg-white dark:bg-[#202020] shadow-lg ${popupClassName}`}> */}
-        <div className={`rounded-lg border-[0.5px] border-gray-200 dark:border-[#5F5F5F] bg-white dark:bg-[#3E3E3E] shadow-lg ${popupClassName}`}>
+        <div className={`rounded-lg border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} bg-white ${getDarkThemeClasses('background1')} shadow-lg ${popupClassName}`}>
           <div className='px-2 pt-2'>
             <div
               // className='flex items-center px-2 rounded-lg bg-gray-100'
-              className='flex items-center px-2 rounded-lg bg-gray-100 dark:bg-[#2C2C2C]'
+              className={`flex items-center px-2 rounded-lg bg-gray-100 ${getDarkThemeClasses('background2')}`}
               onClick={e => e.stopPropagation()}
             >
               <SearchLg className='shrink-0 ml-[1px] mr-[5px] w-3.5 h-3.5 text-gray-400' />
               <input
                 value={searchText}
                 // className='grow px-0.5 py-[7px] text-[13px] text-gray-700 bg-transparent appearance-none outline-none caret-primary-600 placeholder:text-gray-400'
-                className='grow px-0.5 py-[7px] text-[13px] text-gray-700 dark:text-[#FCFCFC] bg-transparent appearance-none outline-none caret-primary-600 placeholder:text-gray-400'
+                className={`grow px-0.5 py-[7px] text-[13px] text-gray-700 ${getDarkThemeClasses('sub_text1')} bg-transparent appearance-none outline-none caret-primary-600 placeholder:text-gray-400`}
                 placeholder={t('workflow.tabs.searchBlock') || ''}
                 onChange={e => setSearchText(e.target.value)}
                 autoFocus

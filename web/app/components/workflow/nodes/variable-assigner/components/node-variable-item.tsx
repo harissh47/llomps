@@ -5,7 +5,7 @@ import { Line3 } from '@/app/components/base/icons/src/public/common'
 import { Variable02 } from '@/app/components/base/icons/src/vender/solid/development'
 import type { Node } from '@/app/components/workflow/types'
 import { BlockEnum } from '@/app/components/workflow/types'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type NodeVariableItemProps = {
   node: Node
   varName: string
@@ -22,18 +22,18 @@ const NodeVariableItem = ({
     //   showBorder && '!bg-black/[0.02]',
     // )}>
     <div className={cn(
-      'relative flex items-center mt-0.5 h-6 bg-gray-100 dark:bg-[#3f3f3f] rounded-md  px-1 text-xs font-normal text-gray-700',
-      showBorder && '!bg-black/[0.02]',
+      `relative flex items-center mt-0.5 h-6 bg-gray-100 ${getDarkThemeClasses('background3')} rounded-md  px-1 text-xs font-normal text-gray-700',
+      showBorder && '!bg-black/[0.02]`,
     )}>
       <div className='flex items-center'>
         <div className='p-[1px]'>
           <VarBlockIcon
-            className='!text-gray-900 dark:!text-white'
+            className={`!text-gray-900 ${getDarkThemeClasses('svg')}`}
             type={node?.data.type || BlockEnum.Start}
           />
         </div>
         {/* <div className='max-w-[85px] truncate mx-0.5 text-xs font-medium text-gray-700' title={node?.data.title}>{node?.data.title}</div> */}
-        <div className='max-w-[85px] truncate mx-0.5 text-xs font-medium text-gray-700 dark:text-white' title={node?.data.title}>{node?.data.title}</div>
+        <div className={`max-w-[85px] truncate mx-0.5 text-xs font-medium text-gray-700 ${getDarkThemeClasses('text')}`} title={node?.data.title}>{node?.data.title}</div>
 
         <Line3 className='mr-0.5'></Line3>
       </div>

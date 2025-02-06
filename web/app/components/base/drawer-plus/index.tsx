@@ -5,7 +5,7 @@ import cn from 'classnames'
 import Drawer from '@/app/components/base/drawer'
 import { XClose } from '@/app/components/base/icons/src/vender/line/general'
 import useBreakpoints, { MediaType } from '@/hooks/use-breakpoints'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   isShow: boolean
   onHide: () => void
@@ -59,18 +59,18 @@ const DrawerPlus: FC<Props> = ({
     >
       <div
         // className={cn(contentClassName, 'w-full flex flex-col bg-white border-[0.5px] border-gray-200 rounded-xl shadow-xl')}
-        className={cn(contentClassName, 'w-full flex flex-col bg-white border-[0.5px] border-gray-200 dark:border-[#5f5f5f] rounded-xl shadow-xl overflow-hidden')}
+        className={cn(contentClassName, `w-full flex flex-col bg-white border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} rounded-xl shadow-xl overflow-hidden`)}
         style={{
           height,
         }}
         ref={ref}
       >
         {/* <div className={cn(headerClassName, 'shrink-0 border-b border-b-gray-100 py-4')}> */}
-        <div className={cn(headerClassName, 'shrink-0 border-b border-b-gray-100 dark:border-b-[#5f5f5f] py-4 dark:bg-[#202020]')}>
+        <div className={cn(headerClassName, `shrink-0 border-b border-b-gray-100 ${getDarkThemeClasses('border')} py-4 ${getDarkThemeClasses('main_background')}`)}>
           
           <div className='flex justify-between items-center pl-6 pr-5 h-6'>
             {/* <div className='text-base font-semibold text-gray-900'> */}
-            <div className='text-base font-semibold text-gray-900 dark:text-white'>
+            <div className={`text-base font-semibold text-gray-900 ${getDarkThemeClasses('text')}`}>
               {title}
             </div>
             <div className='flex items-center'>
@@ -84,13 +84,13 @@ const DrawerPlus: FC<Props> = ({
           </div>
           {titleDescription && (
             // <div className='pl-6 pr-10 leading-[18px] text-xs font-normal text-gray-500'>
-            <div className='pl-6 pr-10 leading-[18px] text-xs font-normal text-gray-500 dark:text-[#FCFCFC]'>
+            <div className={`pl-6 pr-10 leading-[18px] text-xs font-normal text-gray-500 ${getDarkThemeClasses('sub_text1')}`}>
               {titleDescription}
             </div>
           )}
         </div>
         {/* <div className='grow overflow-y-auto'> */}
-        <div className='grow overflow-y-auto dark:bg-[#202020]'>
+        <div className={`grow overflow-y-auto ${getDarkThemeClasses('main_background')}`}>
           {body}
         </div>
         {foot && (

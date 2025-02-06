@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import classNames from 'classnames'
 import s from './index.module.css'
 import type { DataSet } from '@/models/datasets'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const itemClass = `
   w-full sm:w-[234px] p-3 rounded-xl bg-gray-25 border border-gray-100 cursor-pointer
 `
@@ -49,7 +49,9 @@ const IndexMethodRadio = ({
               itemClass,
               itemClassName,
               s.item,
-              option.key === value && s['item-active'],
+              `${getDarkThemeClasses('background1')}`,
+              // option.key === value && s['item-active'],
+              option.key === value ? s['item-active']: `${getDarkThemeClasses('border')} ${getDarkThemeClasses('background2')}`,
               disable && s.disable,
             )}
             onClick={() => {
@@ -59,11 +61,11 @@ const IndexMethodRadio = ({
           >
             <div className='flex items-center mb-1'>
               <div className={classNames(s.icon, s[`${option.icon}-icon`])} />
-              <div className='grow text-sm text-gray-900'>{option.text}</div>
+              <div className={`grow text-sm text-gray-900 ${getDarkThemeClasses('sub_text1')}`}>{option.text}</div>
               <div className={classNames(radioClass, s.radio)} />
               
             </div>
-            <div className='pl-9 text-xs text-gray-500 leading-[18px]'>{option.desc}</div>
+            <div className={`pl-9 text-xs text-gray-500 leading-[18px] ${getDarkThemeClasses('svg')}`}>{option.desc}</div>
           </div>
         ))
       }

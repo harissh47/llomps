@@ -59,7 +59,7 @@ import {
   UPDATE_HISTORY_EVENT_EMITTER,
 } from './constants'
 import { useEventEmitterContextContext } from '@/context/event-emitter'
-
+import { getDarkThemeClasses } from '@/app/theme'
 export type PromptEditorProps = {
   instanceId?: string
   compact?: boolean
@@ -145,7 +145,7 @@ const PromptEditor: FC<PromptEditorProps> = ({
       <div className='relative h-full'>
         <RichTextPlugin
           // contentEditable={<ContentEditable className={`${className} outline-none ${compact ? 'leading-5 text-[13px]' : 'leading-6 text-sm'} text-gray-700`} style={style || {}} />}
-          contentEditable={<ContentEditable className={`${className} outline-none ${compact ? 'leading-5 text-[13px]' : 'leading-6 text-sm'} text-gray-700 dark:text-[#FCFCFC]`} style={style || {}} />}
+          contentEditable={<ContentEditable className={`${className} outline-none ${compact ? 'leading-5 text-[13px]' : 'leading-6 text-sm'} text-gray-700 ${getDarkThemeClasses('sub_text1')}`} style={style || {}} />}
           placeholder={<Placeholder value={placeholder} className={placeholderClassName} compact={compact} />}
           ErrorBoundary={LexicalErrorBoundary}
         />

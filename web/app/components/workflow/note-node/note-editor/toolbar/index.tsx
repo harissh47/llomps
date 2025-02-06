@@ -6,7 +6,7 @@ import FontSizeSelector from './font-size-selector'
 import Command from './command'
 import type { OperatorProps } from './operator'
 import Operator from './operator'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type ToolbarProps = ColorPickerProps & OperatorProps
 const Toolbar = ({
   theme,
@@ -19,7 +19,7 @@ const Toolbar = ({
 }: ToolbarProps) => {
   return (
     // <div className='inline-flex items-center p-0.5 bg-white rounded-lg border-[0.5px] border-black/5 shadow-sm'>
-    <div className='inline-flex items-center p-0.5 bg-white dark:bg-[#3f3f3f] rounded-lg border-[0.5px] border-black/5 shadow-sm'>
+    <div className={`inline-flex items-center p-0.5 bg-white ${getDarkThemeClasses('background3')} rounded-lg border-[0.5px] border-black/5 shadow-sm`}>
 
       <ColorPicker
         theme={theme}

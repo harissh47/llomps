@@ -10,7 +10,7 @@ import {
   PortalToFollowElemContent,
   PortalToFollowElemTrigger,
 } from '@/app/components/base/portal-to-follow-elem'
-
+import { getDarkThemeClasses } from '@/app/theme'
 export const COLOR_LIST = [
   {
     key: NoteTheme.blue,
@@ -74,7 +74,7 @@ const ColorPicker = ({
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent>
         {/* <div className='grid grid-cols-3 grid-rows-2 gap-0.5 p-0.5 rounded-lg border-[0.5px] border-black/8 bg-white shadow-lg'> */}
-        <div className='grid grid-cols-3 grid-rows-2 gap-0.5 p-0.5 rounded-lg border-[0.5px] border-black/8 bg-white dark:bg-[#3f3f3f] shadow-lg'>
+        <div className={`grid grid-cols-3 grid-rows-2 gap-0.5 p-0.5 rounded-lg border-[0.5px] border-black/8 bg-white ${getDarkThemeClasses('background3')} shadow-lg`}>
 
           {
             COLOR_LIST.map(color => (

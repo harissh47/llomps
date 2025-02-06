@@ -7,7 +7,7 @@ import type { KeyValue } from '../../../types'
 import KeyValueItem from './item'
 // import TooltipPlus from '@/app/components/base/tooltip-plus'
 // import { EditList } from '@/app/components/base/icons/src/vender/solid/communication'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const i18nPrefix = 'workflow.nodes.http'
 
 type Props = {
@@ -48,11 +48,11 @@ const KeyValueList: FC<Props> = ({
   }, [list, onChange])
 
   return (
-    <div className='border border-gray-200 dark:border-[#5f5f5f] rounded-lg overflow-hidden'>
+    <div className={`border border-gray-200 ${getDarkThemeClasses('border')} rounded-lg overflow-hidden`}>
       {/* <div className='flex items-center h-7 leading-7 text-xs font-medium text-gray-500 uppercase'> */}
-      <div className='flex items-center h-7 leading-7 text-xs font-medium text-gray-500 dark:text-[#A1A6B2] uppercase'>
+      <div className={`flex items-center h-7 leading-7 text-xs font-medium text-gray-500 ${getDarkThemeClasses('sub_text3')} uppercase`}>
         {/* <div className='w-1/2 h-full pl-3 border-r border-gray-200'>{t(`${i18nPrefix}.key`)}</div> */}
-        <div className='w-1/2 h-full pl-3 border-r border-gray-200 dark:border-[#5f5f5f] '>{t(`${i18nPrefix}.key`)}</div>
+        <div className={`w-1/2 h-full pl-3 border-r border-gray-200 ${getDarkThemeClasses('border')} `}>{t(`${i18nPrefix}.key`)}</div>
 
         <div className='flex w-1/2 h-full pl-3 pr-1 items-center justify-between'>
           <div>{t(`${i18nPrefix}.value`)}</div>

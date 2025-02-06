@@ -11,7 +11,7 @@ import useAvailableVarList from '../../../_base/hooks/use-available-var-list'
 import InputWithVar from '@/app/components/workflow/nodes/_base/components/prompt/editor'
 import type { Var } from '@/app/components/workflow/types'
 import { VarType } from '@/app/components/workflow/types'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   readonly: boolean
   nodeId: string
@@ -112,7 +112,7 @@ const EditBody: FC<Props> = ({
               disabled={readonly}
             />
             {/* <div className='leading-[18px] text-[13px] font-normal text-gray-700'>{bodyTextMap[t]}</div> */}
-            <div className='leading-[18px] text-[13px] font-normal text-gray-700 dark:text-[#A1A6B2]'>{bodyTextMap[t]}</div>
+            <div className={`leading-[18px] text-[13px] font-normal text-gray-700 ${getDarkThemeClasses('sub_text3')}`}>{bodyTextMap[t]}</div>
           </label>
         ))}
       </div>

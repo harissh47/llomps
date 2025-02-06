@@ -2,7 +2,7 @@
 import type { FC } from 'react'
 import React from 'react'
 import { useStore } from '@/app/components/workflow/store'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   isInNode?: boolean
   isExpand: boolean

@@ -13,7 +13,7 @@ import { Trash03 } from '@/app/components/base/icons/src/vender/line/general'
 import { RefreshCw05 } from '@/app/components/base/icons/src/vender/line/arrows'
 import Selector from '@/app/components/workflow/nodes/_base/components/selector'
 import Toast from '@/app/components/base/toast'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const i18nPrefix = 'workflow.nodes.ifElse'
 
 const Line = (
@@ -150,7 +150,7 @@ const Item: FC<ItemProps> = ({
             {Line}
             <div
               // className='shrink-0 mx-1 flex items-center h-[22px] pl-2 pr-1.5 border border-gray-200 rounded-lg bg-white shadow-xs space-x-0.5 text-primary-600 cursor-pointer'
-              className='shrink-0 mx-1 flex items-center h-[22px] pl-2 pr-1.5 border border-gray-200 dark:border-[#5F5F5F] rounded-lg bg-white dark:bg-[#3F3F3F] shadow-xs space-x-0.5 text-primary-600 cursor-pointer'
+              className={`shrink-0 mx-1 flex items-center h-[22px] pl-2 pr-1.5 border border-gray-200 ${getDarkThemeClasses('border')} rounded-lg bg-white ${getDarkThemeClasses('background3')} shadow-xs space-x-0.5 text-primary-600 cursor-pointer`}
               onClick={onLogicalOperatorToggle}
             >
               <div className='text-xs font-semibold uppercase'>{t(`${i18nPrefix}.${logicalOperator === LogicalOperator.and ? 'and' : 'or'}`)}</div>
@@ -193,13 +193,13 @@ const Item: FC<ItemProps> = ({
                   })
                 }
               }}
-              className={cn(!readonly && 'cursor-pointer', 'shrink-0 w-[100px] whitespace-nowrap flex items-center h-8 justify-between px-2.5 rounded-lg bg-gray-100 dark:bg-[#2c2c2c] capitalize')}
+              className={cn(!readonly && 'cursor-pointer', `shrink-0 w-[100px] whitespace-nowrap flex items-center h-8 justify-between px-2.5 rounded-lg bg-gray-100 ${getDarkThemeClasses('background2')} capitalize`)}
             >
               {
                 !payload.comparison_operator
                   // ? <div className='text-[13px] font-normal text-gray-400'>{t(`${i18nPrefix}.operator`)}</div>
-                  ? <div className='text-[13px] font-normal text-gray-400 dark:text-[#FCFCFC]'>{t(`${i18nPrefix}.operator`)}</div>
-                  : <div className='text-[13px] font-normal text-gray-900 dark:text-[#FCFCFC]'>{isComparisonOperatorNeedTranslate(payload.comparison_operator) ? t(`${i18nPrefix}.comparisonOperator.${payload.comparison_operator}`) : payload.comparison_operator}</div>
+                  ? <div className={`text-[13px] font-normal text-gray-400 ${getDarkThemeClasses('sub_text1')}`}>{t(`${i18nPrefix}.operator`)}</div>
+                  : <div className={`text-[13px] font-normal text-gray-900 ${getDarkThemeClasses('sub_text1')}`}>{isComparisonOperatorNeedTranslate(payload.comparison_operator) ? t(`${i18nPrefix}.comparisonOperator.${payload.comparison_operator}`) : payload.comparison_operator}</div>
               }
 
             </div>
@@ -232,12 +232,12 @@ const Item: FC<ItemProps> = ({
           onChange={handleValueChange}
           placeholder={(!readonly && !isValueReadOnly) ? t(`${i18nPrefix}.enterValue`)! : ''}
           // className='min-w-[80px] flex-grow h-8 leading-8 px-2.5  rounded-lg border-0 bg-gray-100  text-gray-900 text-[13px]  placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200'
-           className='min-w-[80px] flex-grow h-8 leading-8 px-2.5  rounded-lg border-0 bg-gray-100 dark:bg-[#2c2c2c] dark:text-[#FCFCFC] text-gray-900 dark:text-[#FCFCFC] text-[13px]  placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200 dark:focus:ring-[#5F5F5F]'
+           className={`min-w-[80px] flex-grow h-8 leading-8 px-2.5  rounded-lg border-0 bg-gray-100 ${getDarkThemeClasses('background2')} ${getDarkThemeClasses('sub_text1')} text-gray-900 ${getDarkThemeClasses('sub_text1')} text-[13px]  placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200 ${getDarkThemeClasses('focusring')}`}
           type='text'
         />
         {!readonly && (
           <div
-            className={cn(canRemove ? 'text-gray-500 bg-gray-100 dark:bg-[#3F3F3F] hover:bg-gray-200  cursor-pointer' : 'bg-gray-25 dark:bg-[#3F3F3F] text-gray-300', 'p-2 rounded-lg ')}
+            className={cn(canRemove ? `text-gray-500 bg-gray-100 ${getDarkThemeClasses('hover')} ${getDarkThemeClasses('background2')} hover:bg-gray-200  cursor-pointer` : `bg-gray-25 ${getDarkThemeClasses('background2')} text-gray-300`, 'p-2 rounded-lg ')}
             onClick={canRemove ? onRemove : () => { }}
           >
             <Trash03 className='w-4 h-4 ' />

@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next'
 import { useBoolean } from 'ahooks'
 import type { Timeout as TimeoutPayloadType } from '../../types'
 import { ChevronRight } from '@/app/components/base/icons/src/vender/line/arrows'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   readonly: boolean
   nodeId: string
@@ -30,12 +30,12 @@ const InputField: FC<{
     <div className="space-y-1">
       <div className="flex items-center h-[18px] space-x-2">
         {/* <span className="text-[13px] font-medium text-gray-900">{title}</span> */}
-        <span className="text-[13px] font-medium text-gray-900 dark:text-[#fcfcfc]">{title}</span>
+        <span className={`text-[13px] font-medium text-gray-900 ${getDarkThemeClasses('sub_text1')}`}>{title}</span>
 
         <span className="text-xs font-normal text-gray-500">{description}</span>
       </div>
       {/* <input className="w-full px-3 text-sm leading-9 text-gray-900 border-0 rounded-lg grow h-9 bg-gray-100 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200" value={value} onChange={(e) => { */}
-      <input className="w-full px-3 text-sm leading-9 text-gray-900 dark:text-white rounded-lg grow h-9 bg-gray-100 dark:bg-[#2c2c2c] focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200 dark:focus:ring-[#5f5f5f]" value={value} onChange={(e) => {
+      <input className={`w-full px-3 text-sm leading-9 text-gray-900 ${getDarkThemeClasses('text')} rounded-lg grow h-9 bg-gray-100 ${getDarkThemeClasses('background2')} focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200 ${getDarkThemeClasses('focusring')}`} value={value} onChange={(e) => {
 
         const value = Math.max(min, Math.min(max, parseInt(e.target.value, 10)))
         onChange(value)
@@ -58,7 +58,7 @@ const Timeout: FC<Props> = ({ readonly, payload, onChange }) => {
         <div
           onClick={toggleFold}
           // className={cn('flex justify-between leading-[18px] text-[13px] font-semibold text-gray-700 uppercase cursor-pointer')}>
-          className={cn('flex justify-between leading-[18px] text-[13px] font-semibold text-gray-700 dark:text-white uppercase cursor-pointer')}>
+          className={cn(`flex justify-between leading-[18px] text-[13px] font-semibold text-gray-700 ${getDarkThemeClasses('text')} uppercase cursor-pointer`)}>
 
           <div>{t(`${i18nPrefix}.timeout.title`)}</div>
           <ChevronRight className='w-4 h-4 text-gray-500 transform transition-transform' style={{ transform: isFold ? 'rotate(0deg)' : 'rotate(90deg)' }} />

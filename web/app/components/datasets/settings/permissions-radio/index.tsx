@@ -4,6 +4,7 @@ import classNames from 'classnames'
 import s from './index.module.css'
 import type { DataSet } from '@/models/datasets'
 import { UserIcon } from '@heroicons/react/20/solid'
+import { getDarkThemeClasses } from '@/app/theme'
  
 // const itemClass = `
 //   flex items-center w-full sm:w-[234px] h-12 px-3 rounded-xl bg-gray-25 border border-gray-100 cursor-pointer
@@ -49,7 +50,9 @@ const PermissionsRadio = ({
               itemClass,
               itemClassName,
               s.item,
-              option.key === value && s['item-active'],
+              `${getDarkThemeClasses('background1')}`,
+              // option.key === value && s['item-active'],
+              option.key === value ? s['item-active']: `${getDarkThemeClasses('border')} ${getDarkThemeClasses('background2')}`,
               disable && s.disable,
             )}
             onClick={() => {
@@ -59,8 +62,8 @@ const PermissionsRadio = ({
           >
           
           {/* <div className={classNames(s['user-icon'], 'mr-3')} /> */}
-            <div><UserIcon className='w-4 h-4 bg-contain  mr-2' /></div>
-            <div className='grow text-sm text-gray-900'>{option.text}</div>
+            <div><UserIcon className={`w-4 h-4 bg-contain mr-2 ${getDarkThemeClasses('text')}`} /></div>
+            <div className={`grow text-sm text-gray-900 ${getDarkThemeClasses('sub_text1')}`}>{option.text}</div>
             <div className={classNames(radioClass, s.radio)} />
           </div>
         ))

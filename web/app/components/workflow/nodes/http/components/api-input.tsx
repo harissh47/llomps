@@ -10,7 +10,7 @@ import { VarType } from '../../../types'
 import type { Var } from '../../../types'
 import Input from '@/app/components/workflow/nodes/_base/components/input-support-select-var'
 import { ChevronDown } from '@/app/components/base/icons/src/vender/line/arrows'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const MethodOptions = [
   { label: 'GET', value: Method.get },
   { label: 'POST', value: Method.post },
@@ -53,8 +53,8 @@ const ApiInput: FC<Props> = ({
         onChange={onMethodChange}
         options={MethodOptions}
         trigger={
-          <div className={cn(readonly && 'cursor-pointer', 'h-8 shrink-0 flex items-center px-2.5 bg-gray-100 dark:bg-[#2c2c2c] border-black/5 rounded-lg')} >
-            <div className='w-12 pl-0.5 leading-[18px] text-xs font-medium text-gray-900 dark:text-white uppercase'>{method}</div>
+          <div className={cn(readonly && 'cursor-pointer', `h-8 shrink-0 flex items-center px-2.5 bg-gray-100 ${getDarkThemeClasses('background2')} border-black/5 rounded-lg`)} >
+            <div className={`w-12 pl-0.5 leading-[18px] text-xs font-medium text-gray-900 ${getDarkThemeClasses('text')} uppercase`}>{method}</div>
             {!readonly && <ChevronDown className='ml-1 w-3.5 h-3.5 text-gray-700' />}
           </div>
         }
@@ -66,7 +66,7 @@ const ApiInput: FC<Props> = ({
       <Input
         instanceId='http-api-url'
         // className={cn(isFocus ? 'shadow-xs bg-gray-50 border-gray-300' : 'bg-gray-100 border-gray-100', 'w-0 grow rounded-lg px-3 py-[6px] border')}
-        className={cn(isFocus ? 'shadow-xs bg-gray-50 border-gray-300 dark:border-[#5f5f5f] dark:bg-[#383838]' : 'bg-gray-100 dark:bg-[#2c2c2c] border-gray-100 dark:border-[#2c2c2c]', 'w-0 grow rounded-lg px-3 py-[6px] border')}
+        className={cn(isFocus ? `shadow-xs bg-gray-50 border-gray-300 ${getDarkThemeClasses('border')} ${getDarkThemeClasses('background3')}` : `bg-gray-100 ${getDarkThemeClasses('background2')} border-gray-100 ${getDarkThemeClasses('border1')}`, 'w-0 grow rounded-lg px-3 py-[6px] border')}
         value={url}
         onChange={onUrlChange}
         readOnly={readonly}

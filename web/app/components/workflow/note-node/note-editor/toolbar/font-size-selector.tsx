@@ -10,7 +10,7 @@ import {
 import { TitleCase } from '@/app/components/base/icons/src/vender/line/editor'
 import { ChevronDown } from '@/app/components/base/icons/src/vender/line/arrows'
 import { Check } from '@/app/components/base/icons/src/vender/line/general'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const FontSizeSelector = () => {
   const { t } = useTranslation()
   const FONT_SIZE_LIST = [
@@ -44,9 +44,9 @@ const FontSizeSelector = () => {
       <PortalToFollowElemTrigger onClick={() => handleOpenFontSizeSelector(!fontSizeSelectorShow)}>
         <div className={cn(
           // 'flex items-center pl-2 pr-1.5 h-8 rounded-md text-[13px] font-medium text-gray-700 cursor-pointer hover:bg-gray-50',
-          'flex items-center pl-2 pr-1.5 h-8 rounded-md text-[13px] font-medium text-gray-700 dark:text-white cursor-pointer hover:bg-gray-50 dark:hover:bg-zinc-800',
+          `flex items-center pl-2 pr-1.5 h-8 rounded-md text-[13px] font-medium text-gray-700 ${getDarkThemeClasses('text')} cursor-pointer hover:bg-gray-50 ${getDarkThemeClasses('hover')}`,
 
-          fontSizeSelectorShow && 'bg-gray-50 dark:bg-[#383838]',
+          fontSizeSelectorShow && `bg-gray-50 ${getDarkThemeClasses('background3')}`,
         )}>
           <TitleCase className='mr-1 w-4 h-4' />
           {FONT_SIZE_LIST.find(font => font.key === fontSize)?.value || t('workflow.nodes.note.editor.small')}
@@ -54,12 +54,12 @@ const FontSizeSelector = () => {
         </div>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent>
-        <div className='p-1 w-[120px] bg-white dark:bg-[#3f3f3f] border-[0.5px] border-gray-200 dark:border-[#5f5f5f] rounded-md shadow-xl text-gray-700 dark:text-white'>
+        <div className={`p-1 w-[120px] bg-white ${getDarkThemeClasses('background3')} border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} rounded-md shadow-xl text-gray-700 ${getDarkThemeClasses('text')}`}>
           {
             FONT_SIZE_LIST.map(font => (
               <div
                 key={font.key}
-                className='flex items-center justify-between pl-3 pr-2 h-8 rounded-md cursor-pointer hover:bg-gray-50 dark:hover:bg-zinc-800'
+                className={`flex items-center justify-between pl-3 pr-2 h-8 rounded-md cursor-pointer hover:bg-gray-50 ${getDarkThemeClasses('hover')}`}
                 onClick={(e) => {
                   e.stopPropagation()
                   handleFontSize(font.key)

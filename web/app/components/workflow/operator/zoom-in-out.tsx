@@ -32,7 +32,7 @@ import {
   ZoomIn,
   ZoomOut,
 } from '@/app/components/base/icons/src/vender/line/editor'
-
+import { getDarkThemeClasses } from '@/app/theme'
 enum ZoomType {
   zoomIn = 'zoomIn',
   zoomOut = 'zoomOut',
@@ -220,12 +220,12 @@ const ZoomInOut: FC = () => {
           ${workflowReadOnly && '!cursor-not-allowed opacity-50'}
         `}> */}
         <div className={`
-          p-0.5 h-9 cursor-pointer text-[13px] text-gray-500 font-medium rounded-lg bg-white dark:bg-[#202020] shadow-lg border-[0.5px] border-gray-100 dark:border-[#3F3F3F] dark:border-solid dark:shadow-sm
+          p-0.5 h-9 cursor-pointer text-[13px] text-gray-500 font-medium rounded-lg bg-white ${getDarkThemeClasses('main_background')} shadow-lg border-[0.5px] border-gray-100 ${getDarkThemeClasses('border')} dark:border-solid dark:shadow-sm
           ${workflowReadOnly && '!cursor-not-allowed opacity-50'}
         `}>
           <div className={cn(
             'flex items-center justify-between w-[98px] h-8 rounded-lg',
-            open && 'bg-gray-50 dark:bg-[#383838]',
+            open && `bg-gray-50 ${getDarkThemeClasses('background3')}`,
           )}>
             <TipPopup
               title={t('workflow.operator.zoomOut')}
@@ -241,7 +241,7 @@ const ZoomInOut: FC = () => {
                 <ZoomOut className='w-4 h-4' />
               </div>
             </TipPopup>
-            <div className='w-[34px] dark:text-white'>{parseFloat(`${zoom * 100}`).toFixed(0)}%</div>
+            <div className={`w-[34px] ${getDarkThemeClasses('text')}`}>{parseFloat(`${zoom * 100}`).toFixed(0)}%</div>
             <TipPopup
               title={t('workflow.operator.zoomIn')}
               shortcuts={['ctrl', '+']}
@@ -260,13 +260,13 @@ const ZoomInOut: FC = () => {
         </div>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent className='z-10'>
-        <div className='w-[145px] rounded-lg border-[0.5px] border-gray-200 dark:border-[#5f5f5f] bg-white dark:bg-[#3f3f3f] shadow-lg'>
+        <div className={`w-[145px] rounded-lg border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} bg-white ${getDarkThemeClasses('background3')} shadow-lg`}>
           {
             ZOOM_IN_OUT_OPTIONS.map((options, i) => (
               <Fragment key={i}>
                 {
                   i !== 0 && (
-                    <div className='h-[1px] bg-gray-100 dark:bg-[#5f5f5f] ' />
+                    <div className={`h-[1px] bg-gray-100 ${getDarkThemeClasses('background6')} `} />
                   )
                 }
                 <div className='p-1'>
@@ -274,7 +274,7 @@ const ZoomInOut: FC = () => {
                     options.map(option => (
                       <div
                         key={option.key}
-                        className='flex items-center justify-between px-3 h-8 rounded-lg hover:bg-gray-50 dark:hover:bg-zinc-800 cursor-pointer text-sm text-gray-700 dark:text-white'
+                        className={`flex items-center justify-between px-3 h-8 rounded-lg hover:bg-gray-50 ${getDarkThemeClasses('hover')} cursor-pointer text-sm text-gray-700 ${getDarkThemeClasses('text')}`}
                         onClick={() => handleZoom(option.key)}
                       >
                         {option.text}

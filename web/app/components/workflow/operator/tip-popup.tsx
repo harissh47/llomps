@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import ShortcutsName from '../shortcuts-name'
 import TooltipPlus from '@/app/components/base/tooltip-plus'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type TipPopupProps = {
   title: string
   children: React.ReactNode
@@ -17,11 +17,11 @@ const TipPopup = ({
       offset={4}
       hideArrow
       // popupClassName='!p-0 !bg-gray-25 '
-      popupClassName='!p-0 !bg-gray-25 dark:!bg-[#3f3f3f]'
+      popupClassName={`!p-0 !bg-gray-25 ${getDarkThemeClasses('background3')}`}
 
       popupContent={
         // <div className='flex items-center gap-1 px-2 h-6 text-xs font-medium text-gray-700  rounded-lg border-[0.5px] border-black/5'>
-        <div className='flex items-center gap-1 px-2 h-6 text-xs font-medium text-gray-700 dark:text-white rounded-lg border-[0.5px] border-black/5'>
+        <div className={`flex items-center gap-1 px-2 h-6 text-xs font-medium text-gray-700 ${getDarkThemeClasses('text')} rounded-lg border-[0.5px] border-black/5`}>
 
           {title}
           {

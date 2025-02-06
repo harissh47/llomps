@@ -31,7 +31,7 @@ import Loading from '@/app/components/base/loading'
 import { useProviderContext } from '@/context/provider-context'
 import { TONE_LIST } from '@/config'
 import { ArrowNarrowLeft } from '@/app/components/base/icons/src/vender/line/arrows'
-
+import { getDarkThemeClasses } from '@/app/theme'
 export type ModelParameterModalProps = {
   popupClassName?: string
   portalToFollowElemContentClassName?: string
@@ -192,7 +192,7 @@ const ModelParameterModal: FC<ModelParameterModalProps> = ({
         </PortalToFollowElemTrigger>
         <PortalToFollowElemContent className={cn(portalToFollowElemContentClassName, 'z-[60]')}>
           {/* <div className={cn(popupClassName, 'w-[496px] rounded-xl border border-gray-100 bg-white  shadow-xl')}> */}
-          <div className={cn(popupClassName, 'w-[496px] rounded-xl border border-gray-100 bg-white dark:bg-[#3E3E3E] dark:border-[#5F5F5F] shadow-xl')}>
+          <div className={cn(popupClassName, `w-[496px] rounded-xl border border-gray-100 bg-white ${getDarkThemeClasses('background1')} ${getDarkThemeClasses('border')} shadow-xl`)}>
 
             <div className={cn(
               'max-h-[480px]  overflow-y-auto',
@@ -201,7 +201,7 @@ const ModelParameterModal: FC<ModelParameterModalProps> = ({
               <div className='flex items-center justify-between h-8'>
                 {/* <div className={cn('font-semibold text-gray-900 shrink-0', isInWorkflow && 'text-[13px]')}>
                   {t('common.modelProvider.model').toLocaleUpperCase()} */}
-                  <div className={cn('font-semibold text-gray-900 shrink-0 dark:text-white', isInWorkflow && 'text-[13px]')}>
+                  <div className={cn(`font-semibold text-gray-900 shrink-0 ${getDarkThemeClasses('text')}`, isInWorkflow && 'text-[13px]')}>
                   {t('common.modelProvider.model').toLocaleUpperCase()}
                 </div>
                 <ModelSelector
@@ -214,7 +214,7 @@ const ModelParameterModal: FC<ModelParameterModalProps> = ({
               {
                 !!parameterRules.length && (
                   // <div className='my-5 h-[1px] bg-gray-100' />
-                  <div className='my-5 h-[1px] bg-gray-100 dark:bg-[#5F5F5F]' />
+                  <div className={`my-5 h-[1px] bg-gray-100 ${getDarkThemeClasses('background6')}`} />
                 )
               }
               {
@@ -226,7 +226,7 @@ const ModelParameterModal: FC<ModelParameterModalProps> = ({
                 !isLoading && !!parameterRules.length && (
                   <div className='flex items-center justify-between mb-4'>
                     {/* <div className={cn('font-semibold text-gray-900', isInWorkflow && 'text-[13px]')}>{t('common.modelProvider.parameters')}</div> */}
-                    <div className={cn('font-semibold text-gray-900 dark:text-white', isInWorkflow && 'text-[13px]')}>{t('common.modelProvider.parameters')}</div>
+                    <div className={cn(`font-semibold text-gray-900 ${getDarkThemeClasses('text')}`, isInWorkflow && 'text-[13px]')}>{t('common.modelProvider.parameters')}</div>
                     {
                       PROVIDER_WITH_PRESET_TONE.includes(provider) && (
                         <PresetsParameter onSelect={handleSelectPresetParameter} />
@@ -260,7 +260,7 @@ const ModelParameterModal: FC<ModelParameterModalProps> = ({
               //   onClick={() => onDebugWithMultipleModelChange?.()}
               // >
                 <div
-                className='flex items-center justify-between px-6 h-[50px] bg-gray-50 border-t border-t-gray-100 dark:border-t-[#5F5F5F] text-xs font-medium text-primary-600 cursor-pointer rounded-b-xl dark:bg-[#202020]'
+                className={`flex items-center justify-between px-6 h-[50px] bg-gray-50 border-t border-t-gray-100 ${getDarkThemeClasses('border')} text-xs font-medium text-primary-600 cursor-pointer rounded-b-xl ${getDarkThemeClasses('main_background')}`}
                 onClick={() => onDebugWithMultipleModelChange?.()}
               >
                 {

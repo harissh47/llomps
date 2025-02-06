@@ -10,7 +10,7 @@ import type { ToolDefaultValue } from './types'
 import { TabsEnum } from './types'
 import Blocks from './blocks'
 import AllTools from './all-tools'
-
+import { getDarkThemeClasses } from '@/app/theme'
 export type TabsProps = {
   searchText: string
   onSelect: (type: BlockEnum, tool?: ToolDefaultValue) => void
@@ -31,7 +31,7 @@ const Tabs: FC<TabsProps> = ({
       {
         !noBlocks && (
           // <div className='flex items-center px-3 border-b-[0.5px] border-b-black/5'>
-          <div className='flex items-center px-3 border-b-[0.5px] border-b-black/5 dark:border-b-[#5F5F5F]'>
+          <div className={`flex items-center px-3 border-b-[0.5px] border-b-black/5 ${getDarkThemeClasses('border')}`}>
             {
               tabs.map(tab => (
                 <div
@@ -39,8 +39,8 @@ const Tabs: FC<TabsProps> = ({
                   className={cn(
                     'relative mr-4 h-[34px] leading-[34px] text-[13px] font-medium cursor-pointer',
                     activeTab === tab.key
-                      ? 'text-gray-700 dark:text-[#A1A6B2] after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-primary-600'
-                      : 'text-gray-500 dark:text-[#6B7082]',
+                      ? `text-gray-700 ${getDarkThemeClasses('sub_text3')} after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-full after:bg-primary-600`
+                      : `text-gray-500 ${getDarkThemeClasses('svg')}`,
                   )}
                   onClick={() => setActiveTab(tab.key)}
                 >

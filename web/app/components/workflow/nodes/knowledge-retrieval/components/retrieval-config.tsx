@@ -20,7 +20,7 @@ import type {
   DatasetConfigs,
 } from '@/models/debug'
 import { ChevronDown } from '@/app/components/base/icons/src/vender/line/arrows'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   payload: {
     retrieval_mode: RETRIEVE_TYPE
@@ -93,14 +93,14 @@ const RetrievalConfig: FC<Props> = ({
         }}
       >
         {/* <div className={cn(!readonly && 'cursor-pointer', open && 'bg-gray-100', 'flex items-center h-6  px-2 rounded-md hover:bg-gray-100 group  select-none')}> */}
-        <div className={cn(!readonly && 'cursor-pointer', open && 'bg-gray-100 dark:bg-zinc-800', 'flex items-center h-6  px-2 rounded-md hover:bg-gray-100 dark:hover:bg-zinc-800 group  select-none')}>
-          <div className={cn(open ? 'text-gray-700' : 'text-gray-500', 'leading-[18px] text-xs font-medium group-hover:bg-gray-100 dark:group-hover:bg-zinc-800')}>{payload.retrieval_mode === RETRIEVE_TYPE.oneWay ? t('appDebug.datasetConfig.retrieveOneWay.title') : t('appDebug.datasetConfig.retrieveMultiWay.title')}</div>
+        <div className={cn(!readonly && 'cursor-pointer', open && `bg-gray-100 ${getDarkThemeClasses('background8')}`, `flex items-center h-6  px-2 rounded-md hover:bg-gray-100 ${getDarkThemeClasses('hover')} group  select-none`)}>
+          <div className={cn(open ? 'text-gray-700' : 'text-gray-500', `leading-[18px] text-xs font-medium group-hover:bg-gray-100 ${getDarkThemeClasses('grouphover')}`)}>{payload.retrieval_mode === RETRIEVE_TYPE.oneWay ? t('appDebug.datasetConfig.retrieveOneWay.title') : t('appDebug.datasetConfig.retrieveMultiWay.title')}</div>
           {!readonly && <ChevronDown className='w-3 h-3 ml-1' />}
         </div>
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent style={{ zIndex: 1001 }}>
         {/* <div className='w-[404px] pt-3 pb-4 px-4 shadow-xl  rounded-2xl border border-gray-200  bg-white'> */}
-        <div className='w-[404px] pt-3 pb-4 px-4 shadow-xl  rounded-2xl border border-gray-200 dark:border-[#5F5F5F] bg-white dark:bg-[#3E3E3E]'>
+        <div className={`w-[404px] pt-3 pb-4 px-4 shadow-xl  rounded-2xl border border-gray-200 ${getDarkThemeClasses('border')} bg-white ${getDarkThemeClasses('background1')}`}>
           <ConfigRetrievalContent
             datasetConfigs={
               {

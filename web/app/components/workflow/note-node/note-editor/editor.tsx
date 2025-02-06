@@ -17,7 +17,7 @@ import LinkEditorPlugin from './plugins/link-editor-plugin'
 import FormatDetectorPlugin from './plugins/format-detector-plugin'
 // import TreeView from '@/app/components/base/prompt-editor/plugins/tree-view'
 import Placeholder from '@/app/components/base/prompt-editor/plugins/placeholder'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type EditorProps = {
   placeholder?: string
   onChange?: (editorState: EditorState) => void
@@ -40,7 +40,7 @@ const Editor = ({
             <ContentEditable
               spellCheck={false}
               // className='w-full h-full outline-none caret-primary-600 '
-              className='w-full h-full outline-none caret-primary-600 dark:text-white'
+              className={`w-full h-full outline-none caret-primary-600 ${getDarkThemeClasses('text')}`}
 
               placeholder={placeholder}
             />

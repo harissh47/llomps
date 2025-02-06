@@ -17,7 +17,7 @@ import { useOperator } from './operator/hooks'
 import { exportAppConfig } from '@/service/apps'
 import { useToastContext } from '@/app/components/base/toast'
 import { useStore as useAppStore } from '@/app/components/app/store'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const PanelContextmenu = () => {
   const { t } = useTranslation()
   const { notify } = useToastContext()
@@ -54,7 +54,7 @@ const PanelContextmenu = () => {
     return (
       <div
         // className='flex items-center justify-between px-3 h-8 text-sm text-gray-700 rounded-lg cursor-pointer hover:bg-gray-50'
-        className='flex items-center justify-between px-3 h-8 text-sm text-gray-700 dark:text-white rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-zinc-800'
+        className={`flex items-center justify-between px-3 h-8 text-sm text-gray-700 ${getDarkThemeClasses('text')} rounded-lg cursor-pointer hover:bg-gray-50 ${getDarkThemeClasses('hover')}`}
       >
         {t('workflow.common.addBlock')}
       </div>
@@ -67,7 +67,7 @@ const PanelContextmenu = () => {
   return (
     <div
       // className='absolute w-[200px] rounded-lg border-[0.5px] border-gray-200 bg-white shadow-xl z-[9]'
-      className='absolute w-[200px] rounded-lg border-[0.5px] border-gray-200 dark:border-[#5F5F5F] bg-white dark:bg-[#202020] shadow-xl z-[9]'
+      className={`absolute w-[200px] rounded-lg border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} bg-white ${getDarkThemeClasses('main_background')} shadow-xl z-[9]`}
       style={{
         left: panelMenu.left,
         top: panelMenu.top,
@@ -84,7 +84,7 @@ const PanelContextmenu = () => {
         />
         <div
           // className='flex items-center justify-between px-3 h-8 text-sm text-gray-700 rounded-lg cursor-pointer hover:bg-gray-50'
-          className='flex items-center justify-between px-3 h-8 text-sm text-gray-700 dark:text-white rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-zinc-800'
+          className={`flex items-center justify-between px-3 h-8 text-sm text-gray-700 ${getDarkThemeClasses('text')} rounded-lg cursor-pointer hover:bg-gray-50 ${getDarkThemeClasses('hover')}`}
           onClick={(e) => {
             e.stopPropagation()
             handleAddNote()
@@ -95,7 +95,7 @@ const PanelContextmenu = () => {
         </div>
         <div
           // className='flex items-center justify-between px-3 h-8 text-sm text-gray-700 rounded-lg cursor-pointer hover:bg-gray-50'
-          className='flex items-center justify-between px-3 h-8 text-sm text-gray-700 dark:text-white rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-zinc-800'
+          className={`flex items-center justify-between px-3 h-8 text-sm text-gray-700 ${getDarkThemeClasses('text')} rounded-lg cursor-pointer hover:bg-gray-50 ${getDarkThemeClasses('hover')}`}
           onClick={() => {
             handleStartWorkflowRun()
             handlePaneContextmenuCancel()
@@ -106,12 +106,12 @@ const PanelContextmenu = () => {
         </div>
       </div>
       {/* <div className='h-[1px] bg-gray-100'></div> */}
-      <div className='h-[1px] bg-gray-100 dark:bg-[#5F5F5F]'></div>
+      <div className={`h-[1px] bg-gray-100 ${getDarkThemeClasses('background6')}`}></div>
       <div className='p-1'>
         <div
           className={cn(
             // 'flex items-center justify-between px-3 h-8 text-sm text-gray-700 rounded-lg cursor-pointer',
-            'flex items-center justify-between px-3 h-8 text-sm text-gray-700 dark:text-white rounded-lg cursor-pointer',
+            `flex items-center justify-between px-3 h-8 text-sm text-gray-700 ${getDarkThemeClasses('text')} rounded-lg cursor-pointer`,
             !clipboardElements.length ? 'opacity-50 cursor-not-allowed' : 'hover:bg-gray-50',
           )}
           onClick={() => {
@@ -126,11 +126,11 @@ const PanelContextmenu = () => {
         </div>
       </div>
       {/* <div className='h-[1px] bg-gray-100'></div> */}
-      <div className='h-[1px] bg-gray-100 dark:bg-[#5F5F5F]'></div>
+      <div className={`h-[1px] bg-gray-100 ${getDarkThemeClasses('background6')}`}></div>
       <div className='p-1'>
         <div
           // className='flex items-center justify-between px-3 h-8 text-sm text-gray-700 rounded-lg cursor-pointer hover:bg-gray-50'
-          className='flex items-center justify-between px-3 h-8 text-sm text-gray-700 dark:text-white rounded-lg cursor-pointer hover:bg-gray-50 dark:hover:bg-zinc-800'
+          className={`flex items-center justify-between px-3 h-8 text-sm text-gray-700 ${getDarkThemeClasses('text')} rounded-lg cursor-pointer hover:bg-gray-50 ${getDarkThemeClasses('hover')}`}
           onClick={() => onExport()}
         >
           {t('app.export')}

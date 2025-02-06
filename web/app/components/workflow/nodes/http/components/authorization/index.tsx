@@ -8,7 +8,7 @@ import { APIType, AuthorizationType } from '../../types'
 import RadioGroup from './radio-group'
 import Modal from '@/app/components/base/modal'
 import Button from '@/app/components/base/button'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const i18nPrefix = 'workflow.nodes.http.authorization'
 
 type Props = {
@@ -22,7 +22,7 @@ const Field = ({ title, isRequired, children }: { title: string; isRequired?: bo
   return (
     <div>
       {/* <div className='leading-8 text-[13px] font-medium text-gray-700'> */}
-      <div className='leading-8 text-[13px] font-medium text-gray-700 dark:text-white'>
+      <div className={`leading-8 text-[13px] font-medium text-gray-700 ${getDarkThemeClasses('text')}`}>
 
         {title}
         {isRequired && <span className='ml-0.5 text-[#D92D20]'>*</span>}
@@ -123,7 +123,7 @@ const Authorization: FC<Props> = ({
                   <input
                     type='text'
                     // className='w-full h-8 leading-8 px-2.5  rounded-lg border-0 bg-gray-100  text-gray-900 text-[13px]  placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200'
-                    className='w-full h-8 leading-8 px-2.5  rounded-lg border-0 bg-gray-100 dark:bg-[#5f5f5f]  text-gray-900 dark:text-white text-[13px]  placeholder:text-gray-400 dark:placeholder:text-white  focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200 dark:focus:ring-[#6b7082]'
+                    className={`w-full h-8 leading-8 px-2.5  rounded-lg border-0 bg-gray-100 ${getDarkThemeClasses('background6')}  text-gray-900 ${getDarkThemeClasses('text')} text-[13px]  placeholder:text-gray-400 ${getDarkThemeClasses('placeholder')}  focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200 ${getDarkThemeClasses('focusring')}`}
 
                     value={tempPayload.config?.header || ''}
                     onChange={handleAPIKeyOrHeaderChange('header')}
@@ -135,7 +135,7 @@ const Authorization: FC<Props> = ({
                 <input
                   type='text'
                   // className='w-full h-8 leading-8 px-2.5  rounded-lg border-0 bg-gray-100  text-gray-900 text-[13px]  placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200'
-                  className='w-full h-8 leading-8 px-2.5  rounded-lg border-0 bg-gray-100 dark:bg-[#2c2c2c] text-gray-900 dark:text-white text-[13px]  placeholder:text-gray-400 dark:placeholder:text-white focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200 dark:focus:ring-[#5f5f5f]'
+                  className={`w-full h-8 leading-8 px-2.5  rounded-lg border-0 bg-gray-100 ${getDarkThemeClasses('background2')} text-gray-900 ${getDarkThemeClasses('text')} text-[13px]  placeholder:text-gray-400 ${getDarkThemeClasses('placeholder')} focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200 ${getDarkThemeClasses('focusring')}`}
 
                   value={tempPayload.config?.api_key || ''}
                   onChange={handleAPIKeyOrHeaderChange('api_key')}
@@ -146,7 +146,7 @@ const Authorization: FC<Props> = ({
         </div>
         <div className='mt-6 flex justify-end space-x-2'>
           {/* <Button onClick={onHide} className='flex items-center !h-8 leading-[18px] !text-[13px] !font-medium '>{t('common.operation.cancel')}</Button> */}
-          <Button onClick={onHide} className='flex items-center !h-8 leading-[18px] !text-[13px] !font-medium dark:bg-[#3e3e3e] dark:border-[#5f5f5f] dark:hover:bg-zinc-800'>{t('common.operation.cancel')}</Button>
+          <Button onClick={onHide} className={`flex items-center !h-8 leading-[18px] !text-[13px] !font-medium ${getDarkThemeClasses('background1')} ${getDarkThemeClasses('border')} ${getDarkThemeClasses('hover')}`}>{t('common.operation.cancel')}</Button>
           <Button type='primary' onClick={handleConfirm} className='flex items-center !h-8 leading-[18px] !text-[13px] !font-medium'>{t('common.operation.save')}</Button>
         </div>
       </div>

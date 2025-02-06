@@ -12,7 +12,7 @@ import { BlockEnum } from '@/app/components/workflow/types'
 import PromptEditor from '@/app/components/base/prompt-editor'
 import { Variable02 } from '@/app/components/base/icons/src/vender/solid/development'
 import TooltipPlus from '@/app/components/base/tooltip-plus'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   instanceId?: string
   className?: string
@@ -111,7 +111,7 @@ const Editor: FC<Props> = ({
               popupContent={`${t('workflow.common.insertVarTip')}`}
             >
               {/* <div className='p-0.5 rounded-[5px] shadow-lg cursor-pointer bg-white hover:bg-gray-100 border-[0.5px] border-black/5'> */}
-              <div className='p-0.5 rounded-[5px] shadow-lg cursor-pointer bg-white dark:bg-[#383838] hover:bg-gray-100 border-[0.5px] border-black/5 dark:border-[#5F5F5F]'>
+              <div className={`p-0.5 rounded-[5px] shadow-lg cursor-pointer bg-white ${getDarkThemeClasses('background3')} hover:bg-gray-100 border-[0.5px] border-black/5 ${getDarkThemeClasses('border')}`}>
 
                 <Variable02 className='w-3.5 h-3.5 text-gray-500' />
               </div>

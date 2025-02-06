@@ -11,7 +11,7 @@ import { VarBlockIcon } from '@/app/components/workflow/block-icon'
 import { Line3 } from '@/app/components/base/icons/src/public/common'
 import { Variable02 } from '@/app/components/base/icons/src/vender/solid/development'
 import { BlockEnum } from '@/app/components/workflow/types'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const Node: FC<NodeProps<EndNodeType>> = ({
   id,
   data,
@@ -46,11 +46,11 @@ const Node: FC<NodeProps<EndNodeType>> = ({
           isChatMode,
         })
         return (
-          <div key={index} className='flex items-center h-6 justify-between bg-gray-100 rounded-md  px-1 space-x-1 text-xs font-normal text-gray-700'>
+          <div key={index} className={`flex items-center h-6 justify-between bg-gray-100 rounded-md  px-1 space-x-1 text-xs font-normal text-gray-700 ${getDarkThemeClasses('background3')}`}>
             <div className='flex items-center text-xs font-medium text-gray-500'>
               <div className='p-[1px]'>
                 <VarBlockIcon
-                  className='!text-gray-900'
+                  className={`!text-gray-900 ${getDarkThemeClasses('svg')}`}
                   type={node?.data.type || BlockEnum.Start}
                 />
               </div>

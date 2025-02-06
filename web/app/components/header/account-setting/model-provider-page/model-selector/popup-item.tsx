@@ -21,7 +21,7 @@ import { Check } from '@/app/components/base/icons/src/vender/line/general'
 import { useModalContext } from '@/context/modal-context'
 import { useProviderContext } from '@/context/provider-context'
 import Tooltip from '@/app/components/base/tooltip'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type PopupItemProps = {
   defaultModel?: DefaultModel
   model: Model
@@ -79,7 +79,7 @@ const PopupItem: FC<PopupItemProps> = ({
               key={modelItem.model}
               className={`
                 group relative flex items-center px-3 py-1.5 h-8 rounded-lg
-                ${modelItem.status === ModelStatusEnum.active ? 'cursor-pointer hover:bg-gray-50 dark:hover:bg-zinc-800' : 'cursor-not-allowed hover:bg-gray-50/60'}
+                ${modelItem.status === ModelStatusEnum.active ? `cursor-pointer hover:bg-gray-50 ${getDarkThemeClasses('hover')}` : 'cursor-not-allowed hover:bg-gray-50/60'}
               `}
               onClick={() => handleSelect(model.provider, modelItem)}
             >

@@ -26,7 +26,7 @@ import {
 } from '@/app/components/base/icons/src/vender/solid/editor'
 import { OrganizeGrid } from '@/app/components/base/icons/src/vender/line/layout'
 import { StickerSquare } from '@/app/components/base/icons/src/vender/line/files'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const Control = () => {
   const { t } = useTranslation()
   const controlMode = useStore(s => s.controlMode)
@@ -92,7 +92,7 @@ const Control = () => {
 
   return (
     // <div className='flex items-center p-0.5 rounded-lg border-[0.5px] border-gray-100 bg-white shadow-lg text-gray-500'>
-    <div className='flex items-center p-0.5 rounded-lg border-[0.5px] border-gray-100 bg-white dark:bg-[#202020] shadow-lg text-gray-500 dark:border-[#3F3F3F] dark:border-solid'>
+    <div className={`flex items-center p-0.5 rounded-lg border-[0.5px] border-gray-100 bg-white ${getDarkThemeClasses('main_background')} shadow-lg text-gray-500 ${getDarkThemeClasses('border')} dark:border-solid`}>
       <AddBlock />
       <TipPopup title={t('workflow.nodes.note.addNote')}>
         <div

@@ -13,7 +13,7 @@ import { InputVarType, NodeRunningStatus } from '@/app/components/workflow/types
 import ResultPanel from '@/app/components/workflow/run/result-panel'
 import Toast from '@/app/components/base/toast'
 import { TransferMethod } from '@/types/app'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const i18nPrefix = 'workflow.singleRun'
 
 type BeforeRunFormProps = {
@@ -109,10 +109,10 @@ const BeforeRunForm: FC<BeforeRunFormProps> = ({
       backgroundColor: 'rgba(16, 24, 40, 0.20)',
     }}>
       {/* <div className='h-full rounded-2xl bg-white flex flex-col'> */}
-      <div className='h-full rounded-2xl bg-white dark:bg-[#3e3e3e] flex flex-col'>
+      <div className={`h-full rounded-2xl bg-white ${getDarkThemeClasses('background1')} flex flex-col`}>
         <div className='shrink-0 flex justify-between items-center h-8 pl-4 pr-3 pt-3'>
           {/* <div className='text-base font-semibold text-gray-900 truncate'> */}
-          <div className='text-base font-semibold text-gray-900 dark:text-white truncate'>
+          <div className={`text-base font-semibold text-gray-900 ${getDarkThemeClasses('text')} truncate`}>
             {t(`${i18nPrefix}.testRun`)} {nodeName}
           </div>
           <div className='ml-2 shrink-0 p-1 cursor-pointer' onClick={onHide}>

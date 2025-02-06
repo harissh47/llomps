@@ -3,7 +3,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import type { FC } from 'react'
 import { useDebounceFn } from 'ahooks'
 import cn from 'classnames'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   className?: string
   height: number
@@ -76,7 +76,7 @@ const PromptEditorHeightResizeWrap: FC<Props> = ({
     >
       {/* <div className={cn(className, 'overflow-y-auto')} */}
       {/* <div className={cn(className, 'overflow-y-auto  dark:bg-[#1A1A1A] dark:text-white')} */}
-      <div className={cn(className, 'overflow-y-auto dark:text-white ')}
+      <div className={cn(className, `overflow-y-auto ${getDarkThemeClasses('text')}`)}
         style={{
           height,
         }}

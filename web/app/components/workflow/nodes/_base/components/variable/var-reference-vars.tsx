@@ -283,7 +283,7 @@ const VarReferenceVars: FC<Props> = ({
             // className={cn(searchBoxClassName, isFocus && 'shadow-sm bg-white ', 'mb-2 mx-1 flex items-center px-2 rounded-lg bg-gray-100 ')}
             className={cn(
               searchBoxClassName,
-              isFocus && `shadow-sm bg-white ${getDarkThemeClasses('background1')}`,
+              isFocus && `shadow-sm bg-white ${getDarkThemeClasses('background3')}`,
               `mb-2 mx-1 flex items-center px-2 rounded-lg bg-gray-100 ${getDarkThemeClasses('background2')}`
             )}
             onClick={(e) => e.stopPropagation()}

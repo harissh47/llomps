@@ -21,7 +21,7 @@ import {
 import { THEME_MAP } from './constants'
 import { useNote } from './hooks'
 import type { NoteNodeType } from './types'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const Icon = () => {
   return (
     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
@@ -62,7 +62,7 @@ const NoteNode = ({
     <div
       className={cn(
         // 'flex flex-col relative rounded-md shadow-xs border hover:shadow-md',
-        'flex flex-col relative rounded-md shadow-xs border hover:shadow-md dark:!bg-[#202020]',
+        `flex flex-col relative rounded-md shadow-xs border hover:shadow-md ${getDarkThemeClasses('main_background')}`,
       )}
       style={{
         background: THEME_MAP[theme].bg,
@@ -115,7 +115,7 @@ const NoteNode = ({
           {
             data.showAuthor && (
               // <div className='p-3 pt-0 text-xs text-black/[0.32]'>
-              <div className='p-3 pt-0 text-xs text-black/[0.32] dark:text-white'>
+              <div className={`p-3 pt-0 text-xs text-black/[0.32] ${getDarkThemeClasses('text')}`}>
                 {data.author}
               </div>
             )

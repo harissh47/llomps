@@ -14,7 +14,7 @@ import Button from '@/app/components/base/button'
 import { fetchDatasets } from '@/service/datasets'
 import Loading from '@/app/components/base/loading'
 import { formatNumber } from '@/utils/format'
-
+import { getDarkThemeClasses } from '@/app/theme'
 export type ISelectDataSetProps = {
   isShow: boolean
   onClose: () => void
@@ -125,9 +125,9 @@ const SelectDataSet: FC<ISelectDataSetProps> = ({
                 // className={cn(s.item, selected.some(i => i.id === item.id) && s.selected, 'flex justify-between items-center h-10 px-2 rounded-lg bg-white border border-gray-200  cursor-pointer', !item.embedding_available && s.disabled)}
                 // className={cn(s.item, selected.some(i => i.id === item.id) && s.selected, 'flex justify-between items-center h-10 px-2 rounded-lg bg-white border border-gray-200  cursor-pointer dark:bg-[#3f3f3f] dark:hover:bg-zinc-600 ', !item.embedding_available && s.disabled)}
                 className={cn(
-                  'flex justify-between items-center h-10 px-2 rounded-lg bg-white border border-gray-200 cursor-pointer shadow-[0px_1px_2px_rgba(16,24,40,0.05)] dark:bg-[#3E3E3E] dark:border-[#5F5F5F]',
+                  `flex justify-between items-center h-10 px-2 rounded-lg bg-white border border-gray-200 cursor-pointer shadow-[0px_1px_2px_rgba(16,24,40,0.05)] ${getDarkThemeClasses('background1')} ${getDarkThemeClasses('border')}`,
                   selected.some(i => i.id === item.id) &&
-                    'bg-[#F5F8FF] dark:bg-zinc-800 border-[#4CAF50]',
+                    `bg-[#F5F8FF] ${getDarkThemeClasses('background8')} border-[#4CAF50]`,
                   !item.embedding_available &&
                     'bg-white border-gray-200 cursor-default'
                 )}
@@ -142,7 +142,7 @@ const SelectDataSet: FC<ISelectDataSetProps> = ({
                     <TypeIcon type="upload_file" size='md' />
                   </div>
                   {/* <div className={cn('max-w-[200px] text-[13px] font-medium text-gray-800 overflow-hidden text-ellipsis whitespace-nowrap ', !item.embedding_available && 'opacity-50 !max-w-[120px]')}>{item.name}</div> */}
-                  <div className={cn('max-w-[200px] text-[13px] font-medium text-gray-800 overflow-hidden text-ellipsis whitespace-nowrap dark:text-white', !item.embedding_available && 'opacity-50 !max-w-[120px]')}>{item.name}</div>
+                  <div className={cn(`max-w-[200px] text-[13px] font-medium text-gray-800 overflow-hidden text-ellipsis whitespace-nowrap ${getDarkThemeClasses('text')}`, !item.embedding_available && 'opacity-50 !max-w-[120px]')}>{item.name}</div>
                   {!item.embedding_available && (
                     <span className='ml-1 shrink-0 px-1 border boder-gray-200 rounded-md text-gray-500 text-xs font-normal leading-[18px]'>{t('dataset.unavailable')}</span>
                   )}
@@ -163,11 +163,11 @@ const SelectDataSet: FC<ISelectDataSetProps> = ({
       {loaded && (
         <div className='flex justify-between items-center mt-8'>
           {/* <div className='text-sm  font-medium text-gray-700'> */}
-          <div className='text-sm  font-medium text-gray-700 dark:text-[#A1A6B2]'>
+          <div className={`text-sm  font-medium text-gray-700 ${getDarkThemeClasses('sub_text3')}`}>
             {selected.length > 0 && `${selected.length} ${t('appDebug.feature.dataSet.selected')}`}
           </div>
           <div className='flex space-x-2'>
-            <Button className='!w-24 !h-9 dark:bg-[#3E3E3E] dark:hover:bg-zinc-800 dark:border-[#5F5F5F]' onClick={onClose}>{t('common.operation.cancel')}</Button>
+            <Button className={`!w-24 !h-9 ${getDarkThemeClasses('background1')} ${getDarkThemeClasses('hover')} ${getDarkThemeClasses('border')}`} onClick={onClose}>{t('common.operation.cancel')}</Button>
             <Button className='!w-24 !h-9' type='primary' onClick={handleSelect} disabled={hasNoData}>{t('common.operation.add')}</Button>
           </div>
         </div>

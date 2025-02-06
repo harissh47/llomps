@@ -13,7 +13,7 @@ import { useNodeIterationInteractions } from './use-interactions'
 import type { IterationNodeType } from './types'
 import AddBlock from './add-block'
 import type { NodeProps } from '@/app/components/workflow/types'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const Node: FC<NodeProps<IterationNodeType>> = ({
   id,
   data,
@@ -31,8 +31,11 @@ const Node: FC<NodeProps<IterationNodeType>> = ({
     // <div className={cn(
     //   'relative min-w-[258px] min-h-[118px] w-full h-full rounded-2xl bg-[#F0F2F7]/90',
     // )}>
+    // <div className={cn(
+    //   'relative min-w-[258px] min-h-[118px] w-full h-full rounded-2xl bg-[#F0F2F7]/90 dark:bg-[#383838]',
+    // )}>
     <div className={cn(
-      'relative min-w-[258px] min-h-[118px] w-full h-full rounded-2xl bg-[#F0F2F7]/90 dark:bg-[#383838]',
+      `relative min-w-[258px] min-h-[118px] w-full h-full rounded-2xl bg-[#F0F2F7]/90 ${getDarkThemeClasses('background3')}`,
     )}>
       <Background
         id={`iteration-background-${id}`}

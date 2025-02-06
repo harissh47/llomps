@@ -3,7 +3,7 @@ import type { FC } from 'react'
 import React from 'react'
 import cn from 'classnames'
 import s from './style.module.css'
-
+ 
 type Props = {
   className?: string
   icon: React.ReactNode
@@ -16,7 +16,7 @@ type Props = {
   chosenConfig?: React.ReactNode
   chosenConfigWrapClassName?: string
 }
-
+ 
 const RadioCard: FC<Props> = ({
   icon,
   iconBgClassName = 'bg-[#F5F3FF]',
@@ -30,15 +30,17 @@ const RadioCard: FC<Props> = ({
 }) => {
   return (
     // <div className={cn(s.item, isChosen && s.active)}>
-    <div
-  className={`relative rounded-xl border border-gray-100 dark:border-[#5f5f5f] cursor-pointer ${
-    isChosen
-      ? 'border-[1.5px] border-[#4CAF50] shadow-[0px_1px_3px_rgba(16,24,40,0.1),0px_1px_2px_rgba(16,24,40,0.06)]'
-      : 'border-gray-100 bg-[#fcfcfd]'
-  }`}
->
-      
-      <div className='flex py-3 pl-3 pr-4 dark:bg-[#3f3f3f] rounded-t-xl' onClick={onChosen}>
+    <div className={cn(s.item, isChosen ? `${s.active}`: 'dark:border-[#5f5f5f]')}>
+
+
+{/* //   className={`relative rounded-xl border border-gray-100 dark:border-[#5f5f5f] cursor-pointer ${ */}
+{/* //     isChosen
+//       ? 'border-[1.5px] border-[#4CAF50] shadow-[0px_1px_3px_rgba(16,24,40,0.1),0px_1px_2px_rgba(16,24,40,0.06)]'
+//       : 'border-gray-100 bg-[#fcfcfd]'
+//   }`} */}
+
+     
+      <div className='flex py-3 pl-3 pr-4 dark:bg-[#3f3f3f] rounded-t-xl overflow-hidden' onClick={onChosen}>
         <div className={cn(iconBgClassName, 'mr-3 shrink-0 flex w-8 justify-center h-8 items-center rounded-lg dark:bg-[#5f5f5f]')}>
           {icon}
         </div>

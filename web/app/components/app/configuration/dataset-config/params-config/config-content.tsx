@@ -21,7 +21,7 @@ import ModelParameterModal from '@/app/components/header/account-setting/model-p
 import TooltipPlus from '@/app/components/base/tooltip-plus'
 import { HelpCircle } from '@/app/components/base/icons/src/vender/line/general'
 import { ModelTypeEnum } from '@/app/components/header/account-setting/model-provider-page/declarations'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   datasetConfigs: DatasetConfigs
   onChange: (configs: DatasetConfigs, isRetrievalModeChange?: boolean) => void
@@ -115,7 +115,7 @@ const ConfigContent: FC<Props> = ({
         <>
           <div className='mt-6'>
             {/* <div className='leading-[32px] text-[13px] font-medium text-gray-900'>{t('common.modelProvider.rerankModel.key')}</div> */}
-            <div className='leading-[32px] text-[13px] font-medium text-gray-900 dark:text-white'>{t('common.modelProvider.rerankModel.key')}</div>
+            <div className={`leading-[32px] text-[13px] font-medium text-gray-900 ${getDarkThemeClasses('text')}`}>{t('common.modelProvider.rerankModel.key')}</div>
             <div>
               <ModelSelector
                 defaultModel={rerankModel && { provider: rerankModel?.provider_name, model: rerankModel?.model_name }}
@@ -153,7 +153,7 @@ const ConfigContent: FC<Props> = ({
         <div className='mt-6'>
           <div className='flex items-center space-x-0.5'>
             {/* <div className='leading-[32px] text-[13px] font-medium text-gray-900'>{t('common.modelProvider.systemReasoningModel.key')}</div> */}
-            <div className='leading-[32px] text-[13px] font-medium text-gray-900 dark:text-white'>{t('common.modelProvider.systemReasoningModel.key')}</div>
+            <div className={`leading-[32px] text-[13px] font-medium text-gray-900 ${getDarkThemeClasses('text')}`}>{t('common.modelProvider.systemReasoningModel.key')}</div>
             <TooltipPlus
               popupContent={t('common.modelProvider.systemReasoningModel.tip')}
             >

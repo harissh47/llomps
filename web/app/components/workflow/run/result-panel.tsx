@@ -5,7 +5,7 @@ import StatusPanel from './status'
 import MetaData from './meta'
 import CodeEditor from '@/app/components/workflow/nodes/_base/components/editor/code-editor'
 import { CodeLanguage } from '@/app/components/workflow/nodes/code/types'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type ResultPanelProps = {
   inputs?: string
   process_data?: string
@@ -37,7 +37,7 @@ const ResultPanel: FC<ResultPanelProps> = ({
   const { t } = useTranslation()
   return (
     // <div className='bg-white py-2'>
-    <div className='bg-white dark:bg-[#333333] py-2'>
+    <div className={`bg-white ${getDarkThemeClasses('background1')} py-2`}>
       <div className='px-4 py-2'>
         <StatusPanel
           status={status}

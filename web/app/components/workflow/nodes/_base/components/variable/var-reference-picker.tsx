@@ -281,7 +281,8 @@ const VarReferencePicker: FC<Props> = ({
                             <div className='flex items-center'>
                               <div className='p-[1px]'>
                                 <VarBlockIcon
-                                  className='!text-gray-900'
+                                  // className='!text-gray-900'
+                                   className={`!text-gray-900 ${getDarkThemeClasses('svg')}`}
                                   type={outputVarNode?.type || BlockEnum.Start}
                                 />
                               </div>

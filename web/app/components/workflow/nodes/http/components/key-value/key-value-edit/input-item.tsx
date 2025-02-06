@@ -8,6 +8,7 @@ import RemoveButton from '@/app/components/workflow/nodes/_base/components/remov
 import Input from '@/app/components/workflow/nodes/_base/components/input-support-select-var'
 import type { Var } from '@/app/components/workflow/types'
 import { VarType } from '@/app/components/workflow/types'
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   className?: string
   instanceId?: string
@@ -50,14 +51,14 @@ const InputItem: FC<Props> = ({
 
   return (
     // <div className={cn(className, 'hover:bg-gray-50 dark:hover:bg-zinc-800 hover:cursor-text', 'relative flex h-full')}>
-    <div className={cn(className, 'hover:bg-gray-50 dark:hover:bg-zinc-800 hover:cursor-text', 'relative flex h-full')}>
+    <div className={cn(className, `hover:bg-gray-50 ${getDarkThemeClasses('hover')} hover:cursor-text`, 'relative flex h-full')}>
 
       {(!readOnly)
         ? (
           <Input
             instanceId={instanceId}
             // className={cn(isFocus ? 'bg-gray-100 ' : 'bg-width', 'w-0 grow px-3 py-1')}
-            className={cn(isFocus ? 'bg-gray-100 dark:bg-[#2c2c2c]' : 'bg-width', 'w-0 grow px-3 py-1')}
+            className={cn(isFocus ? `bg-gray-100 ${getDarkThemeClasses('background2')}` : 'bg-width', 'w-0 grow px-3 py-1')}
 
             value={value}
             onChange={onChange}

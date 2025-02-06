@@ -1,7 +1,7 @@
 import { memo } from 'react'
 import cn from 'classnames'
 import { getKeyboardKeyNameBySystem } from './utils'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type ShortcutsNameProps = {
   keys: string[]
   className?: string
@@ -13,7 +13,7 @@ const ShortcutsName = ({
   return (
     <div className={cn(
       // 'flex items-center gap-0.5 h-4 text-xs text-gray-400',
-      'flex items-center gap-0.5 h-4 text-xs text-gray-400 dark:text-white',
+      `flex items-center gap-0.5 h-4 text-xs text-gray-400 ${getDarkThemeClasses('text')}`,
       className,
     )}>
       {

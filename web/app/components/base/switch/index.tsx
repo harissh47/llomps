@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react'
 import classNames from 'classnames'
 import { Switch as OriginalSwitch } from '@headlessui/react'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type SwitchProps = {
   onChange?: (value: boolean) => void
   size?: 'sm' | 'md' | 'lg' | 'l'
@@ -49,7 +49,7 @@ const Switch = ({ onChange, size = 'lg', defaultValue = false, disabled = false,
       className={classNames(
         wrapStyle[size],
         // enabled ? 'bg-green-600' : 'bg-gray-200',
-        enabled ? 'bg-primary-600' : 'bg-gray-200 dark:bg-[#4d4d4d]',
+        enabled ? 'bg-primary-600' : `bg-gray-200 ${getDarkThemeClasses('background7')}`,
         'relative inline-flex  flex-shrink-0 cursor-pointer rounded-full border-2 border-transparent transition-colors duration-200 ease-in-out',
         disabled ? '!opacity-50 !cursor-not-allowed' : '',
         className,

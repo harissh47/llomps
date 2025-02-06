@@ -12,7 +12,7 @@ import { ToolTypeEnum } from './types'
 import Tools from './tools'
 import { useToolTabs } from './hooks'
 import { useGetLanguage } from '@/context/i18n'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type AllToolsProps = {
   searchText: string
   onSelect: OnSelectBlock
@@ -48,15 +48,16 @@ const AllTools = ({
   return (
     <div>
       {/* <div className='flex items-center px-3 h-8 space-x-1 bg-gray-25 border-b-[0.5px] border-black/[0.08] shadow-xs'> */}
-      <div className='flex items-center px-3 h-8 space-x-1 bg-gray-25 dark:bg-[#383838] border-b-[0.5px] border-black/[0.08] dark:border-b-[#5F5F5F] shadow-xs'>
+      <div className={`flex items-center px-3 h-8 space-x-1 bg-gray-25 ${getDarkThemeClasses('background3')} border-b-[0.5px] border-black/[0.08] ${getDarkThemeClasses('border')} shadow-xs`}>
         {
           tabs.map(tab => (
             <div
               className={cn(
                 // 'flex items-center px-2 h-6 rounded-md hover:bg-gray-100  cursor-pointer',
-                'flex items-center px-2 h-6 rounded-md hover:bg-gray-100 dark:hover:bg-zinc-800 cursor-pointer',
-                'text-xs font-medium text-gray-700 dark:text-[#eeeeee]',
-                activeTab === tab.key && 'bg-gray-200 dark:bg-[#3f3f3f]',
+                `flex items-center px-2 h-6 rounded-md hover:bg-gray-100 ${getDarkThemeClasses('hover')} cursor-pointer`,
+                // `text-xs font-medium text-gray-700 dark:text-[#eeeeee]`,
+                `text-xs font-medium text-gray-700 ${getDarkThemeClasses('sub_text1')}`,
+                activeTab === tab.key && `bg-gray-200 ${getDarkThemeClasses('background3')}`,
               )}
               key={tab.key}
               onClick={() => setActiveTab(tab.key)}

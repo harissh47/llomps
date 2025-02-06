@@ -6,7 +6,7 @@ import cn from 'classnames'
 import produce from 'immer'
 import type { KeyValue } from '../../../types'
 import InputItem from './input-item'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const i18nPrefix = 'workflow.nodes.http'
 
 type Props = {
@@ -50,9 +50,9 @@ const KeyValueItem: FC<Props> = ({
   return (
     // group class name is for hover row show remove button
     // <div className={cn(className, 'group flex h-min-7 border-t border-gray-200')}>
-    <div className={cn(className, 'group flex h-min-7 border-t border-gray-200 dark:border-[#5f5f5f]')}>
+    <div className={cn(className, `group flex h-min-7 border-t border-gray-200 ${getDarkThemeClasses('border')}`)}>
 
-      <div className='w-1/2 border-r border-gray-200 dark:border-[#5f5f5f]'>
+      <div className={`w-1/2 border-r border-gray-200 ${getDarkThemeClasses('border')}`}>
         <InputItem
           instanceId={`http-key-${instanceId}`}
           nodeId={nodeId}

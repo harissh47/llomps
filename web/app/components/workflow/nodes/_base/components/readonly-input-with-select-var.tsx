@@ -7,6 +7,7 @@ import { VarBlockIcon } from '../../../block-icon'
 import { getNodeInfoById, isSystemVar } from './variable/utils'
 import { Line3 } from '@/app/components/base/icons/src/public/common'
 import { Variable02 } from '@/app/components/base/icons/src/vender/solid/development'
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   nodeId: string
   value: string
@@ -34,7 +35,7 @@ const ReadonlyInputWithSelectVar: FC<Props> = ({
     const html: JSX.Element[] = strWithVarPlaceholder.split(VAR_PLACEHOLDER).map((str, index) => {
       if (!vars[index])
         // return <span className='relative top-[-3px] leading-[16px] ' key={index}>{str}</span>
-      return <span className='relative top-[-3px] leading-[16px] dark:text-white' key={index}>{str}</span>
+      return <span className={`relative top-[-3px] leading-[16px] ${getDarkThemeClasses('text')} `} key={index}>{str}</span>
 
 
       const value = vars[index].split('.')
@@ -45,7 +46,7 @@ const ReadonlyInputWithSelectVar: FC<Props> = ({
       return (<span key={index}>
         <span className='relative top-[-3px] leading-[16px]'>{str}</span>
         {/* <div className=' inline-flex h-[16px] items-center px-1.5 rounded-[5px] bg-white'> */}
-        <div className=' inline-flex h-[16px] items-center px-1.5 rounded-[5px] bg-white dark:bg-[#5f5f5f]'>
+        <div className={` inline-flex h-[16px] items-center px-1.5 rounded-[5px] bg-white ${getDarkThemeClasses('background6')}`}>
 
           <div className='flex items-center'>
             <div className='p-[1px]'>
@@ -56,7 +57,7 @@ const ReadonlyInputWithSelectVar: FC<Props> = ({
             </div>
             {/* <div className='max-w-[60px] mx-0.5 text-xs font-medium text-gray-700 dark:text-[#FCFCFC] truncate' title={node?.title}>{node?.title}</div> */}
 
-            <div className='max-w-[60px] mx-0.5 text-xs font-medium text-gray-700 dark:text-[#FCFCFC] truncate' title={node?.title}>{node?.title}</div>
+            <div className={`max-w-[60px] mx-0.5 text-xs font-medium text-gray-700 ${getDarkThemeClasses('sub_text1')} truncate`} title={node?.title}>{node?.title}</div>
             <Line3 className='mr-0.5'></Line3>
           </div>
           <div className='flex items-center text-primary-600'>
