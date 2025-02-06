@@ -21,6 +21,7 @@ import { Plan } from '@/app/components/billing/type'
 import UpgradeBtn from '@/app/components/billing/upgrade-btn'
 import { NUM_INFINITE } from '@/app/components/billing/config'
 import { LanguagesSupported } from '@/i18n/language'
+import { getDarkThemeClasses } from '@/app/theme'
 dayjs.extend(relativeTime)
 
 const MembersPage = () => {
@@ -48,11 +49,11 @@ const MembersPage = () => {
     <>
       <div className='flex flex-col'>
         {/* <div className='flex items-center mb-4 p-3 bg-gray-50 rounded-2xl'> */}
-        <div className='flex items-center mb-4 p-3 bg-gray-50 rounded-2xl dark:bg-[#1A1A1A] dark:border-2 dark:border-[#3F3F3F] dark:border-solid dark:rounded-xl dark:shadow-sm cursor-pointer dark:text-white'>
+        <div className={`flex items-center mb-4 p-3 bg-gray-50 rounded-2xl ${getDarkThemeClasses('background4')} border-2 ${getDarkThemeClasses('border')} border-solid rounded-xl shadow-sm cursor-pointer ${getDarkThemeClasses('text')}`}>
           <LogoEmbededChatHeader className='!w-10 !h-10' />
           <div className='grow mx-2'>
             {/* <div className='text-sm font-medium text-gray-900'> */}
-            <div className='text-sm font-medium text-gray-900 dark:text-white'>{currentWorkspace?.name}</div>
+            <div className={`text-sm font-medium text-gray-900 ${getDarkThemeClasses('text')}`}>{currentWorkspace?.name}</div>
             {enableBilling && (
               <div className='text-xs text-gray-500'>
                 {isNotUnlimitedMemberPlan
@@ -78,8 +79,8 @@ const MembersPage = () => {
             <UpgradeBtn className='mr-2' loc='member-invite' />
           )}
           <div className={
-            `shrink-0 flex items-center py-[7px] px-3 border-[0.5px] border-gray-200 dark:border-[#5f5f5f]
-            text-[13px] font-medium text-primary-600 bg-white dark:bg-[#3f3f3f]
+            `shrink-0 flex items-center py-[7px] px-3 border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')}
+            text-[13px] font-medium text-primary-600 bg-white ${getDarkThemeClasses('background3')}
             shadow-xs rounded-lg ${(isCurrentWorkspaceManager && !isMemberFull) ? 'cursor-pointer' : 'grayscale opacity-50 cursor-default'}`
           } onClick={() => (isCurrentWorkspaceManager && !isMemberFull) && setInviteModalVisible(true)}>
             <UserPlusIcon className='w-4 h-4 mr-2 ' />
@@ -87,42 +88,42 @@ const MembersPage = () => {
           </div>
         </div>
         <div className='overflow-visible lg:overflow-visible'>
-          <div className='flex items-center py-[7px] border-b border-gray-200 dark:border-[#5f5f5f] min-w-[480px]'>
+          <div className={`flex items-center py-[7px] border-b border-gray-200 ${getDarkThemeClasses('border')} min-w-[480px]`}>
             {/* <div className='grow px-3 text-xs font-medium text-gray-500'>{t('common.members.name')}</div>
             <div className='shrink-0 w-[104px] text-xs font-medium text-gray-500'>{t('common.members.lastActive')}</div>
             <div className='shrink-0 w-[96px] px-3 text-xs font-medium text-gray-500'>{t('common.members.role')}</div>
           </div> */}
-          <div className='grow px-3 text-xs font-medium text-gray-500 dark:text-white'>{t('common.members.name')}</div>
-            <div className='shrink-0 w-[104px] text-xs font-medium text-gray-500 dark:text-white'>{t('common.members.lastActive')}</div>
-            <div className='shrink-0 w-[96px] px-3 text-xs font-medium text-gray-500 dark:text-white'>{t('common.members.role')}</div>
+          <div className={`grow px-3 text-xs font-medium text-gray-500 ${getDarkThemeClasses('text')}`}>{t('common.members.name')}</div>
+            <div className={`shrink-0 w-[104px] text-xs font-medium text-gray-500 ${getDarkThemeClasses('text')}`}>{t('common.members.lastActive')}</div>
+            <div className={`shrink-0 w-[96px] px-3 text-xs font-medium text-gray-500 ${getDarkThemeClasses('text')}`}>{t('common.members.role')}</div>
           </div>
           <div className='min-w-[480px] relative'>
             {
               accounts.map(account => (
-                <div key={account.id} className='flex border-b border-gray-100 dark:border-[#5f5f5f]'>
+                <div key={account.id} className={`flex border-b border-gray-100 ${getDarkThemeClasses('border')}`}>
                   <div className='grow flex items-center py-2 px-3'>
                     <Avatar size={24} className='mr-2' name={account.name} />
                     <div className=''>
                       {/* <div className='text-[13px] font-medium text-gray-700 leading-[18px]'> */}
-                      <div className='text-[13px] font-medium text-gray-700 leading-[18px] dark:text-white'>
+                      <div className={`text-[13px] font-medium text-gray-700 leading-[18px] ${getDarkThemeClasses('text')}`}>
                         {account.name}
                         {account.status === 'pending' && <span className='ml-1 text-xs text-[#DC6803]'>{t('common.members.pending')}</span>}
                         {/* {userProfile.email === account.email && <span className='text-xs text-gray-500'>{t('common.members.you')}</span>} */}
-                        {userProfile.email === account.email && <span className='text-xs text-gray-500 dark:text-white'>{t('common.members.you')}</span>}
+                        {userProfile.email === account.email && <span className={`text-xs text-gray-500 ${getDarkThemeClasses('text')}`}>{t('common.members.you')}</span>}
                         
                       </div>
                       {/* <div className='text-xs text-gray-500 leading-[18px]'>{account.email}</div> */}
-                      <div className='text-xs text-gray-500 leading-[18px] dark:text-white'>{account.email}</div>
+                      <div className={`text-xs text-gray-500 leading-[18px] ${getDarkThemeClasses('text')}`}>{account.email}</div>
                     </div>
                   </div>
                   {/* <div className='shrink-0 flex items-center w-[104px] py-2 text-[13px] text-gray-700'>{dayjs(Number((account.last_active_at || account.created_at)) * 1000).locale(locale === 'zh-Hans' ? 'zh-cn' : 'en').fromNow()}</div> */}
-                  <div className='shrink-0 flex items-center w-[104px] py-2 text-[13px] text-gray-700 dark:text-white'>{dayjs(Number((account.last_active_at || account.created_at)) * 1000).locale(locale === 'zh-Hans' ? 'zh-cn' : 'en').fromNow()}</div>
+                  <div className={`shrink-0 flex items-center w-[104px] py-2 text-[13px] text-gray-700 ${getDarkThemeClasses('text')}`}>{dayjs(Number((account.last_active_at || account.created_at)) * 1000).locale(locale === 'zh-Hans' ? 'zh-cn' : 'en').fromNow()}</div>
                   <div className='shrink-0 w-[96px] flex items-center'>
                     {
                       (owner && account.role !== 'owner')
                         ? <Operation member={account} onOperate={mutate} />
                         // : <div className='px-3 text-[13px] text-gray-700'>
-                         : <div className='px-3 text-[13px] text-gray-700 dark:text-white'>{RoleMap[account.role] || RoleMap.normal}</div>
+                         : <div className={`px-3 text-[13px] text-gray-700 ${getDarkThemeClasses('text')}`}>{RoleMap[account.role] || RoleMap.normal}</div>
                     }
                   </div>
                 </div>
@@ -156,3 +157,4 @@ const MembersPage = () => {
 }
 
 export default MembersPage
+

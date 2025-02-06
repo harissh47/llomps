@@ -10,7 +10,7 @@ import {
   updateApiBasedExtension,
 } from '@/service/common'
 import { useToastContext } from '@/app/components/base/toast'
-
+import { getDarkThemeClasses } from '@/app/theme'
 export type ApiBasedExtensionData = {
   name?: string
   apiEndpoint?: string
@@ -79,7 +79,7 @@ const ApiBasedExtensionModal: FC<ApiBasedExtensionModalProps> = ({
       className='!p-8 !pb-6 !max-w-none !w-[640px]'
     >
       {/* <div className='mb-2 text-xl font-semibold text-gray-900'> */}
-      <div className='mb-2 text-xl font-semibold text-gray-900 dark:text-white'>
+      <div className={`mb-2 text-xl font-semibold text-gray-900 ${getDarkThemeClasses('text')}`}>
         {
           data.name
             ? t('common.apiBasedExtension.modal.editTitle')
@@ -88,20 +88,20 @@ const ApiBasedExtensionModal: FC<ApiBasedExtensionModalProps> = ({
       </div>
       <div className='py-2'>
         {/* <div className='leading-9 text-sm font-medium text-gray-900'> */}
-        <div className='leading-9 text-sm font-medium text-gray-900 dark:text-white'>
+        <div className={`leading-9 text-sm font-medium text-gray-900 ${getDarkThemeClasses('text')}`}>
           {t('common.apiBasedExtension.modal.name.title')}
         </div>
         <input
           value={localeData.name || ''}
           onChange={e => handleDataChange('name', e.target.value)}
           // className='block px-3 w-full h-9 bg-gray-100 rounded-lg text-sm text-gray-900 outline-none appearance-none'
-          className='block px-3 w-full h-9 bg-gray-100 dark:bg-[#2c2c2c] rounded-lg text-sm text-gray-900 dark:text-[#FCFCFC] outline-none appearance-none'
+          className={`block px-3 w-full h-9 bg-gray-100  ${getDarkThemeClasses('background2')} rounded-lg text-sm text-gray-900  ${getDarkThemeClasses('sub_text1')} outline-none appearance-none`}
           placeholder={t('common.apiBasedExtension.modal.name.placeholder') || ''}
         />
       </div>
       <div className='py-2'>
         {/* <div className='flex justify-between items-center h-9 text-sm font-medium text-gray-900'> */}
-        <div className='flex justify-between items-center h-9 text-sm font-medium text-gray-900 dark:text-white'>
+        <div className={`flex justify-between items-center h-9 text-sm font-medium text-gray-900 ${getDarkThemeClasses('text')}`}>
           {t('common.apiBasedExtension.modal.apiEndpoint.title')}
           {/* <a
             href={t('common.apiBasedExtension.linkUrl') || '/'}
@@ -116,13 +116,13 @@ const ApiBasedExtensionModal: FC<ApiBasedExtensionModalProps> = ({
           value={localeData.api_endpoint || ''}
           onChange={e => handleDataChange('api_endpoint', e.target.value)}
           // className='block px-3 w-full h-9 bg-gray-100 rounded-lg text-sm text-gray-900 outline-none appearance-none'
-          className='block px-3 w-full h-9 bg-gray-100 dark:bg-[#2c2c2c] rounded-lg text-sm text-gray-900 dark:text-[#FCFCFC] outline-none appearance-none'
+          className={`block px-3 w-full h-9 bg-gray-100  ${getDarkThemeClasses('background2')} rounded-lg text-sm text-gray-900  ${getDarkThemeClasses('sub_text1')} outline-none appearance-none`}
           placeholder={t('common.apiBasedExtension.modal.apiEndpoint.placeholder') || ''}
         />
       </div>
       <div className='py-2'>
         {/* <div className='leading-9 text-sm font-medium text-gray-900'> */}
-        <div className='leading-9 text-sm font-medium text-gray-900 dark:text-white'>
+        <div className={`leading-9 text-sm font-medium text-gray-900 ${getDarkThemeClasses('text')}`}>
           {t('common.apiBasedExtension.modal.apiKey.title')}
         </div>
         <div className='flex items-center'>
@@ -130,7 +130,7 @@ const ApiBasedExtensionModal: FC<ApiBasedExtensionModalProps> = ({
             value={localeData.api_key || ''}
             onChange={e => handleDataChange('api_key', e.target.value)}
             // className='block grow mr-2 px-3 h-9 bg-gray-100 rounded-lg text-sm text-gray-900 outline-none appearance-none'
-            className='block grow mr-2 px-3 h-9 bg-gray-100 dark:bg-[#2c2c2c] rounded-lg text-sm text-gray-900 dark:text-[#FCFCFC] outline-none appearance-none'
+            className={`block grow mr-2 px-3 h-9 bg-gray-100  ${getDarkThemeClasses('background2')} rounded-lg text-sm text-gray-900  ${getDarkThemeClasses('sub_text1')} outline-none appearance-none`}
             placeholder={t('common.apiBasedExtension.modal.apiKey.placeholder') || ''}
           />
         </div>
@@ -138,7 +138,7 @@ const ApiBasedExtensionModal: FC<ApiBasedExtensionModalProps> = ({
       <div className='flex items-center justify-end mt-6'>
         <Button
           onClick={onCancel}
-          className='mr-2 text-sm font-medium dark:bg-[#333333] dark:border-[#5F5F5F] dark:hover:bg-zinc-800'
+          className={`mr-2 text-sm font-medium  ${getDarkThemeClasses('background1')}  ${getDarkThemeClasses('border')}  ${getDarkThemeClasses('hover')}`}
         >
           {t('common.operation.cancel')}
         </Button>

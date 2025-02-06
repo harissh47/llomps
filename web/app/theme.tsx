@@ -84,6 +84,11 @@ export type DarkThemeColors = {
   bg1:string
   prose:string
   ring1:string
+  borderb1:string
+  bordert:string
+  peercheckedbg:string
+  peerfocus:string
+
 }
  
 // // Function to determine background color based on provider
@@ -126,13 +131,13 @@ export const getDarkTheme = (): DarkThemeColors => ({
   background4: 'dark:bg-[#1A1A1A]',
   background6: 'dark:bg-[#5f5f5f]',
   svg: 'dark:text-[#6b7280]',
-  green_text: 'dark:text-primary-600',
+  green_text: 'dark:!text-primary-600',
   green_border: 'dark:border-primary-600',
   shadow:'dark:shadow-[#5f5f5f]',
   lab_activatedbutton:'dark:bg-zinc-600',
   hover1:'dark:hover:bg-[#3f3f3f]',
   hover2:'dark:hover:bg-gray-800',
-  hover3:'dark:hover:bg-zinc-700',
+  hover3:'dark:hover:!bg-zinc-700',
   hover4: 'dark:hover:bg-[#E35B5B]',
   placeholder:'dark:placeholder:text-white',
   placeholder1:'dark:placeholder:text-[#FCFCFC]',
@@ -176,11 +181,15 @@ export const getDarkTheme = (): DarkThemeColors => ({
   background8: 'dark:bg-zinc-800',
   focusvisible:'dark:focus-visible:!bg-zinc-800',
   borderb:'dark:border-b-[#3f3f3f]',
+  borderb1:'dark:border-b-[#5f5f5f]',
   sub_text10:'dark:text-yellow-500',
   sub_text11:'dark:text-green-500',
   bg1: 'dark:bg-[#3e3e3e]',
   prose:'dark:prose-h1:text-white dark:prose-h3:text-white dark:prose-p:text-[#FCFCFC] dark:prose-strong:text-[#FCFCFC]',
-  ring1:'dark:ring-1 dark:ring-white/10'
+  ring1:'dark:ring-1 dark:ring-white/10',
+  bordert:'dark:border-t-[#5f5f5f]',
+  peercheckedbg:'dark:peer-checked:bg-[#3f3f3f]',
+  peerfocus:'dark:peer-focus:ring-[#3f3f3f]/20'
  
 
 });

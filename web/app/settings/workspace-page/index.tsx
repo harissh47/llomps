@@ -10,7 +10,7 @@ import { apiPrefix } from '@/config';
 import { error } from 'console';
 import { Data } from 'emoji-mart';
 import useSWR, { mutate } from 'swr';
-
+import { getDarkThemeClasses } from '@/app/theme';
 interface Workspace {
   email: string;
   name: string;
@@ -118,7 +118,8 @@ export default function WorkspacePage() {
   return (
     <>
       <div className='flex flex-col'>
-        <div className='flex justify-between items-center mb-4 p-3 bg-gray-50 rounded-2xl dark:bg-[#1A1A1A] dark:border-2 dark:border-[#3F3F3F] dark:rounded-xl dark:shadow-sm dark:hover:bg-zinc-800 cursor-pointer dark:text-white'>
+        <div className={`flex justify-between items-center mb-4 p-3 bg-gray-50 rounded-2xl ${getDarkThemeClasses('background4')} border-2 ${getDarkThemeClasses('border')} rounded-xl shadow-sm ${getDarkThemeClasses('hover')} cursor-pointer ${getDarkThemeClasses('text')}
+`}>
           <span>Create a new Workspace</span>
           <Button onClick={openModal} type='primary' className='text-sm px-4 py-2'>
             Add
@@ -126,19 +127,20 @@ export default function WorkspacePage() {
         </div>
 
         <div className='overflow-visible lg:overflow-visible'>
-          <div className='flex items-center py-[7px] border-b border-gray-200 dark:border-[#5f5f5f] min-w-[480px]'>
-            <div className='grow px-3 text-xs font-medium text-gray-500 dark:text-white'>Email</div>
-            <div className='shrink-0 w-[104px] text-xs font-medium text-gray-500 dark:text-white'>Role</div>
+          <div className={`flex items-center py-[7px] border-b border-gray-200 ${getDarkThemeClasses('border')} min-w-[480px]`}>
+            <div className={`grow px-3 text-xs font-medium text-gray-500 ${getDarkThemeClasses('text')}`}>Email</div>
+            <div className={ `shrink-0 w-[104px] text-xs font-medium text-gray-500 ${getDarkThemeClasses('text')}
+`}>Role</div>
           </div>
 
           {workspaces?.map((workspace, index) => (
             <div
               key={index}
-              className='py-3 border-b border-gray-200 hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-700'
+              className={`py-3 border-b border-gray-200 hover:bg-gray-100 ${getDarkThemeClasses('border')}${getDarkThemeClasses('hover')}`}
             >
-              <div className='px-3 text-sm font-medium text-gray-700 dark:text-gray-200'>{workspace.email}</div>
-              <div className='px-3 text-sm text-gray-500 dark:text-gray-400'>{workspace.name}</div>
-              <div className='px-3 text-sm text-gray-500 dark:text-gray-400'>
+              <div className={`px-3 text-sm font-medium text-gray-700 ${getDarkThemeClasses('sub_text6')}`}>{workspace.email}</div>
+              <div className={`px-3 text-sm text-gray-500 ${getDarkThemeClasses('sub_text7')}`}>{workspace.name}</div>
+              <div className={`px-3 text-sm text-gray-500 ${getDarkThemeClasses('sub_text7')}`}>
                 Password: {workspace.password ? '******' : 'Not Set'}
               </div>
             </div>
@@ -155,12 +157,13 @@ export default function WorkspacePage() {
           className='!w-[362px] !p-0'
         >
           <div className='p-4'>
-            <h2 className='text-xl mb-4 text-gray-900 dark:text-white'>
+            <h2 className={`text-xl mb-4 text-gray-900 ${getDarkThemeClasses('text')}
+`}>
               {t('AddWorkspace')}
             </h2>
             <form onSubmit={handleSubmit} className='flex flex-col space-y-4'>
               <div>
-                <label className='block text-sm font-medium text-gray-700 dark:text-white'>
+                <label className={`block text-sm font-medium text-gray-700 ${getDarkThemeClasses('text')}`}>
                   {t('Email')}
                 </label>
                 <input
@@ -168,12 +171,16 @@ export default function WorkspacePage() {
                   name='email'
                   value={formData.email}
                   onChange={handleInputChange}
-                  className='mt-1 block w-full p-2 border border-gray-300 dark:border-[#5f5f5f] rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 dark:bg-[#333] dark:text-white'
+                  // className={`mt-1 block w-full p-2 border border-gray-300 ${getDarkThemeClasses('border')} rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 ${getDarkThemeClasses('background2')} ${getDarkThemeClasses('text')}`}
+                  className={`  mt-2 w-80 px-3 py-2 bg-gray-100 ${getDarkThemeClasses('background2')}
+ rounded
+  text-sm font-normal text-gray-800 ${getDarkThemeClasses('text')}
+  ${getDarkThemeClasses('focusoutline')} focus:border-2 ${getDarkThemeClasses('borderfocus')}`}
                   required
                 />
               </div>
               <div>
-                <label className='block text-sm font-medium text-gray-700 dark:text-white'>
+                <label className={`block text-sm font-medium text-gray-700 ${getDarkThemeClasses('text')}`}>
                   {t('UserName')}
                 </label>
                 <input
@@ -181,12 +188,16 @@ export default function WorkspacePage() {
                   name='name'
                   value={formData.name}
                   onChange={handleInputChange}
-                  className='mt-1 block w-full p-2 border border-gray-300 dark:border-[#5f5f5f] rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 dark:bg-[#333] dark:text-white'
+                  // className={`mt-1 block w-full p-2 border border-gray-300 dark:border-[#5f5f5f] rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 dark:bg-[#333] ${getDarkThemeClasses('text')}`}
+                  className={` mt-2 w-80 px-3 py-2 bg-gray-100 ${getDarkThemeClasses('background2')}
+ rounded
+  text-sm font-normal text-gray-800 ${getDarkThemeClasses('text')}
+  ${getDarkThemeClasses('focusoutline')} focus:border-2 ${getDarkThemeClasses('borderfocus')}`}
                   required
                 />
               </div>
               <div>
-                <label className='block text-sm font-medium text-gray-700 dark:text-white'>
+                <label className={`block text-sm font-medium text-gray-700 ${getDarkThemeClasses('text')}`}>
                   {t('Password')}
                 </label>
                 <input
@@ -194,7 +205,11 @@ export default function WorkspacePage() {
                   name='password'
                   value={formData.password}
                   onChange={handleInputChange}
-                  className='mt-1 block w-full p-2 border border-gray-300 dark:border-[#5f5f5f] rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 dark:bg-[#333] dark:text-white'
+                  // className={`mt-1 block w-full p-2 border border-gray-300 ${getDarkThemeClasses('border')} rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 dark:bg-[#333] ${getDarkThemeClasses('text')}`}
+                  className={` mt-2 w-80 px-3 py-2 bg-gray-100 ${getDarkThemeClasses('background2')}
+ rounded
+  text-sm font-normal text-gray-800 ${getDarkThemeClasses('text')}
+  ${getDarkThemeClasses('focusoutline')} focus:border-2 ${getDarkThemeClasses('borderfocus')}`}
                   required
                 />
               </div>
@@ -209,7 +224,7 @@ export default function WorkspacePage() {
               <div className='flex justify-end space-x-3 '>
                 <Button type='default' 
                 onClick={closeModal}          
-                 className='mr-2 text-sm font-medium dark:border-0 dark:bg-[#3f3f3f] dark:hover:bg-zinc-800'
+                 className={`mr-2 text-sm font-medium ${getDarkThemeClasses('border')} ${getDarkThemeClasses('background3')} ${getDarkThemeClasses('hover')}`}
                 >
 
                   {t('Cancel')}
@@ -299,7 +314,8 @@ export default function WorkspacePage() {
 //     return (
 //         <>
 //             <div className='flex flex-col'>
-//                 <div className={`flex justify-between items-center mb-4 p-3 bg-gray-50 rounded-2xl dark:bg-[#1A1A1A] dark:border-2 dark:border-[#3F3F3F] dark:rounded-xl dark:shadow-sm dark:hover:bg-zinc-800 cursor-pointer dark:text-white
+//                 <div className={`flex justify-between items-center mb-4 p-3 bg-gray-50 rounded-2xl dark:bg-[#1A1A1A] dark:border-2 dark:border-[#3F3F3F] dark:rounded-xl dark:shadow-sm ${getDarkThemeClasses('hover')} cursor-pointer ${getDarkThemeClasses('text')}
+
 //                     ${isOwner ? 'cursor-pointer' : 'cursor-not-allowed grayscale'}`}>
 //                     <span>Create a new Workspace</span>
 //                     {isOwner && (
@@ -309,9 +325,9 @@ export default function WorkspacePage() {
 
 //                 {/* <div className="overflow-visible lg:overflow-visible">
 //                     <div className="flex items-center py-[7px] border-b border-gray-200 min-w-[480px]">
-//                         <div className="grow px-3 text-xs font-medium text-gray-500 dark:text-white">Email</div>
-//                         <div className="grow px-3 text-xs font-medium text-gray-500 dark:text-white">Name</div>
-//                         <div className='shrink-0 w-[104px] text-xs font-medium text-gray-500 dark:text-white'>Role</div>
+//                         <div className="grow px-3 text-xs font-medium text-gray-500 ${getDarkThemeClasses('text')}">Email</div>
+//                         <div className="grow px-3 text-xs font-medium text-gray-500 ${getDarkThemeClasses('text')}">Name</div>
+//                         <div className='shrink-0 w-[104px] text-xs font-medium text-gray-500 ${getDarkThemeClasses('text')}'>Role</div>
 //                     </div>
 //                     {workspaces.map((workspace, index) => (
 //                         <div key={index} className="flex items-center py-2 border-b border-gray-200 hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-700">
@@ -323,8 +339,8 @@ export default function WorkspacePage() {
 //                 </div> */}
 //                 <div className="overflow-visible lg:overflow-visible">
 //                     <div className="flex items-center py-[7px] border-b border-gray-200 min-w-[480px]">
-//                         <div className="grow px-3 text-xs font-medium text-gray-500 dark:text-white">Email</div>
-//                         <div className="shrink-0 w-[104px] text-xs font-medium text-gray-500 dark:text-white">Role</div>
+//                         <div className="grow px-3 text-xs font-medium text-gray-500 ${getDarkThemeClasses('text')}">Email</div>
+//                         <div className="shrink-0 w-[104px] text-xs font-medium text-gray-500 ${getDarkThemeClasses('text')}">Role</div>
 //                     </div>
 
 //                     {workspaces.map((workspace, index) => (
@@ -350,41 +366,41 @@ export default function WorkspacePage() {
 //                     className="!w-[362px] !p-0"
 //                 >
 //                     <div className="p-4">
-//                         <h2 className="text-xl mb-4 text-gray-900 dark:text-white">Add Workspace</h2>
+//                         <h2 className="text-xl mb-4 text-gray-900 ${getDarkThemeClasses('text')}">Add Workspace</h2>
 //                         <form onSubmit={handleSubmit} className="flex flex-col space-y-4">
 //                             <div>
-//                                 <label className="block text-sm font-medium text-gray-700 dark:text-white">Email</label>
+//                                 <label className="block text-sm font-medium text-gray-700 ${getDarkThemeClasses('text')}">Email</label>
 //                                 <input
 //                                     type="email"
 //                                     name="email"
 //                                     // value={formData.workspaceName}
 //                                     value={formData.email}
 //                                     onChange={handleInputChange}
-//                                     className="mt-1 block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 dark:bg-[#333] dark:text-white"
+//                                     className="mt-1 block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 dark:bg-[#333] ${getDarkThemeClasses('text')}"
 //                                     required
 //                                 ></input>
 //                             </div>
 //                             <div>
-//                                 <label className="block text-sm font-medium text-gray-700 dark:text-white">User Name</label>
+//                                 <label className="block text-sm font-medium text-gray-700 ${getDarkThemeClasses('text')}">User Name</label>
 //                                 <input
 //                                     type="text"
 //                                     name="name"
 //                                     // value={formData.ownerName}
 //                                     value={formData.name}
 //                                     onChange={handleInputChange}
-//                                     className="mt-1 block w-full p-2 borer border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 dark:bg-[#333] dark:text-white"
+//                                     className="mt-1 block w-full p-2 borer border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 dark:bg-[#333] ${getDarkThemeClasses('text')}"
 //                                     required
 //                                 />
 //                             </div>
 //                             <div>
-//                                 <label className="block text-sm font-medium text-gray-700 dark:text-white">Password</label>
+//                                 <label className="block text-sm font-medium text-gray-700 ${getDarkThemeClasses('text')}">Password</label>
 //                                 <input
 //                                     type="password"
 //                                     name="password"
 //                                     // value={formData.ownerName}
 //                                     value={formData.password}
 //                                     onChange={handleInputChange}
-//                                     className="mt-1 block w-full p-2 borer border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 dark:bg-[#333] dark:text-white"
+//                                     className="mt-1 block w-full p-2 borer border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 dark:bg-[#333] ${getDarkThemeClasses('text')}"
 //                                     required
 //                                 />
 //                             </div>
@@ -392,12 +408,12 @@ export default function WorkspacePage() {
 //                         {/* role */}
 
 //                         <div>
-//                                 <label className="block text-sm font-medium text-gray-700 dark:text-white">Role</label>
+//                                 <label className="block text-sm font-medium text-gray-700 ${getDarkThemeClasses('text')}">Role</label>
 //                                 <select
 //                                     name="role"
 //                                     value={formData.role}
 //                                     onChange={handleInputChange}
-//                                     className="mt-1 block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 dark:bg-[#333] dark:text-white"
+//                                     className="mt-1 block w-full p-2 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 dark:bg-[#333] ${getDarkThemeClasses('text')}"
 //                                     required
 //                                 >
 //                                     <option value="Admin">Admin</option>

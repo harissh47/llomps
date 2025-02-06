@@ -48,7 +48,7 @@ import {
 import { useToastContext } from '@/app/components/base/toast'
 import ConfirmCommon from '@/app/components/base/confirm/common'
 import { useAppContext } from '@/context/app-context'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type ModelModalProps = {
   provider: ModelProvider
   configurateMethod: ConfigurationMethodEnum
@@ -279,11 +279,11 @@ const ModelModal: FC<ModelModalProps> = ({
       <PortalToFollowElemContent className='w-full h-full z-[60]'>
         <div className='fixed inset-0 flex items-center justify-center bg-black/[.25]'>
           {/* <div className='mx-2 w-[640px] max-h-[calc(100vh-120px)] bg-white shadow-xl rounded-2xl overflow-y-auto'> */}
-          <div className='mx-2 w-[640px] max-h-[calc(100vh-120px)] bg-white dark:bg-[#333333] shadow-xl rounded-2xl overflow-y-auto'>
+          <div className={`mx-2 w-[640px] max-h-[calc(100vh-120px)] bg-white ${getDarkThemeClasses('background1')}  shadow-xl rounded-2xl overflow-y-auto`}>
             <div className='px-8 pt-8'>
-              <div className='flex justify-between items-center mb-2'>
+              <div className={`flex justify-between items-center mb-2`}>
                 {/* <div className='text-xl font-semibold text-gray-900'>{renderTitlePrefix()}</div> */}
-                <div className='text-xl font-semibold text-gray-900 dark:text-white'>{renderTitlePrefix()}</div>
+                <div className={`text-xl font-semibold text-gray-900 ${getDarkThemeClasses('text')} `}>{renderTitlePrefix()}</div>
                 <ProviderIcon provider={provider} />
               </div>
 
@@ -297,7 +297,7 @@ const ModelModal: FC<ModelModalProps> = ({
                 isEditMode={isEditMode}
               />
 
-              <div className='mt-1 mb-4 border-t-[0.5px] border-t-gray-100 dark:border-t-[#5f5f5f]' />
+              <div className={`mt-1 mb-4 border-t-[0.5px] border-t-gray-100 ${getDarkThemeClasses('bordert')} `} />
               <ModelLoadBalancingConfigs withSwitch {...{
                 draftConfig,
                 setDraftConfig,
@@ -307,7 +307,7 @@ const ModelModal: FC<ModelModalProps> = ({
               }} />
 
               {/* <div className='sticky bottom-0 flex justify-between items-center mt-2 -mx-2 pt-4 px-2 pb-6 flex-wrap gap-y-2 bg-white'> */}
-              <div className='sticky bottom-0 flex justify-between items-center mt-2 -mx-2 pt-4 px-2 pb-6 flex-wrap gap-y-2 bg-white dark:bg-[#333333]'>
+              <div className={`sticky bottom-0 flex justify-between items-center mt-2 -mx-2 pt-4 px-2 pb-6 flex-wrap gap-y-2 bg-white ${getDarkThemeClasses('background1')} `}>
                 {
                   (provider.help && (provider.help.title || provider.help.url))
                     ? (
@@ -327,7 +327,7 @@ const ModelModal: FC<ModelModalProps> = ({
                   {
                     isEditMode && (
                       <Button
-                        className='mr-2 h-9 text-sm font-medium text-[#D92D20] dark:bg-[#3f3f3f] dark:hover:bg-zinc-800 dark:border-0'
+                        className={`mr-2 h-9 text-sm font-medium text-[#D92D20] ${getDarkThemeClasses('background1')}  ${getDarkThemeClasses('hover')}  border ${getDarkThemeClasses('border')} `}
                         onClick={() => setShowConfirm(true)}
                       >
                         {t('common.operation.remove')}
@@ -335,7 +335,7 @@ const ModelModal: FC<ModelModalProps> = ({
                     )
                   }
                   <Button
-                    className='mr-2 h-9 text-sm font-medium text-gray-700 dark:hover:bg-zinc-800 dark:bg-[#333333] dark:border-[#5F5F5F]'
+                    className={`mr-2 h-9 text-sm font-medium text-gray-700 ${getDarkThemeClasses('hover')}  ${getDarkThemeClasses('background1')}  ${getDarkThemeClasses('border')} `}
                     onClick={onCancel}
                   >
                     {t('common.operation.cancel')}
@@ -367,7 +367,7 @@ const ModelModal: FC<ModelModalProps> = ({
                   )
                   : (
                     // <div className='flex justify-center items-center py-3 bg-gray-50 text-xs text-gray-500'>
-                    <div className='flex justify-center items-center py-3 bg-gray-50 dark:bg-[#333333] text-xs text-gray-500 dark:text-[#FCFCFC]'>
+                    <div className={`flex justify-center items-center py-3 bg-gray-50 ${getDarkThemeClasses('background1')}  text-xs text-gray-500 ${getDarkThemeClasses('sub_text1')} `}>
                       <Lock01 className='mr-1 w-3 h-3 text-gray-500' />
                       {t('common.modelProvider.encrypted.front')}
                       <a

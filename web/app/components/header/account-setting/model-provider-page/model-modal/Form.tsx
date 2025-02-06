@@ -18,6 +18,7 @@ import { SimpleSelect } from '@/app/components/base/select'
 import Tooltip from '@/app/components/base/tooltip-plus'
 import { HelpCircle } from '@/app/components/base/icons/src/vender/line/general'
 import Radio from '@/app/components/base/radio'
+import { getDarkThemeClasses } from '@/app/theme'
 type FormProps = {
   className?: string
   itemClassName?: string
@@ -97,7 +98,7 @@ const Form: FC<FormProps> = ({
       return (
         <div key={variable} className={cn(itemClassName, 'py-3')}>
           {/* <div className={cn(fieldLabelClassName, 'py-2 text-sm text-gray-900')}> */}
-          <div className={cn(fieldLabelClassName, 'py-2 text-sm text-gray-900 dark:!text-white')}>
+          <div className={cn(fieldLabelClassName, `py-2 text-sm text-gray-900 ${getDarkThemeClasses('sub_text1')}`)}>
             {label[language] || label.en_US}
             {
               required && (
@@ -139,7 +140,7 @@ const Form: FC<FormProps> = ({
       return (
         <div key={variable} className={cn(itemClassName, 'py-3')}>
           {/* <div className={cn(fieldLabelClassName, 'py-2 text-sm text-gray-900')}> */}
-          <div className={cn(fieldLabelClassName, 'py-2 text-sm text-gray-900 dark:text-white')}>
+          <div className={cn(fieldLabelClassName, `py-2 text-sm text-gray-900 ${getDarkThemeClasses('text')}`)}>
             {label[language] || label.en_US}
             {
               required && (
@@ -164,7 +165,7 @@ const Form: FC<FormProps> = ({
                   // `}
                   className={`
                     flex items-center px-3 py-2 rounded-lg border 
-                    ${value[variable] === option.value ? 'border-[1.5px] border-primary-400 bg-white dark:bg-[#3F3F3F] shadow-sm' : 'border-gray-100 dark:border-[#5F5F5F] bg-gray-25 dark:bg-[#3F3F3F]'}
+                    ${value[variable] === option.value ? `border-[1.5px] border-primary-400 bg-white ${getDarkThemeClasses('background2')} ${getDarkThemeClasses('text')} shadow-sm` : `border-gray-100 ${getDarkThemeClasses('border')} bg-gray-25 ${getDarkThemeClasses('background3')}`}
                     ${disabed && '!cursor-not-allowed opacity-60'}
                     cursor-pointer
                   `}
@@ -176,7 +177,7 @@ const Form: FC<FormProps> = ({
                     ${value[variable] === option.value && 'border-[5px] border-primary-600'}
                   `} />
                   {/* <div className='text-sm text-gray-900'>{option.label[language] || option.label.en_US}</div> */}
-                  <div className='text-sm text-gray-900 dark:text-white'>{option.label[language] || option.label.en_US}</div>
+                  <div className={`text-sm text-gray-900 ${getDarkThemeClasses('text')} `}>{option.label[language] || option.label.en_US}</div>
                 </div>
               ))
             }
@@ -203,7 +204,7 @@ const Form: FC<FormProps> = ({
       return (
         <div key={variable} className={cn(itemClassName, 'py-3')}>
           {/* <div className={cn(fieldLabelClassName, 'py-2 text-sm text-gray-900')}> */}
-          <div className={cn(fieldLabelClassName, 'py-2 text-sm text-gray-900 dark:!text-white')}>
+          <div className={cn(fieldLabelClassName, `py-2 text-sm text-gray-900 ${getDarkThemeClasses('sub_text1')}`)}>
             {label[language] || label.en_US}
 
             {
@@ -244,10 +245,10 @@ const Form: FC<FormProps> = ({
 
       return (
         <div key={variable} className={cn(itemClassName, 'py-3')}>
-          <div className='flex items-center justify-between py-2 text-sm text-gray-900 dark:text-white'>
+          <div className={`flex items-center justify-between py-2 text-sm text-gray-900 ${getDarkThemeClasses('text')}`}>
             <div className='flex items-center space-x-2'>
               {/* <span className={cn(fieldLabelClassName, 'py-2 text-sm text-gray-900')}>{label[language] || label.en_US}</span> */}
-              <span className={cn(fieldLabelClassName, 'py-2 text-sm text-gray-900 dark:!text-white')}>{label[language] || label.en_US}</span>
+              <span className={cn(fieldLabelClassName, `py-2 text-sm text-gray-900 ${getDarkThemeClasses('sub_text1')}`)}>{label[language] || label.en_US}</span>
               {tooltipContent}
             </div>
             <Radio.Group

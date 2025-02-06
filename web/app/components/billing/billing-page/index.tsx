@@ -6,6 +6,7 @@ import PricingToggle from './PricingToggle'
 import { PricingPlan } from './types'
 import PricingCard from './PricingCard'
 import PricingTable from './PricingTable'
+import { getDarkThemeClasses } from '@/app/theme'
 const Billing: FC = () => {
   const [isYearly, setIsYearly] = useState(false)
   const [pricingData, setPricingData] = useState<any>(null)
@@ -37,11 +38,11 @@ const Billing: FC = () => {
 
   return (
     // <main className='bg-white dark:bg-gray-900'>
-    <main className='bg-white dark:bg-[#202020]'>
+    <main className={`bg-white  ${getDarkThemeClasses('main_background')}`}>
 
       <section className='max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-0 py-4'>
-        <h1 className='text-4xl font-bold mb-4 mt-0 text-gray-900 dark:text-white text-center'>{heading}</h1>
-        <p className='text-gray-600 dark:text-gray-300 mb-8 text-center'>{subheading}</p>
+        <h1 className={`text-4xl font-bold mb-4 mt-0 text-gray-900  ${getDarkThemeClasses('text')} text-center`}>{heading}</h1>
+        <p className={`text-gray-600  ${getDarkThemeClasses('sub_text7')} mb-8 text-center`}>{subheading}</p>
         <div className='mb-12'>
           <PricingToggle
             isYearly={isYearly}

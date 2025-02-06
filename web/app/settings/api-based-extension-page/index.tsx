@@ -5,7 +5,7 @@ import Empty from './empty'
 import { useModalContext } from '@/context/modal-context'
 import { Plus } from '@/app/components/base/icons/src/vender/line/general'
 import { fetchApiBasedExtensionList } from '@/service/common'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const ApiBasedExtensionPage = () => {
   const { t } = useTranslation()
   const { setShowApiBasedExtensionModal } = useModalContext()
@@ -44,7 +44,7 @@ const ApiBasedExtensionPage = () => {
         onClick={handleOpenApiBasedExtensionModal}
       > */}
         <div
-        className='flex items-center justify-center px-3 h-8 text-[13px] font-medium text-gray-700 rounded-lg bg-gray-50 cursor-pointer dark:bg-[#1A1A1A] dark:border-2 dark:border-[#3F3F3F] dark:border-solid dark:rounded-xl dark:shadow-sm dark:hover:bg-zinc-800 cursor-pointer dark:text-white '
+        className={`flex items-center justify-center px-3 h-8 text-[13px] font-medium text-gray-700 rounded-lg bg-gray-50 cursor-pointer  ${getDarkThemeClasses('background4')} border-2  ${getDarkThemeClasses('border4')} border-solid rounded-xl shadow-sm  ${getDarkThemeClasses('hover')} cursor-pointer  ${getDarkThemeClasses('text')} `}
         onClick={handleOpenApiBasedExtensionModal}
       >
         <Plus className='mr-2 w-4 h-4' />
