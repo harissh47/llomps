@@ -27,7 +27,7 @@ import Loading from '@/app/components/base/loading'
 import Confirm from '@/app/components/base/confirm'
 import useTimestamp from '@/hooks/use-timestamp'
 import { useAppContext } from '@/context/app-context'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type ISecretKeyModalProps = {
   isShow: boolean
   appId?: string
@@ -100,32 +100,41 @@ const SecretKeyModal = ({
     <Modal isShow={isShow} onClose={onClose} title={`${t('appApi.apiKeyModal.apiSecretKey')}`} className={`${s.customModal} px-8 flex flex-col`}>
       <XMarkIcon className={`w-6 h-6 absolute cursor-pointer text-gray-500 ${s.close}`} onClick={onClose} />
       {/* <p className='mt-1 text-[13px] text-gray-500 font-normal leading-5 flex-shrink-0'>{t('appApi.apiKeyModal.apiSecretKeyTips')}</p> */}
-      <p className='mt-1 text-[13px] text-gray-500 font-normal leading-5 flex-shrink-0 dark:text-[#A1A2B6]'>{t('appApi.apiKeyModal.apiSecretKeyTips')}</p>
+      <p className={`mt-1 text-[13px] text-gray-500 font-normal leading-5 flex-shrink-0 ${getDarkThemeClasses('sub_text3')}
+`}>{t('appApi.apiKeyModal.apiSecretKeyTips')}</p>
       {!apiKeysList && <div className='mt-4'><Loading /></div>}
       {
         !!apiKeysList?.data?.length && (
           <div className='flex flex-col flex-grow mt-4 overflow-hidden'>
             {/* <div className='flex items-center flex-shrink-0 text-xs font-semibold text-gray-500 border-b border-solid h-9'> */}
-            <div className='flex items-center flex-shrink-0 text-xs font-semibold text-gray-500 border-b border-solid dark:border-[#5F5F5F] h-9'>
-              <div className='flex-shrink-0 w-64 px-3 dark:text-white'>{t('appApi.apiKeyModal.secretKey')}</div>
-              <div className='flex-shrink-0 px-3 w-[200px] dark:text-white'>{t('appApi.apiKeyModal.created')}</div>
-              <div className='flex-shrink-0 px-3 w-[200px] dark:text-white'>{t('appApi.apiKeyModal.lastUsed')}</div>
+            <div className={`flex items-center flex-shrink-0 text-xs font-semibold text-gray-500 border-b border-solid ${getDarkThemeClasses('border')}
+ h-9`}>
+              <div className={`flex-shrink-0 w-64 px-3 ${getDarkThemeClasses('text')}
+`}>{t('appApi.apiKeyModal.secretKey')}</div>
+              <div className={`flex-shrink-0 px-3 w-[200px] ${getDarkThemeClasses('text')}
+`}>{t('appApi.apiKeyModal.created')}</div>
+              <div className={`flex-shrink-0 px-3 w-[200px] ${getDarkThemeClasses('text')}
+`}>{t('appApi.apiKeyModal.lastUsed')}</div>
               <div className='flex-grow px-3'></div>
             </div>
             <div className='flex-grow overflow-auto'>
               {apiKeysList.data.map(api => (
                 // <div className='flex items-center text-sm font-normal text-gray-700 border-b border-solid h-9' key={api.id}>
-                <div className='flex items-center text-sm font-normal text-gray-700 border-b border-solid dark:border-[#5F5F5F] h-9' key={api.id}>
-                  <div className='flex-shrink-0 w-64 px-3 font-mono truncate dark:text-[#fcfcfc]'>{generateToken(api.token)}</div>
-                  <div className='flex-shrink-0 px-3 truncate w-[200px] dark:text-[#fcfcfc]'>{formatTime(Number(api.created_at), t('appLog.dateTimeFormat') as string)}</div>
-                  <div className='flex-shrink-0 px-3 truncate w-[200px] dark:text-[#fcfcfc]'>{api.last_used_at ? formatTime(Number(api.created_at), t('appLog.dateTimeFormat') as string) : t('appApi.never')}</div>
+                <div className={`flex items-center text-sm font-normal text-gray-700 border-b border-solid ${getDarkThemeClasses('border')}
+ h-9`} key={api.id}>
+                  <div className={`flex-shrink-0 w-64 px-3 font-mono truncate ${getDarkThemeClasses('sub_text1')}
+`}>{generateToken(api.token)}</div>
+                  <div className={`flex-shrink-0 px-3 truncate w-[200px] ${getDarkThemeClasses('sub_text1')}
+`}>{formatTime(Number(api.created_at), t('appLog.dateTimeFormat') as string)}</div>
+                  <div className={`flex-shrink-0 px-3 truncate w-[200px] ${getDarkThemeClasses('sub_text1')}
+`}>{api.last_used_at ? formatTime(Number(api.created_at), t('appLog.dateTimeFormat') as string) : t('appApi.never')}</div>
                   <div className='flex flex-grow px-3'>
                     <Tooltip
                       selector={`key-${api.token}`}
                       content={copyValue === api.token ? `${t('appApi.copied')}` : `${t('appApi.copy')}`}
                       className='z-10'
                     >
-                      <div className={`flex items-center justify-center flex-shrink-0 w-6 h-6 mr-1 rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-zinc-800 ${s.copyIcon} ${copyValue === api.token ? s.copied : ''}`} onClick={() => {
+                      <div className={`flex items-center justify-center flex-shrink-0 w-6 h-6 mr-1 rounded-lg cursor-pointer hover:bg-gray-100 ${getDarkThemeClasses('hover')} ${s.copyIcon} ${copyValue === api.token ? s.copied : ''}`} onClick={() => {
                         // setIsCopied(true)
                         copy(api.token)
                         setCopyValue(api.token)
@@ -146,10 +155,12 @@ const SecretKeyModal = ({
         )
       }
       <div className='flex'>
-        <Button type='default' className={`flex flex-shrink-0 mt-4 dark:border-[#5F5F5F] dark:hover:bg-transparent dark:hover:shadow-[#5F5F5F] ${s.autoWidth}`} onClick={onCreate} disabled={ !currentWorkspace || !isCurrentWorkspaceManager}>
+        <Button type='default' className={`flex flex-shrink-0 mt-4 ${getDarkThemeClasses('border')}
+ ${getDarkThemeClasses('hovershadow')} ${getDarkThemeClasses('background1')} ${s.autoWidth}`} onClick={onCreate} disabled={ !currentWorkspace || !isCurrentWorkspaceManager}>
           <PlusIcon className='flex flex-shrink-0 w-4 h-4' />
           {/* <div className='text-xs font-medium text-gray-800'>{t('appApi.apiKeyModal.createNewSecretKey')}</div> */}
-          <div className='text-xs font-medium text-gray-800 dark:text-white'>{t('appApi.apiKeyModal.createNewSecretKey')}</div>
+          <div className={`text-xs font-medium text-gray-800 ${getDarkThemeClasses('text')}
+`}>{t('appApi.apiKeyModal.createNewSecretKey')}</div>
         </Button>
       </div>
       <SecretKeyGenerateModal className='flex-shrink-0' isShow={isVisible} onClose={() => setVisible(false)} newKey={newKey} />

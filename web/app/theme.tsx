@@ -74,6 +74,16 @@ export type DarkThemeColors = {
   outline:string
   focusoutline:string
   borderradius:string
+  grouphovertext1:string
+  grouphovertext2:string
+  background8: string
+  focusvisible:string
+  borderb:string
+  sub_text10:string
+  sub_text11:string
+  bg1:string
+  prose:string
+  ring1:string
 }
  
 // // Function to determine background color based on provider
@@ -117,7 +127,7 @@ export const getDarkTheme = (): DarkThemeColors => ({
   background6: 'dark:bg-[#5f5f5f]',
   svg: 'dark:text-[#6b7280]',
   green_text: 'dark:text-primary-600',
-  green_border: 'dark:text-primary-600',
+  green_border: 'dark:border-primary-600',
   shadow:'dark:shadow-[#5f5f5f]',
   lab_activatedbutton:'dark:bg-zinc-600',
   hover1:'dark:hover:bg-[#3f3f3f]',
@@ -160,7 +170,18 @@ export const getDarkTheme = (): DarkThemeColors => ({
   appcardBorder:'dark:border-[#3f3f3f] dark:border-2',
   outline:'dark:hover:outline-[#5f5f5f]',
   focusoutline:'dark:focus:outline-none',
-  borderradius:'dark:border-2'
+  borderradius:'dark:border-2',
+  grouphovertext1:'dark:group-hover:text-[#a8a8a8]',
+  grouphovertext2:'dark:group-hover:text-[#e0dede] ',
+  background8: 'dark:bg-zinc-800',
+  focusvisible:'dark:focus-visible:!bg-zinc-800',
+  borderb:'dark:border-b-[#3f3f3f]',
+  sub_text10:'dark:text-yellow-500',
+  sub_text11:'dark:text-green-500',
+  bg1: 'dark:bg-[#3e3e3e]',
+  prose:'dark:prose-h1:text-white dark:prose-h3:text-white dark:prose-p:text-[#FCFCFC] dark:prose-strong:text-[#FCFCFC]',
+  ring1:'dark:ring-1 dark:ring-white/10'
+ 
 
 });
  

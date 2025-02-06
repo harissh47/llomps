@@ -152,6 +152,7 @@ import copyStyle from '@/app/components/app/chat/copy-btn/style.module.css';
 import Tooltip from '@/app/components/base/tooltip';
 import { useAppContext } from '@/context/app-context';
 import { IS_CE_EDITION } from '@/config';
+import { getDarkThemeClasses } from '@/app/theme';
 
 type Props = {
   isShow: boolean;
@@ -253,7 +254,7 @@ const Embedded = ({ isShow, onClose, appBaseUrl, accessToken, className }: Props
       closable={true}
     >
       {/* <div className="mb-4 mt-8 text-gray-900 text-[14px] font-medium leading-tight"> */}
-      <div className="mb-4 mt-8 text-gray-900 text-[14px] font-medium leading-tight dark:text-white" >
+      <div className={`mb-4 mt-8 text-gray-900 text-[14px] font-medium leading-tight ${getDarkThemeClasses('text')}`}>
         {t(`${prefixEmbedded}.explanation`)}
       </div>
       <div className="flex flex-wrap items-center justify-evenly gap-y-2">
@@ -265,7 +266,7 @@ const Embedded = ({ isShow, onClose, appBaseUrl, accessToken, className }: Props
               style.option,
               style[`${v}Icon`],
               option === v && style.active,
-              'flex-1 min-w-[150px] max-w-[200px] text-center cursor-pointer dark:border-[#5f5f5f]'
+              `flex-1 min-w-[150px] max-w-[200px] text-center cursor-pointer ${getDarkThemeClasses('green_border')}`
             )}
             onClick={() => {
               setOption(v as Option);
@@ -278,10 +279,10 @@ const Embedded = ({ isShow, onClose, appBaseUrl, accessToken, className }: Props
       </div>
       <div className={cn('w-full bg-gray-100 rounded-lg flex-col justify-start items-start inline-flex', 'mt-6')}>
         {/* <div className="inline-flex items-center self-stretch justify-start gap-2 py-1 pl-3 pr-1 border border-black rounded-tl-lg rounded-tr-lg bg-gray-50 border-opacity-5"> */}
-        <div className="inline-flex items-center self-stretch justify-start gap-2 py-1 pl-3 pr-1 border border-black rounded-tl-lg rounded-tr-lg bg-gray-50 border-opacity-5 dark:bg-[#2c2c2c]">
+        <div className={`inline-flex items-center self-stretch justify-start gap-2 py-1 pl-3 pr-1 border border-black rounded-tl-lg rounded-tr-lg bg-gray-50 border-opacity-5 ${getDarkThemeClasses('background2')}`}>
           {/* <div className="grow shrink basis-0 text-slate-700 text-[13px] font-medium leading-none">
             {t(`${prefixEmbedded}.${option}`)} */}
-            <div className="grow shrink basis-0 text-slate-700 text-[13px] font-medium leading-none dark:text-white">
+            <div className={`grow shrink basis-0 text-slate-700 text-[13px] font-medium leading-none ${getDarkThemeClasses('text')}`}>
             {t(`${prefixEmbedded}.${option}`)}
           </div>
           <div className="flex items-center justify-center gap-1 p-2 rounded-lg">
@@ -290,7 +291,7 @@ const Embedded = ({ isShow, onClose, appBaseUrl, accessToken, className }: Props
               content={(isCopied[option] ? t(`${prefixEmbedded}.copied`) : t(`${prefixEmbedded}.copy`)) || ''}
             >
               {/* <div className="w-8 h-8 rounded-lg cursor-pointer hover:bg-gray-100"> */}
-              <div className="w-8 h-8 rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-zinc-800">
+              <div className={`w-8 h-8 rounded-lg cursor-pointer hover:bg-gray-100 ${getDarkThemeClasses('hover')}`}>
 
                 <div onClick={onClickCopy} className={`w-full h-full ${copyStyle.copyIcon} ${isCopied[option] ? copyStyle.copied : ''}`}></div>
               </div>
@@ -298,10 +299,10 @@ const Embedded = ({ isShow, onClose, appBaseUrl, accessToken, className }: Props
           </div>
         </div>
         {/* <div className="flex items-start justify-start w-full gap-2 p-3 overflow-x-auto"> */}
-        <div className="flex items-start justify-start w-full gap-2 p-3 overflow-x-auto dark:bg-zinc-800">
+        <div className={`flex items-start justify-start w-full gap-2 p-3 overflow-x-auto ${getDarkThemeClasses('background8')}`}>
           <div className="grow shrink basis-0 text-slate-700 text-[13px] leading-tight font-mono">
             {/* <pre className='select-text'>{OPTION_MAP[option].getContent(appBaseUrl, accessToken, isTestEnv)}</pre> */}
-            <pre className='select-text dark:text-white'>{OPTION_MAP[option].getContent(appBaseUrl, accessToken, isTestEnv)}</pre>
+            <pre className={`select-text ${getDarkThemeClasses('text')}`}>{OPTION_MAP[option].getContent(appBaseUrl, accessToken, isTestEnv)}</pre>
           </div>
         </div>
       </div>

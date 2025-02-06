@@ -73,7 +73,7 @@ export default function Modal({
                   as="h3"
                   // className="text-lg font-medium leading-6 text-gray-900"
                   // className="text-lg font-medium leading-6 text-gray-900 dark:bg-[#3e3e3e] dark:text-white"
-                    className="text-lg font-medium leading-6 text-gray-900 ${getDarkThemeClasses('background1')} ${getDarkThemeClasses('text')}"
+                    className={`text-lg font-medium leading-6 text-gray-900 ${getDarkThemeClasses('sub_text1')} ${getDarkThemeClasses('background1')} `}
                 >
                   {title}
                 </Dialog.Title>}
