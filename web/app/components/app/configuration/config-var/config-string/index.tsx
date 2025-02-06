@@ -1,7 +1,7 @@
 'use client'
 import type { FC } from 'react'
 import React, { useEffect } from 'react'
-
+import { getDarkThemeClasses } from '@/app/theme'
 export type IConfigStringProps = {
   value: number | undefined
   maxLength: number
@@ -37,7 +37,7 @@ const ConfigString: FC<IConfigStringProps> = ({
           onChange(value)
         }}
         // className="w-full px-3 text-sm leading-9 text-gray-900 border-0 rounded-lg grow h-9 bg-gray-100 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200"
-         className="w-full px-3 text-sm leading-9 text-gray-900 dark:text-[#FCFCFC] border-0 rounded-lg grow h-9 bg-gray-100 dark:bg-[#2C2C2C] focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200 dark:focus:ring-[#5F5F5F]"
+         className={`w-full px-3 text-sm leading-9 text-gray-900 ${getDarkThemeClasses('sub_text1')} border-0 rounded-lg grow h-9 bg-gray-100 ${getDarkThemeClasses('background2')} focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200 ${getDarkThemeClasses('focusring')}`}
       />
     </div>
   )

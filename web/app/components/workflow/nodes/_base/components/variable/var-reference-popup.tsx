@@ -3,7 +3,7 @@ import type { FC } from 'react'
 import React from 'react'
 import VarReferenceVars from './var-reference-vars'
 import type { NodeOutPutVar, ValueSelector, Var } from '@/app/components/workflow/types'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   vars: NodeOutPutVar[]
   onChange: (value: ValueSelector, varDetail: Var) => void
@@ -17,7 +17,7 @@ const VarReferencePopup: FC<Props> = ({
   // max-h-[300px] overflow-y-auto todo: use portal to handle long list
   return (
     // <div className='p-1 bg-white rounded-lg border border-gray-200 shadow-lg space-y-1' style={{
-      <div className='p-1 bg-white dark:bg-[#3E3E3E] rounded-lg border border-gray-200 dark:border-[#5F5F5F] shadow-lg space-y-1' style={{
+      <div className={`p-1 bg-white ${getDarkThemeClasses('background1')} rounded-lg border border-gray-200 ${getDarkThemeClasses('border')} shadow-lg space-y-1`} style={{
   
     width: itemWidth || 228,
     }}>

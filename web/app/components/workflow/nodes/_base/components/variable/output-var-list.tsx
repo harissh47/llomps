@@ -9,7 +9,7 @@ import VarTypePicker from './var-type-picker'
 import type { VarType } from '@/app/components/workflow/types'
 import { checkKeys } from '@/utils/var'
 import Toast from '@/app/components/base/toast'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   readonly: boolean
   outputs: OutputVar
@@ -90,7 +90,7 @@ const OutputVarList: FC<Props> = ({
             value={item.variable}
             onChange={handleVarNameChange(index)}
             // className='w-0 grow h-8 leading-8 px-2.5 rounded-lg border-0 bg-gray-100  text-gray-900 text-[13px] placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200'
-            className='w-0 grow h-8 leading-8 px-2.5 rounded-lg border-0 bg-gray-100 dark:bg-[#2c2c2c] text-gray-900 dark:text-[#FCFCFC] text-[13px] placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200 dark:focus:ring-[#5F5F5F]'
+            className={`w-0 grow h-8 leading-8 px-2.5 rounded-lg border-0 bg-gray-100 ${getDarkThemeClasses('background2')} text-gray-900 ${getDarkThemeClasses('sub_text1')} text-[13px] placeholder:text-gray-400 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200 ${getDarkThemeClasses('focusring')}`}
             type='text' />
           <VarTypePicker
             readonly={readonly}

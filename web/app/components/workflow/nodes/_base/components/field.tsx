@@ -7,7 +7,7 @@ import type { DefaultTFuncReturn } from 'i18next'
 import { HelpCircle } from '@/app/components/base/icons/src/vender/line/general'
 import TooltipPlus from '@/app/components/base/tooltip-plus'
 import { ChevronRight } from '@/app/components/base/icons/src/vender/line/arrows'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   className?: string
   title: JSX.Element | string | DefaultTFuncReturn
@@ -37,7 +37,7 @@ const Filed: FC<Props> = ({
         className={cn('flex justify-between items-center', supportFold && 'cursor-pointer')}>
         <div className='flex items-center h-6'>
           {/* <div className='text-[13px] font-medium text-gray-700 uppercase'>{title}</div> */}
-          <div className='text-[13px] font-medium text-gray-700 dark:text-white uppercase'>{title}</div>
+          <div className={`text-[13px] font-medium text-gray-700 ${getDarkThemeClasses('text')} uppercase`}>{title}</div>
           {tooltip && (
             <TooltipPlus popupContent={
               <div className='w-[120px]'>

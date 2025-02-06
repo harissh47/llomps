@@ -6,7 +6,7 @@ import { ChevronDown } from '@/app/components/base/icons/src/vender/line/arrows'
 import { PortalToFollowElem, PortalToFollowElemContent, PortalToFollowElemTrigger } from '@/app/components/base/portal-to-follow-elem'
 import { Check, SearchLg } from '@/app/components/base/icons/src/vender/line/general'
 import { XCircle } from '@/app/components/base/icons/src/vender/solid/general'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   value: CodeDependency
   available_dependencies: CodeDependency[]
@@ -37,7 +37,7 @@ const DependencyPicker: FC<Props> = ({
     >
       <PortalToFollowElemTrigger onClick={() => setOpen(!open)} className='flex-grow cursor-pointer'>
         {/* <div className='flex items-center h-8 justify-between px-2.5 rounded-lg border-0 bg-gray-100 text-gray-900 text-[13px]'> */}
-        <div className='flex items-center h-8 justify-between px-2.5 rounded-lg border-0 bg-gray-100 dark:bg-[#2c2c2c] text-gray-900 dark:text-[#FCFCFC] text-[13px]'>
+        <div className={`flex items-center h-8 justify-between px-2.5 rounded-lg border-0 bg-gray-100 ${getDarkThemeClasses('background2')} text-gray-900 ${getDarkThemeClasses('sub_text1')} text-[13px]`}>
           <div className='grow w-0 truncate' title={value.name}>{value.name}</div>
           <ChevronDown className='shrink-0 w-3.5 h-3.5 text-gray-700' />
         </div>
@@ -45,18 +45,18 @@ const DependencyPicker: FC<Props> = ({
       <PortalToFollowElemContent style={{
         zIndex: 100,
       }}>
-        <div className='p-1 bg-white dark:bg-[#3e3e3e] dark:border-[#5F5F5F] rounded-lg shadow-sm dark:shadow-[#5F5F5F]' style={{
+        <div className={`p-1 bg-white ${getDarkThemeClasses('background1')} ${getDarkThemeClasses('border')} rounded-lg shadow-sm ${getDarkThemeClasses('shadow')}`} style={{
           width: 350,
         }}>
           <div
             // className='shadow-sm bg-white mb-2 mx-1 flex items-center px-2 rounded-lg bg-gray-100'
-             className='shadow-sm bg-white mb-2 mx-1 flex items-center px-2 rounded-lg bg-gray-100 dark:bg-[#3e3e3e] dark:border-[#5F5F5F] dark:shadow-[#5F5F5F]'
+             className={`shadow-sm bg-white mb-2 mx-1 flex items-center px-2 rounded-lg bg-gray-100 ${getDarkThemeClasses('background1')} ${getDarkThemeClasses('border')} ${getDarkThemeClasses('shadow')}`}
           >
             <SearchLg className='shrink-0 ml-[1px] mr-[5px] w-3.5 h-3.5 text-gray-400' />
             <input
               value={searchText}
               // className='grow px-0.5 py-[7px] text-[13px] text-gray-700 bg-transparent appearance-none outline-none caret-primary-600 placeholder:text-gray-400'
-              className='grow px-0.5 py-[7px] text-[13px] text-gray-700 dark:text-[#FCFCFC] bg-transparent appearance-none outline-none caret-primary-600 placeholder:text-gray-400'
+              className={`grow px-0.5 py-[7px] text-[13px] text-gray-700 ${getDarkThemeClasses('sub_text1')} bg-transparent appearance-none outline-none caret-primary-600 placeholder:text-gray-400`}
               placeholder={t('workflow.nodes.code.searchDependencies') || ''}
               onChange={e => setSearchText(e.target.value)}
               autoFocus
@@ -81,7 +81,7 @@ const DependencyPicker: FC<Props> = ({
               <div
                 key={dependency.name}
                 // className='flex items-center h-[30px] justify-between pl-3 pr-2 rounded-lg hover:bg-gray-100 text-gray-900 text-[13px] cursor-pointer'
-                className='flex items-center h-[30px] justify-between pl-3 pr-2 rounded-lg hover:bg-gray-100 dark:hover:bg-zinc-800 text-gray-900 dark:text-[#FCFCFC] text-[13px] cursor-pointer'
+                className={`flex items-center h-[30px] justify-between pl-3 pr-2 rounded-lg hover:bg-gray-100 ${getDarkThemeClasses('hover')} text-gray-900 ${getDarkThemeClasses('sub_text1')} text-[13px] cursor-pointer`}
                 onClick={handleChange(dependency)}
               >
                 <div className='w-0 grow truncate'>{dependency.name}</div>

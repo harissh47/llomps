@@ -17,7 +17,7 @@ import { XClose } from "@/app/components/base/icons/src/vender/line/general";
 import { NEED_REFRESH_APP_LIST_KEY } from "@/config";
 import { getRedirection } from "@/utils/app-redirection";
 import DSLFileList from "./DslFileList";
-import { getDarkThemeClasses } from "@/utils/theme";
+import { getDarkThemeClasses } from "@/app/theme";
 type CreateFromDSLModalProps = {
   show: boolean;
   onSuccess?: () => void;

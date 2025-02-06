@@ -13,7 +13,7 @@ import { useStore as useAppStore } from '@/app/components/app/store'
 import { ChevronDown, ChevronRight } from '@/app/components/base/icons/src/vender/line/arrows'
 import { FileArrow01, FilePlus01, FilePlus02 } from '@/app/components/base/icons/src/vender/line/files'
 import { Plus } from '@/app/components/base/icons/src/vender/line/general'
-
+import { getDarkThemeClasses } from '@/app/theme'
 export type NavItem = {
   id: string
   name: string
@@ -74,11 +74,11 @@ const NavSelector = ({ curNav, navs, createText, isApp, onCreate, onLoadmore }: 
               //   divide-y z-40 divide-gray-100 origin-top-right rounded-lg bg-white
               //   shadow-lg
               // "
-              className="
+              className={`
                 absolute -left-11 right-0 mt-1.5 w-[12.7rem] max-w-80
-                divide-y z-40 divide-gray-100 dark:divide-[#5F5F5F] origin-top-right rounded-lg bg-white dark:bg-[#3f3f3f]
+                divide-y z-40 divide-gray-100 ${getDarkThemeClasses('divide')} origin-top-right rounded-lg bg-white ${getDarkThemeClasses('background3')}
                 shadow-lg
-              "
+              `}
             >
               {/* <div className="px-1 py-1 overflow-auto" style={{ maxHeight: '50vh' }} onScroll={handleScroll}> */}
               <div className="px-1 py-1 overflow-auto " style={{ maxHeight: '50vh' }} onScroll={handleScroll}>
@@ -86,8 +86,8 @@ const NavSelector = ({ curNav, navs, createText, isApp, onCreate, onLoadmore }: 
                 {
                   navs.map(nav => (
                     <Menu.Item key={nav.id}>
-                      <div className='flex items-center w-full z-40 px-3 py-[6px] text-gray-700 dark:text-white text-[14px] rounded-lg font-normal hover:bg-gray-100 dark:hover:bg-zinc-800 cursor-pointer truncate' onClick={() => {
-                        // <div className='flex items-center w-full px-3 py-[6px] text-gray-700 text-[14px] rounded-lg font-normal hover:bg-gray-100 cursor-pointer truncate' onClick={() => {
+                      <div className={`flex items-center w-full z-40 px-3 py-[6px] text-gray-700 ${getDarkThemeClasses('text')} text-[14px] rounded-lg font-normal hover:bg-gray-100 ${getDarkThemeClasses('hover')} cursor-pointer truncate' onClick={() => {
+                        // <div className='flex items-center w-full px-3 py-[6px] text-gray-700 text-[14px] rounded-lg font-normal hover:bg-gray-100 cursor-pointer truncate`} onClick={() => {
                         if (curNav?.id === nav.id)
                           return
                         setAppDetail()
@@ -139,12 +139,12 @@ const NavSelector = ({ curNav, navs, createText, isApp, onCreate, onLoadmore }: 
               {!isApp && (
                 <Menu.Button className='p-1 w-full'>
                   <div onClick={() => onCreate('')} className={cn(
-                    'flex items-center gap-2 px-3 py-[6px] rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-zinc-800',
+                    `flex items-center gap-2 px-3 py-[6px] rounded-lg cursor-pointer hover:bg-gray-100 ${getDarkThemeClasses('hover')}`,
                   )}>
-                    <div className='shrink-0 flex justify-center items-center w-6 h-6 bg-gray-50 dark:bg-[#333333] rounded-[6px] border-[0.5px] border-gray-200 dark:border-[#5f5f5f] border'>
+                    <div className={`shrink-0 flex justify-center items-center w-6 h-6 bg-gray-50 ${getDarkThemeClasses('background1')} rounded-[6px] border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} border`}>
                       <Plus className='w-4 h-4 text-gray-500 ' />
                     </div>
-                    <div className='grow text-left font-normal text-[14px] text-gray-700 dark:text-white'>{createText}</div>
+                    <div className={`grow text-left font-normal text-[14px] text-gray-700 ${getDarkThemeClasses('text')}`}>{createText}</div>
                   </div>
                 </Menu.Button>
               )}
@@ -155,13 +155,13 @@ const NavSelector = ({ curNav, navs, createText, isApp, onCreate, onLoadmore }: 
                     <>
                       <Menu.Button className='p-1 w-full'>
                         <div className={cn(
-                          'flex items-center gap-2 px-3 py-[6px] rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-zinc-800',
-                          open && '!bg-gray-100 dark:!bg-[#3f3f3f]',
+                          `flex items-center gap-2 px-3 py-[6px] rounded-lg cursor-pointer hover:bg-gray-100 ${getDarkThemeClasses('hover')}`,
+                          open && `!bg-gray-100 ${getDarkThemeClasses('background3')}`,
                         )}>
-                          <div className='shrink-0 flex justify-center items-center w-6 h-6 bg-gray-50 dark:bg-[#333333] rounded-[6px] border-[0.5px] border-gray-200 dark:border-[#5f5f5f] border'>
+                          <div className={`shrink-0 flex justify-center items-center w-6 h-6 bg-gray-50 ${getDarkThemeClasses('background1')} rounded-[6px] border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} border`}>
                             <Plus className='w-4 h-4 text-gray-500' />
                           </div>
-                          <div className='grow text-left font-normal text-[14px] text-gray-700 dark:text-white'>{createText}</div>
+                          <div className={`grow text-left font-normal text-[14px] text-gray-700 ${getDarkThemeClasses('text')}`}>{createText}</div>
                           {/* <ChevronRight className='shrink-0 w-3.5 h-3.5  text-gray-500' /> */}
                           <ChevronDown className='shrink-0 w-3.5 h-3.5  text-gray-500' />
                         </div>
@@ -177,11 +177,11 @@ const NavSelector = ({ curNav, navs, createText, isApp, onCreate, onLoadmore }: 
                       >
                         <Menu.Items className={cn(
                           // 'absolute top-[3px] right-[-198px] min-w-[200px] z-10 bg-white border-[0.5px] border-gray-200 rounded-lg shadow-lg',
-                          'absolute left-0 mt-2 min-w-[200px] z-10 bg-white dark:bg-[#3F3F3F] border-[0.5px] border-gray-200 dark:border-[#5F5F5F] rounded-lg shadow-lg',
+                          `absolute left-0 mt-2 min-w-[200px] z-10 bg-white ${getDarkThemeClasses('background3')} border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} rounded-lg shadow-lg`,
                         )}>
                           <div className='p-1'>
-                            <div className={cn('flex items-center px-3 py-[6px] rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-zinc-800 text-gray-700 dark:text-white font-normal')} onClick={() => onCreate('blank')}>
-                              <FilePlus01 className='shrink-0 mr-2 w-4 h-4 text-gray-600 dark:text-[#6b7280]' />
+                            <div className={cn(`flex items-center px-3 py-[6px] rounded-lg cursor-pointer hover:bg-gray-100 ${getDarkThemeClasses('hover')} text-gray-700 ${getDarkThemeClasses('text')} font-normal`)} onClick={() => onCreate('blank')}>
+                              <FilePlus01 className={`shrink-0 mr-2 w-4 h-4 text-gray-600 ${getDarkThemeClasses('svg')}`} />
                               {t('app.newApp.startFromBlank')}
                             </div>
                             {/* <div className={cn('flex items-center px-3 py-[6px] rounded-lg cursor-pointer hover:bg-gray-100 text-gray-700 font-normal')} onClick={() => onCreate('template')}>
@@ -190,8 +190,8 @@ const NavSelector = ({ curNav, navs, createText, isApp, onCreate, onLoadmore }: 
                             </div> */}
                           </div>
                           {/* <div className='p-1 border-t border-gray-100'> */}
-                          <div className={cn('flex items-center px-3 py-[6px] rounded-lg cursor-pointer hover:bg-gray-100 dark:hover:bg-zinc-800 text-gray-700 dark:text-white font-normal')} onClick={() => onCreate('dsl')}>
-                            <FileArrow01 className='shrink-0 mr-2 w-4 h-4 text-gray-600 dark:text-[#6b7280]' />
+                          <div className={cn(`flex items-center px-3 py-[6px] rounded-lg cursor-pointer hover:bg-gray-100 ${getDarkThemeClasses('hover')} text-gray-700 ${getDarkThemeClasses('text')} font-normal`)} onClick={() => onCreate('dsl')}>
+                            <FileArrow01 className={`shrink-0 mr-2 w-4 h-4 text-gray-600 ${getDarkThemeClasses('svg')}`} />
                             {t('app.importDSL')}
                           </div>
                           {/* </div> */}

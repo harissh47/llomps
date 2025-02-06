@@ -13,7 +13,7 @@ import { NEED_REFRESH_APP_LIST_KEY } from "@/config";
 import { getRedirection } from "@/utils/app-redirection";
 import Check from "../../base/icons/src/vender/line/general/Check";
 import * as yaml from "js-yaml";
-import { getDarkThemeClasses } from "@/utils/theme";
+import { getDarkThemeClasses } from "@/app/theme";
 interface AppData {
   name: string;
   description: string;

@@ -122,7 +122,7 @@ const PanelOperatorPopup = ({
                 )
               }
             </div>
-            <div className='h-[1px] bg-gray-100 dark:bg-[#5f5f5f]'></div>
+            <div className={`h-[1px] bg-gray-100 ${getDarkThemeClasses('background3')}`}></div>
           </>
         )
       }
@@ -155,7 +155,7 @@ const PanelOperatorPopup = ({
                 <ShortcutsName keys={['ctrl', 'd']} />
               </div>
             </div>
-            <div className='h-[1px] bg-gray-100 dark:bg-[#5f5f5f]'></div>
+            <div className={`h-[1px] bg-gray-100 ${getDarkThemeClasses('background3')}`}></div>
             <div className='p-1'>
               <div
                 // className={`
@@ -172,7 +172,7 @@ const PanelOperatorPopup = ({
                 <ShortcutsName keys={['del']} />
               </div>
             </div>
-            <div className='h-[1px] bg-gray-100 dark:bg-[#5F5F5F]'></div>
+            <div className={`h-[1px] bg-gray-100 ${getDarkThemeClasses('background3')}`}></div>
           </>
         )
       }
@@ -189,11 +189,11 @@ const PanelOperatorPopup = ({
               </a>
             </div> */}
             {/* <div className='h-[1px] bg-gray-100'></div> */}
-            <div className='h-[1px] bg-gray-100 dark:bg-[#5F5F5F]'></div>
+            <div className={`h-[1px] bg-gray-100 ${getDarkThemeClasses('background3')}`}></div>
           </>
         )
       }
-      <div className={`p-1 ${getDarkThemeClasses('background3')} overflow-hidden`}>
+      <div className={`p-1`}>
       {/* <div className='px-3 py-2 text-xs text-gray-500 dark:text-white'> */}
 
         <div className={`px-3 py-2 text-xs text-gray-500 ${getDarkThemeClasses('text')}`}>
