@@ -69,10 +69,11 @@ export type DarkThemeColors = {
   focusring: string
   hovertransparent: string
   hover7: string
-  background6: string
-  appcardBorder: string
-  outline: string
-  focusoutline: string
+  background6:string
+  appcardBorder:string
+  outline:string
+  focusoutline:string
+  borderradius:string
 }
  
 // // Function to determine background color based on provider
@@ -113,6 +114,7 @@ export const getDarkTheme = (): DarkThemeColors => ({
   background2: 'dark:!bg-[#2c2c2c]',
   background3: 'dark:!bg-[#3f3f3f]',
   background4: 'dark:bg-[#1A1A1A]',
+  background6: 'dark:bg-[#5f5f5f]',
   svg: 'dark:text-[#6b7280]',
   green_text: 'dark:text-primary-600',
   green_border: 'dark:text-primary-600',
@@ -128,7 +130,7 @@ export const getDarkTheme = (): DarkThemeColors => ({
   sub_text4:'dark:text-[#E1E1E1]',
   border2:'dark:border-slate-400',
   border3:'dark:border-primary-400',
-  borderhover:'dark:hover:border-[#5F5F5F]',
+  borderhover:'dark:hover:!border-[#5F5F5F]',
   borderhover2:'dark:hover:border-primary-400',
   shadow1:'dark:shadow-slate-700',
   shadow2:'dark:shadow-[#3e3e3e]',
@@ -149,17 +151,17 @@ export const getDarkTheme = (): DarkThemeColors => ({
   hover5:'dark:hover:bg-[#b8b8b8]',
   divide:'dark:divide-[#5f5f5f]',
   hover6:'dark:hover-!bg-[#202020]',
-  hovershadow1:'dark:hover:shadow:bg-[#3f3f3f]',
+  hovershadow1:'dark:hover:shadow-[#3f3f3f]',
   hovershadow2:'dark:hover:shadow-[#2e2e2e]',
   borderhover3:'dark:hover:border-[#4CAF50] dark:hover:shadow-none',
   focusring:'dark:focus:ring-[#5F5F5F]',
   hovertransparent:'dark:hover:bg-transparent',
   hover7:'dark:hover:bg-[#2E2E2E]',
-  background6: 'dark:bg-[#5f5f5f]',
   appcardBorder:'dark:border-[#3f3f3f] dark:border-2',
-  outline: 'dark:hover:outline-[#5f5f5f]',
-  focusoutline:'dark:focus:outline-none'
- 
+  outline:'dark:hover:outline-[#5f5f5f]',
+  focusoutline:'dark:focus:outline-none',
+  borderradius:'dark:border-2'
+
 });
  
 export const getDarkThemeClasses = (componet: keyof DarkThemeColors): string => {

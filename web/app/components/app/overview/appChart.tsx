@@ -10,6 +10,7 @@ import { useTranslation } from 'react-i18next'
 import { formatNumber } from '@/utils/format'
 import Basic from '@/app/components/app-sidebar/basic'
 import Loading from '@/app/components/base/loading'
+import { getDarkThemeClasses } from '@/app/theme'
 import type { AppDailyConversationsResponse, AppDailyEndUsersResponse, AppTokenCostsResponse } from '@/models/app'
 import { getAppDailyConversations, getAppDailyEndUsers, getAppStatistics, getAppTokenCosts, getWorkflowDailyConversations } from '@/service/apps'
 const valueFormatter = (v: string | number) => v
@@ -232,7 +233,7 @@ const Chart: React.FC<IChartProps> = ({
   const sumData = isAvg ? (sum(yData) / yData.length) : sum(yData)
 
   return (
-    <div className={`flex flex-col w-full px-6 py-4 border-[0.5px] rounded-lg border-gray-200 dark:border-[#3f3f3f] dark:border-2 shadow-xs ${className ?? ''}`}>
+    <div className={`flex flex-col w-full px-6 py-4 border-[0.5px] rounded-lg border-gray-200 ${getDarkThemeClasses('border')} ${getDarkThemeClasses('borderradius')} shadow-xs ${className ?? ''}`}>
       <div className='mb-3'>
         <Basic name={title} type={timePeriod} hoverTip={explanation} />
       </div>

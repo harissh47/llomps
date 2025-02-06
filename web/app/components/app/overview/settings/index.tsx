@@ -15,7 +15,7 @@ import EmojiPicker from '@/app/components/base/emoji-picker'
 import { useToastContext } from '@/app/components/base/toast'
 
 import { languages } from '@/i18n/language'
-
+import { getDarkThemeClasses } from '@/app/theme'
 export type ISettingsModalProps = {
   appInfo: AppDetailResponse
   isShow: boolean
@@ -105,10 +105,14 @@ const SettingsModal: FC<ISettingsModalProps> = ({
         onClose={onHide}
         className={`${s.settingsModal}`}
       >
-        <div className={`mt-6 font-medium dark:text-white ${s.settingTitle} text-gray-900 dark:text-white`}>{t(`${prefixSettings}.webName`)}</div>
+        <div className={`mt-6 font-medium ${getDarkThemeClasses('text')}
+ ${s.settingTitle} text-gray-900 ${getDarkThemeClasses('text')}
+`}>{t(`${prefixSettings}.webName`)}</div>
         {/* <div className={`mt-6 font-medium ${s.settingTitle} text-gray-900`}>{t(`${prefixSettings}.webName`)}</div> */}
-        {/* <div className='flex mt-2 dark:text-white'> */}
-        <div className='flex mt-2 dark:text-white'>
+        {/* <div className='flex mt-2 ${getDarkThemeClasses('text')}
+'> */}
+        <div className={`flex mt-2 ${getDarkThemeClasses('text')}
+`}>
 
           {/* <AppIcon size='large'
             onClick={() => { setShowEmojiPicker(true) }}
@@ -117,21 +121,25 @@ const SettingsModal: FC<ISettingsModalProps> = ({
             background={emoji.icon_background}
           /> */}
           {/* <input className={`flex-grow rounded-lg h-10 box-border px-3 ${s.projectName} bg-gray-100`} */}
-          <input className={`flex-grow rounded-lg h-10 box-border px-3 dark:focus:outline-none focus:border-2 dark:focus:border-[#5f5f5f]-none focus:border-2 dark:focus:border-[#5f5f5f]  ${s.projectName} bg-gray-100 dark:bg-[#2c2c2c] `}
-
+          <input className={`flex-grow rounded-lg h-10 box-border px-3 ${getDarkThemeClasses('focusoutline')} focus:border-2 ${getDarkThemeClasses('borderfocus')} focus:border-2 ${getDarkThemeClasses('borderfocus')}  ${s.projectName} bg-gray-100 ${getDarkThemeClasses('background2')} `}
+          // <input className={`flex-grow rounded-lg h-10 box-border px-3 dark:focus:outline-none focus:border-2 dark:focus:border-[#5f5f5f]-none focus:border-2 dark:focus:border-[#5f5f5f]  ${s.projectName} bg-gray-100 dark:bg-[#2c2c2c] `}
+ 
             value={inputInfo.title}
             onChange={onChange('title')}
             placeholder={t('app.appNamePlaceholder') || ''}
           />
         </div>
         {/* <div className={`mt-6 font-medium ${s.settingTitle} text-gray-900 `}>{t(`${prefixSettings}.webDesc`)}</div> */}
-        <div className={`mt-6 font-medium ${s.settingTitle} text-gray-900  dark:text-white`}>{t(`${prefixSettings}.webDesc`)}</div>
+        <div className={`mt-6 font-medium ${s.settingTitle} text-gray-900  ${getDarkThemeClasses('text')}
+`}>{t(`${prefixSettings}.webDesc`)}</div>
         {/* <p className={`mt-1 ${s.settingsTip} text-gray-500`}>{t(`${prefixSettings}.webDescTip`)}</p> */}
-        <p className={`mt-1 ${s.settingsTip} text-gray-500 dark:text-white`}>{t(`${prefixSettings}.webDescTip`)}</p>
+        <p className={`mt-1 ${s.settingsTip} text-gray-500 ${getDarkThemeClasses('text')}
+`}>{t(`${prefixSettings}.webDescTip`)}</p>
         <textarea
           rows={3}
           // className={`mt-2 pt-2 pb-2 px-3 rounded-lg bg-gray-100 dark:bg-[#3f3f3f] w-full ${s.settingsTip} text-gray-900 `}
-          className={`mt-2 pt-2 pb-2 px-3 rounded-lg bg-gray-100 dark:bg-[#2c2c2c] dark:focus:outline-none w-full ${s.settingsTip} text-gray-900 dark:text-white focus:border-2 dark:focus:border-[#5f5f5f]`}
+          className={`mt-2 pt-2 pb-2 px-3 rounded-lg bg-gray-100 ${getDarkThemeClasses('background2')} ${getDarkThemeClasses('focusoutline')} w-full ${s.settingsTip} text-gray-900 ${getDarkThemeClasses('text')}
+ focus:border-2 ${getDarkThemeClasses('borderfocus')}`}
 
           value={inputInfo.desc}
           onChange={onChange('desc')}
@@ -146,22 +154,26 @@ const SettingsModal: FC<ISettingsModalProps> = ({
         {!isShowMore && <div className='w-full cursor-pointer mt-8' onClick={() => setIsShowMore(true)}>
           <div className='flex justify-between'>
             {/* <div className={`font-medium ${s.settingTitle} flex-grow text-gray-900`}>{t(`${prefixSettings}.more.entry`)}</div> */}
-            <div className={`font-medium ${s.settingTitle} flex-grow text-gray-900 dark:text-white`}>{t(`${prefixSettings}.more.entry`)}</div>
+            <div className={`font-medium ${s.settingTitle} flex-grow text-gray-900 ${getDarkThemeClasses('text')}
+`}>{t(`${prefixSettings}.more.entry`)}</div>
             <div className='flex-shrink-0 w-4 h-4 text-gray-500'>
               <ChevronRightIcon />
             </div>
           </div>
           {/* <p className={`mt-1 ${s.policy} text-gray-500`}>{t(`${prefixSettings}.more.copyright`)} & {t(`${prefixSettings}.more.privacyPolicy`)}</p> */}
-          <p className={`mt-1 ${s.policy} text-gray-500 dark:text-white`}>{t(`${prefixSettings}.more.copyright`)} & {t(`${prefixSettings}.more.privacyPolicy`)}</p>
+          <p className={`mt-1 ${s.policy} text-gray-500 ${getDarkThemeClasses('text')}
+`}>{t(`${prefixSettings}.more.copyright`)} & {t(`${prefixSettings}.more.privacyPolicy`)}</p>
         </div>}
         {isShowMore && <>
           {/* <hr className='w-full mt-6' /> */}
-          <hr className='w-full mt-6 border dark:border-[#5F5F5F]  ' />
+          <hr className={`w-full mt-6 border ${getDarkThemeClasses('border')}  `} />
 
           {/* <div className={`mt-6 font-medium ${s.settingTitle} text-gray-900`}>{t(`${prefixSettings}.more.copyright`)}</div> */}
-          <div className={`mt-6 font-medium ${s.settingTitle} text-gray-900 dark:text-white`}>{t(`${prefixSettings}.more.copyright`)}</div>
+          <div className={`mt-6 font-medium ${s.settingTitle} text-gray-900 ${getDarkThemeClasses('text')}
+`}>{t(`${prefixSettings}.more.copyright`)}</div>
           {/* <input className={`w-full mt-2 rounded-lg h-10 box-border px-3 ${s.projectName} bg-gray-100`} */}
-          <input className={`w-full mt-2 rounded-lg h-10 box-border dark:focus:outline-none px-3 dark:text-white ${s.projectName} bg-gray-100 dark:bg-[#2c2c2c] focus:border-2 dark:focus:border-[#5f5f5f]`}
+          <input className={`w-full mt-2 rounded-lg h-10 box-border ${getDarkThemeClasses('focusoutline')} px-3 ${getDarkThemeClasses('text')}
+ ${s.projectName} bg-gray-100 ${getDarkThemeClasses('background2')} focus:border-2 ${getDarkThemeClasses('borderfocus')}`}
 
             value={inputInfo.copyright}
             onChange={onChange('copyright')}
@@ -169,7 +181,8 @@ const SettingsModal: FC<ISettingsModalProps> = ({
           />
           {/* <div className={`mt-8 font-medium ${s.settingTitle} text-gray-900`}>{t(`${prefixSettings}.more.privacyPolicy`)}</div>
           <p className={`mt-1 ${s.settingsTip} text-gray-500`}> */}
-          <div className={`mt-8 font-medium ${s.settingTitle} text-gray-900 dark:text-white`}>{t(`${prefixSettings}.more.privacyPolicy`)}</div>
+          <div className={`mt-8 font-medium ${s.settingTitle} text-gray-900 ${getDarkThemeClasses('text')}
+`}>{t(`${prefixSettings}.more.privacyPolicy`)}</div>
           <p className={`mt-1 ${s.settingsTip} text-gray-500`}>
             {/* <Trans
               i18nKey={`${prefixSettings}.more.privacyPolicyTip`}
@@ -177,17 +190,22 @@ const SettingsModal: FC<ISettingsModalProps> = ({
             /> */}
           </p>
           {/* <input className={`w-full mt-2 rounded-lg h-10 box-border px-3 ${s.projectName} bg-gray-100`} */}
-          <input className={`w-full mt-2 rounded-lg h-10 box-border dark:focus:outline-none px-3 ${s.projectName} bg-gray-100 dark:bg-[#2c2c2c] dark:text-white focus:border-2 dark:focus:border-[#5f5f5f]`}
+          <input className={`w-full mt-2 rounded-lg h-10 box-border ${getDarkThemeClasses('focusoutline')} px-3 ${s.projectName} bg-gray-100 ${getDarkThemeClasses('background2')} ${getDarkThemeClasses('text')}
+ focus:border-2 ${getDarkThemeClasses('borderfocus')}`}
             value={inputInfo.privacyPolicy}
             onChange={onChange('privacyPolicy')}
             placeholder={t(`${prefixSettings}.more.privacyPolicyPlaceholder`) as string}
           />
           {/* <div className={`mt-8 font-medium ${s.settingTitle} text-gray-900`}>{t(`${prefixSettings}.more.customDisclaimer`)}</div> */}
-          <div className={`mt-8 font-medium ${s.settingTitle} text-gray-900 dark:text-white`}>{t(`${prefixSettings}.more.customDisclaimer`)}</div>
+          <div className={`mt-8 font-medium ${s.settingTitle} text-gray-900 ${getDarkThemeClasses('text')}
+`}>{t(`${prefixSettings}.more.customDisclaimer`)}</div>
           {/* <p className={`mt-1 ${s.settingsTip} text-gray-500`}>{t(`${prefixSettings}.more.customDisclaimerTip`)}</p> */}
-          <p className={`mt-1 ${s.settingsTip} text-gray-500 dark:text-white`}>{t(`${prefixSettings}.more.customDisclaimerTip`)}</p>
+          <p className={`mt-1 ${s.settingsTip} text-gray-500 ${getDarkThemeClasses('text')}
+`}>{t(`${prefixSettings}.more.customDisclaimerTip`)}</p>
           {/* <input className={`w-full mt-2 rounded-lg h-10 box-border px-3 ${s.projectName} bg-gray-100 dark:bg-[#3f3f3f] `} */}
-          <input className={`w-full mt-2 rounded-lg h-10 box-border dark:focus:outline-none  px-3 dark:text-white ${s.projectName} bg-gray-100 dark:bg-[#2c2c2c] focus:border-2 dark:focus:border-[#5f5f5f] `}
+          <input className={`w-full mt-2 rounded-lg h-10 box-border ${getDarkThemeClasses('focusoutline')}  px-3 ${getDarkThemeClasses('text')}
+ ${s.projectName} bg-gray-100 ${getDarkThemeClasses('background2')} focus:border-2 ${getDarkThemeClasses('borderfocus')}
+ `}
 
             value={inputInfo.customDisclaimer}
             onChange={onChange('customDisclaimer')}
@@ -196,7 +214,7 @@ const SettingsModal: FC<ISettingsModalProps> = ({
         </>}
         <div className='mt-10 flex justify-end'>
           {/* <Button className='mr-2 flex-shrink-0 !text-sm ' onClick={onHide}>{t('common.operation.cancel')}</Button> */}
-          <Button className='mr-2 flex-shrink-0 !text-sm dark:bg-[#3e3e3e] dark:border-[#5f5f5f] dark:hover:bg-zinc-800' onClick={onHide}>{t('common.operation.cancel')}</Button>
+          <Button className={`mr-2 flex-shrink-0 !text-sm ${getDarkThemeClasses('background1')} ${getDarkThemeClasses('border')} ${getDarkThemeClasses('hover')}`} onClick={onHide}>{t('common.operation.cancel')}</Button>
 
           <Button type='primary' className='flex-shrink-0 !text-sm' onClick={onClickSave} loading={saveLoading}>{t('common.operation.save')}</Button>
         </div>

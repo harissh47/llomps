@@ -3,7 +3,7 @@ import ChartView from './chartView'
 import CardView from './cardView'
 import { getLocaleOnServer, useTranslation as translate } from '@/i18n/server'
 import ApikeyInfoPanel from '@/app/components/app/overview/apikey-info-panel'
-
+import { getDarkThemeClasses } from '@/app/theme'
 export type IDevelopProps = {
   params: { appId: string }
 }
@@ -23,7 +23,7 @@ const Overview = async ({
       {/* <ApikeyInfoPanel /> */}
       {/* <div className='flex flex-row items-center justify-between mb-4 text-xl text-gray-900'>
         {t('overview.title')} */}
-        <div className='flex flex-row items-center justify-between mb-4 text-xl text-gray-900 dark:text-white'>
+        <div className={`flex flex-row items-center justify-between mb-4 text-xl text-gray-900 dark:text-white`}>
         {t('overview.title')}
       </div>
       <CardView appId={appId} />
