@@ -9,11 +9,6 @@ import {
 import useSWR from 'swr'
 import { useLocalStorageState } from 'ahooks'
 import produce from 'immer'
-<<<<<<< HEAD
-=======
-import { ToastContext } from '@/app/components/base/toast'
-
->>>>>>> origin/rupa
 import type {
   Callback,
   ChatConfig,
@@ -219,7 +214,6 @@ export const useChatWithHistory = (installedAppInfo?: InstalledApp) => {
       for (let i = 0; i < inputsForms.length; i += 1) {
         const item = inputsForms[i]
 
-<<<<<<< HEAD
         if (item.required && !newConversationInputsRef.current[item.variable]) {
           if (!silent) {
             notify({
@@ -230,18 +224,6 @@ export const useChatWithHistory = (installedAppInfo?: InstalledApp) => {
           }
           return
         }
-=======
-        // if (item.required && !newConversationInputsRef.current[item.variable]) {
-        //   if (!silent) {
-        //     notify({
-        //       type: 'error',
-        //       // message: t('appDebug.errorMessage.valueOfVarRequired', { key: item.variable }),
-        //       message: `${item.variable} value can not be empty`,
-        //     })
-        //   }
-        //   return
-        // }
->>>>>>> origin/rupa
       }
       return true
     }

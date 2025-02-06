@@ -142,7 +142,7 @@ const CodeEditor: FC<Props> = ({
       inherit: true,
       rules: [],
       colors: {
-        "editor.background": isDarkTheme ? "#3f3f3f" : "#F2F4F7",
+        "editor.background": isDarkTheme ? "#2c2c2c" : "#F2F4F7",
       },
     });
 

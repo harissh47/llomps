@@ -22,11 +22,7 @@ const Header: FC<HeaderProps> = ({
       //   `}
       className={`
         sticky top-0 flex items-center px-8 h-16 text-base font-medium 
-<<<<<<< HEAD
         text-gray-900 bg-white border-b-[0.5px] border-b-gray-200 z-[100]
-=======
-        text-gray-900 dark:text-[#fcfcfc] bg-white dark:!bg-[#202020] border-b-[0.5px] border-b-gray-200 dark:border-b-[#5f5f5f] z-[100]
->>>>>>> origin/rupa
         ${isMobile && '!h-12' && 'z-[40]'}
         `}
     >

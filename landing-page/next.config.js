@@ -34,18 +34,6 @@ const nextConfig = {
     // https://nextjs.org/docs/api-reference/next.config.js/ignoring-typescript-errors
     ignoreBuildErrors: true,
   },
-<<<<<<< HEAD
-=======
-//   async redirects() {
-//     return [
-//       {
-//         source: '/',
-//         destination: '/apps',
-//         permanent: false,
-//       },
-//     ]
-//   },
->>>>>>> origin/rupa
   output: 'standalone',
 }
 

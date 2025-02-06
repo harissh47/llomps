@@ -69,11 +69,7 @@ const ChatWithHistory: FC<ChatWithHistoryProps> = ({
 
   const [isDarkMode, setIsDarkMode] = useState(false)
 
-<<<<<<< HEAD
   const toggleTheme = () => {
-=======
-const toggleTheme = () => {
->>>>>>> origin/rupa
     const html = document.documentElement
     if (isDarkMode) {
       html.classList.remove('dark')
@@ -125,25 +121,18 @@ const toggleTheme = () => {
   }
 
   console.log("ule varudhaa over over over")
-<<<<<<< HEAD
   
   // if(isDarkMode === true){
   //   const dark ='bg-[#202020]'
 
 
   // }
-=======
->>>>>>> origin/rupa
 
 
   return (
     // <div className={`h-full flex bg-white ${className} ${isMobile && 'flex-col'}`}>
     // <div className={`h-full flex ${className} ${isMobile && 'flex-col'}`} style={{ backgroundColor: '#2c2c2c' }}>
-<<<<<<< HEAD
     <div className={`relative h-full flex bg-white ${className} ${isMobile && 'flex-col'}`}>
-=======
-    <div className={`relative h-full flex bg-white dark:!bg-[#202020] ${className} ${isMobile && 'flex-col'}`}>
->>>>>>> origin/rupa
       {
         !isMobile && (
           <>
@@ -155,26 +144,14 @@ const toggleTheme = () => {
                 onClick={(e) => {
                   e.stopPropagation();
                   handleToggleModal();
-<<<<<<< HEAD
-=======
-                  
->>>>>>> origin/rupa
                 }}
               >
                 <Settings01 />
               </button>
               {isModalOpen && (
-<<<<<<< HEAD
                 <div ref={modalRef} className='absolute top-full mt-2 right-0 z-50 bg-white border-[0.5px] border-gray-100 shadow-lg rounded-lg px-2 w-36'>
                   <div className='flex justify-between items-center'>
                     <div className='text-gray-900 text-base'>Theme</div>
-=======
-                // <div ref={modalRef} className='absolute top-full mt-2 right-0 z-50 bg-white dark:!bg-[#202020] border-[0.5px] border-gray-100 shadow-lg rounded-lg px-2 w-36'>
-                <div ref={modalRef} className='absolute top-full mt-2 right-0 z-50 bg-white dark:!bg-[#202020] border-[0.5px] border-gray-100 dark:border-[#5f5f5f] shadow-lg rounded-lg px-2 w-36 '>
-
-                  <div className='flex justify-between items-center'>
-                    <div className='text-gray-900 dark:text-white text-base'>Theme</div>
->>>>>>> origin/rupa
                     <button onClick={toggleTheme} className='p-2 rounded-full' aria-label='Toggle Theme'>
                       {isDarkMode ? (
                         <SunIcon className='h-6 w-6 text-yellow-500' />
@@ -303,10 +280,7 @@ const ChatWithHistoryWrapWithCheckToken: FC<ChatWithHistoryWrapProps> = ({
   className,
 }) => {
   const [initialized, setInitialized] = useState(false)
-<<<<<<< HEAD
   console.log(installedAppInfo)
-=======
->>>>>>> origin/rupa
   const [appUnavailable, setAppUnavailable] = useState<boolean>(false)
   const [isUnknownReason, setIsUnknownReason] = useState<boolean>(false)
 
