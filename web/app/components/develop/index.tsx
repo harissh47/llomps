@@ -33,7 +33,7 @@ const DevelopMain = ({ appId }: IDevelopMainProps) => {
             {/* <div className={`ml-2 border border-gray-200 border-solid flex-shrink-0 px-2 py-0.5 rounded-[6px] text-gray-500 text-[0.625rem] ${s.customApi}`}>
               {t('appApi.apiServer')} */}
             {/* <div className={`dark:text-white ml-2 border border-gray-200 border-solid flex-shrink-0 px-2 py-0.5 rounded-[6px] text-gray-500 text-[0.625rem] ${s.customApi}`}> */}
-            <div className={`dark:text-white ml-2 border border-gray-200 ${getDarkThemeClasses('border')} ${getDarkThemeClasses('hovershadow')} border-solid flex-shrink-0 px-2 py-0.5 rounded-[6px] text-gray-500 text-[0.625rem] ${s.customApi}`}>
+            <div className={`${getDarkThemeClasses('text')} ml-2 border border-gray-200 ${getDarkThemeClasses('border')} ${getDarkThemeClasses('hovershadow')} border-solid flex-shrink-0 px-2 py-0.5 rounded-[6px] text-gray-500 text-[0.625rem] ${s.customApi}`}>
               {t('appApi.apiServer')}
             </div>
           </InputCopy>

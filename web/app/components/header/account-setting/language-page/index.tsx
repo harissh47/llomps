@@ -11,12 +11,12 @@ import { ToastContext } from '@/app/components/base/toast'
 import I18n from '@/context/i18n'
 import { timezones } from '@/utils/timezone'
 import { languages } from '@/i18n/language'
-
+import { getDarkThemeClasses } from '@/app/theme'
 // const titleClassName = `
 //   mb-2 text-sm font-medium text-gray-900
 // `
 const titleClassName = `
-  mb-2 text-sm font-medium text-gray-900 dark:text-white
+  mb-2 text-sm font-medium text-gray-900 ${getDarkThemeClasses('text')}
 `
 
 export default function LanguagePage() {

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { ChevronDownIcon, ChevronRightIcon } from '@heroicons/react/24/outline'
 import classNames from 'classnames'
-
+import { getDarkThemeClasses } from '@/app/theme'
 export type IItem = {
   key: string
   name: string
@@ -26,9 +26,9 @@ const Collapse = ({
 
   return (
     // <div className={classNames('border border-gray-200 bg-gray-50 rounded-lg', wrapperClassName)}>
-    <div className={classNames('border border-gray-200 dark:border-[#5f5f5f] bg-gray-50 dark:bg-[#3F3F3F] rounded-lg', wrapperClassName)}>
+    <div className={classNames(`border border-gray-200 ${getDarkThemeClasses('border')} bg-gray-50 ${getDarkThemeClasses('background2')} rounded-lg`, wrapperClassName)}>
       {/* <div className='flex items-center justify-between leading-[18px] px-3 py-2 text-xs font-medium text-gray-800 cursor-pointer' onClick={toggle}> */}
-      <div className='flex items-center justify-between leading-[18px] px-3 py-2 text-xs font-medium text-gray-800 dark:text-white cursor-pointer' onClick={toggle}>
+      <div className={`flex items-center justify-between leading-[18px] px-3 py-2 text-xs font-medium text-gray-800 ${getDarkThemeClasses('text')} cursor-pointer`} onClick={toggle}>
         {title}
         {
           open
@@ -39,7 +39,7 @@ const Collapse = ({
       {
         open && (
           // <div className='py-2 border-t border-t-gray-100'>
-          <div className='py-2 border-t border-t-gray-100 dark:border-t-[#5f5f5f]'>
+          <div className={`py-2 border-t border-t-gray-100 ${getDarkThemeClasses('bordert')}`}>
             {
               items.map(item => (
                 <div key={item.key} onClick={() => onSelect && onSelect(item)}>

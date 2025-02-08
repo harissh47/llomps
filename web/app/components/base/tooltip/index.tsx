@@ -4,6 +4,7 @@ import type { FC } from 'react'
 import React from 'react'
 import { Tooltip as ReactTooltip } from 'react-tooltip' // fixed version to 5.8.3 https://github.com/ReactTooltip/react-tooltip/issues/972
 import 'react-tooltip/dist/react-tooltip.css'
+import { getDarkThemeClasses } from '@/app/theme'
 
 type TooltipProps = {
   selector: string
@@ -37,7 +38,7 @@ const Tooltip: FC<TooltipProps> = ({
       <ReactTooltip
         id={selector}
         content={content}
-        className={classNames('!z-[999] !bg-white dark:!bg-[#3f3f3f] !text-xs !font-normal !text-gray-700 dark:!text-white !shadow-lg !opacity-100', className)}
+        className={classNames(`!z-[999] !bg-white ${getDarkThemeClasses('background3')} !text-xs !font-normal !text-gray-700 ${getDarkThemeClasses('sub_text1')} !shadow-lg !opacity-100`, className)}
         place={position}
         clickable={clickable}
         isOpen={disabled ? false : undefined}

@@ -14,19 +14,19 @@ import { ToastContext } from '@/app/components/base/toast'
 import AppIcon from '@/app/components/base/app-icon'
 import Avatar from '@/app/components/base/avatar'
 import { IS_CE_EDITION } from '@/config'
-
+import { getDarkThemeClasses } from '@/app/theme'
 // const titleClassName = `
 //   text-sm font-medium text-gray-900
 // `
 const titleClassName = `
-  text-sm font-medium text-gray-900 dark:text-white
+  text-sm font-medium text-gray-900 ${getDarkThemeClasses('text')} 
 `
 
 // const descriptionClassName = `
 //   mt-1 text-xs font-normal text-gray-500
 // `
 const descriptionClassName = `
-  mt-1 text-xs font-normal text-gray-500 dark:text-[#FCFCFC]
+  mt-1 text-xs font-normal text-gray-500 ${getDarkThemeClasses('sub_text1')} 
 `
 
 // const inputClassName = `
@@ -35,8 +35,8 @@ const descriptionClassName = `
 // `
 
 const inputClassName = `
-  mt-2 w-full px-3 py-2 bg-gray-100 dark:bg-[#3F3F3F] rounded dark:focus:outline-none focus:border-2 dark:focus:border-[#5f5f5f]
-  text-sm font-normal text-gray-800 dark:text-[#FCFCFC]
+  mt-2 w-full px-3 py-2 bg-gray-100 ${getDarkThemeClasses('background2')} rounded ${getDarkThemeClasses('focusoutline')} focus:border-2 ${getDarkThemeClasses('borderfocus')}
+  text-sm font-normal text-gray-800 ${getDarkThemeClasses('sub_text1')}
 `
 
 const validPassword = /^(?=.*[a-zA-Z])(?=.*\d).{8,}$/
@@ -133,7 +133,7 @@ export default function AccountPage() {
           <AppIcon size='tiny' />
         </div>
         {/* <div className='mt-[3px] text-xs font-medium text-gray-700 leading-[18px]'>{item.name}</div> */}
-        <div className='mt-[3px] text-xs font-medium text-gray-700 dark:text-[#FCFCFC] leading-[18px]'>{item.name}</div>
+        <div className={`mt-[3px] text-xs font-medium text-gray-700 ${getDarkThemeClasses('sub_text1')} leading-[18px]`}>{item.name}</div>
       </div>
     )
   }
@@ -147,10 +147,10 @@ export default function AccountPage() {
       <div className='mb-8'>
         <div className={titleClassName}>{t('common.account.name')}</div>
         {/* <div className={classNames('flex items-center justify-between mt-2 w-full h-9 px-3 bg-gray-100 rounded text-sm font-normal text-gray-800 cursor-pointer group')}> */}
-        <div className={classNames('flex items-center justify-between mt-2 w-full h-9 px-3 bg-gray-100 dark:bg-[#3F3F3F] rounded text-sm font-normal text-gray-800 dark:text-[#FCFCFC] cursor-pointer group')}>
+        <div className={classNames(`flex items-center justify-between mt-2 w-full h-9 px-3 bg-gray-100 ${getDarkThemeClasses('background2')} rounded text-sm font-normal text-gray-800 ${getDarkThemeClasses('sub_text1')} cursor-pointer group`)}>
           {userProfile.name}
           {/* <div className='items-center hidden h-6 px-2 text-xs font-normal bg-white border border-gray-200 rounded-md group-hover:flex' onClick={handleEditName}>{t('common.operation.edit')}</div> */}
-          <div className='items-center hidden h-6 px-2 text-xs font-normal bg-white dark:bg-[#5F5F5F] border border-gray-200 dark:border-[#3F3F3F] rounded-md group-hover:flex' onClick={handleEditName}>{t('common.operation.edit')}</div>
+          <div className={`items-center hidden h-6 px-2 text-xs font-normal bg-white ${getDarkThemeClasses('background3')} border border-gray-200 ${getDarkThemeClasses('border')} rounded-md group-hover:flex`} onClick={handleEditName}>{t('common.operation.edit')}</div>
         </div>
       </div>
       <div className='mb-8'>
@@ -160,15 +160,15 @@ export default function AccountPage() {
       {IS_CE_EDITION && (
         <div className='mb-8'>
           {/* <div className='mb-1 text-sm font-medium text-gray-900'>{t('common.account.password')}</div> */}
-          <div className='mb-1 text-sm font-medium text-gray-900 dark:text-white'>{t('common.account.password')}</div>
+          <div className={`mb-1 text-sm font-medium text-gray-900 ${getDarkThemeClasses('text')}`}>{t('common.account.password')}</div>
           {/* <div className='mb-2 text-xs text-gray-500'>{t('common.account.passwordTip')}</div> */}
-          <div className='mb-2 text-xs text-gray-500 dark:text-[#FCFCFC]'>{t('common.account.passwordTip')}</div>
-          <Button className='font-medium !text-gray-700 !px-3 !py-[7px] !text-[13px] dark:border-0 dark:bg-[#3f3f3f] dark:hover:bg-zinc-800' onClick={() => setEditPasswordModalVisible(true)}>{userProfile.is_password_set ? t('common.account.resetPassword') : t('common.account.setPassword')}</Button>
+          <div className={`mb-2 text-xs text-gray-500 ${getDarkThemeClasses('sub_text1')}`}>{t('common.account.passwordTip')}</div>
+          <Button className={`font-medium !text-gray-700 !px-3 !py-[7px] !text-[13px] border ${getDarkThemeClasses('border')}  ${getDarkThemeClasses('background2')} ${getDarkThemeClasses('hover')}`} onClick={() => setEditPasswordModalVisible(true)}>{userProfile.is_password_set ? t('common.account.resetPassword') : t('common.account.setPassword')}</Button>
         </div>
       )}
       {!!apps.length && (
         <>
-          <div className='mb-6 border-[0.5px] border-gray-100 dark:border-[#5f5f5f]' />
+          <div className={`mb-6 border-[0.5px] border-gray-100 ${getDarkThemeClasses('border')}`} />
           <div className='mb-8'>
             <div className={titleClassName}>{t('common.account.langGeniusAccount')}</div>
             <div className={descriptionClassName}>{t('common.account.langGeniusAccountTip')}</div>
@@ -189,7 +189,7 @@ export default function AccountPage() {
           wrapperClassName='z-20'
         >
           {/* <div className='mb-6 text-lg font-medium text-gray-900'>{t('common.account.editName')}</div> */}
-          <div className='mb-6 text-lg font-medium text-gray-900 dark:text-white'>{t('common.account.editName')}</div>
+          <div className={`mb-6 text-lg font-medium text-gray-900 ${getDarkThemeClasses('text')}`}>{t('common.account.editName')}</div>
           <div className={titleClassName}>{t('common.account.name')}</div>
           <input
             className={inputClassName}
@@ -197,7 +197,7 @@ export default function AccountPage() {
             onChange={e => setEditName(e.target.value)}
           />
           <div className='flex justify-end mt-10'>
-            <Button className='mr-2 text-sm font-medium dark:border-0 dark:bg-[#3f3f3f] dark:hover:bg-zinc-800' onClick={() => setEditNameModalVisible(false)}>{t('common.operation.cancel')}</Button>
+            <Button className={`mr-2 text-sm font-medium ${getDarkThemeClasses('border')} ${getDarkThemeClasses('background1')} ${getDarkThemeClasses('hover')}`} onClick={() => setEditNameModalVisible(false)}>{t('common.operation.cancel')}</Button>
             <Button
               disabled={editing || !editName}
               type='primary'
@@ -220,7 +220,7 @@ export default function AccountPage() {
           wrapperClassName='z-20'
         >
           {/* <div className='mb-6 text-lg font-medium text-gray-900'>{userProfile.is_password_set ? t('common.account.resetPassword') : t('common.account.setPassword')}</div> */}
-          <div className='mb-6 text-lg font-medium text-gray-900 dark:text-white'>{userProfile.is_password_set ? t('common.account.resetPassword') : t('common.account.setPassword')}</div>
+          <div className={`mb-6 text-lg font-medium text-gray-900 ${getDarkThemeClasses('text')}`}>{userProfile.is_password_set ? t('common.account.resetPassword') : t('common.account.setPassword')}</div>
           {userProfile.is_password_set && (
             <>
               <div className={titleClassName}>{t('common.account.currentPassword')}</div>
@@ -233,7 +233,7 @@ export default function AccountPage() {
             </>
           )}
           {/* <div className='mt-8 text-sm font-medium text-gray-900'> */}
-          <div className='mt-8 text-sm font-medium text-gray-900 dark:text-white'>
+          <div className={`mt-8 text-sm font-medium text-gray-900 ${getDarkThemeClasses('text')}`}>
             {userProfile.is_password_set ? t('common.account.newPassword') : t('common.account.password')}
           </div>
           <input
@@ -243,7 +243,7 @@ export default function AccountPage() {
             onChange={e => setPassword(e.target.value)}
           />
           {/* <div className='mt-8 text-sm font-medium text-gray-900'>{t('common.account.confirmPassword')}</div> */}
-          <div className='mt-8 text-sm font-medium text-gray-900 dark:text-white'>{t('common.account.confirmPassword')}</div>
+          <div className={`mt-8 text-sm font-medium text-gray-900 ${getDarkThemeClasses('text')}`}>{t('common.account.confirmPassword')}</div>
           <input
             type="password"
             className={inputClassName}

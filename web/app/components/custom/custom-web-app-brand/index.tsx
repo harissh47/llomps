@@ -16,7 +16,7 @@ import {
   updateCurrentWorkspace,
 } from '@/service/common'
 import { useAppContext } from '@/context/app-context'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const ALLOW_FILE_EXTENSIONS = ['svg', 'png']
 
 const CustomWebAppBrand = () => {
@@ -106,12 +106,12 @@ const CustomWebAppBrand = () => {
   return (
     <div className='py-4'>
       {/* <div className='mb-2 text-sm font-medium text-gray-900'>{t('custom.webapp.title')}</div> */}
-      <div className='mb-2 text-sm font-medium text-gray-900 dark:text-white'>{t('custom.webapp.title')}</div>
+      <div className={`mb-2 text-sm font-medium text-gray-900 ${getDarkThemeClasses('text')}`}>{t('custom.webapp.title')}</div>
       {/* <div className='relative mb-4 pl-4 pb-6 pr-[119px] rounded-xl border-[0.5px] border-black/8 shadow-xs bg-gray-50 overflow-hidden'> */}
-      <div className='relative mb-4 pl-4 pb-6 pr-[119px] rounded-xl border-[0.5px] border-black/8 shadow-xs bg-gray-50 dark:bg-[#3F3F3F] overflow-hidden'>
+      <div className={`relative mb-4 pl-4 pb-6 pr-[119px] rounded-xl border-[0.5px] border-black/8 shadow-xs bg-gray-50 ${getDarkThemeClasses('background3')} overflow-hidden`}>
         <div className={`${s.mask} absolute top-0 left-0 w-full -bottom-2 z-10`}></div>
         {/* <div className='flex items-center -mt-2 mb-4 p-6 bg-white rounded-xl'> */}
-        <div className='flex items-center -mt-2 mb-4 p-6 bg-white dark:bg-[#5F5F5F] rounded-xl'>
+        <div className={`flex items-center -mt-2 mb-4 p-6 bg-white ${getDarkThemeClasses('background6')} rounded-xl`}>
           <div className='flex items-center px-4 w-[125px] h-9 rounded-lg bg-primary-600 border-[0.5px] border-primary-700 shadow-xs'>
             <MessageDotsCircle className='shrink-0 mr-2 w-4 h-4 text-white' />
             <div className='grow h-2 rounded-sm bg-white opacity-50' />
@@ -119,7 +119,7 @@ const CustomWebAppBrand = () => {
         </div>
         <div className='flex items-center h-5 justify-between'>
           {/* <div className='w-[369px] h-1.5 rounded-sm bg-gray-200 opacity-80' /> */}
-          <div className='w-[369px] h-1.5 rounded-sm bg-gray-200 dark:bg-[#5F5F5F] opacity-80' />
+          <div className={`w-[369px] h-1.5 rounded-sm bg-gray-200 ${getDarkThemeClasses('background6')} opacity-80`} />
           {
             !webappBrandRemoved && (
               <div className='flex items-center text-[10px] font-medium text-gray-400'>
@@ -135,7 +135,7 @@ const CustomWebAppBrand = () => {
         </div>
       </div>
       {/* <div className='flex items-center justify-between mb-2 px-4 h-14 rounded-xl border-[0.5px] border-gray-200 bg-gray-50 text-sm font-medium text-gray-900'> */}
-      <div className='flex items-center justify-between mb-2 px-4 h-14 rounded-xl border-[0.5px] border-gray-200 dark:border-[#3F3F3F] bg-gray-50 dark:bg-[#3F3F3F] text-sm font-medium text-gray-900 dark:text-white'>
+      <div className={`flex items-center justify-between mb-2 px-4 h-14 rounded-xl border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} bg-gray-50 ${getDarkThemeClasses('background3')} text-sm font-medium text-gray-900 ${getDarkThemeClasses('text')}`}>
         {t('custom.webapp.removeBrand')}
         <Switch
           size='l'
@@ -150,22 +150,22 @@ const CustomWebAppBrand = () => {
       `}> */}
 
       <div className={`
-        flex items-center justify-between px-4 py-3 rounded-xl border-[0.5px] border-gray-200 dark:border-[#3F3F3F] bg-gray-50 dark:bg-[#3F3F3F]
+        flex items-center justify-between px-4 py-3 rounded-xl border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} bg-gray-50 ${getDarkThemeClasses('background3')}
         ${webappBrandRemoved && 'opacity-30'}
       `}>
 
         <div>
           {/* <div className='leading-5 text-sm font-medium text-gray-900'>{t('custom.webapp.changeLogo')}</div>
           <div className='leading-[18px] text-xs text-gray-500'>{t('custom.webapp.changeLogoTip')}</div> */}
-          <div className='leading-5 text-sm font-medium text-gray-900 dark:text-white'>{t('custom.webapp.changeLogo')}</div>
-          <div className='leading-[18px] text-xs text-gray-500 dark:text-[#FCFCFC]'>{t('custom.webapp.changeLogoTip')}</div>
+          <div className={`leading-5 text-sm font-medium text-gray-900 ${getDarkThemeClasses('text')}`}>{t('custom.webapp.changeLogo')}</div>
+          <div className={`leading-[18px] text-xs text-gray-500 ${getDarkThemeClasses('text')}`}>{t('custom.webapp.changeLogoTip')}</div>
         </div>
         <div className='flex items-center'>
           {
             !uploading && (
               <Button
                 className={`
-                  relative mr-2 !h-8 !px-3 bg-white !text-[13px] dark:border-0 dark:bg-[#333333] dark:hover:bg-zinc-800
+                  relative mr-2 !h-8 !px-3 bg-white !text-[13px] ${getDarkThemeClasses('borderradius1')} ${getDarkThemeClasses('background2')} ${getDarkThemeClasses('hover')}
 
                   ${uploadDisabled ? 'opacity-40' : ''}
                 `}
@@ -208,7 +208,7 @@ const CustomWebAppBrand = () => {
               <>
                 <Button
                   type='primary'
-                  className='mr-2 !h-8 !px-3 !py-0 !text-[13px]'
+                  className={`mr-2 !h-8 !px-3 !py-0 !text-[13px] ${getDarkThemeClasses('background2')}`}
                   onClick={handleApply}
                   disabled={webappBrandRemoved || !isCurrentWorkspaceManager}
                 >
@@ -227,7 +227,7 @@ const CustomWebAppBrand = () => {
           <div className='mr-2 h-5 w-[1px] bg-black/5'></div>
           <Button
             className={`
-              !h-8 !px-3 bg-white !text-[13px] dark:border-0 dark:bg-[#333333] dark:hover:bg-zinc-800
+              !h-8 !px-3 bg-white !text-[13px] ${getDarkThemeClasses('borderradius1')} ${getDarkThemeClasses('background1')} ${getDarkThemeClasses('hover')}
               ${(uploadDisabled || (!webappLogo && !webappBrandRemoved)) ? 'opacity-40' : ''}
             `}
             disabled={uploadDisabled || (!webappLogo && !webappBrandRemoved)}

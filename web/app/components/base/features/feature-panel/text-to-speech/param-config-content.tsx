@@ -17,7 +17,7 @@ import { fetchAppVoices } from '@/service/apps'
 import Tooltip from '@/app/components/base/tooltip'
 import { HelpCircle } from '@/app/components/base/icons/src/vender/line/general'
 import { languages } from '@/i18n/language'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type VoiceParamConfigProps = {
   onChange?: OnFeaturesChange
 }
@@ -60,11 +60,11 @@ const VoiceParamConfig = ({
   return (
     <div>
       <div>
-        <div className='leading-6 text-base font-semibold text-gray-800 dark:text-white'>{t('appDebug.voice.voiceSettings.title')}</div>
+        <div className={`leading-6 text-base font-semibold text-gray-800 ${getDarkThemeClasses('text')} `}>{t('appDebug.voice.voiceSettings.title')}</div>
         <div className='pt-3 space-y-6'>
           <div>
             <div className='mb-2 flex items-center  space-x-1'>
-              <div className='leading-[18px] text-[13px] font-semibold text-gray-800 dark:text-white'>{t('appDebug.voice.voiceSettings.language')}</div>
+              <div className={`leading-[18px] text-[13px] font-semibold text-gray-800 ${getDarkThemeClasses('text')} `}>{t('appDebug.voice.voiceSettings.language')}</div>
               <Tooltip htmlContent={<div className='w-[180px]' >
                 {t('appDebug.voice.voiceSettings.resolutionTooltip').split('\n').map(item => (
                   <div key={item}>{item}</div>
@@ -83,9 +83,9 @@ const VoiceParamConfig = ({
             >
               <div className={'relative h-9'}>
                 {/* <Listbox.Button className={'w-full h-full rounded-lg border-0 bg-gray-100 py-1.5 pl-3 pr-10 sm:text-sm sm:leading-6 focus-visible:outline-none focus-visible:bg-gray-200 group-hover:bg-gray-200 cursor-pointer'}> */}
-                <Listbox.Button className={'w-full h-full rounded-lg border-0 bg-gray-100 dark:bg-[#3f3f3f] dark:text-white py-1.5 pl-3 pr-10 sm:text-sm sm:leading-6 focus-visible:outline-none focus-visible:bg-gray-200 group-hover:bg-gray-200 cursor-pointer'}>
+                <Listbox.Button className={`w-full h-full rounded-lg border-0 bg-gray-100 ${getDarkThemeClasses('background3')}  ${getDarkThemeClasses('text')}  py-1.5 pl-3 pr-10 sm:text-sm sm:leading-6 focus-visible:outline-none focus-visible:bg-gray-200 group-hover:bg-gray-200 cursor-pointer`}>
 
-                  <span className={classNames('block truncate text-left', !languageItem?.name && 'text-gray-400 dark:text-white ')}>
+                  <span className={classNames('block truncate text-left', !languageItem?.name && `text-gray-400 ${getDarkThemeClasses('text')}  `)}>
                     {languageItem?.name ? t(`common.voice.language.${languageItem?.value.replace('-', '')}`) : localLanguagePlaceholder}
                   </span>
                   <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
@@ -102,12 +102,12 @@ const VoiceParamConfig = ({
                   leaveTo="opacity-0"
                 >
 
-                  <Listbox.Options className="absolute z-10 mt-1 px-1 max-h-60 w-full overflow-auto rounded-md bg-white dark:bg-[#3f3f3f] py-1 text-base shadow-lg border-gray-200 dark:border-[#5f5f5f] border-[0.5px] focus:outline-none sm:text-sm">
+                  <Listbox.Options className={`absolute z-10 mt-1 px-1 max-h-60 w-full overflow-auto rounded-md bg-white ${getDarkThemeClasses('background3')}  py-1 text-base shadow-lg border-gray-200 ${getDarkThemeClasses('border')}  border-[0.5px] focus:outline-none sm:text-sm`}>
                     {languages.map((item: Item) => (
                       <Listbox.Option
                         key={item.value}
                         className={({ active }) =>
-                          `relative cursor-pointer select-none py-2 pl-3 pr-9 rounded-lg hover:bg-gray-100 dark:hover:bg-zinc-800 text-gray-700 dark:text-white ${active ? 'bg-gray-100 dark:bg-[#3f3f3f]' : ''
+                          `relative cursor-pointer select-none py-2 pl-3 pr-9 rounded-lg hover:bg-gray-100 ${getDarkThemeClasses('hover')}  text-gray-700 ${getDarkThemeClasses('text')}  ${active ? `bg-gray-100 ${getDarkThemeClasses('background3')} ` : ''
                           }`
                         }
                         value={item}
@@ -137,7 +137,7 @@ const VoiceParamConfig = ({
           </div>
 
           <div>
-            <div className='mb-2 leading-[18px] text-[13px] font-semibold text-gray-800 dark:text-white'>{t('appDebug.voice.voiceSettings.voice')}</div>
+            <div className={`mb-2 leading-[18px] text-[13px] font-semibold text-gray-800 ${getDarkThemeClasses('text')} `}>{t('appDebug.voice.voiceSettings.voice')}</div>
             <Listbox
               value={voiceItem}
               disabled={!languageItem}
@@ -148,8 +148,8 @@ const VoiceParamConfig = ({
               }}
             >
               <div className={'relative h-9'}>
-                <Listbox.Button className={'w-full h-full rounded-lg border-0 bg-gray-100 dark:bg-[#3f3f3f] py-1.5 pl-3 pr-10 sm:text-sm sm:leading-6 focus-visible:outline-none focus-visible:bg-gray-200 group-hover:bg-gray-200 dark:group-hover:bg-zinc-800 cursor-pointer'}>
-                  <span className={classNames('block truncate text-left', !voiceItem?.name && 'text-gray-400 dark:text-white')}>{voiceItem?.name ?? localVoicePlaceholder}</span>
+                <Listbox.Button className={`w-full h-full rounded-lg border-0 bg-gray-100 ${getDarkThemeClasses('background3')}  py-1.5 pl-3 pr-10 sm:text-sm sm:leading-6 focus-visible:outline-none focus-visible:bg-gray-200 group-hover:bg-gray-200 ${getDarkThemeClasses('grouphover')} cursor-pointer`}>
+                  <span className={classNames(`block truncate text-left', !voiceItem?.name && 'text-gray-400 ${getDarkThemeClasses('text')} `)}>{voiceItem?.name ?? localVoicePlaceholder}</span>
                   <span className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-2">
                     <ChevronDownIcon
                       className="h-5 w-5 text-gray-400"
@@ -164,12 +164,12 @@ const VoiceParamConfig = ({
                   leaveTo="opacity-0"
                 >
 
-                  <Listbox.Options className="absolute z-10 mt-1 px-1 max-h-60 w-full overflow-auto rounded-md bg-white dark:bg-[#3f3f3f] py-1 text-base shadow-lg border-gray-200 dark:border-[#5f5f5f] border-[0.5px] focus:outline-none sm:text-sm">
+                  <Listbox.Options className={`absolute z-10 mt-1 px-1 max-h-60 w-full overflow-auto rounded-md bg-white ${getDarkThemeClasses('background3')}  py-1 text-base shadow-lg border-gray-200 ${getDarkThemeClasses('border')}  border-[0.5px] focus:outline-none sm:text-sm`}>
                     {voiceItems?.map((item: Item) => (
                       <Listbox.Option
                         key={item.value}
                         className={({ active }) =>
-                          `relative cursor-pointer select-none py-2 pl-3 pr-9 rounded-lg hover:bg-gray-100 dark:hover:bg-zinc-800 text-gray-700 dark:text-white ${active ? 'bg-gray-100 dark:bg-[#3f3f3f]' : ''
+                          `relative cursor-pointer select-none py-2 pl-3 pr-9 rounded-lg hover:bg-gray-100 ${getDarkThemeClasses('hover')}  text-gray-700 ${getDarkThemeClasses('text')}  ${active ? `bg-gray-100 ${getDarkThemeClasses('background3')} ` : ''
                           }`
                         }
                         value={item}

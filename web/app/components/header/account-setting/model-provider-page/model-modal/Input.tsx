@@ -1,6 +1,6 @@
 import type { FC } from 'react'
 import { CheckCircle } from '@/app/components/base/icons/src/vender/solid/general'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type InputProps = {
   value?: string
   onChange: (v: string) => void
@@ -50,11 +50,12 @@ const Input: FC<InputProps> = ({
         //   ${className}
         // `}
         className={`
-          block px-3 w-full h-9 bg-gray-100 dark:!bg-[#2c2c2c] text-sm rounded-lg border border-transparent
+          block px-3 w-full h-9 bg-gray-100 ${getDarkThemeClasses('background2')} text-sm rounded-lg border border-transparent
           appearance-none outline-none caret-primary-600
-          hover:border-[rgba(0,0,0,0.08)] hover:bg-gray-50 dark:hover:bg-zinc-800 dark:hover:border-[#5F5F5F]
-          focus:bg-white focus:border-gray-300 focus:shadow-xs dark:focus:border-[#5F5F5F]
-          placeholder:text-sm placeholder:text-gray-400 dark:text-[#FCFCFC]
+          hover:border-[rgba(0,0,0,0.08)] hover:bg-gray-50 ${getDarkThemeClasses('hover')}
+          focus:bg-white focus:border-gray-300 focus:shadow-xs 
+          placeholder:text-sm placeholder:text-gray-400 ${getDarkThemeClasses('sub_text1')} ${getDarkThemeClasses('text')}
+          ${getDarkThemeClasses('focusoutline')} focus:border-2 ${getDarkThemeClasses('borderfocus')}
           ${validated && 'pr-[30px]'}
           ${className}
         `}

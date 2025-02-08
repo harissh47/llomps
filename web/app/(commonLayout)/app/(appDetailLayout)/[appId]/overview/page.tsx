@@ -23,7 +23,7 @@ const Overview = async ({
       {/* <ApikeyInfoPanel /> */}
       {/* <div className='flex flex-row items-center justify-between mb-4 text-xl text-gray-900'>
         {t('overview.title')} */}
-        <div className={`flex flex-row items-center justify-between mb-4 text-xl text-gray-900 dark:text-white`}>
+        <div className={`flex flex-row items-center justify-between mb-4 text-xl text-gray-900 ${getDarkThemeClasses('text')}`}>
         {t('overview.title')}
       </div>
       <CardView appId={appId} />

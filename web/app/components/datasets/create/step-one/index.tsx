@@ -17,7 +17,7 @@ import { NotionPageSelector } from '@/app/components/base/notion-page-selector'
 import { useDatasetDetailContext } from '@/context/dataset-detail'
 import { useProviderContext } from '@/context/provider-context'
 import VectorSpaceFull from '@/app/components/billing/vector-space-full'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type IStepOneProps = {
   datasetId?: string
   dataSourceType?: DataSourceType
@@ -46,15 +46,15 @@ export const NotionConnector = ({ onSetting }: NotionConnectorProps) => {
 
   return (
     // <div className={s.notionConnectionTip}>
-    <div className="
-        flex flex-col items-start p-6 max-w-[640px] bg-[#F9FAFB] dark:bg-[#3F3F3F] rounded-[16px]">
+    <div className={`
+        flex flex-col items-start p-6 max-w-[640px] bg-[#F9FAFB] ${getDarkThemeClasses('background3')}  rounded-[16px]`}>
       <span className={s.notionIcon} />
       {/* <div className={s.title}>{t('datasetCreation.stepOne.notionSyncTitle')}</div>
       <div className={s.tip}>{t('datasetCreation.stepOne.notionSyncTip')}</div> */}
-      <div className="relative my-6 font-semibold text-lg leading-6 text-[#9bd489] dark:text-primary-600">
+      <div className={`relative my-6 font-semibold text-lg leading-6 text-[#9bd489] ${getDarkThemeClasses('green_text')} `}>
       {t('datasetCreation.stepOne.notionSyncTitle')}
       </div>
-      <div className="mb-5 text-sm leading-[18px] text-gray-600 dark:text-white">
+      <div className={`mb-5 text-sm leading-[18px] text-gray-600 ${getDarkThemeClasses('text')} `}>
       {t('datasetCreation.stepOne.notionSyncTip')}
       </div>
       <Button className='h-8' type='primary' onClick={onSetting}>{t('datasetCreation.stepOne.connect')}</Button>
@@ -130,18 +130,18 @@ const StepOne = ({
     return false
   }, [files])
   return (
-    <div className='flex w-full h-full dark:bg-[#202020]'>
+    <div className={`flex w-full h-full ${getDarkThemeClasses('main_background')} `}>
       <div className='grow overflow-y-auto relative'>
         {
           shouldShowDataSourceTypeList && (
             // <div className={s.stepHeader}>{t('datasetCreation.steps.one')}</div>
-            <div className="sticky top-0 left-0 font-semibold text-[18px] leading-[28px] text-[#101828] dark:text-white p-[42px_64px_12px]">
+            <div className={`sticky top-0 left-0 font-semibold text-[18px] leading-[28px] text-[#101828] ${getDarkThemeClasses('text')}  p-[42px_64px_12px]`}>
               {t('datasetCreation.steps.one')}
             </div>
           )
         }
         {/* <div className={s.form}> */}
-        <div className="relative p-[12px] px-[64px] bg-white dark:bg-[#202020]">
+        <div className={`relative p-[12px] px-[64px] bg-white ${getDarkThemeClasses('main_background')} `}>
 
           {
             shouldShowDataSourceTypeList && (
@@ -154,9 +154,9 @@ const StepOne = ({
                   //   dataSourceType === DataSourceType.FILE && s.active,
                   //   dataSourceTypeDisable && dataSourceType !== DataSourceType.FILE && s.disabled,
                   // )} 
-                  className={`box-border relative shrink-0 flex items-center mr-3 p-3 h-14 bg-white dark:bg-[#3F3F3F] rounded-xl font-medium text-[14px] leading-[20px] text-[#101828] dark:text-white cursor-pointer border-[0.5px] border-[#EAECF0]  shadow-[0px_1px_2px_rgba(16,24,40,0.05)]
-                  ${dataSourceType === DataSourceType.FILE ? 'bg-[#f5f8ff] border-[1.5px] border-[#c4E037] shadow-[0px_1px_3px_rgba(16,24,40,0.1)]' : 'dark:border-[#5f5f5f]'}
-                  ${dataSourceTypeDisable && dataSourceType !== DataSourceType.FILE ? 'bg-[#f9fafb] border-[#EAECF0] dark:border-[#5f5f5f] cursor-default' : ''}`}
+                  className={`box-border relative shrink-0 flex items-center mr-3 p-3 h-14 bg-white ${getDarkThemeClasses('background3')}  rounded-xl font-medium text-[14px] leading-[20px] text-[#101828] ${getDarkThemeClasses('text')}  cursor-pointer border-[0.5px] border-[#EAECF0]  shadow-[0px_1px_2px_rgba(16,24,40,0.05)]
+                  ${dataSourceType === DataSourceType.FILE ? 'bg-[#f5f8ff] border-[1.5px] border-[#c4E037] shadow-[0px_1px_3px_rgba(16,24,40,0.1)]' : `${getDarkThemeClasses('border')} `}
+                  ${dataSourceTypeDisable && dataSourceType !== DataSourceType.FILE ? `bg-[#f9fafb] border-[#EAECF0] ${getDarkThemeClasses('border')}  cursor-default` : ''}`}
                   onClick={() => {
                     if (dataSourceTypeDisable)
                       return
@@ -175,9 +175,9 @@ const StepOne = ({
                   //   dataSourceTypeDisable && dataSourceType !== DataSourceType.NOTION && s.disabled,
                   // )}
 
-                  className={`box-border relative shrink-0 flex items-center mr-3 p-3 h-14 bg-white dark:bg-[#3F3F3F] rounded-xl font-medium text-[14px] leading-[20px] text-[#101828] dark:text-white cursor-pointer border-[0.5px] border-[#EAECF0] shadow-[0px_1px_2px_rgba(16,24,40,0.05)]
-                  ${dataSourceType === DataSourceType.NOTION ? 'bg-[#f5f8ff] border-[1.5px] border-[#c4E037] shadow-[0px_1px_3px_rgba(16,24,40,0.1)]' : 'dark:border-[#5f5f5f]'}
-                  ${dataSourceTypeDisable && dataSourceType !== DataSourceType.NOTION ? 'bg-[#f9fafb] border-[#EAECF0] dark:border-[#5f5f5f] cursor-default' : ''}`}
+                  className={`box-border relative shrink-0 flex items-center mr-3 p-3 h-14 bg-white ${getDarkThemeClasses('background3')}  rounded-xl font-medium text-[14px] leading-[20px] text-[#101828] ${getDarkThemeClasses('text')}  cursor-pointer border-[0.5px] border-[#EAECF0] shadow-[0px_1px_2px_rgba(16,24,40,0.05)]
+                  ${dataSourceType === DataSourceType.NOTION ? 'bg-[#f5f8ff] border-[1.5px] border-[#c4E037] shadow-[0px_1px_3px_rgba(16,24,40,0.1)]' : `${getDarkThemeClasses('border')} `}
+                  ${dataSourceTypeDisable && dataSourceType !== DataSourceType.NOTION ? `bg-[#f9fafb] border-[#EAECF0] ${getDarkThemeClasses('border')}  cursor-default` : ''}`}
                   
                   onClick={() => {
                     if (dataSourceTypeDisable)
@@ -196,9 +196,9 @@ const StepOne = ({
                   //   dataSourceType === DataSourceType.WEB && s.active,
                   //   dataSourceTypeDisable && dataSourceType !== DataSourceType.WEB && s.disabled,
                   // )}
-                  className={`box-border relative shrink-0 flex items-center mr-3 p-3 h-14 bg-white dark:bg-[#3F3F3F] rounded-xl font-medium text-[14px] leading-[20px] text-[#101828] dark:text-white cursor-pointer border-[0.5px] border-[#EAECF0] shadow-[0px_1px_2px_rgba(16,24,40,0.05)]
-                  ${dataSourceType === DataSourceType.WEB ? 'bg-[#f5f8ff] border-[1.5px] border-[#c4E037] shadow-[0px_1px_3px_rgba(16,24,40,0.1)]' : 'dark:border-[#5f5f5f]'}
-                  ${dataSourceTypeDisable && dataSourceType !== DataSourceType.WEB ? 'bg-[#f9fafb] border-[#EAECF0] dark:border-[#5f5f5f] cursor-default' : ''}`}
+                  className={`box-border relative shrink-0 flex items-center mr-3 p-3 h-14 bg-white ${getDarkThemeClasses('background3')}  rounded-xl font-medium text-[14px] leading-[20px] text-[#101828] ${getDarkThemeClasses('text')}  cursor-pointer border-[0.5px] border-[#EAECF0] shadow-[0px_1px_2px_rgba(16,24,40,0.05)]
+                  ${dataSourceType === DataSourceType.WEB ? 'bg-[#f5f8ff] border-[1.5px] border-[#c4E037] shadow-[0px_1px_3px_rgba(16,24,40,0.1)]' : `${getDarkThemeClasses('border')} `}
+                  ${dataSourceTypeDisable && dataSourceType !== DataSourceType.WEB ? `bg-[#f9fafb] border-[#EAECF0] ${getDarkThemeClasses('border')}  cursor-default` : ''}`}
 
                   onClick={() => changeType(DataSourceType.WEB)}
                 >
@@ -273,7 +273,7 @@ const StepOne = ({
             <>
               <div className={s.dividerLine} />
               <div onClick={modalShowHandle} className={s.OtherCreationOption}>{t('datasetCreation.stepOne.emptyDatasetCreation')}</div>
-              {/* <div onClick={modalShowHandle} className="flex items-center cursor-pointer font-medium text-[13px] leading-[18px] text-[#000] dark:text-white">
+              {/* <div onClick={modalShowHandle} className="flex items-center cursor-pointer font-medium text-[13px] leading-[18px] text-[#000] ${getDarkThemeClasses('text')} ">
                 {t('datasetCreation.stepOne.emptyDatasetCreation')}
               </div> */}
 

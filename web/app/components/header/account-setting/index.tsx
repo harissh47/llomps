@@ -29,13 +29,13 @@ import { Colors } from '@/app/components/base/icons/src/vender/line/editor'
 import { Colors as ColorsSolid } from '@/app/components/base/icons/src/vender/solid/editor'
 import useBreakpoints, { MediaType } from '@/hooks/use-breakpoints'
 import { useProviderContext } from '@/context/provider-context'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const iconClassName = `
   w-4 h-4 ml-3 mr-2
 `
 
 const scrolledClassName = `
-  border-b dark:border-b-[#5f5f5f] shadow-xs bg-white/[.98]
+  border-b ${getDarkThemeClasses('borderb')} shadow-xs bg-white/[.98]
 `
 
 type IAccountSettingProps = {
@@ -161,15 +161,15 @@ export default function AccountSetting({
     >
       <div className='flex'>
         {/* <div className='w-[44px] sm:w-[200px] px-[1px] py-4 sm:p-4 border border-gray-100 shrink-0 sm:shrink-1 flex flex-col items-center sm:items-start'> */}
-        <div className='w-[44px] sm:w-[200px] px-[1px] py-4 sm:p-4 border border-gray-100 dark:border-[#5f5f5f] rounded-tl-xl rounded-bl-xl shrink-0 sm:shrink-1 flex flex-col items-center sm:items-start dark:bg-[#333333]'>
+        <div className={`w-[44px] sm:w-[200px] px-[1px] py-4 sm:p-4 border border-gray-100 ${getDarkThemeClasses('border')} rounded-tl-xl rounded-bl-xl shrink-0 sm:shrink-1 flex flex-col items-center sm:items-start ${getDarkThemeClasses('background1')} `}>
           {/* <div className='mb-8 ml-0 sm:ml-2 text-sm sm:text-base font-medium leading-6 text-gray-900'>{t('common.userProfile.settings')}</div> */}
-          <div className='mb-8 ml-0 sm:ml-2 text-sm sm:text-base font-medium leading-6 text-gray-900 dark:text-white'>{t('common.userProfile.settings')}</div>
+          <div className={`mb-8 ml-0 sm:ml-2 text-sm sm:text-base font-medium leading-6 text-gray-900 ${getDarkThemeClasses('text')} `}>{t('common.userProfile.settings')}</div>
           <div className='w-full'>
             {
               menuItems.map(menuItem => (
                 <div key={menuItem.key} className='mb-4'>
                   {/* <div className='px-2 mb-[6px] text-[10px] sm:text-xs font-medium text-gray-500'>{menuItem.name}</div> */}
-                  <div className='px-2 mb-[6px] text-[10px] sm:text-xs font-medium text-gray-500 dark:text-white'>{menuItem.name}</div>
+                  <div className={`px-2 mb-[6px] text-[10px] sm:text-xs font-medium text-gray-500 ${getDarkThemeClasses('text')} `}>{menuItem.name}</div>
                   <div>
                     {
                       menuItem.items.map(item => (
@@ -177,7 +177,7 @@ export default function AccountSetting({
                           key={item.key}
                           className={`
                             flex items-center h-[37px] mb-[2px] text-sm cursor-pointer rounded-lg
-                            ${activeMenu === item.key ? 'font-semibold text-primary-600 bg-primary-50' : 'font-light text-gray-700 dark:text-[#FCFCFC]'}
+                            ${activeMenu === item.key ? 'font-semibold text-primary-600 bg-primary-50' : `font-light text-gray-700 ${getDarkThemeClasses('sub_text1')}`}
                           `}
                           title={item.name}
                           onClick={() => setActiveMenu(item.key)}
@@ -194,14 +194,14 @@ export default function AccountSetting({
           </div>
         </div>
         {/* <div ref={scrollRef} className='relative w-[824px] h-[720px] pb-4 border overflow-y-auto'> */}
-        <div ref={scrollRef} className="relative w-[824px] h-[720px] pb-4 border dark:border-[#5f5f5f] dark:bg-[#333333] rounded-tr-xl rounded-br-xl overflow-y-auto">
+        <div ref={scrollRef} className={`relative w-[824px] h-[720px] pb-4 border ${getDarkThemeClasses('border')} ${getDarkThemeClasses('background1')}  rounded-tr-xl rounded-br-xl overflow-y-auto`}>
           {/* <div className={cn('sticky top-0 px-6 py-4 flex items-center h-14 mb-4 bg-white text-base font-medium text-gray-900 z-20', scrolled && scrolledClassName)}> */}
-          <div className={cn('sticky top-0 px-6 py-4 flex items-center h-14 mb-4 bg-white dark:bg-[#333333] text-base font-medium text-gray-900 dark:text-white z-20', scrolled && scrolledClassName)}>
+          <div className={cn(`sticky top-0 px-6 py-4 flex items-center h-14 mb-4 bg-white ${getDarkThemeClasses('background1')}  text-base font-medium text-gray-900 ${getDarkThemeClasses('text')}  z-20`, scrolled && scrolledClassName)}>
             <div className='shrink-0'>{activeItem?.name}</div>
             {
               activeItem?.description && (
                 // <div className='shrink-0 ml-2 text-xs text-gray-600'>{activeItem?.description}</div>
-                <div className='shrink-0 ml-2 text-xs text-gray-600 dark:text-[#6B7280]'>{activeItem?.description}</div>
+                <div className={`shrink-0 ml-2 text-xs text-gray-600 ${getDarkThemeClasses('sub_text2')}`}>{activeItem?.description}</div>
               )
             }
             <div className='grow flex justify-end'>

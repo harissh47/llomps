@@ -88,7 +88,12 @@ export type DarkThemeColors = {
   bordert:string
   peercheckedbg:string
   peerfocus:string
-
+  border6:string
+  borderhover4:string
+  appcardBorder2:string
+  borderhover5:string
+  borderradius1: string
+  
 }
  
 // // Function to determine background color based on provider
@@ -122,7 +127,7 @@ export const getDarkTheme = (): DarkThemeColors => ({
   border: 'dark:!border-[#5f5f5f]',
   border1:'dark:!border-[#202020]',
   border4:'dark:border-[#3e3e3e]',
-  sub_text1: 'dark:text-[#fcfcfc]',
+  sub_text1: 'dark:!text-[#fcfcfc]',
   sub_text2: 'dark:text-[#6b7280]',
   sub_text3: 'dark:text-[#a1a2b6]',
   background1: 'dark:!bg-[#3e3e3e]',
@@ -159,6 +164,7 @@ export const getDarkTheme = (): DarkThemeColors => ({
   sub_text9:'dark:text-[#3f3f3f]',
   texthover: 'dark:hover:text-[#b7e724]',
   borderhover1:'dark:hover:border-[#B2CCFF]',
+  
   hovershadow:'dark:hover:bg-transparent dark:hover:shadow-[#5F5F5F]',
   groupBorderHover:'dark:group-hover:border-gray-700',
   ring:'dark:ring-primary-500',
@@ -169,6 +175,7 @@ export const getDarkTheme = (): DarkThemeColors => ({
   hovershadow1:'dark:hover:shadow-[#3f3f3f]',
   hovershadow2:'dark:hover:shadow-[#2e2e2e]',
   borderhover3:'dark:hover:border-[#4CAF50] dark:hover:shadow-none',
+  borderhover4:'dark:hover:!border-primary-600',
   focusring:'dark:focus:ring-[#5F5F5F]',
   hovertransparent:'dark:hover:bg-transparent',
   hover7:'dark:hover:bg-[#2E2E2E]',
@@ -189,7 +196,12 @@ export const getDarkTheme = (): DarkThemeColors => ({
   ring1:'dark:ring-1 dark:ring-white/10',
   bordert:'dark:border-t-[#5f5f5f]',
   peercheckedbg:'dark:peer-checked:bg-[#3f3f3f]',
-  peerfocus:'dark:peer-focus:ring-[#3f3f3f]/20'
+  peerfocus:'dark:peer-focus:ring-[#3f3f3f]/20',
+  border6: 'dark:border-gray-800',
+  appcardBorder2:'dark:border-[#5f5f5f] dark:border-2',
+  borderhover5:'dark:hover:border-[#D1E0FF]',
+  borderradius1: 'dark:border-0',
+  
  
 
 });

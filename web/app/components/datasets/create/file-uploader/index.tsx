@@ -14,7 +14,7 @@ import { fetchSupportFileTypes } from '@/service/datasets'
 import I18n from '@/context/i18n'
 import { LanguagesSupported } from '@/i18n/language'
 import { IS_CE_EDITION } from '@/config'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const FILES_NUMBER_LIMIT = 20
 
 type IFileUploaderProps = {
@@ -252,7 +252,7 @@ const FileUploader = ({
       {/* <div className={cn(s.title, titleClassName)}>{t('datasetCreation.stepOne.uploader.title')}</div> */}
       
       <div className={cn(
-    "mb-2 font-medium text-[16px] leading-[24px] text-[#344054] dark:text-white",
+    `mb-2 font-medium text-[16px] leading-[24px] text-[#344054] ${getDarkThemeClasses('text')} `,
     titleClassName
   )}>{t('datasetCreation.stepOne.uploader.title')}</div>
 
@@ -262,13 +262,13 @@ const FileUploader = ({
         // className={cn(s.uploader, dragging && s.dragging)}
         className={cn(
             s.uploader,
-            "dark:bg-zinc-800 dark:border-zinc-600",
+            `${getDarkThemeClasses('background8')} ${getDarkThemeClasses('border')}`,
             dragging && s.dragging
           )}>
 
         
           <div className='flex justify-center items-center min-h-6 mb-2 '>
-          {/* <div className='flex justify-center items-center min-h-6 mb-2 dark:text-white'> */}
+          {/* <div className='flex justify-center items-center min-h-6 mb-2 ${getDarkThemeClasses('text')} '> */}
             <span className={s.uploadIcon} />
             
             {/* <span
@@ -282,7 +282,7 @@ const FileUploader = ({
             <span>
               {t('datasetCreation.stepOne.uploader.button')}
               {/* <label className={s.browse} onClick={selectHandle}>{t('datasetCreation.stepOne.uploader.browse')}</label> */}
-              <label className="pl-1 cursor-pointer text-[#8AB40A] dark:text-[#8AB40A]"
+              <label className={`pl-1 cursor-pointer text-[#8AB40A] text-[#8AB40A]`}
               onClick={selectHandle}>
               {t('datasetCreation.stepOne.uploader.browse')}
               </label>
@@ -290,7 +290,7 @@ const FileUploader = ({
             </span>
           </div>
           {/* <div className={s.tip}>{t('datasetCreation.stepOne.uploader.tip', {  */}
-          <div className={"font-normal text-[12px] leading-[18px] text-[#667085] dark:text-[#A1A6B2]"}>{t('datasetCreation.stepOne.uploader.tip', {
+          <div className={`font-normal text-[12px] leading-[18px] text-[#667085] ${getDarkThemeClasses('sub_text3')} `}>{t('datasetCreation.stepOne.uploader.tip', {
         
             size: fileUploadConfig.file_size_limit,
             supportTypes: supportTypesShowNames,
@@ -308,12 +308,12 @@ const FileUploader = ({
             //   fileItem.progress < 100 && s.uploading,
             // )}
             className={cn(s.file,
-              "box-border relative flex items-center justify-between p-2 pr-3 max-w-[640px] h-[40px] bg-white dark:bg-[#202020] border border-gray-300 dark:border-[#5f5f5f] shadow-sm rounded-lg overflow-hidden cursor-pointer hover:bg-[#D1E0FF] hover:border-[#D1E0FF] dark:hover:border-[#D1E0FF] hover:shadow-md",
-              fileItem.progress < 100 && "bg-[#FCFCFD] dark:bg-[#202020] border border-gray-300 dark:border-[#5f5f5f] hover:bg-[#FCFCFD] dark:hover:bg-[#2e2e2e] hover:border-gray-300 dark:hover:border-[#D1E0FF]"
+              `box-border relative flex items-center justify-between p-2 pr-3 max-w-[640px] h-[40px] bg-white ${getDarkThemeClasses('main_background')}  border border-gray-300 ${getDarkThemeClasses('border')}  shadow-sm rounded-lg overflow-hidden cursor-pointer hover:bg-[#D1E0FF] hover:border-[#D1E0FF] ${getDarkThemeClasses('borderhover5')} hover:shadow-md`,
+              fileItem.progress < 100 && `bg-[#FCFCFD] ${getDarkThemeClasses('main_background')}  border border-gray-300 ${getDarkThemeClasses('border')}  hover:bg-[#FCFCFD] ${getDarkThemeClasses('hover6')} hover:border-gray-300 ${getDarkThemeClasses('borderhover5')}`
             )}
             // className={cn(
-            //   "box-border relative flex items-center justify-between p-2 max-w-[640px] h-10 bg-white dark:bg-[#3F3F3F] border border-[#EAECF0] dark:border-[#5f5f5f] shadow-sm rounded-md overflow-hidden cursor-pointer",
-            //   fileItem.progress < 100 && "bg-[#FCFCFD] border-[#EAECF0] dark:border-[#5f5f5f] "
+            //   "box-border relative flex items-center justify-between p-2 max-w-[640px] h-10 bg-white dark:bg-[#3F3F3F] border border-[#EAECF0] ${getDarkThemeClasses('border')}  shadow-sm rounded-md overflow-hidden cursor-pointer",
+            //   fileItem.progress < 100 && "bg-[#FCFCFD] border-[#EAECF0] ${getDarkThemeClasses('border')}  "
             // )}
             >
             
@@ -324,7 +324,7 @@ const FileUploader = ({
               <div className={cn(s.fileIcon, s[getFileType(fileItem.file)])} />
               {/* <div className={s.filename}>{fileItem.file.name}</div>
               <div className={s.size}>{getFileSize(fileItem.file.size)}</div> */}
-              <div className="font-medium text-[13px] leading-[18px] text-[#1D2939] dark:text-white">
+              <div className={`font-medium text-[13px] leading-[18px] text-[#1D2939] ${getDarkThemeClasses('text')} `}>
               {fileItem.file.name}
               </div>
               <div className="ml-3 font-normal text-[12px] leading-[18px] text-[#667085] ">
