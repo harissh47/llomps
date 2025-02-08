@@ -4,7 +4,7 @@ import React from 'react'
 import { useTranslation } from 'react-i18next'
 import { PlusIcon } from '@heroicons/react/20/solid'
 import cn from 'classnames'
-
+import { getDarkThemeClasses } from '@/app/theme'
 export type IOperationBtnProps = {
   className?: string
   type: 'add' | 'edit'
@@ -38,7 +38,7 @@ const OperationBtn: FC<IOperationBtnProps> = ({
     //   className={cn(className, 'flex items-center rounded-md h-7 px-3 space-x-1 text-gray-700 cursor-pointer hover:bg-gray-200 select-none')}
     //   onClick={onClick}>
         <div
-      className={cn(className, ' flex items-center rounded-md h-7 px-3 space-x-1 text-gray-700 cursor-pointer hover:bg-gray-200 select-none dark:text-white dark:hover:bg-zinc-800 cursor-pointer ')}
+      className={cn(className, ` flex items-center rounded-md h-7 px-3 space-x-1 text-gray-700 cursor-pointer hover:bg-gray-200 select-none ${getDarkThemeClasses('text')} ${getDarkThemeClasses('hover')} cursor-pointer `)}
       onClick={onClick}>
       <div >
         {iconMap[type]}

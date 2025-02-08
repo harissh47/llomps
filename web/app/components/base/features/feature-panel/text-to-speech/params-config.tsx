@@ -10,7 +10,7 @@ import {
   PortalToFollowElemContent,
   PortalToFollowElemTrigger,
 } from '@/app/components/base/portal-to-follow-elem'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type ParamsConfigProps = {
   onChange?: OnFeaturesChange
   disabled?: boolean
@@ -33,7 +33,7 @@ const ParamsConfig = ({
     >
       <PortalToFollowElemTrigger onClick={() => !disabled && setOpen(v => !v)}>
         {/* <div className={cn('flex items-center rounded-md h-7 px-3 space-x-1 text-gray-700 cursor-pointer hover:bg-gray-200', open && 'bg-gray-200')}> */}
-        <div className={cn('flex items-center rounded-md h-7 px-3 space-x-1 text-gray-700 dark:text-[#6b7082] cursor-pointer hover:bg-gray-200 dark:hover:bg-zinc-800', open && 'bg-gray-200 dark:bg-[#5f5f5f]')}>
+        <div className={cn(`flex items-center rounded-md h-7 px-3 space-x-1 text-gray-700 ${getDarkThemeClasses('svg')} cursor-pointer hover:bg-gray-200 ${getDarkThemeClasses('hover')}`, open && `bg-gray-200 ${getDarkThemeClasses('background6')}`)}>
 
           <Settings01 className='w-3.5 h-3.5 ' />
           <div className='ml-1 leading-[18px] text-xs font-medium '>{t('appDebug.voice.settings')}</div>
@@ -41,7 +41,7 @@ const ParamsConfig = ({
       </PortalToFollowElemTrigger>
       <PortalToFollowElemContent style={{ zIndex: 50 }}>
         {/* <div className='w-80 sm:w-[412px] p-4 bg-white  rounded-lg border-[0.5px] border-gray-200 shadow-lg space-y-3'> */}
-        <div className='w-80 sm:w-[412px] p-4 bg-white dark:bg-[#383838]  rounded-lg border-[0.5px] border-gray-200 dark:border-[#5f5f5f] shadow-lg space-y-3'>
+        <div className={`w-80 sm:w-[412px] p-4 bg-white ${getDarkThemeClasses('background3')}  rounded-lg border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} shadow-lg space-y-3`}>
 
           <ParamConfigContent onChange={onChange} />
         </div>

@@ -16,7 +16,7 @@ import s from '@/app/components/custom/style.module.css'
 import GridMask from '@/app/components/base/grid-mask'
 import { useProviderContextSelector } from '@/context/provider-context'
 import { IS_CE_EDITION } from '@/config'
-
+import { getDarkThemeClasses } from '@/app/theme'
 export type ModelLoadBalancingConfigsProps = {
   draftConfig?: ModelLoadBalancingConfig
   setDraftConfig: Dispatch<SetStateAction<ModelLoadBalancingConfig | undefined>>
@@ -142,8 +142,8 @@ const ModelLoadBalancingConfigs = ({
     <>
       <div
         className={classNames(
-          'min-h-16 bg-gray-50 dark:bg-[#3F3F3F] border rounded-xl transition-colors',
-          (withSwitch || !draftConfig.enabled) ? 'border-gray-200 dark:border-[#5f5f5f]' : 'border-primary-400',
+          `min-h-16 bg-gray-50 ${getDarkThemeClasses('background3')} border rounded-xl transition-colors`,
+          (withSwitch || !draftConfig.enabled) ? `border-gray-200 ${getDarkThemeClasses('border')}` : 'border-primary-400',
           (withSwitch || draftConfig.enabled) ? 'cursor-default' : 'cursor-pointer',
           className,
         )}
@@ -155,14 +155,14 @@ const ModelLoadBalancingConfigs = ({
           </div>
           <div className='grow'>
             {/* <div className='flex items-center gap-1 text-sm'> */}
-            <div className='flex items-center gap-1 text-sm dark:text-white'>
+            <div className={`flex items-center gap-1 text-sm ${getDarkThemeClasses('text')}`}>
               {t('common.modelProvider.loadBalancing')}
               <TooltipPlus popupContent={t('common.modelProvider.loadBalancingInfo')} popupClassName='max-w-[300px]'>
                 <HelpCircle className='w-3 h-3 text-gray-400' />
               </TooltipPlus>
             </div>
             {/* <div className='text-xs text-gray-500'>{t('common.modelProvider.loadBalancingDescription')}</div> */}
-            <div className='text-xs text-gray-500 dark:text-[#FCFCFC]'>{t('common.modelProvider.loadBalancingDescription')}</div>
+            <div className={`text-xs text-gray-500 ${getDarkThemeClasses('sub_text1')}`}>{t('common.modelProvider.loadBalancingDescription')}</div>
           </div>
           {
             withSwitch && (

@@ -8,7 +8,7 @@ import Switch from '@/app/components/base/switch'
 import { FeatureEnum } from '@/app/components/base/features/types'
 import { useFeaturesStore } from '@/app/components/base/features/hooks'
 import { useModalContext } from '@/context/modal-context'
-
+import { getDarkThemeClasses } from '@/app/theme'
 export type IFeatureItemProps = {
   icon: React.ReactNode
   previewImgClassName?: string
@@ -68,12 +68,12 @@ const FeatureItem: FC<IFeatureItemProps> = ({
 
   return (
     // <div className={cn(s.wrap, 'relative flex justify-between p-3 rounded-xl border border-transparent bg-gray-50 hover:border-gray-200  cursor-pointer')}>
-    <div className={cn(s.wrap, 'relative flex justify-between p-3 rounded-xl border border-transparent bg-gray-50 dark:bg-[#3f3f3f] hover:border-gray-200 dark:hover:border-[#5F5F5F] cursor-pointer')}>
+    <div className={cn(s.wrap, `relative flex justify-between p-3 rounded-xl border border-transparent bg-gray-50 ${getDarkThemeClasses('background3')} hover:border-gray-200 ${getDarkThemeClasses('borderhover')} cursor-pointer`)}>
 
       <div className='flex space-x-3 mr-2'>
         {/* icon */}
         <div
-          className='shrink-0 flex items-center justify-center w-8 h-8 rounded-lg border border-gray-200 bg-white'
+          className={`shrink-0 flex items-center justify-center w-8 h-8 rounded-lg border border-gray-200 bg-white`}
           style={{
             boxShadow: '0px 1px 2px rgba(16, 24, 40, 0.05)',
           }}
@@ -82,9 +82,9 @@ const FeatureItem: FC<IFeatureItemProps> = ({
         </div>
         <div>
           {/* <div className='text-sm font-semibold text-gray-800'>{title}</div> */}
-          <div className='text-sm font-semibold text-gray-800 dark:text-white'>{title}</div>
+          <div className={`text-sm font-semibold text-gray-800 ${getDarkThemeClasses('text')}`}>{title}</div>
           {/* <div className='text-xs font-normal text-gray-500'>{description}</div> */}
-          <div className='text-xs font-normal text-gray-500 dark:text-[#fcfcfc]'>{description}</div>
+          <div className={`text-xs font-normal text-gray-500 ${getDarkThemeClasses('sub_text1')}`}>{description}</div>
         </div>
       </div>
 

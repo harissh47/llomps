@@ -14,6 +14,7 @@ import VarReferencePicker from '@/app/components/workflow/nodes/_base/components
 import Input from '@/app/components/workflow/nodes/_base/components/input-support-select-var'
 import useAvailableVarList from '@/app/components/workflow/nodes/_base/hooks/use-available-var-list'
 import { VarType } from '@/app/components/workflow/types'
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   readOnly: boolean
   nodeId: string
@@ -129,15 +130,15 @@ const InputVarList: FC<Props> = ({
             <div key={variable} className='space-y-1'>
               <div className='flex items-center h-[18px] space-x-2'>
                 {/* <span className='text-[13px] font-medium text-gray-900'>{label[language] || label.en_US}</span> */}
-                <span className='text-[13px] font-medium text-gray-900 dark:text-[#FCFCFC]'>{label[language] || label.en_US}</span>
+                <span className={`text-[13px] font-medium text-gray-900 ${getDarkThemeClasses('sub_text1')}`}>{label[language] || label.en_US}</span>
                 {/* <span className='text-xs font-normal text-gray-500'>{paramType(type)}</span> */}
-                <span className='text-xs font-normal text-gray-500 dark:text-[#A1A6B2]'>{paramType(type)}</span>
+                <span className={`text-xs font-normal text-gray-500 ${getDarkThemeClasses('sub_text3')}`}>{paramType(type)}</span>
                 {required && <span className='leading-[18px] text-xs font-normal text-[#EC4A0A]'>Required</span>}
               </div>
               {isString && (
                 <Input
                   // className={cn(inputsIsFocus[variable] ? 'shadow-xs bg-gray-50 border-gray-300' : 'bg-gray-100 border-gray-100', 'rounded-lg px-3 py-[6px] border')}
-                  className={cn(inputsIsFocus[variable] ? 'shadow-xs bg-gray-50 border-gray-300 dark:bg-[#3F3F3F] dark:border-[#5F5F5F]' : 'bg-gray-100 border-gray-100 dark:bg-[#3F3F3F] dark:border-[#3F3F3F]', 'rounded-lg px-3 py-[6px] border')}
+                  className={cn(inputsIsFocus[variable] ? `shadow-xs bg-gray-50 border-gray-300 ${getDarkThemeClasses('background3')} ${getDarkThemeClasses('border')}` : `bg-gray-100 border-gray-100 ${getDarkThemeClasses('background2')} ${getDarkThemeClasses('border5')}`, 'rounded-lg px-3 py-[6px] border')}
                   value={varInput?.value as string || ''}
                   onChange={handleMixedTypeChange(variable)}
                   readOnly={readOnly}
@@ -174,7 +175,7 @@ const InputVarList: FC<Props> = ({
                 />
               )}
               {/* {tooltip && <div className='leading-[18px] text-xs font-normal text-gray-600'>{tooltip[language] || tooltip.en_US}</div>} */}
-              {tooltip && <div className='leading-[18px] text-xs font-normal text-gray-600 dark:text-[#6B7280]'>{tooltip[language] || tooltip.en_US}</div>}
+              {tooltip && <div className={`leading-[18px] text-xs font-normal text-gray-600 ${getDarkThemeClasses('svg')}`}>{tooltip[language] || tooltip.en_US}</div>}
             </div>
           )
         })

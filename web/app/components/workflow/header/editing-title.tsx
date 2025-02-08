@@ -3,7 +3,7 @@ import { useTranslation } from 'react-i18next'
 import { useWorkflow } from '../hooks'
 import { useStore } from '@/app/components/workflow/store'
 import useTimestamp from '@/hooks/use-timestamp'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const EditingTitle = () => {
   const { t } = useTranslation()
   const { formatTime } = useTimestamp()
@@ -14,7 +14,7 @@ const EditingTitle = () => {
 
   return (
     // <div className='flex-col z-40 items-center py-2 h-[18px] text-xs text-gray-500'>
-    <div className='flex items-center h-[18px] text-xs text-gray-500 dark:text-white'>
+    <div className={`flex items-center h-[18px] text-xs text-gray-500 ${getDarkThemeClasses('text')}`}>
       {
         !!draftUpdatedAt && (
           <>

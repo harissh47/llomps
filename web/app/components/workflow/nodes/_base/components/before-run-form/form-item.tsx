@@ -16,7 +16,7 @@ import { useFeatures } from '@/app/components/base/features/hooks'
 import { VarBlockIcon } from '@/app/components/workflow/block-icon'
 import { Line3 } from '@/app/components/base/icons/src/public/common'
 import { Variable02 } from '@/app/components/base/icons/src/vender/solid/development'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   payload: InputVar
   value: any
@@ -62,7 +62,7 @@ const FormItem: FC<Props> = ({
               <VarBlockIcon type={nodeType || BlockEnum.Start} />
             </div>
             {/* <div className='mx-0.5 text-xs font-medium text-gray-700 max-w-[150px] truncate' title={nodeName}> */}
-            <div className='mx-0.5 text-xs font-medium text-gray-700 dark:text-[#F5F5F5] max-w-[150px] truncate' title={nodeName}>
+            <div className={`mx-0.5 text-xs font-medium text-gray-700 ${getDarkThemeClasses('sub_text1')} max-w-[150px] truncate`} title={nodeName}>
               {nodeName}
             </div>
             <Line3 className='mr-0.5'></Line3>
@@ -86,13 +86,13 @@ const FormItem: FC<Props> = ({
   return (
     <div className={`${className}`}>
       {/* {!isArrayLikeType && <div className='h-8 leading-8 text-[13px] font-medium text-gray-700 truncate'>{typeof payload.label === 'object' ? nodeKey : payload.label}</div>} */}
-      {!isArrayLikeType && <div className='h-8 leading-8 text-[13px] font-medium text-gray-700 dark:text-[#A1A2B6] truncate'>{typeof payload.label === 'object' ? nodeKey : payload.label}</div>}
+      {!isArrayLikeType && <div className={`h-8 leading-8 text-[13px] font-medium text-gray-700 ${getDarkThemeClasses('sub_text3')} truncate`}>{typeof payload.label === 'object' ? nodeKey : payload.label}</div>}
       <div className='grow'>
         {
           type === InputVarType.textInput && (
             <input
               // className="w-full px-3 text-sm leading-8 text-gray-900 border-0 rounded-lg grow h-8 bg-gray-50 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200"
-              className="w-full px-3 text-sm leading-8 text-gray-900 dark:text-[#FCFCFC] border-0 rounded-lg grow h-8 bg-gray-50 dark:bg-[#2c2c2c] focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200 dark:focus:ring-[#5F5F5F]"
+              className={`w-full px-3 text-sm leading-8 text-gray-900 ${getDarkThemeClasses('sub_text1')} border-0 rounded-lg grow h-8 bg-gray-50 ${getDarkThemeClasses('background2')} focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200 ${getDarkThemeClasses('focusring')}`}
               type="text"
               value={value || ''}
               onChange={e => onChange(e.target.value)}
@@ -106,7 +106,7 @@ const FormItem: FC<Props> = ({
           type === InputVarType.number && (
             <input
               // className="w-full px-3 text-sm leading-8 text-gray-900 border-0 rounded-lg grow h-8 bg-gray-50 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200"
-              className="w-full px-3 text-sm leading-8 text-gray-900 border-0 rounded-lg grow h-8 bg-gray-50 dark:bg-[#2c2c2c] focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200 dark:focus:ring-[#5f5f5f]"
+              className={`w-full px-3 text-sm leading-8 text-gray-900 border-0 rounded-lg grow h-8 bg-gray-50 ${getDarkThemeClasses('background2')} focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200 ${getDarkThemeClasses('focusring')}`}
               type="number"
               value={value || ''}
               onChange={e => onChange(e.target.value)}
@@ -120,7 +120,7 @@ const FormItem: FC<Props> = ({
           type === InputVarType.paragraph && (
             <textarea
               // className="w-full px-3 py-1 text-sm leading-[18px] text-gray-900 border-0 rounded-lg grow h-[120px] bg-gray-50 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200"
-              className="w-full px-3 py-1 text-sm leading-[18px] text-gray-900 dark:text-[#FCFCFC] border-0 rounded-lg grow h-[120px] bg-gray-50 dark:!bg-[#3F3F3F] focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200 dark:focus:ring-[#5F5F5F]"
+              className={`w-full px-3 py-1 text-sm leading-[18px] text-gray-900 ${getDarkThemeClasses('sub_text1')} border-0 rounded-lg grow h-[120px] bg-gray-50 ${getDarkThemeClasses('background2')} focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200 ${getDarkThemeClasses('focusring')}`}
               value={value || ''}
               onChange={e => onChange(e.target.value)}
               placeholder={t('appDebug.variableConig.inputPlaceholder')!}

@@ -2,7 +2,7 @@
 import type { FC } from 'react'
 import { useTranslation } from 'react-i18next'
 import useTimestamp from '@/hooks/use-timestamp'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   status: string
   executor?: string
@@ -28,13 +28,13 @@ const MetaData: FC<Props> = ({
   return (
     <div className='relative'>
       {/* <div className='h-6 leading-6 text-gray-500 text-xs font-medium'>{t('runLog.meta.title')}</div> */}
-      <div className='h-6 leading-6 text-gray-500 dark:text-white text-xs font-medium'>{t('runLog.meta.title')}</div>
+      <div className={`h-6 leading-6 text-gray-500 ${getDarkThemeClasses('text')} text-xs font-medium`}>{t('runLog.meta.title')}</div>
       <div className='py-1'>
         <div className='flex'>
           {/* <div className='shrink-0 w-[104px] px-2 py-[5px] text-gray-500 text-xs leading-[18px] truncate'>{t('runLog.meta.status')}</div> */}
-          <div className='shrink-0 w-[104px] px-2 py-[5px] text-gray-500 dark:text-[#FCFCFC] text-xs leading-[18px] truncate'>{t('runLog.meta.status')}</div>
+          <div className={`shrink-0 w-[104px] px-2 py-[5px] text-gray-500 ${getDarkThemeClasses('sub_text1')} text-xs leading-[18px] truncate`}>{t('runLog.meta.status')}</div>
           {/* <div className='grow px-2 py-[5px] text-gray-900 text-xs leading-[18px]'> */}
-          <div className='grow px-2 py-[5px] text-gray-900 dark:text-[#A1A6B2] text-xs leading-[18px]'>
+          <div className={`grow px-2 py-[5px] text-gray-900 ${getDarkThemeClasses('sub_text3')} text-xs leading-[18px]`}>
             {status === 'running' && (
               <div className='my-[5px] w-16 h-2 rounded-sm bg-[rgba(0,0,0,0.05)]'/>
             )}
@@ -51,9 +51,9 @@ const MetaData: FC<Props> = ({
         </div>
         <div className='flex'>
           {/* <div className='shrink-0 w-[104px] px-2 py-[5px] text-gray-500 text-xs leading-[18px] truncate'>{t('runLog.meta.executor')}</div> */}
-          <div className='shrink-0 w-[104px] px-2 py-[5px] text-gray-500 dark:text-[#FCFCFC] text-xs leading-[18px] truncate'>{t('runLog.meta.executor')}</div>
+          <div className={`shrink-0 w-[104px] px-2 py-[5px] text-gray-500 ${getDarkThemeClasses('sub_text1')} text-xs leading-[18px] truncate`}>{t('runLog.meta.executor')}</div>
           {/* <div className='grow px-2 py-[5px] text-gray-900 text-xs leading-[18px]'> */}
-          <div className='grow px-2 py-[5px] text-gray-900 dark:text-[#A1A6B2] text-xs leading-[18px]'>
+          <div className={`grow px-2 py-[5px] text-gray-900 ${getDarkThemeClasses('sub_text3')} text-xs leading-[18px]`}>
             {status === 'running' && (
               <div className='my-[5px] w-[88px] h-2 rounded-sm bg-[rgba(0,0,0,0.05)]'/>
             )}
@@ -64,9 +64,9 @@ const MetaData: FC<Props> = ({
         </div>
         <div className='flex'>
           {/* <div className='shrink-0 w-[104px] px-2 py-[5px] text-gray-500 text-xs leading-[18px] truncate'>{t('runLog.meta.startTime')}</div> */}
-          <div className='shrink-0 w-[104px] px-2 py-[5px] text-gray-500 dark:text-[#FCFCFC] text-xs leading-[18px] truncate'>{t('runLog.meta.startTime')}</div>
+          <div className={`shrink-0 w-[104px] px-2 py-[5px] text-gray-500 ${getDarkThemeClasses('sub_text1')} text-xs leading-[18px] truncate`}>{t('runLog.meta.startTime')}</div>
           {/* <div className='grow px-2 py-[5px] text-gray-900 text-xs leading-[18px]'> */}
-          <div className='grow px-2 py-[5px] text-gray-900 dark:text-[#A1A6B2] text-xs leading-[18px]'>
+          <div className={`grow px-2 py-[5px] text-gray-900 ${getDarkThemeClasses('sub_text3')} text-xs leading-[18px]`}>
             {status === 'running' && (
               <div className='my-[5px] w-[72px] h-2 rounded-sm bg-[rgba(0,0,0,0.05)]'/>
             )}
@@ -77,9 +77,9 @@ const MetaData: FC<Props> = ({
         </div>
         <div className='flex'>
           {/* <div className='shrink-0 w-[104px] px-2 py-[5px] text-gray-500 text-xs leading-[18px] truncate'>{t('runLog.meta.time')}</div> */}
-          <div className='shrink-0 w-[104px] px-2 py-[5px] text-gray-500 dark:text-[#FCFCFC] text-xs leading-[18px] truncate'>{t('runLog.meta.time')}</div>
+          <div className={`shrink-0 w-[104px] px-2 py-[5px] text-gray-500 ${getDarkThemeClasses('sub_text1')} text-xs leading-[18px] truncate`}>{t('runLog.meta.time')}</div>
           {/* <div className='grow px-2 py-[5px] text-gray-900 text-xs leading-[18px]'> */}
-          <div className='grow px-2 py-[5px] text-gray-900 dark:text-[#A1A6B2] text-xs leading-[18px]'>
+          <div className={`grow px-2 py-[5px] text-gray-900 ${getDarkThemeClasses('sub_text3')} text-xs leading-[18px]`}>
             {status === 'running' && (
               <div className='my-[5px] w-[72px] h-2 rounded-sm bg-[rgba(0,0,0,0.05)]'/>
             )}
@@ -90,9 +90,9 @@ const MetaData: FC<Props> = ({
         </div>
         <div className='flex'>
           {/* <div className='shrink-0 w-[104px] px-2 py-[5px] text-gray-500 text-xs leading-[18px] truncate'>{t('runLog.meta.tokens')}</div> */}
-          <div className='shrink-0 w-[104px] px-2 py-[5px] text-gray-500 dark:text-[#FCFCFC] text-xs leading-[18px] truncate'>{t('runLog.meta.tokens')}</div>
+          <div className={`shrink-0 w-[104px] px-2 py-[5px] text-gray-500 ${getDarkThemeClasses('sub_text1')} text-xs leading-[18px] truncate`}>{t('runLog.meta.tokens')}</div>
           {/* <div className='grow px-2 py-[5px] text-gray-900 text-xs leading-[18px]'> */}
-          <div className='grow px-2 py-[5px] text-gray-900 dark:text-[#A1A6B2] text-xs leading-[18px]'>
+          <div className={`grow px-2 py-[5px] text-gray-900 ${getDarkThemeClasses('sub_text3')} text-xs leading-[18px]`}>
             {status === 'running' && (
               <div className='my-[5px] w-[48px] h-2 rounded-sm bg-[rgba(0,0,0,0.05)]'/>
             )}
@@ -104,9 +104,9 @@ const MetaData: FC<Props> = ({
         {showSteps && (
           <div className='flex'>
             {/* <div className='shrink-0 w-[104px] px-2 py-[5px] text-gray-500 text-xs leading-[18px] truncate'>{t('runLog.meta.steps')}</div> */}
-            <div className='shrink-0 w-[104px] px-2 py-[5px] text-gray-500 dark:text-[#FCFCFC] text-xs leading-[18px] truncate'>{t('runLog.meta.steps')}</div>
+            <div className={`shrink-0 w-[104px] px-2 py-[5px] text-gray-500 ${getDarkThemeClasses('sub_text1')} text-xs leading-[18px] truncate`}>{t('runLog.meta.steps')}</div>
             {/* <div className='grow px-2 py-[5px] text-gray-900 text-xs leading-[18px]'> */}
-            <div className='grow px-2 py-[5px] text-gray-900 dark:text-[#A1A6B2] text-xs leading-[18px]'>
+            <div className={`grow px-2 py-[5px] text-gray-900 ${getDarkThemeClasses('sub_text3')} text-xs leading-[18px]`}>
               {status === 'running' && (
                 <div className='my-[5px] w-[24px] h-2 rounded-sm bg-[rgba(0,0,0,0.05)]'/>
               )}

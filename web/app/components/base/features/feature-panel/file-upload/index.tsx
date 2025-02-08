@@ -10,7 +10,7 @@ import {
 import ParamConfig from './param-config'
 import Switch from '@/app/components/base/switch'
 import { File05 } from '@/app/components/base/icons/src/vender/solid/files'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type FileUploadProps = {
   onChange?: OnFeaturesChange
   disabled?: boolean
@@ -40,12 +40,12 @@ const FileUpload = ({
 
   return (
     // <div className='flex items-center px-3 h-12 bg-gray-50 rounded-xl overflow-hidden'></div>
-    <div className='flex items-center px-3 h-12 bg-gray-50 dark:bg-[#3F3F3F] rounded-xl overflow-hidden'>
+    <div className={`flex items-center px-3 h-12 bg-gray-50 ${getDarkThemeClasses('background3')} rounded-xl overflow-hidden`}>
       <div className='shrink-0 flex items-center justify-center mr-1 w-6 h-6'>
         <File05 className='shrink-0 w-4 h-4 text-[#6938EF]' />
       </div>
       {/* <div className='shrink-0 mr-2 whitespace-nowrap text-sm text-gray-800 font-semibold'> */}
-      <div className='shrink-0 mr-2 whitespace-nowrap text-sm text-gray-800 dark:text-white font-semibold'>
+      <div className={`shrink-0 mr-2 whitespace-nowrap text-sm text-gray-800 ${getDarkThemeClasses('text')} font-semibold`}>
         {t('common.imageUploader.imageUpload')}
       </div>
       <div className='grow' />

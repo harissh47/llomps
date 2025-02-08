@@ -3,7 +3,7 @@ import type { FC } from 'react'
 import React from 'react'
 import cn from 'classnames'
 import { Plus } from '../icons/src/vender/line/general'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   className?: string
   onClick: () => void
@@ -15,7 +15,7 @@ const AddButton: FC<Props> = ({
 }) => {
   return (
     // <div className={cn(className, 'p-1 rounded-md cursor-pointer hover:bg-gray-200 select-none')} onClick={onClick}>
-    <div className={cn(className, 'p-1 rounded-md cursor-pointer hover:bg-gray-200 dark:hover:bg-zinc-800 select-none')} onClick={onClick}>
+    <div className={cn(className, `p-1 rounded-md cursor-pointer hover:bg-gray-200 ${getDarkThemeClasses('hover')} select-none`)} onClick={onClick}>
 
       <Plus className='w-4 h-4 text-gray-500' />
     </div>

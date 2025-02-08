@@ -16,11 +16,11 @@ import Toast from '@/app/components/base/toast'
 import ConfigSelect from '@/app/components/app/configuration/config-var/config-select'
 import { ChangeType, type MoreInfo } from '@/app/components/workflow/types'
 import { checkKeys } from '@/utils/var'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const i18nPrefix = 'workflow.nodes.parameterExtractor'
 const errorI18nPrefix = 'workflow.errorMsg'
 // const inputClassName = 'w-full px-3 text-sm leading-9 text-gray-900 border-0 rounded-lg grow h-9 bg-gray-100 focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200'
-const inputClassName = 'w-full px-3 text-sm leading-9 text-gray-900 dark:text-white border-0 rounded-lg grow h-9 bg-gray-100 dark:bg-[#2c2c2c] focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200 dark:focus:ring-[#5f5f5f]'
+const inputClassName = `w-full px-3 text-sm leading-9 text-gray-900 ${getDarkThemeClasses('text')} border-0 rounded-lg grow h-9 bg-gray-100 ${getDarkThemeClasses('background2')} focus:outline-none focus:ring-1 focus:ring-inset focus:ring-gray-200 ${getDarkThemeClasses('focusring')}`
 
 
 const DEFAULT_PARAM: Param = {
@@ -184,7 +184,7 @@ const AddExtractParameter: FC<Props> = ({
             </div>
             <div className='mt-4 flex justify-end space-x-2'>
               {/* <Button className='flex !h-8 !w-[95px] text-[13px] font-medium text-gray-700' onClick={hideModal} >{t('common.operation.cancel')}</Button> */}
-              <Button className='flex !h-8 !w-[95px] text-[13px] font-medium text-gray-700 dark:bg-[#3e3e3e] dark:border-[#5f5f5f] dark:hover:bg-zinc-800' onClick={hideModal} >{t('common.operation.cancel')}</Button>
+              <Button className={`flex !h-8 !w-[95px] text-[13px] font-medium text-gray-700 ${getDarkThemeClasses('background1')} ${getDarkThemeClasses('border')} ${getDarkThemeClasses('hover')}`} onClick={hideModal} >{t('common.operation.cancel')}</Button>
               <Button className='flex !h-8 !w-[95px] text-[13px] font-medium' type='primary' onClick={handleSave} >{isAdd ? t('common.operation.add') : t('common.operation.save')}</Button>
             </div>
           </div>

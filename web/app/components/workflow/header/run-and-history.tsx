@@ -16,7 +16,7 @@ import {
 } from '@/app/components/base/icons/src/vender/line/mediaAndDevices'
 import { Loading02 } from '@/app/components/base/icons/src/vender/line/general'
 import { MessagePlay } from '@/app/components/base/icons/src/vender/line/communication'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const RunMode = memo(() => {
   const { t } = useTranslation()
   const { handleWorkflowStartRunInWorkflow } = useWorkflowStartRun()
@@ -72,8 +72,8 @@ const PreviewMode = memo(() => {
   return (
     <div
       className={cn(
-        'flex items-center px-1.5 h-7 rounded-md text-[13px] font-medium text-primary-600',
-        'hover:bg-primary-50 dark:hover:bg-zinc-800 cursor-pointer',
+        `flex items-center px-1.5 h-7 rounded-md text-[13px] font-medium text-primary-600`,
+        `hover:bg-primary-50 ${getDarkThemeClasses('hover')} cursor-pointer`,
       )}
       onClick={() => handleWorkflowStartRunInChatflow()}
     >
@@ -89,7 +89,7 @@ const RunAndHistory: FC = () => {
 
   return (
     // <div className='flex items-center px-0.5 h-8 rounded-lg border-[0.5px] border-gray-200 bg-white dark:bg-[#202020] shadow-xs dark:hover:bg-zinc-800'>
-    <div className='flex items-center px-0.5 h-8 rounded-lg border-[0.5px] border-gray-200 bg-white dark:bg-[#333333] shadow-xs dark:hover:bg-zinc-800 dark:border-2 dark:border-[#3F3F3F] dark:border-solid dark:shadow-sm'>
+    <div className={`flex items-center px-0.5 h-8 rounded-lg border-[0.5px] border-gray-200 bg-white ${getDarkThemeClasses('background1')} shadow-xs ${getDarkThemeClasses('border')} border-solid shadow-sm`}>
       {
         !isChatMode && <RunMode />
       }
@@ -97,7 +97,7 @@ const RunAndHistory: FC = () => {
         isChatMode && <PreviewMode />
       }
       {/* <div className='mx-0.5 w-[0.5px] h-8 bg-gray-200'></div> */}
-      <div className='mx-0.5 w-[0.5px] h-8 bg-gray-200 dark:border-2 dark:border-[#3F3F3F] dark:border-solid dark:shadow-sm'></div>
+      <div className={`mx-0.5 w-[0.5px] h-8 bg-gray-200 ${getDarkThemeClasses('appcardBorder2')} border-solid shadow-sm`}></div>
       <ViewHistory />
     </div>
   )

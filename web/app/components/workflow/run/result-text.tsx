@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next'
 import { ImageIndentLeft } from '@/app/components/base/icons/src/vender/line/editor'
 import { Markdown } from '@/app/components/base/markdown'
 import LoadingAnim from '@/app/components/app/chat/loading-anim'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type ResultTextProps = {
   isRunning?: boolean
   outputs?: any
@@ -20,7 +20,7 @@ const ResultText: FC<ResultTextProps> = ({
 }) => {
   const { t } = useTranslation()
   return (
-    <div className='bg-gray-50 py-2'>
+    <div className={`bg-gray-50 ${getDarkThemeClasses('background2')} py-2`}>
       {isRunning && !outputs && (
         <div className='pt-4 pl-[26px]'>
           <LoadingAnim type='text' />

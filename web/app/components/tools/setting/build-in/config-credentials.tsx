@@ -12,7 +12,7 @@ import Loading from '@/app/components/base/loading'
 import Form from '@/app/components/header/account-setting/model-provider-page/model-modal/Form'
 import { LinkExternal02 } from '@/app/components/base/icons/src/vender/line/general'
 import { useAppContext } from '@/context/app-context'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   collection: Collection
   onCancel: () => void
@@ -91,7 +91,7 @@ const ConfigCredential: FC<Props> = ({
                   }
                   < div className='flex space-x-2'>
                     {/* <Button className='flex items-center h-8 !px-3 !text-[13px] font-medium !text-gray-700 bg-white' onClick={onCancel}>{t('common.operation.cancel')}</Button> */}
-                    <Button className='flex items-center h-8 !px-3 !text-[13px] font-medium !text-gray-700 bg-white dark:bg-[#3e3e3e] dark:border-[#5F5F5F] dark:hover:bg-zinc-800 dark:!text-white' onClick={onCancel}>{t('common.operation.cancel')}</Button>
+                    <Button className={`flex items-center h-8 !px-3 !text-[13px] font-medium !text-gray-700 bg-white ${getDarkThemeClasses('background1')} ${getDarkThemeClasses('border')} ${getDarkThemeClasses('hover')} ${getDarkThemeClasses('sub_text1')}`} onClick={onCancel}>{t('common.operation.cancel')}</Button>
                     <Button className='flex items-center h-8 !px-3 !text-[13px] font-medium' type='primary' onClick={() => onSaved(tempCredential)}>{t('common.operation.save')}</Button>
                   </div>
                 </div>

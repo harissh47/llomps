@@ -5,7 +5,7 @@ import { HelpCircle } from '@/app/components/base/icons/src/vender/line/general'
 import Tooltip from '@/app/components/base/tooltip-plus'
 import Slider from '@/app/components/base/slider'
 import Switch from '@/app/components/base/switch'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type Props = {
   className?: string
   id: string
@@ -37,7 +37,7 @@ const ParamItem: FC<Props> = ({ className, id, name, noTooltip, tip, step = 0.1,
             />
           )}
           {/* <span className="mx-1 text-gray-900 text-[13px] leading-[18px] font-medium">{name}</span> */}
-          <span className="mx-1 text-gray-900 dark:text-white text-[13px] leading-[18px] font-medium">{name}</span>
+          <span className={`mx-1 text-gray-900 ${getDarkThemeClasses('text')} text-[13px] leading-[18px] font-medium`}>{name}</span>
 
           {!noTooltip && (
             <Tooltip popupContent={<div className="w-[200px]">{tip}</div>}>
@@ -51,7 +51,7 @@ const ParamItem: FC<Props> = ({ className, id, name, noTooltip, tip, step = 0.1,
       <div className="mt-2 flex items-center">
         <div className="mr-4 flex shrink-0 items-center">
           {/* <input disabled={!enable} type="number" min={min} max={max} step={step} className="block w-[48px] h-7 text-xs leading-[18px] rounded-lg border-0 pl-1 pl py-1.5 bg-gray-50 text-gray-900  placeholder:text-gray-400 focus:ring-1 focus:ring-inset focus:ring-primary-600 disabled:opacity-60" value={(value === null || value === undefined) ? '' : value} onChange={(e) => { */}
-          <input disabled={!enable} type="number" min={min} max={max} step={step} className="block w-[48px] h-7 text-xs leading-[18px] rounded-lg border-0 pl-1 pl py-1.5 bg-gray-50 dark:bg-[#2C2C2C] text-gray-900 dark:text-white  placeholder:text-gray-400 dark:placeholder:text-white focus:ring-1 focus:ring-inset focus:ring-primary-600 dark:focus:outline-none  disabled:opacity-60" value={(value === null || value === undefined) ? '' : value} onChange={(e) => {
+          <input disabled={!enable} type="number" min={min} max={max} step={step} className={`block w-[48px] h-7 text-xs leading-[18px] rounded-lg border-0 pl-1 pl py-1.5 bg-gray-50 ${getDarkThemeClasses('background2')} text-gray-900 ${getDarkThemeClasses('text')}  placeholder:text-gray-400 ${getDarkThemeClasses('placeholder')} focus:ring-1 focus:ring-inset focus:ring-primary-600 ${getDarkThemeClasses('focusoutline')}  disabled:opacity-60`} value={(value === null || value === undefined) ? '' : value} onChange={(e) => {
 
             const value = parseFloat(e.target.value)
             if (value < min || value > max)

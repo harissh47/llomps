@@ -36,7 +36,7 @@ import {
   useStore,
   useWorkflowStore,
 } from '@/app/components/workflow/store'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type ViewHistoryProps = {
   withText?: boolean
 }
@@ -87,7 +87,7 @@ const ViewHistory = ({
               //   open && '!bg-primary-50',
               // )}>
               <div className={cn(
-                'flex items-center px-3 h-8 rounded-lg border-[0.5px] border-gray-200 dark:border-[#5F5F5F] bg-white dark:bg-[#333333] shadow-xs',
+                `flex items-center px-3 h-8 rounded-lg border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} bg-white ${getDarkThemeClasses('background1')} shadow-xs`,
                 'text-[13px] font-medium text-primary-600 cursor-pointer',
                 open && '!bg-primary-50',
               )}>
@@ -105,7 +105,7 @@ const ViewHistory = ({
               >
                 <div
                   className={`
-                    flex items-center justify-center w-7 h-7 rounded-md hover:bg-black/5 dark:hover:bg-zinc-800 cursor-pointer
+                    flex items-center justify-center w-7 h-7 rounded-md hover:bg-black/5 ${getDarkThemeClasses('hover')} cursor-pointer
                     ${open && 'bg-primary-50'}
                   `}
                   onClick={() => {
@@ -122,13 +122,13 @@ const ViewHistory = ({
         <PortalToFollowElemContent className='z-[12]'>
           <div
             // className='flex flex-col ml-2 w-[240px] bg-white border-[0.5px] border-gray-200 shadow-xl rounded-xl overflow-y-auto'
-            className='flex flex-col ml-2 w-[240px] bg-white border-[0.5px] border-gray-200 dark:border-[#5F5F5F] shadow-xl rounded-xl overflow-y-auto'
+            className={`flex flex-col ml-2 w-[240px] bg-white border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} shadow-xl rounded-xl overflow-y-auto`}
             style={{
               maxHeight: 'calc(2 / 3 * 100vh)',
             }}
           >
             {/* <div className='sticky top-0 bg-white flex items-center justify-between px-4 pt-3 text-base font-semibold text-gray-900'> */}
-            <div className='sticky top-0 bg-white dark:bg-[#333333] flex items-center justify-between px-4 pt-3 text-base font-semibold text-gray-900 dark:text-white'>
+            <div className={`sticky top-0 bg-white ${getDarkThemeClasses('background1')} flex items-center justify-between px-4 pt-3 text-base font-semibold text-gray-900 ${getDarkThemeClasses('text')}`}>
 
               <div className='grow'>{t('workflow.common.runHistory')}</div>
               <div
@@ -152,7 +152,7 @@ const ViewHistory = ({
             {
               !isLoading && (
                 // <div className='p-2'>
-                <div className='p-2 dark:bg-[#333333]'>
+                <div className={`p-2 ${getDarkThemeClasses('background1')}`}>
 
                   {
                     !data?.data.length && (
@@ -201,14 +201,14 @@ const ViewHistory = ({
                         <div>
                           <div
                             className={cn(
-                              'flex items-center text-[13px] font-medium leading-[18px] dark:text-[#FCFCFC]',
+                              `flex items-center text-[13px] font-medium leading-[18px] ${getDarkThemeClasses('sub_text1')}`,
                               item.id === historyWorkflowData?.id && 'text-primary-600',
                             )}
                           >
                             {`Test ${isChatMode ? 'Chat' : 'Run'}#${item.sequence_number}`}
                           </div>
                           {/* <div className='flex items-center text-xs text-gray-500 leading-[18px]'> */}
-                          <div className='flex items-center text-xs text-gray-500 dark:text-[#A1A6B2] leading-[18px]'>
+                          <div className={`flex items-center text-xs text-gray-500 ${getDarkThemeClasses('sub_text3')} leading-[18px]`}>
                             {item.created_by_account.name} · {formatTimeFromNow((item.finished_at || item.created_at) * 1000)}
                           </div>
                         </div>

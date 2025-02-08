@@ -3,7 +3,7 @@
 import { useSelectedLayoutSegment } from 'next/navigation'
 import classNames from 'classnames'
 import Link from 'next/link'
-
+import { getDarkThemeClasses } from '@/app/theme'
 export type NavIcon = React.ComponentType<
   React.PropsWithoutRef<React.ComponentProps<'svg'>> & {
     title?: string | undefined
@@ -50,9 +50,9 @@ export default function NavLink({
       // )}
       className={classNames(
         // isActive ? ' text-primary-600 font-semibold' : 'text-gray-700 hover:bg-gray-100 hover:text-gray-700',
-        isActive ? ' text-primary-600 font-semibold' : 'text-gray-700 hover:bg-gray-100 dark:hover:bg-zinc-800 hover:text-gray-700 dark:text-white',
+        isActive ? ` text-primary-600 font-semibold` : `text-gray-700 hover:bg-gray-100 ${getDarkThemeClasses('hover')} hover:text-gray-700 ${getDarkThemeClasses('text')}`,
         // 'group flex items-start h-9 px-3 rounded-md py-2 text-sm font-normal',
-        'group flex items-center h-9 px-3 rounded-md py-2 text-sm font-normal dark:bg-[#202020] cursor-pointer',
+        `group flex items-center h-9 px-3 rounded-md py-2 text-sm font-normal ${getDarkThemeClasses('main_background')} cursor-pointer`,
         // mode === 'expand' ? 'px-3' : 'px-2.5',
       )}
       title={mode === 'collapse' ? name : ''}
@@ -61,7 +61,8 @@ export default function NavLink({
         className={classNames(
           'h-4 w-4 flex-shrink-0 mr-2',
           // isActive ? 'text-primary-600' : 'text-gray-700',
-          isActive ? 'text-primary-600' : 'text-gray-700 dark:text-[#556676]',
+          // isActive ? 'text-primary-600' : 'text-gray-700 dark:text-[#556676]',
+          isActive ? 'text-primary-600' : `text-gray-700 ${getDarkThemeClasses('svg')}`,
           // mode === 'expand' ? 'mr-2' : 'mr-0',
         )}
         aria-hidden="true"

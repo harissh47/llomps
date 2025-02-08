@@ -6,7 +6,7 @@ import type { OnFeaturesChange } from '../types'
 import FeatureModal from './feature-modal'
 import Button from '@/app/components/base/button'
 import { Plus } from '@/app/components/base/icons/src/vender/line/general'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type ChooseFeatureProps = {
   onChange?: OnFeaturesChange
   disabled?: boolean
@@ -22,12 +22,12 @@ const ChooseFeature = ({
     <>
       <Button
         className={`
-          px-3 py-0 h-8 rounded-lg border border-primary-100 dark:border-[#5F5F5F] bg-primary-25 shadow-xs text-xs font-semibold text-primary-600 dark:!text-primary-600 dark:hover:bg-zinc-800
+          px-3 py-0 h-8 rounded-lg border border-primary-100 ${getDarkThemeClasses('border')} bg-primary-25 shadow-xs text-xs font-semibold text-primary-600 ${getDarkThemeClasses('green_text')} ${getDarkThemeClasses('hover')}
           ${disabled && 'cursor-not-allowed opacity-50'}
         `}
         onClick={() => !disabled && setShowFeaturesModal(true)}
       >
-        <Plus className='mr-1 w-4 h-4 dark:text-primary-600' />
+        <Plus className={`mr-1 w-4 h-4 ${getDarkThemeClasses('green_text')}`} />
         {t('appDebug.operation.addFeature')}
       </Button>
       {

@@ -3,7 +3,7 @@ import type { FC, ReactNode } from 'react'
 import React from 'react'
 import cn from 'classnames'
 import ParamsConfig from '@/app/components/app/configuration/config-voice/param-config'
-
+import { getDarkThemeClasses } from '@/app/theme'
 export type IFeaturePanelProps = {
   className?: string
   headerIcon?: ReactNode
@@ -33,8 +33,8 @@ const FeaturePanel: FC<IFeaturePanelProps> = ({
       <div
       className={cn(
         className,
-        isFocus && 'border border-[#2D0DEE] dark:border-[#5F5F5F] ',
-        'rounded-xl bg-gray-50 dark:!bg-[#3f3f3f] pt-2 pb-3',
+        isFocus && `border border-[#2D0DEE] ${getDarkThemeClasses('border')} `,
+        `rounded-xl bg-gray-50 ${getDarkThemeClasses('background3')} pt-2 pb-3`,
         noBodySpacing && '!pb-0'
       )}    
       style={isFocus
@@ -45,14 +45,14 @@ const FeaturePanel: FC<IFeaturePanelProps> = ({
     >
       {/* Header */}
       {/* <div className={cn('pb-2 px-3', hasHeaderBottomBorder && 'border-b border-gray-100')}> */}
-      <div className={cn('pb-2 px-3 dark:bg-[#3f3f3f]', hasHeaderBottomBorder && 'border-b border-gray-100 dark:border-[#5F5F5F]')}>
+      <div className={cn(`pb-2 px-3 ${getDarkThemeClasses('background3')}`, hasHeaderBottomBorder && `border-b border-gray-100 ${getDarkThemeClasses('border')}`)}>
 
         <div className='flex justify-between items-center h-8'>
           <div className='flex items-center space-x-1 shrink-0'>
             {/* {headerIcon && <div className='flex items-center justify-center w-6 h-6'>{headerIcon}</div>} */}
-            {headerIcon && <div className='flex items-center justify-center w-6 h-6 dark:text-[#6B7280]'>{headerIcon}</div>}
+            {headerIcon && <div className={`flex items-center justify-center w-6 h-6 ${getDarkThemeClasses('svg')}`}>{headerIcon}</div>}
             {/* <div className='text-sm font-semibold text-gray-800'>{title}</div> */}
-            <div className='text-sm font-semibold text-gray-800 dark:text-white'>{title}</div>
+            <div className={`text-sm font-semibold text-gray-800 ${getDarkThemeClasses('text')}`}>{title}</div>
           </div>
           <div className='flex gap-2 items-center'>
             {headerRight && <div>{headerRight}</div>}
@@ -65,7 +65,7 @@ const FeaturePanel: FC<IFeaturePanelProps> = ({
       {/* Body */}
       {children && (
         // <div className={cn(!noBodySpacing && 'mt-1 px-3 ')}>
-        <div className={cn(!noBodySpacing && 'mt-1 px-3 dark:bg-[#3f3f3f]')}>
+        <div className={cn(!noBodySpacing && `mt-1 px-3 ${getDarkThemeClasses('background3')}`)}>
 
           {children}
         </div>

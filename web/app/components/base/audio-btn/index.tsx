@@ -7,7 +7,7 @@ import Tooltip from '@/app/components/base/tooltip'
 import { randomString } from '@/utils'
 import { textToAudio } from '@/service/share'
 import Loading from '@/app/components/base/loading'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type AudioBtnProps = {
   value: string
   voice?: string
@@ -221,7 +221,7 @@ const AudioBtn = ({
       >
         <button
           disabled={audioState === 'loading'}
-          className={`box-border p-0.5 flex items-center justify-center cursor-pointer ${isAudition || '!p-0 rounded-md bg-white dark:bg-[#383838]'}`}
+          className={`box-border p-0.5 flex items-center justify-center cursor-pointer ${isAudition || `!p-0 rounded-md bg-white ${getDarkThemeClasses('background3')}`}`}
           onClick={handleToggle}
         >
           {audioState === 'loading'
@@ -232,7 +232,7 @@ const AudioBtn = ({
             )
             : (
               // <div className={`w-6 h-6 rounded-md ${!isAudition ? 'w-4 h-4 hover:bg-gray-50 ' : 'hover:bg-gray-50 '} ${(audioState === 'playing') ? s.pauseIcon : s.playIcon}`}></div>
-              <div className={`w-6 h-6 rounded-md ${!isAudition ? 'w-4 h-4 hover:bg-gray-50 dark:hover:bg-zinc-800' : 'hover:bg-gray-50 dark:hover:bg-zinc-800'} ${(audioState === 'playing') ? s.pauseIcon : s.playIcon}`}></div>
+              <div className={`w-6 h-6 rounded-md ${!isAudition ? `w-4 h-4 hover:bg-gray-50 ${getDarkThemeClasses('hover')}` : `hover:bg-gray-50 ${getDarkThemeClasses('hover')}`} ${(audioState === 'playing') ? s.pauseIcon : s.playIcon}`}></div>
 
             )}
         </button>

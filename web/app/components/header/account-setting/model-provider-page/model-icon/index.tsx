@@ -6,7 +6,7 @@ import type {
 import { useLanguage } from '../hooks'
 import { CubeOutline } from '@/app/components/base/icons/src/vender/line/shapes'
 import { OpenaiViolet } from '@/app/components/base/icons/src/public/llm'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type ModelIconProps = {
   provider?: Model | ModelProvider
   modelName?: string
@@ -34,10 +34,10 @@ const ModelIcon: FC<ModelIconProps> = ({
 
   return (
     <div className={`
-      flex items-center justify-center w-6 h-6 rounded border-[0.5px] border-black/5 bg-gray-50
+      flex items-center justify-center w-6 h-6 rounded border-[0.5px] border-black/5 bg-gray-50 ${getDarkThemeClasses('background3')} 
       ${className}
     `}>
-      <CubeOutline className='w-4 h-4 text-gray-400' />
+      <CubeOutline className={`w-4 h-4 text-gray-400 ${getDarkThemeClasses('svg')}`} />
     </div>
   )
 }

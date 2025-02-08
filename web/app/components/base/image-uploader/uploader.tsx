@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { useLocalFileUploader } from './hooks'
 import type { ImageFile } from '@/types/app'
 import { ALLOW_FILE_EXTENSIONS } from '@/types/app'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type UploaderProps = {
   children: (hovering: boolean) => JSX.Element
   onUpload: (imageFile: ImageFile) => void

@@ -87,6 +87,11 @@ export type DarkThemeColors = {
   bordert: string
   peercheckedbg: string
   peerfocus: string
+  border5: string
+  border6: string
+  appcardBorder2: string
+  borderhover4: string
+  borderradius1: string
 }
  
  
@@ -99,7 +104,7 @@ export const getDarkTheme = (): DarkThemeColors => ({
   border: 'dark:!border-[#5f5f5f]',
   border1:'dark:!border-[#202020]',
   border4:'dark:border-[#3e3e3e]',
-  sub_text1: 'dark:text-[#fcfcfc]',
+  sub_text1: 'dark:!text-[#fcfcfc]',
   sub_text2: 'dark:text-[#6b7280]',
   sub_text3: 'dark:text-[#a1a2b6]',
   background1: 'dark:!bg-[#3e3e3e]',
@@ -150,6 +155,7 @@ export const getDarkTheme = (): DarkThemeColors => ({
   hover7:'dark:hover:bg-[#2E2E2E]',
   background6: 'dark:bg-[#5f5f5f]',
   appcardBorder:'dark:border-[#3f3f3f] dark:border-2',
+  appcardBorder2:'dark:border-[#5f5f5f] dark:border-2',
   outline: 'dark:hover:outline-[#5f5f5f]',
   focusoutline:'dark:focus:outline-none',
   background7:'dark:bg-[#4d4d4d]',
@@ -165,8 +171,11 @@ export const getDarkTheme = (): DarkThemeColors => ({
   ring1:'dark:ring-1 dark:ring-white/10',
   bordert:'dark:border-t-[#5f5f5f]',
   peercheckedbg:'dark:peer-checked:bg-[#3f3f3f]',
-  peerfocus:'dark:peer-focus:ring-[#3f3f3f]/20'
-
+  peerfocus:'dark:peer-focus:ring-[#3f3f3f]/20',
+  border5: 'dark:!border-[#3f3f3f]',
+  border6: 'dark:border-gray-800',
+  borderhover4:'dark:hover:!border-primary-600',
+  borderradius1: 'dark:border-0'
 });
  
 export const getDarkThemeClasses = (componet: keyof DarkThemeColors): string => {

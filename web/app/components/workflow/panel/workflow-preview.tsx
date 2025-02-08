@@ -27,7 +27,7 @@ import Loading from '@/app/components/base/loading'
 import { XClose } from '@/app/components/base/icons/src/vender/line/general'
 import { Clipboard } from '@/app/components/base/icons/src/vender/line/files'
 import type { NodeTracing } from '@/types/workflow'
-
+import { getDarkThemeClasses } from '@/app/theme'
 const WorkflowPreview = ({
   onShowIterationDetail,
 }: {
@@ -81,9 +81,9 @@ const WorkflowPreview = ({
 
   return (
     <div className={`
-      flex flex-col w-[420px] h-full rounded-l-2xl border-[0.5px] border-gray-200 shadow-xl bg-white
+      flex flex-col w-[420px] h-full rounded-l-2xl border-[0.5px] border-gray-200 shadow-xl bg-white ${getDarkThemeClasses('background1')} ${getDarkThemeClasses('borderradius1')}
     `}>
-      <div className='flex items-center justify-between p-4 pb-1 text-base font-semibold text-gray-900'>
+      <div className={`flex items-center justify-between p-4 pb-1 text-base font-semibold text-gray-900 ${getDarkThemeClasses('text')}`}>
         {`Test Run${!workflowRunningData?.result.sequence_number ? '' : `#${workflowRunningData?.result.sequence_number}`}`}
         <div className='p-1 cursor-pointer' onClick={() => handleCancelDebugAndPreviewPanel()}>
           <XClose className='w-4 h-4 text-gray-500' />
@@ -104,16 +104,16 @@ const WorkflowPreview = ({
                 {showInputsPanel && (
                   <div
                     className={cn(
-                      'mr-6 py-3 border-b-2 border-transparent text-[13px] font-semibold leading-[18px] text-gray-400 cursor-pointer',
-                      currentTab === 'INPUT' && '!border-[rgb(21,94,239)] text-gray-700',
+                      `mr-6 py-3 border-b-2 border-transparent text-[13px] font-semibold leading-[18px] text-gray-400 ${getDarkThemeClasses('sub_text3')} cursor-pointer`,
+                      currentTab === 'INPUT' && `!border-[rgb(21,94,239)] text-gray-700 ${getDarkThemeClasses('sub_text1')}`,
                     )}
                     onClick={() => switchTab('INPUT')}
                   >{t('runLog.input')}</div>
                 )}
                 <div
                   className={cn(
-                    'mr-6 py-3 border-b-2 border-transparent text-[13px] font-semibold leading-[18px] text-gray-400 cursor-pointer',
-                    currentTab === 'RESULT' && '!border-[rgb(21,94,239)] text-gray-700',
+                    `mr-6 py-3 border-b-2 border-transparent text-[13px] font-semibold leading-[18px] text-gray-400 ${getDarkThemeClasses('sub_text3')} cursor-pointer`,
+                    currentTab === 'RESULT' && `!border-[rgb(21,94,239)] text-gray-700 ${getDarkThemeClasses('sub_text1')}`,
                     !workflowRunningData && 'opacity-30 !cursor-not-allowed',
                   )}
                   onClick={() => {
@@ -124,9 +124,9 @@ const WorkflowPreview = ({
                 >{t('runLog.result')}</div>
                 <div
                   className={cn(
-                    'mr-6 py-3 border-b-2 border-transparent text-[13px] font-semibold leading-[18px] text-gray-400 cursor-pointer',
-                    currentTab === 'DETAIL' && '!border-[rgb(21,94,239)] text-gray-700',
-                    !workflowRunningData && 'opacity-30 !cursor-not-allowed',
+                    `mr-6 py-3 border-b-2 border-transparent text-[13px] font-semibold leading-[18px] text-gray-400 ${getDarkThemeClasses('sub_text3')} cursor-pointer`,
+                    currentTab === 'DETAIL' && `!border-[rgb(21,94,239)] text-gray-700 ${getDarkThemeClasses('sub_text1')}`,
+                    !workflowRunningData && `opacity-30 !cursor-not-allowed`,
                   )}
                   onClick={() => {
                     if (!workflowRunningData)
@@ -136,8 +136,8 @@ const WorkflowPreview = ({
                 >{t('runLog.detail')}</div>
                 <div
                   className={cn(
-                    'mr-6 py-3 border-b-2 border-transparent text-[13px] font-semibold leading-[18px] text-gray-400 cursor-pointer',
-                    currentTab === 'TRACING' && '!border-[rgb(21,94,239)] text-gray-700',
+                    `mr-6 py-3 border-b-2 border-transparent text-[13px] font-semibold leading-[18px] text-gray-400 ${getDarkThemeClasses('sub_text3')} cursor-pointer`,
+                    currentTab === 'TRACING' && `!border-[rgb(21,94,239)] text-gray-700 ${getDarkThemeClasses('sub_text1')}`,
                     !workflowRunningData && 'opacity-30 !cursor-not-allowed',
                   )}
                   onClick={() => {
@@ -148,8 +148,8 @@ const WorkflowPreview = ({
                 >{t('runLog.tracing')}</div>
               </div>
               <div className={cn(
-                'grow bg-white h-0 overflow-y-auto rounded-b-2xl',
-                (currentTab === 'RESULT' || currentTab === 'TRACING') && '!bg-gray-50',
+                `grow bg-white ${getDarkThemeClasses('bg1')} h-0 overflow-y-auto rounded-b-2xl`,
+                (currentTab === 'RESULT' || currentTab === 'TRACING') && `!bg-gray-50 ${getDarkThemeClasses('background2')}`,
               )}>
                 {currentTab === 'INPUT' && showInputsPanel && (
                   <InputsPanel onRun={() => switchTab('RESULT')} />
@@ -193,7 +193,7 @@ const WorkflowPreview = ({
                   />
                 )}
                 {currentTab === 'DETAIL' && !workflowRunningData?.result && (
-                  <div className='flex h-full items-center justify-center bg-white'>
+                  <div className={`flex h-full items-center justify-center bg-white ${getDarkThemeClasses('background1')}`}>
                     <Loading />
                   </div>
                 )}
@@ -204,7 +204,7 @@ const WorkflowPreview = ({
                   />
                 )}
                 {currentTab === 'TRACING' && !workflowRunningData?.tracing?.length && (
-                  <div className='flex h-full items-center justify-center bg-gray-50'>
+                  <div className={`flex h-full items-center justify-center bg-gray-50 ${getDarkThemeClasses('background1')}`}>
                     <Loading />
                   </div>
                 )}

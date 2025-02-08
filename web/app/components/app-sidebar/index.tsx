@@ -10,7 +10,7 @@ import {
   AlignRight01,
 } from '@/app/components/base/icons/src/vender/line/layout'
 import { useStore as useAppStore } from '@/app/components/app/store'
-
+import { getDarkThemeClasses } from '@/app/theme'
 export type IAppDetailNavProps = {
   iconType?: 'app' | 'dataset' | 'notion'
   title: string
@@ -60,8 +60,7 @@ const AppDetailNav = ({ title, desc, icon, icon_background, navigation, extraInf
       //   shrink-0 flex flex-row bg-white border-r border-gray-200 transition-all w-auto
       // `}
       className={`
-        // absolute bottom-3 left-3 rounded-lg flex items-center bg-white border border-gray-200 transition-all w-max z-50 drop-shadow-md shadow-gray-500
-         absolute bottom-3 left-3 rounded-lg flex items-center bg-white border border-gray-200 dark:border-gray-800 transition-all w-max z-50 drop-shadow-md shadow-gray-500
+         absolute bottom-3 left-3 rounded-lg flex items-center bg-white border border-gray-200 ${getDarkThemeClasses('border6')} transition-all w-max z-50 drop-shadow-md shadow-gray-500
       `}
     >
       {/* <div
@@ -109,7 +108,7 @@ const AppDetailNav = ({ title, desc, icon, icon_background, navigation, extraInf
           
         // `}
         className={`
-          grow space-y-1 rounded-md bg-white flex items-center px-2 py-0 dark:bg-[#202020] dark:border-0 cursor-pointer
+          grow space-y-1 rounded-md bg-white flex items-center px-2 py-0 ${getDarkThemeClasses('main_background')} cursor-pointer
           
         `}
       >

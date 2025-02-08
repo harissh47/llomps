@@ -13,7 +13,7 @@ import TextToSpeech from './text-to-speech'
 import SpeechToText from './speech-to-text'
 import Citation from './citation'
 import Moderation from './moderation'
-
+import { getDarkThemeClasses } from '@/app/theme'
 export type FeaturePanelProps = {
   onChange?: OnFeaturesChange
   openingStatementProps: OpeningStatementProps
@@ -46,7 +46,7 @@ const FeaturePanel = ({
           <div>
             <div className='flex items-center'>
               {/* <div className='shrink-0 text-xs font-semibold text-gray-500'> */}
-              <div className='shrink-0 text-xs font-semibold text-gray-500 dark:text-white '>
+              <div className={`shrink-0 text-xs font-semibold text-gray-500 ${getDarkThemeClasses('text')} `}>
                 {t('appDebug.feature.groupChat.title')}
               </div>
               <div

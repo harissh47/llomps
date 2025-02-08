@@ -28,7 +28,7 @@ import {
   XClose,
 } from '@/app/components/base/icons/src/vender/line/general'
 import { AlertTriangle } from '@/app/components/base/icons/src/vender/line/alertsAndFeedback'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type WorkflowChecklistProps = {
   disabled: boolean
 }
@@ -55,7 +55,7 @@ const WorkflowChecklist = ({
       <PortalToFollowElemTrigger onClick={() => !disabled && setOpen(v => !v)}>
         <div
           className={cn(
-            'relative flex items-center justify-center p-0.5 w-8 h-8 rounded-lg border-[0.5px] border-gray-200 dark:border-[#5F5F5F] bg-white dark:bg-[#202020] shadow-xs',
+            `relative flex items-center justify-center p-0.5 w-8 h-8 rounded-lg border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} bg-white ${getDarkThemeClasses('main_background')} shadow-xs`,
             disabled && 'opacity-50 cursor-not-allowed',
           )}
         >
@@ -85,14 +85,14 @@ const WorkflowChecklist = ({
       <PortalToFollowElemContent className='z-[12]'>
         <div
           // className='w-[420px] rounded-2xl bg-white border-[0.5px] border-black/5 shadow-lg overflow-y-auto'
-          className='w-[420px] rounded-2xl bg-white dark:bg-[#333333] border-[0.5px] border-black/5 dark:border-[#5F5F5F]/2 shadow-lg overflow-y-auto'
+          className={`w-[420px] rounded-2xl bg-white ${getDarkThemeClasses('background1')} border-[0.5px] border-black/5 ${getDarkThemeClasses('border')}/2 shadow-lg overflow-y-auto`}
           style={{
             maxHeight: 'calc(2 / 3 * 100vh)',
           }}
         >
           
           {/* <div className='sticky top-0 bg-white flex items-center pl-4 pr-3 pt-3 h-[44px] text-md font-semibold text-gray-900 dark:text-white z-[1]'> */}
-          <div className='sticky top-0 bg-white dark:bg-[#333333] flex items-center pl-4 pr-3 pt-3 h-[44px] text-md font-semibold text-gray-900 dark:text-white z-[1]'>
+          <div className={`sticky top-0 bg-white ${getDarkThemeClasses('background1')} flex items-center pl-4 pr-3 pt-3 h-[44px] text-md font-semibold text-gray-900 ${getDarkThemeClasses('text')} z-[1]`}>
             <div className='grow'>{t('workflow.panel.checklist')}{needWarningNodes.length ? `(${needWarningNodes.length})` : ''}</div>
             <div
               className='shrink-0 flex items-center justify-center w-6 h-6 cursor-pointer'
@@ -112,14 +112,14 @@ const WorkflowChecklist = ({
                         <div
                           key={node.id}
                           // className='mb-2 last-of-type:mb-0 border-[0.5px] border-gray-200 bg-white  shadow-xs rounded-lg cursor-pointer dark:bg-[#3f3f3f] overflow-hidden'
-                          className='mb-2 last-of-type:mb-0 border-[0.5px] border-gray-200 dark:border-[#5F5F5F] bg-white  shadow-xs rounded-lg cursor-pointer dark:bg-[#3f3f3f] overflow-hidden'
+                          className={`mb-2 last-of-type:mb-0 border-[0.5px] border-gray-200 ${getDarkThemeClasses('border')} bg-white  shadow-xs rounded-lg cursor-pointer ${getDarkThemeClasses('background3')} overflow-hidden`}
                           onClick={() => {
                             handleNodeSelect(node.id)
                             setOpen(false)
                           }}
                         >
                           {/* <div className='flex items-center p-2 h-9 text-xs font-medium text-gray-700'> */}
-                          <div className='flex items-center p-2 h-9 text-xs font-medium text-gray-700 dark:bg-[#383838] dark:text-white'>
+                          <div className={`flex items-center p-2 h-9 text-xs font-medium text-gray-700 ${getDarkThemeClasses('background3')} ${getDarkThemeClasses('text')}`}>
 
                             <BlockIcon
                               type={node.type}
@@ -132,9 +132,9 @@ const WorkflowChecklist = ({
                             {
                               node.unConnected && (
                                 // <div className='px-3 py-2 bg-gray-25 rounded-b-lg dark:bg-[#5f5f5f]'>
-                                <div className='px-3 py-2 bg-gray-25 dark:bg-[#3F3F3F]'>
+                                <div className={`px-3 py-2 bg-gray-25 ${getDarkThemeClasses('background2')}`}>
 
-                                  <div className='flex text-xs leading-[18px] text-gray-500 dark:text-[#fcfcfc]'>
+                                  <div className={`flex text-xs leading-[18px] text-gray-500 ${getDarkThemeClasses('sub_text1')}`}>
                                     <AlertTriangle className='mt-[3px] mr-2 w-3 h-3 text-[#F79009]' />
                                     {t('workflow.common.needConnecttip')}
                                   </div>
@@ -143,8 +143,8 @@ const WorkflowChecklist = ({
                             }
                             {
                               node.errorMessage && (
-                                <div className='px-3 py-2 bg-gray-25 rounded-b-lg dark:bg-[#3F3F3F]'>
-                                  <div className='flex text-xs leading-[18px] text-gray-500 dark:text-[#fcfcfc]'>
+                                <div className={`px-3 py-2 bg-gray-25 rounded-b-lg ${getDarkThemeClasses('background2')}`}>
+                                  <div className={`flex text-xs leading-[18px] text-gray-500 ${getDarkThemeClasses('sub_text1')}`}>
                                     <AlertTriangle className='mt-[3px] mr-2 w-3 h-3 text-[#F79009]' />
                                     {node.errorMessage}
                                   </div>
@@ -161,7 +161,7 @@ const WorkflowChecklist = ({
             }
             {
               !needWarningNodes.length && (
-                <div className='mx-4 mb-3 py-4 rounded-lg bg-gray-50 dark:bg-[#3F3F3F] text-gray-400 text-xs text-center'>
+                <div className={`mx-4 mb-3 py-4 rounded-lg bg-gray-50 ${getDarkThemeClasses('background3')} text-gray-400 text-xs text-center`}>
                   <ChecklistSquare className='mx-auto mb-[5px] w-8 h-8 text-gray-300' />
                   {t('workflow.panel.checklistResolved')}
                 </div>

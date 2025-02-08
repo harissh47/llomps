@@ -27,7 +27,7 @@ import Switch from '../../../switch'
 import { useParams } from 'next/navigation'
 import { useToastContext } from '../../../toast'
 import { upload } from '@/service/base'
-
+import { getDarkThemeClasses } from '@/app/theme'
 // const MAX_QUESTION_NUM = 7
 const MAX_QUESTION_NUM = 5
 
@@ -264,7 +264,7 @@ const OpeningStatement: FC<OpeningStatementProps> = ({
       <div className='flex items-center space-x-1'>
         <div className='flex items-center space-x-1'>
           {/* <label className='text-xs font-medium text-gray-700 '> */}
-          <label className='text-xs font-medium text-gray-700 dark:text-[#FCFCFC] '>
+          <label className={`text-xs font-medium text-gray-700 ${getDarkThemeClasses('sub_text1')} `}>
 
             Show Carousel
           </label>
@@ -280,7 +280,7 @@ const OpeningStatement: FC<OpeningStatementProps> = ({
         </div>
         <div className='flex items-center space-x-1'>
           {/* <label className='text-xs font-medium text-gray-700'> */}
-          <label className='text-xs font-medium text-gray-700 dark:text-[#FCFCFC]'>
+          <label className={`text-xs font-medium text-gray-700 ${getDarkThemeClasses('sub_text1')}`}>
 
             Show Container
           </label>
@@ -295,7 +295,7 @@ const OpeningStatement: FC<OpeningStatementProps> = ({
           />
         </div>
         {/* <div className='px-2 leading-[18px] text-xs font-medium text-gray-700 cursor-pointer' onClick={handleCancel}>{t('common.operation.cancel')}</div> */}
-        <div className='px-2 leading-[18px] text-xs font-medium text-gray-700 dark:text-[#FCFCFC] cursor-pointer' onClick={handleCancel}>{t('common.operation.cancel')}</div>
+        <div className={`px-2 leading-[18px] text-xs font-medium text-gray-700 ${getDarkThemeClasses('sub_text1')} cursor-pointer`} onClick={handleCancel}>{t('common.operation.cancel')}</div>
 
         <Button className='!h-8 !px-3 text-xs' onClick={handleConfirm} type="primary">{t('common.operation.save')}</Button>
       </div>
@@ -309,7 +309,7 @@ const OpeningStatement: FC<OpeningStatementProps> = ({
       <div>
         <div className='flex items-center py-2'>
           {/* <div className='shrink-0 flex space-x-0.5 leading-[18px] text-xs font-medium text-gray-500'> */}
-          <div className='shrink-0 flex space-x-0.5 leading-[18px] text-xs font-medium text-gray-500 dark:text-[#FCFCFC]'>
+          <div className={`shrink-0 flex space-x-0.5 leading-[18px] text-xs font-medium text-gray-500 ${getDarkThemeClasses('sub_text1')}`}>
 
             <div className='uppercase'>{t('appDebug.openingStatement.openingQuestion')}</div>
             <div>·</div>
@@ -333,7 +333,7 @@ const OpeningStatement: FC<OpeningStatementProps> = ({
           {tempSuggestedQuestions.map((question, index) => {
             return (
               // <div className='group relative rounded-lg border border-gray-200 flex items-center pl-2.5 hover:border-gray-300 hover:bg-white' key={index}>
-              <div className='group relative rounded-lg border border-gray-200 flex items-center pl-2.5 hover:border-gray-300 hover:bg-white dark:hover:bg-zinc-800 dark:!text-white' key={index}>
+              <div className={`group relative rounded-lg border border-gray-200 flex items-center pl-2.5 hover:border-gray-300 hover:bg-white ${getDarkThemeClasses('hover')} da${getDarkThemeClasses('sub_text1')}`} key={index}>
 
                 <div className='handle flex items-center justify-center w-4 h-4 cursor-grab'>
                   <svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -353,7 +353,7 @@ const OpeningStatement: FC<OpeningStatementProps> = ({
                     }))
                   }}
                   // className={'w-full max-w-24 overflow-x-auto pl-1.5 pr-8 text-sm leading-9 text-gray-900 border-0 grow h-9 bg-transparent focus:outline-none cursor-pointer rounded-lg'}
-                  className={'w-full max-w-24 overflow-x-auto pl-1.5 pr-8 text-sm leading-9 text-gray-900 dark:text-[#FCFCFC] border-0 grow h-9 bg-transparent focus:outline-none cursor-pointer rounded-lg'}
+                  className={`w-full max-w-24 overflow-x-auto pl-1.5 pr-8 text-sm leading-9 text-gray-900 ${getDarkThemeClasses('sub_text1')} border-0 grow h-9 bg-transparent focus:outline-none cursor-pointer rounded-lg`}
                   style={{ maxWidth: '23rem', textOverflow: 'ellipsis' }}
                 />
 
@@ -420,7 +420,7 @@ const OpeningStatement: FC<OpeningStatementProps> = ({
           <div
             onClick={() => { setTempSuggestedQuestions([...tempSuggestedQuestions, '']) }}
             // className='mt-1 flex items-center h-9 px-3 gap-2 rounded-lg cursor-pointer text-gray-400  bg-gray-100 hover:bg-gray-200'>
-            className='mt-1 flex items-center h-9 px-3 gap-2 rounded-lg cursor-pointer text-gray-400 dark:text-white  bg-gray-100 dark:bg-[#3f3f3f] hover:bg-gray-200 dark:hover:bg-zinc-800'>
+            className={`mt-1 flex items-center h-9 px-3 gap-2 rounded-lg cursor-pointer text-gray-400 ${getDarkThemeClasses('text')}  bg-gray-100 ${getDarkThemeClasses('background3')} hover:bg-gray-200 ${getDarkThemeClasses('hover')}`}>
 
             <Plus className='w-4 h-4'></Plus>
             <div className='text-gray-500 text-[13px]'>{t('appDebug.variableConig.addOption')}</div>
@@ -454,7 +454,7 @@ const OpeningStatement: FC<OpeningStatementProps> = ({
       isFocus={isFocus}
     >
       {/* <div className='text-gray-700 text-sm'> */}
-      <div className='text-gray-700 dark:text-[#FCFCFC] text-sm'>
+      <div className={`text-gray-700 ${getDarkThemeClasses('sub_text1')} text-sm`}>
 
         {(hasValue || (!hasValue && isFocus)) ? (
           <>

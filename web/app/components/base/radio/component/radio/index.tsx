@@ -4,7 +4,7 @@ import cn from 'classnames'
 import { useContext } from 'use-context-selector'
 import RadioGroupContext from '../../context'
 import s from '../../style.module.css'
-
+import { getDarkThemeClasses } from '@/app/theme'
 export type IRadioProps = {
   className?: string
   labelClassName?: string
@@ -46,7 +46,7 @@ export default function Radio({
       disabled ? s.disabled : '',
       // isChecked ? 'bg-white shadow' : '',
       // isChecked ? 'bg-white dark:bg-[#5F5F5F] shadow' : '',
-      isChecked ? 'bg-white dark:bg-[#5F5F5F] shadow' : 'dark:hover:bg-zinc-800',
+      isChecked ? `bg-white ${getDarkThemeClasses('background3')} shadow` : `${getDarkThemeClasses('hover3')}`,
       divClassName,
       className)}
     onClick={() => handleChange(value)}

@@ -2,7 +2,7 @@
 import type { FC } from 'react'
 import React from 'react'
 import GroupName from '@/app/components/app/configuration/base/group-name'
-
+import { getDarkThemeClasses } from '@/app/theme'
 export type IFeatureGroupProps = {
   title: string
   description?: string
@@ -19,7 +19,7 @@ const FeatureGroup: FC<IFeatureGroupProps> = ({
       <div className='mb-2'>
         <GroupName name={title} />
         {description && (
-          <div className='text-xs font-normal text-gray-500 dark:text-[#A1A2B6]'>{description}</div>
+          <div className={`text-xs font-normal text-gray-500 ${getDarkThemeClasses('sub_text3')}`}>{description}</div>
         )}
       </div>
       <div className='space-y-2'>

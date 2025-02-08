@@ -18,7 +18,7 @@ import {
 } from '@/app/components/base/portal-to-follow-elem'
 import type { ImageFile, VisionSettings } from '@/types/app'
 import { TransferMethod } from '@/types/app'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type PasteImageLinkButtonProps = {
   onUpload: (imageFile: ImageFile) => void
   disabled?: boolean
@@ -50,7 +50,7 @@ const PasteImageLinkButton: FC<PasteImageLinkButtonProps> = ({
     >
       <PortalToFollowElemTrigger onClick={handleToggle}>
         <div className={`
-          relative flex items-center justify-center px-3 h-8 bg-gray-100 hover:bg-gray-200 text-xs text-gray-500 rounded-lg
+          relative flex items-center justify-center px-3 h-8 bg-gray-100 ${getDarkThemeClasses('background2')} hover:bg-gray-200 text-xs text-gray-500 rounded-lg
           ${disabled ? 'cursor-not-allowed' : 'cursor-pointer'}
         `}>
           <Link03 className='mr-2 w-4 h-4' />
@@ -98,7 +98,7 @@ const TextGenerationImageUploader: FC<TextGenerationImageUploaderProps> = ({
       {
         hovering => (
           <div className={`
-            flex items-center justify-center px-3 h-8 bg-gray-100
+            flex items-center justify-center px-3 h-8 bg-gray-100 ${getDarkThemeClasses('background2')} ${getDarkThemeClasses('hover')}
             text-xs text-gray-500 rounded-lg cursor-pointer
             ${hovering && 'bg-gray-200'}
           `}>

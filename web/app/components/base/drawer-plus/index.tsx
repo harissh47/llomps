@@ -66,7 +66,7 @@ const DrawerPlus: FC<Props> = ({
         ref={ref}
       >
         {/* <div className={cn(headerClassName, 'shrink-0 border-b border-b-gray-100 py-4')}> */}
-        <div className={cn(headerClassName, `shrink-0 border-b border-b-gray-100 ${getDarkThemeClasses('border')} py-4 ${getDarkThemeClasses('main_background')}`)}>
+        <div className={cn(headerClassName, `shrink-0 border-b border-b-gray-100 ${getDarkThemeClasses('border')} py-4 ${getDarkThemeClasses('background1')}`)}>
           
           <div className='flex justify-between items-center pl-6 pr-5 h-6'>
             {/* <div className='text-base font-semibold text-gray-900'> */}
@@ -90,7 +90,7 @@ const DrawerPlus: FC<Props> = ({
           )}
         </div>
         {/* <div className='grow overflow-y-auto'> */}
-        <div className={`grow overflow-y-auto ${getDarkThemeClasses('main_background')}`}>
+        <div className={`grow overflow-y-auto ${getDarkThemeClasses('background1')}`}>
           {body}
         </div>
         {foot && (

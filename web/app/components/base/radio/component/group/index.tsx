@@ -2,7 +2,7 @@ import type { ReactElement } from 'react'
 import cn from 'classnames'
 import RadioGroupContext from '../../context'
 import s from '../../style.module.css'
-
+import { getDarkThemeClasses } from '@/app/theme'
 export type TRadioGroupProps = {
   children?: ReactElement | ReactElement[]
   value?: string | number
@@ -16,7 +16,7 @@ export default function Group({ children, value, onChange, className = '' }: TRa
   }
   return (
     // <div className={cn('flex items-center bg-gray-50', s.container, className)}>
-    <div className={cn('flex items-center bg-gray-50 dark:bg-[#3F3F3F]', s.container, className)}>
+    <div className={cn(`flex items-center bg-gray-50 ${getDarkThemeClasses('background2')}`, s.container, className)}>
       <RadioGroupContext.Provider value={{ value, onChange: onRadioChange }}>
         {children}
       </RadioGroupContext.Provider>

@@ -10,7 +10,7 @@ import { Speaker } from '@/app/components/base/icons/src/vender/solid/mediaAndDe
 import { languages } from '@/i18n/language'
 import { fetchAppVoices } from '@/service/apps'
 import AudioBtn from '@/app/components/base/audio-btn'
-
+import { getDarkThemeClasses } from '@/app/theme'
 type TextToSpeechProps = {
   onChange?: OnFeaturesChange
   disabled?: boolean
@@ -33,13 +33,13 @@ const TextToSpeech = ({
 
   return (
     // <div className='flex items-center px-3 h-12 bg-gray-50 rounded-xl overflow-hidden'>
-    <div className='flex items-center px-3 h-12 bg-gray-50 dark:bg-[#3f3f3f] rounded-xl overflow-hidden'>
+    <div className={`flex items-center px-3 h-12 bg-gray-50 ${getDarkThemeClasses('background3')} rounded-xl overflow-hidden`}>
 
       <div className='shrink-0 flex items-center justify-center mr-1 w-6 h-6'>
         <Speaker className='w-4 h-4 text-[#7839EE]' />
       </div>
       {/* <div className='shrink-0 mr-2 whitespace-nowrap text-sm text-gray-800 font-semibold'> */}
-      <div className='shrink-0 mr-2 whitespace-nowrap text-sm text-gray-800 dark:text-white font-semibold'>
+      <div className={`shrink-0 mr-2 whitespace-nowrap text-sm text-gray-800 ${getDarkThemeClasses('text')} font-semibold`}>
 
         {t('appDebug.feature.textToSpeech.title')}
       </div>

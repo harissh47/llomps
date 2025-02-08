@@ -68,7 +68,7 @@
 import type { FC } from 'react';
 import React from 'react';
 import cn from 'classnames';
-
+import { getDarkThemeClasses } from '@/app/theme';
 type OPTION = {
   label: string;
   value: any;
@@ -93,11 +93,11 @@ const RadioGroup: FC<Props> = ({
         <div
           key={item.value}
           className={cn(
-            'grow flex items-center h-8 px-2.5 rounded-lg bg-gray-25 dark:bg-[#3F3F3F] border cursor-pointer space-x-2',
-            'hover:bg-white hover:border-primary-600 dark:hover:border-primary-600 hover:shadow-[0px_12px_16px_-4px_rgba(16,24,40,0.08),_0px_4px_6px_-2px_rgba(16,24,40,0.03)]',
+            `grow flex items-center h-8 px-2.5 rounded-lg bg-gray-25 ${getDarkThemeClasses('background3')} border cursor-pointer space-x-2`,
+            `hover:bg-white hover:border-primary-600 ${getDarkThemeClasses('borderhover4')} hover:shadow-[0px_12px_16px_-4px_rgba(16,24,40,0.08),_0px_4px_6px_-2px_rgba(16,24,40,0.03)]`,
             item.value === value
               ? 'bg-white border-primary-600 shadow-[0px_1px_2px_0px_rgba(16,24,40,0.06),_0px_1px_3px_0px_rgba(16,24,40,0.10)]'
-              : 'border-gray-100 dark:border-[#5f5f5f]'
+              : `border-gray-100 ${getDarkThemeClasses('border')}`
           )}
           onClick={() => onChange(item.value)}
         >
@@ -106,14 +106,14 @@ const RadioGroup: FC<Props> = ({
               'w-4 h-4 border-2 rounded-full flex items-center justify-center',
               item.value === value
                 ? 'border-primary-600 bg-transparent'
-                : 'border-gray-200 dark:border-[#5f5f5f]'
+                : `border-gray-200 ${getDarkThemeClasses('border')}`
             )}
           >
             {item.value === value && (
               <div className="w-2 h-2 bg-primary-600 rounded-full"></div>
             )}
           </div>
-          <div className="text-[13px] font-medium text-gray-900 dark:text-[#FCFCFC]">
+          <div className={`text-[13px] font-medium text-gray-900 ${getDarkThemeClasses('sub_text1')}`}>
             {item.label}
           </div>
         </div>
